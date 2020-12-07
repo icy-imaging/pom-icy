@@ -178,7 +178,7 @@
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>${maven-javadoc-plugin.version}</version>
                     <configuration>
-                        <jarOutputDirectory>${outputJar}</jarOutputDirectory>
+                        <outputDirectory>${outputJar}</outputDirectory>
                     </configuration>
                     <executions>
                         <execution>
