@@ -270,23 +270,7 @@
     </build>
 
     <!-- Link to third-party Maven repositories -->
-    <repositories>
-        <repository>
-            <id>ome-repo</id>
-            <name>OME repository</name>
-            <url>https://artifacts.openmicroscopy.org/artifactory/ome.releases/</url>
-        </repository>
-        <repository>
-            <id>geomajas</id>
-            <name>Geomajas</name>
-            <url>http://maven.geomajas.org/</url>
-        </repository>
-        <repository>
-            <id>icy</id>
-            <name>Icy's Nexus</name>
-            <url>https://icy-nexus.pasteur.fr/repository/Icy/</url>
-        </repository>
-    </repositories>
+    <repositories></repositories>
 
     <!-- Icy Maven repositories for POM deployment -->
     <distributionManagement>
