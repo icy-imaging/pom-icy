@@ -179,6 +179,10 @@
                     <version>${maven-javadoc-plugin.version}</version>
                     <configuration>
                         <outputDirectory>${outputJar}</outputDirectory>
+                        <!-- disable javadoc errors -->
+                        <!-- <additionalOptions> -->
+                        <!-- <additionalOption>-Xdoclint:none</additionalOption> -->
+                        <!-- </additionalOptions> -->
                     </configuration>
                     <executions>
                         <execution>
@@ -245,6 +249,7 @@
                         <fail>true</fail>
                     </configuration>
                 </plugin>
+
             </plugins>
         </pluginManagement>
 
