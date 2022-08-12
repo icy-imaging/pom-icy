@@ -623,6 +623,48 @@
             </dependencies>
         </profile>
         <profile>
+            <id>icy-plugin-extract-library</id>
+
+            <build>
+                <defaultGoal>clean package</defaultGoal>
+
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <!-- List of main dependencies and plugins -->
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.bioimageanalysis.icy</groupId>
+                        <artifactId>icy-kernel</artifactId>
+                        <version>${icy-kernel.version}</version>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+
+            <!-- Required dependencies and plugins -->
+            <dependencies>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-kernel</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>ezplug</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>protocols</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
             <id>icy-plugin-deploy-nexus-dev</id>
 
             <!-- Properties for this profile -->
@@ -680,6 +722,21 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>${maven-dependency-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>${project.artifactId}-fetch</id>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>unpack-dependencies</goal>
+                            </goals>
+                            <configuration>
+                                <includeArtifactIds>commons-csv</includeArtifactIds>
+                                <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                                <stripVersion>true</stripVersion>
+                                <excludeTransitive>true</excludeTransitive>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
