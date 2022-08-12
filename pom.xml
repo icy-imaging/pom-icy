@@ -271,7 +271,7 @@
         <sequence-blocks.version>2.1.0</sequence-blocks.version>
         <slic.version>1.0.1</slic.version>
         <snake-yaml.version>1.27.0</snake-yaml.version>
-        <sode-suite.version>1.1.0</sode-suite.version>
+        <soda-suite.version>1.1.0</soda-suite.version>
         <spot-detection-utilities.version>1.1.6</spot-detection-utilities.version>
         <spot-detector.version>1.9.2</spot-detector.version>
         <spot-detector-block.version>1.0.0</spot-detector-block.version>
@@ -1645,7 +1645,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>soda-suite</artifactId>
-                <version>${sode-suite.version}</version>
+                <version>${soda-suite.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
