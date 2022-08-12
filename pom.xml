@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Connection to SciJava Maven environment -->
+    <!--<parent>
+        <groupId>org.scijava</groupId>
+        <artifactId>pom-scijava</artifactId>
+        <version>31.1.0</version>
+    </parent>-->
+
     <groupId>org.bioimageanalysis.icy</groupId>
-    <artifactId>parent-pom-base</artifactId>
-    <version>1.0.1</version>
+    <artifactId>pom-icy</artifactId>
+    <version>2.0.0</version>
 
     <packaging>pom</packaging>
 
     <name>Parent POM base</name>
     <description>Common parent POM for all Icy related projects</description>
-    <url>http://icy.bioimageanalysis.org/</url>
+    <url>https://icy.bioimageanalysis.org/</url>
     <inceptionYear>2020</inceptionYear>
 
     <organization>
@@ -32,7 +39,7 @@
         <developer>
             <id>stef</id>
             <name>Stéphane Dallongeville</name>
-            <url>http://icy.bioimageanalysis.org/author/stef/</url>
+            <url>https://icy.bioimageanalysis.org/author/stef/</url>
             <roles>
                 <role>founder</role>
                 <role>lead</role>
@@ -46,7 +53,7 @@
         <developer>
             <id>jtinevez</id>
             <name>Jean-Yves Tinevez</name>
-            <url>http://icy.bioimageanalysis.org/author/tinevez/</url>
+            <url>https://icy.bioimageanalysis.org/author/tinevez/</url>
             <roles>
                 <role>lead</role>
                 <role>reviewer</role>
@@ -56,7 +63,7 @@
         <developer>
             <id>dgonzalez</id>
             <name>Daniel Felipe González Obando</name>
-            <url>http://icy.bioimageanalysis.org/author/danyfel80/</url>
+            <url>https://icy.bioimageanalysis.org/author/danyfel80/</url>
             <roles>
                 <role>developer</role>
                 <role>debugger</role>
@@ -67,6 +74,7 @@
         <developer>
             <id>atournay</id>
             <name>Amandine Tournay</name>
+            <url>https://icy.bioimageanalysis.org/author/atournay/</url>
             <roles>
                 <role>developer</role>
                 <role>maintainer</role>
@@ -77,13 +85,13 @@
     <mailingLists>
         <mailingList>
             <name>Icy</name>
-            <post>icy-all@pasteur.fr</post>
+            <post>icy.team@pasteur.fr</post>
         </mailingList>
     </mailingLists>
 
     <issueManagement>
         <system>GitLab</system>
-        <url>https://gitlab.pasteur.fr/xx/issues</url>
+        <url>https://gitlab.pasteur.fr/bia/parent-pom-base/-/issues</url>
     </issueManagement>
 
     <properties>
@@ -96,31 +104,622 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!-- Maven Plugins version -->
-        <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
-        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
-        <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
-        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
-        <maven-enforcer-plugin.version>3.0.0-M3</maven-enforcer-plugin.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <maven-dependency-plugin.version>3.3.0</maven-dependency-plugin.version>
+        <maven-enforcer-plugin.version>3.1.0</maven-enforcer-plugin.version>
         <maven-help-plugin.version>3.2.0</maven-help-plugin.version>
+        <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
+        <maven-javadoc-plugin.version>3.4.0</maven-javadoc-plugin.version>
+        <maven-release-plugin.version>3.0.0-M6</maven-release-plugin.version>
+        <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
+        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
 
         <!-- Maven plugin properties -->
         <maven-source-plugin.includePom>true</maven-source-plugin.includePom>
         <maven-jar-plugin.includeMavenDescriptor>false</maven-jar-plugin.includeMavenDescriptor>
+
+        <!-- Maven build configuration -->
+        <outputDirectory>${project.build.directory}</outputDirectory>
+
+        <stripVersion>true</stripVersion>
+
+        <overWriteIfNewer>true</overWriteIfNewer>
+        <overWriteSnapshots>true</overWriteSnapshots>
+        <overWriteReleases>true</overWriteReleases>
+
+        <!-- Icy's plugins version -->
+        <icy-kernel.version>2.4.2</icy-kernel.version>
+
+        <ezplug.version>3.21.0</ezplug.version>
+        <blocks.version>5.3.0</blocks.version>
+        <protocols.version>3.2.2</protocols.version>
+        <jep.version>4.0.3</jep.version>
+
+        <three-d-active-meshes.version>1.3.2</three-d-active-meshes.version>
+        <three-d-mesh-roi.version>1.4.7</three-d-mesh-roi.version>
+        <three-d-rotation.version>1.3.0</three-d-rotation.version>
+        <three-d-spheres-vtk.version>1.0.0</three-d-spheres-vtk.version>
+        <active-contours.version>4.4.11</active-contours.version>
+        <angle-descriptor.version>1.1.1</angle-descriptor.version>
+        <angle-helper.version>1.1.0</angle-helper.version>
+        <animation-3d.version>1.3.1</animation-3d.version>
+        <apache-commons-codec.version>1.1.15</apache-commons-codec.version>
+        <apache-commons-collections.version>4.4</apache-commons-collections.version>
+        <apache-commons-csv.version>1.9.0</apache-commons-csv.version>
+        <apache-commons-lang.version>3.12.0</apache-commons-lang.version>
+        <apache-commons-logging.version>1.2</apache-commons-logging.version>
+        <apache-poi.version>5.0.0</apache-poi.version>
+        <apache-xmlbeans.version>3.6.1</apache-xmlbeans.version>
+        <apeer-sdk.version>1.0.0</apeer-sdk.version>
+        <autocomplete.version>2.5.0</autocomplete.version>
+        <best-threshold.version>1.4.1</best-threshold.version>
+        <big-image-tools.version>2.2.2</big-image-tools.version>
+        <bioflow.version>2.1.1</bioflow.version>
+        <blocks.version>5.3.0</blocks.version>
+        <blockvars.version>0.1.2</blockvars.version>
+        <bridj.version>0.7.0</bridj.version>
+        <bunwrap.version>1.2.1</bunwrap.version>
+        <channel-montage.version>2.5.1</channel-montage.version>
+        <clipper.version>6.4.2</clipper.version>
+        <clojure.version>1.3.0</clojure.version>
+        <color-bar.version>1.0.2</color-bar.version>
+        <color-picker-threshold.version>1.2.2</color-picker-threshold.version>
+        <color-track-processor.version>1.1.1</color-track-processor.version>
+        <connected-components.version>4.8.7</connected-components.version>
+        <convexify.version>2.0.5</convexify.version>
+        <detection-to-roi.version>1.0.1</detection-to-roi.version>
+        <distance-profiler.version>1.0.0</distance-profiler.version>
+        <distance-transforms.version>3.0.0</distance-transforms.version>
+        <docker4icy.version>3.2.7</docker4icy.version>
+        <ehcache.version>2.10.9.2</ehcache.version>
+        <ehcache3.version>3.10.0</ehcache3.version>
+        <ejml.version>0.40.0</ejml.version>
+        <fill-holes-in-roi.version>1.3.1</fill-holes-in-roi.version>
+        <filter-toolbox.version>4.3.1</filter-toolbox.version>
+        <flanagan.version>1.1.1</flanagan.version>
+        <flying-camera.version>1.6.0</flying-camera.version>
+        <global-visible-persistence.version>1.0.0</global-visible-persistence.version>
+        <gluegen-rt.version>2.4.0-rc-20210111</gluegen-rt.version>
+        <google-flatbuffers.version>1.12.0</google-flatbuffers.version>
+        <google-gson.version>2.9.0</google-gson.version>
+        <gson.version>2.8.6</gson.version>
+        <hk-means.version>2.9.2</hk-means.version>
+        <icy-bioformats.version>6.9.1</icy-bioformats.version>
+        <icy-insubstantial.version>7.3.10</icy-insubstantial.version>
+        <icy-random-roi-coloring.version>1.0.0</icy-random-roi-coloring.version>
+        <icy-vtk.version>8.0.1</icy-vtk.version>
+        <ij.version>1.53r</ij.version>
+        <image-to-workbook.version>2.5.3</image-to-workbook.version>
+        <intensity-projection.version>1.8.1</intensity-projection.version>
+        <invert.version>2.0.3</invert.version>
+        <isotropic-wavelet-transform.version>1.1.0</isotropic-wavelet-transform.version>
+        <jai-core.version>1.1.3</jai-core.version>
+        <jai-codec.version>${jai-core.version}</jai-codec.version>
+        <jama.version>1.0.2</jama.version>
+        <java3d.version>1.6.0</java3d.version>
+        <javacl.version>1.0.6</javacl.version>
+        <javacpp.version>1.5.7</javacpp.version>
+        <javadocparser.version>1.0.1</javadocparser.version>
+        <jfree-common.version>1.0.24</jfree-common.version>
+        <jfreechart.version>1.5.3</jfreechart.version>
+        <jmf.version>2.1.1</jmf.version>
+        <jna.version>5.11.0</jna.version>
+        <joal.version>2.3.2</joal.version>
+        <jocl.version>5.5.2</jocl.version>
+        <jogl.version>${gluegen-rt.version}</jogl.version>
+        <javassist.version>3.29.0-GA</javassist.version>
+        <jxl.version>2.6.12</jxl.version>
+        <jython.version>2.8.0</jython.version>
+        <jython-execnet.version>5.5.2</jython-execnet.version>
+        <kinect-driver.version>1.0.0</kinect-driver.version>
+        <kmeans-color-quantization.version>1.2.1</kmeans-color-quantization.version>
+        <kymograph-tracker.version>1.1.0</kymograph-tracker.version>
+        <label-extractor.version>1.5.1</label-extractor.version>
+        <linear-programming.version>1.0.2</linear-programming.version>
+        <magnifier.version>3.1.3</magnifier.version>
+        <mask-editor.version>1.2.1</mask-editor.version>
+        <math-operations.version>2.0.5</math-operations.version>
+        <math-operations-pp.version>2.1.0</math-operations-pp.version>
+        <matlab-communicator.version>1.0.5</matlab-communicator.version>
+        <matlab-exporter.version>2.5.1</matlab-exporter.version>
+        <matlab-function-caller.version>1.0.0</matlab-function-caller.version>
+        <matlab-importer.version>2.5.1</matlab-importer.version>
+        <matlab-io.version>2.5.2</matlab-io.version>
+        <matlab-x-server.version>3.2.0</matlab-x-server.version>
+        <mcib3d-core.version>3.96.0</mcib3d-core.version>
+        <median-filter.version>2.0.0</median-filter.version>
+        <mice-profile-tracker.version>7.1.4</mice-profile-tracker.version>
+        <micromanager.version>1.9.5</micromanager.version>
+        <micromanager-block.version>1.0.4</micromanager-block.version>
+        <microscope-remote.version>2.3.1</microscope-remote.version>
+        <morphomaths.version>5.0.0</morphomaths.version>
+        <motion-profiler.version>4.2.0</motion-profiler.version>
+        <msd-track-processor.version>1.1.2</msd-track-processor.version>
+        <msgpack-core.version>0.9.1</msgpack-core.version>
+        <nd4j.version>1.0.0</nd4j.version>
+        <nherve-image-analysis-toolbox.version>1.2.1</nherve-image-analysis-toolbox.version>
+        <nherve-matrix.version>1.1</nherve-matrix.version>
+        <nherve-toolbox.version>1.3.2</nherve-toolbox.version>
+        <opencv.version>4.5.1-2</opencv.version>
+        <orthoviewer.version>2.0.8</orthoviewer.version>
+        <oshi-core-jdk6.version>3.4.2</oshi-core-jdk6.version>
+        <parallel-colt.version>5.5.2</parallel-colt.version>
+        <particle-animation.version>1.2.1</particle-animation.version>
+        <path-intensity-profiler.version>1.2.2</path-intensity-profiler.version>
+        <projection.version>1.1.0</projection.version>
+        <protractor.version>1.1.0</protractor.version>
+        <python-extractor.version>2.0.0</python-extractor.version>
+        <quickhull.version>1.0.2</quickhull.version>
+        <rescale.version>1.0.0</rescale.version>
+        <rhino.version>1.7.6</rhino.version>
+        <rigid-registration.version>1.4.0</rigid-registration.version>
+        <ring-roi.version>2.0.1</ring-roi.version>
+        <roi-blocks.version>1.4.11</roi-blocks.version>
+        <roi-inclusion-analysis.version>1.3.2</roi-inclusion-analysis.version>
+        <roi-intensity-evolution.version>2.1.0</roi-intensity-evolution.version>
+        <roi-pool.version>1.0.5</roi-pool.version>
+        <roi-proximity-analysis.version>1.0.0</roi-proximity-analysis.version>
+        <roi-statistics.version>5.11.1</roi-statistics.version>
+        <roi-tagger.version>1.0.2</roi-tagger.version>
+        <roi-to-detection.version>1.0.3</roi-to-detection.version>
+        <roi-to-distance-map.version>3.0.0</roi-to-distance-map.version>
+        <roi-tooltip.version>1.1.4</roi-tooltip.version>
+        <rsyntaxtextarea.version>2.5.1</rsyntaxtextarea.version>
+        <ruler-helper.version>1.2.1</ruler-helper.version>
+        <scale-bar.version>3.2.0</scale-bar.version>
+        <script-editor.version>1.17.0</script-editor.version>
+        <sequence-blocks.version>2.1.0</sequence-blocks.version>
+        <slic.version>1.0.1</slic.version>
+        <snake-yaml.version>1.27.0</snake-yaml.version>
+        <soda-suite.version>1.1.0</soda-suite.version>
+        <spot-detection-utilities.version>1.1.6</spot-detection-utilities.version>
+        <spot-detector.version>1.9.2</spot-detector.version>
+        <spot-detector-block.version>1.0.0</spot-detector-block.version>
+        <spot-tracking.version>3.5.2</spot-tracking.version>
+        <spot-tracking-blocks.version>1.2.2</spot-tracking-blocks.version>
+        <stack-rotation.version>1.2.1</stack-rotation.version>
+        <stereo-3d-vtk-canvas.version>1.0.2</stereo-3d-vtk-canvas.version>
+        <swingx-all.version>1.6.5-1</swingx-all.version>
+        <tensor-flow-manager.version>1.0.0</tensor-flow-manager.version>
+        <texture-segmentation.version>1.2.1</texture-segmentation.version>
+        <thresholder.version>3.5.2</thresholder.version>
+        <timestamp-overlay.version>1.0.6</timestamp-overlay.version>
+        <track-manager.version>1.5.0</track-manager.version>
+        <track-painter.version>2.2.1</track-painter.version>
+        <track-processor-excel-export.version>1.2.1</track-processor-excel-export.version>
+        <track-processor-instant-speed.version>1.1.2</track-processor-instant-speed.version>
+        <track-processor-instensity-profile.version>1.0.0</track-processor-instensity-profile.version>
+        <track-instensity-profile-lagache.version>1.0.1</track-instensity-profile-lagache.version>
+        <track-processor-time-clip.version>1.0.1</track-processor-time-clip.version>
+        <tracking-benchmark-generator.version>1.1.1</tracking-benchmark-generator.version>
+        <vecmath.version>1.6.1</vecmath.version>
+        <video-importer.version>1.1.3</video-importer.version>
+        <video-recorder.version>1.2.2</video-recorder.version>
+        <voronoi.version>1.0.0</voronoi.version>
+        <water-shed-3d.version>1.1.1</water-shed-3d.version>
+        <webcam-capture-example.version>1.0.4</webcam-capture-example.version>
+        <webcam-capture-library.version>1.0.0</webcam-capture-library.version>
+        <well-plate-reader.version>3.0.3</well-plate-reader.version>
+        <workbooks.version>3.4.12</workbooks.version>
+        <workspace-editor.version>1.3.2</workspace-editor.version>
+        <xuggler.version>5.5.3</xuggler.version>
     </properties>
 
     <!-- POM profiles -->
     <profiles>
         <profile>
-            <id>compile-project</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+            <id>icy-kernel-config</id>
+
+            <build>
+                <defaultGoal>clean package</defaultGoal>
+
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>1.8</source>
+                            <target>1.8</target>
+                            <excludes>
+                                <exclude>icy/updater/*.java</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <version>3.0.0</version>
+                        <executions>
+                            <execution>
+                                <id>add-resource</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>add-resource</goal>
+                                </goals>
+                                <configuration>
+                                    <resources>
+                                        <resource>
+                                            <directory>ext</directory>
+                                            <targetPath>${outputDirectory}/icy</targetPath>
+                                        </resource>
+                                        <resource>
+                                            <directory>.</directory>
+                                            <targetPath>${outputDirectory}/icy</targetPath>
+                                            <include>CHANGELOG</include>
+                                            <include>LICENSE</include>
+                                            <include>README.md</include>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>copy-dependencies</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <excludeGroupIds>sun.jdt,jdk.tools,net.imagej</excludeGroupIds>
+                                    <outputDirectory>${outputDirectory}/icy/lib</outputDirectory>
+                                    <stripVersion>${stripVersion}</stripVersion>
+                                    <overWriteIfNewer>true</overWriteIfNewer>
+                                    <excludeTransitive>true</excludeTransitive>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>copy-dependencies-ij</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <includeArtifactIds>ij</includeArtifactIds>
+                                    <outputDirectory>${outputDirectory}/icy/ij</outputDirectory>
+                                    <stripVersion>${stripVersion}</stripVersion>
+                                    <overWriteIfNewer>true</overWriteIfNewer>
+                                    <excludeTransitive>true</excludeTransitive>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>copy-icy-jar</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy</goal>
+                                </goals>
+                                <configuration>
+                                    <artifactItems>
+                                        <artifactItem>
+                                            <groupId>${project.groupId}</groupId>
+                                            <artifactId>${project.artifactId}</artifactId>
+                                            <version>${project.version}</version>
+                                            <type>${project.packaging}</type>
+                                            <outputDirectory>${outputDirectory}/icy</outputDirectory>
+                                            <destFileName>icy.jar</destFileName>
+                                        </artifactItem>
+                                    </artifactItems>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <excludes>
+                                <exclude>doc/doc-files</exclude>
+                            </excludes>
+                            <archive>
+                                <manifest>
+                                    <classpathLayoutType>custom</classpathLayoutType>
+                                    <!--suppress UnresolvedMavenProperty -->
+                                    <customClasspathLayout>$${artifact.artifactId}.$${artifact.extension}</customClasspathLayout>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>lib/</classpathPrefix>
+                                    <mainClass>icy.main.Icy</mainClass>
+                                </manifest>
+                                <manifestEntries>
+                                    <Class-Path>ij/ij.jar</Class-Path>
+                                </manifestEntries>
+                                <addMavenDescriptor>false</addMavenDescriptor>
+                            </archive>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <configuration>
+                            <overview>${basedir}/src/main/javadoc/overview.html</overview>
+                            <stylesheetfile>${basedir}/src/main/javadoc/java7doc.css</stylesheetfile>
+                            <!-- disable javadoc errors for substance library (too many, and we don't care really) -->
+                            <additionalOptions>
+                                <additionalOption>-Xdoclint:none</additionalOption>
+                            </additionalOptions>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <dependencies>
+                <dependency>
+                    <groupId>net.sf.ehcache</groupId>
+                    <artifactId>ehcache</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-bioformats</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-insubstantial</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-jep</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-vtk</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>net.imagej</groupId>
+                    <artifactId>ij</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>javax.media</groupId>
+                    <artifactId>jai-core</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>com.sun.media</groupId>
+                    <artifactId>jai-codec</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-linux-amd64</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-linux-i586</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-macosx-universal</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-windows-amd64</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-windows-i586</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-linux-amd64</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-linux-i586</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-macosx-universal</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-windows-amd64</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-windows-i586</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.javassist</groupId>
+                    <artifactId>javassist</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>net.sourceforge.jexcelapi</groupId>
+                    <artifactId>jxl</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.swinglabs.swingx</groupId>
+                    <artifactId>swingx-all</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>icy-kernel-deploy</id>
+
+            <build>
+                <defaultGoal>clean deploy</defaultGoal>
+            </build>
+
+            <!-- Icy Maven repositories for deployment -->
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>icy-dev</id>
+                    <name>Icy Dev's Nexus</name>
+                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-core/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>icy-prod</id>
+                    <name>Icy's Nexus</name>
+                    <url>https://icy-nexus.pasteur.fr/repository/icy-core/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>icy-plugin</id>
+
+            <build>
+                <defaultGoal>clean package</defaultGoal>
+
+                <!-- Required Maven plugins -->
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <!-- List of main dependencies and plugins -->
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.bioimageanalysis.icy</groupId>
+                        <artifactId>icy-kernel</artifactId>
+                        <version>${icy-kernel.version}</version>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+
+            <!-- Required dependencies and plugins -->
+            <dependencies>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-kernel</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>ezplug</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>protocols</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>icy-plugin-extract-library</id>
+
+            <build>
+                <defaultGoal>clean package</defaultGoal>
+
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <!-- List of main dependencies and plugins -->
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.bioimageanalysis.icy</groupId>
+                        <artifactId>icy-kernel</artifactId>
+                        <version>${icy-kernel.version}</version>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+
+            <!-- Required dependencies and plugins -->
+            <dependencies>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-kernel</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>ezplug</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>protocols</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>icy-plugin-deploy-nexus-dev</id>
+
             <!-- Properties for this profile -->
             <build>
-                <defaultGoal>clean install</defaultGoal>
+                <defaultGoal>clean deploy</defaultGoal>
             </build>
+            <!-- Repository link for deployment -->
+            <!-- If you want to upload on Pasteur's Nexus, send a mail to get an account to get the rights -->
+            <!-- FOR PASTEUR EMPLOYEES ONLY -->
+            <!-- FOR DEVELOPMENT AND TEST PURPOSES ONLY -->
+            <distributionManagement>
+                <repository>
+                    <id>icy-dev</id>
+                    <name>Icy's Nexus</name>
+                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-plugins/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>icy-dev</id>
+                    <name>Icy Dev's Nexus</name>
+                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-plugins/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>icy-plugin-deploy-nexus-prod</id>
+            <!-- Properties for this profile -->
+            <build>
+                <defaultGoal>clean deploy</defaultGoal>
+            </build>
+            <!-- Repository link for deployment -->
+            <!-- If you want to upload on Pasteur's Nexus, send a mail to get an account to get the rights -->
+            <!-- FOR STABLE RELEASES ONLY -->
+            <distributionManagement>
+                <repository>
+                    <id>icy-prod</id>
+                    <name>Icy's Nexus</name>
+                    <url>https://icy-nexus.pasteur.fr/repository/icy-plugins/</url>
+                </repository>
+            </distributionManagement>
         </profile>
     </profiles>
 
@@ -137,73 +736,21 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>${maven-resources-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>${maven-dependency-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>${maven-jar-plugin.version}</version>
-                    <configuration>
-                        <outputDirectory>${outputJar}</outputDirectory>
-                        <archive>
-                            <addMavenDescriptor>${maven-jar-plugin.includeMavenDescriptor}</addMavenDescriptor>
-                        </archive>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>${maven-source-plugin.version}</version>
-                    <configuration>
-                        <outputDirectory>${outputJar}</outputDirectory>
-                        <includePom>${maven-source-plugin.includePom}</includePom>
-                    </configuration>
                     <executions>
                         <execution>
-                            <id>attach-sources</id>
+                            <id>${project.artifactId}-fetch</id>
+                            <phase>generate-sources</phase>
                             <goals>
-                                <goal>jar-no-fork</goal>
+                                <goal>unpack-dependencies</goal>
                             </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${maven-javadoc-plugin.version}</version>
-                    <configuration>
-                        <outputDirectory>${outputJar}</outputDirectory>
-                        <!-- disable javadoc errors -->
-                        <!-- <additionalOptions> -->
-                        <!-- <additionalOption>-Xdoclint:none</additionalOption> -->
-                        <!-- </additionalOptions> -->
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>attach-javadoc</id>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-help-plugin</artifactId>
-                    <version>${maven-help-plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>show-current-profile</id>
-                            <phase>compile</phase>
-                            <goals>
-                                <goal>active-profiles</goal>
-                            </goals>
+                            <configuration>
+                                <includeArtifactIds>commons-csv</includeArtifactIds>
+                                <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                                <stripVersion>true</stripVersion>
+                                <excludeTransitive>true</excludeTransitive>
+                            </configuration>
                         </execution>
                     </executions>
                 </plugin>
@@ -229,66 +776,1048 @@
                     <configuration>
                         <rules>
                             <!-- Check if there is duplicate classes -->
-                            <!--<banDuplicateClasses> <message>No Duplicate 
-                                Classes Allowed! - For duplicate transitive dependencies, add dependency 
-                                exclusions. - For duplications between direct dependencies, resolve or add 
-                                ignored classes to this rule's configuration.</message> <ignoreClasses> <ignoreClass>org.pushingpixels.*</ignoreClass> 
-                                <ignoreClass>org.jdesktop.*</ignoreClass> <ignoreClass>org.slf4j.*</ignoreClass> 
+                            <!--<banDuplicateClasses> <message>No Duplicate
+                                Classes Allowed! - For duplicate transitive dependencies, add dependency
+                                exclusions. - For duplications between direct dependencies, resolve or add
+                                ignored classes to this rule's configuration.</message> <ignoreClasses> <ignoreClass>org.pushingpixels.*</ignoreClass>
+                                <ignoreClass>org.jdesktop.*</ignoreClass> <ignoreClass>org.slf4j.*</ignoreClass>
                                 </ignoreClasses> <findAllDuplicates>true</findAllDuplicates> </banDuplicateClasses> -->
 
                             <!-- Prevent circular dependencies -->
                             <!--<banCircularDependencies/> -->
 
-                            <!-- Prevent usage of snapshots dependencies 
+                            <!-- Prevent usage of snapshots dependencies
                                 in the project -->
                             <requireReleaseDeps>
-                                <message>Your dependency cannot be a
-                                    snapshot</message>
+                                <message>Your dependency cannot be a snapshot</message>
                             </requireReleaseDeps>
                         </rules>
                         <fail>true</fail>
                     </configuration>
                 </plugin>
-
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-help-plugin</artifactId>
+                    <version>${maven-help-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>show-current-profile</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>active-profiles</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                    <configuration>
+                        <outputDirectory>${outputDirectory}</outputDirectory>
+                        <archive>
+                            <addMavenDescriptor>${maven-jar-plugin.includeMavenDescriptor}</addMavenDescriptor>
+                        </archive>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                    <configuration>
+                        <outputDirectory>${outputDirectory}</outputDirectory>
+                        <includePom>${maven-source-plugin.includePom}</includePom>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                    <configuration>
+                        <outputDirectory>${outputDirectory}</outputDirectory>
+                        <!-- disable javadoc errors -->
+                        <!-- <additionalOptions> -->
+                        <!-- <additionalOption>-Xdoclint:none</additionalOption> -->
+                        <!-- </additionalOptions> -->
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-javadoc</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven-resources-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${maven-release-plugin.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
-
-        <!-- Required Maven plugins -->
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-            </plugin>
-        </plugins>
     </build>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>3d-active-meshes</artifactId>
+                <version>${three-d-active-meshes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>3d-mesh-roi</artifactId>
+                <version>${three-d-mesh-roi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>3d-rotation</artifactId>
+                <version>${three-d-rotation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>3d-spheres-vtk</artifactId>
+                <version>${three-d-spheres-vtk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>active-contours</artifactId>
+                <version>${active-contours.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>angle-descriptor</artifactId>
+                <version>${angle-descriptor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>angle-helper</artifactId>
+                <version>${angle-helper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>animation-3d</artifactId>
+                <version>${animation-3d.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>apache-commons-codec</artifactId>
+                <version>${apache-commons-codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>apache-commons-collections</artifactId>
+                <version>${apache-commons-collections.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>apache-commons-csv</artifactId>
+                <version>${apache-commons-csv.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>apache-commons-lang</artifactId>
+                <version>${apache-commons-lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>apache-commons-logging</artifactId>
+                <version>${apache-commons-logging.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>apache-poi</artifactId>
+                <version>${apache-poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>apache-xmlbeans</artifactId>
+                <version>${apache-xmlbeans.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>apeer-sdk</artifactId>
+                <version>${apeer-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>autocomplete</artifactId>
+                <version>${autocomplete.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>best-threshold</artifactId>
+                <version>${best-threshold.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>big-image-tools</artifactId>
+                <version>${big-image-tools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>bioflow</artifactId>
+                <version>${bioflow.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>blocks</artifactId>
+                <version>${blocks.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>blockvars</artifactId>
+                <version>${blockvars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>bridj</artifactId>
+                <version>${bridj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>bunwarp</artifactId>
+                <version>${bunwrap.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>channel-montage</artifactId>
+                <version>${channel-montage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>clipper</artifactId>
+                <version>${clipper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>clojure</artifactId>
+                <version>${clojure.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>color-bar</artifactId>
+                <version>${color-bar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>color-picker-threshold</artifactId>
+                <version>${color-picker-threshold.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>color-track-processor</artifactId>
+                <version>${color-track-processor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>connected-components</artifactId>
+                <version>${connected-components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>convexify</artifactId>
+                <version>${convexify.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>detection-to-roi</artifactId>
+                <version>${detection-to-roi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>distance-profiler</artifactId>
+                <version>${distance-profiler.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>distance-transforms</artifactId>
+                <version>${distance-transforms.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>docker4icy</artifactId>
+                <version>${docker4icy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${ehcache.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>ehcache3</artifactId>
+                <version>${ehcache3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>ejml-all</artifactId>
+                <version>${ejml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>ezplug</artifactId>
+                <version>${ezplug.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>fill-holes-in-roi</artifactId>
+                <version>${fill-holes-in-roi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>filter-toolbox</artifactId>
+                <version>${filter-toolbox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>flanagan</artifactId>
+                <version>${flanagan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>flying-camera</artifactId>
+                <version>${flying-camera.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>global-visible-persistence</artifactId>
+                <version>${global-visible-persistence.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt</artifactId>
+                <version>${gluegen-rt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt-natives-linux-amd64</artifactId>
+                <version>${gluegen-rt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt-natives-linux-i586</artifactId>
+                <version>${gluegen-rt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt-natives-macosx-universal</artifactId>
+                <version>${gluegen-rt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt-natives-windows-amd64</artifactId>
+                <version>${gluegen-rt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt-natives-windows-i586</artifactId>
+                <version>${gluegen-rt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>google-flatbuffers</artifactId>
+                <version>${google-flatbuffers.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>google-gson</artifactId>
+                <version>${google-gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>hk-means</artifactId>
+                <version>${hk-means.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-bioformats</artifactId>
+                <version>${icy-bioformats.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-insubstantial</artifactId>
+                <version>${icy-insubstantial.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-jep</artifactId>
+                <version>${jep.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-random-roi-coloring</artifactId>
+                <version>${icy-random-roi-coloring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-vtk</artifactId>
+                <version>${icy-vtk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.imagej</groupId>
+                <artifactId>ij</artifactId>
+                <version>${ij.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.sun</groupId>
+                        <artifactId>tools</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>image-to-workbook</artifactId>
+                <version>${image-to-workbook.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>intensity-projection</artifactId>
+                <version>${intensity-projection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>invert</artifactId>
+                <version>${invert.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>isotropic-wavelet-transform</artifactId>
+                <version>${isotropic-wavelet-transform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.media</groupId>
+                <artifactId>jai-core</artifactId>
+                <version>${jai-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.media</groupId>
+                <artifactId>jai-codec</artifactId>
+                <version>${jai-codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>jama</artifactId>
+                <version>${jama.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>java3d</artifactId>
+                <version>${java3d.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>javacl</artifactId>
+                <version>${javacl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>javacpp</artifactId>
+                <version>${javacpp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>javadocparser</artifactId>
+                <version>${javadocparser.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>jfree-common</artifactId>
+                <version>${jfree-common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>jfreechart</artifactId>
+                <version>${jfreechart.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>jmf</artifactId>
+                <version>${jmf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>jna</artifactId>
+                <version>${jna.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>joal</artifactId>
+                <version>${joal.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>jocl</artifactId>
+                <version>${jocl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all</artifactId>
+                <version>${jogl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all-natives-linux-amd64</artifactId>
+                <version>${jogl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all-natives-linux-i586</artifactId>
+                <version>${jogl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all-natives-macosx-universal</artifactId>
+                <version>${jogl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all-natives-windows-amd64</artifactId>
+                <version>${jogl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all-natives-windows-i586</artifactId>
+                <version>${jogl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>jython</artifactId>
+                <version>${jython.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>jython-execnet</artifactId>
+                <version>${jython-execnet.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sourceforge.jexcelapi</groupId>
+                <artifactId>jxl</artifactId>
+                <version>${jxl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>kinect-driver</artifactId>
+                <version>${kinect-driver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>kmeans-color-quantization</artifactId>
+                <version>${kmeans-color-quantization.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>kymograph-tracker</artifactId>
+                <version>${kymograph-tracker.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>label-extractor</artifactId>
+                <version>${label-extractor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>linear-programming</artifactId>
+                <version>${linear-programming.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>magnifier</artifactId>
+                <version>${magnifier.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>mask-editor</artifactId>
+                <version>${mask-editor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>math-operations</artifactId>
+                <version>${math-operations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>math-operations-pp</artifactId>
+                <version>${math-operations-pp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>matlab-communicator</artifactId>
+                <version>${matlab-communicator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>matlab-exporter</artifactId>
+                <version>${matlab-exporter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>matlab-function-caller</artifactId>
+                <version>${matlab-function-caller.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>matlab-importer</artifactId>
+                <version>${matlab-importer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>matlab-io</artifactId>
+                <version>${matlab-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>matlab-x-server</artifactId>
+                <version>${matlab-x-server.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>mcib3d-core</artifactId>
+                <version>${mcib3d-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>median-filter</artifactId>
+                <version>${median-filter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>mice-profiler-tracker</artifactId>
+                <version>${mice-profile-tracker.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>micromanager</artifactId>
+                <version>${micromanager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>micromanager-block</artifactId>
+                <version>${micromanager-block.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>microscope-remote</artifactId>
+                <version>${microscope-remote.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>morphomaths</artifactId>
+                <version>${morphomaths.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>motion-profiler</artifactId>
+                <version>${motion-profiler.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>msd-track-processor</artifactId>
+                <version>${msd-track-processor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>msgpack-core</artifactId>
+                <version>${msgpack-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>nd4j</artifactId>
+                <version>${nd4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>nherve-image-analysis-toolbox</artifactId>
+                <version>${nherve-image-analysis-toolbox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>nherve-matrix</artifactId>
+                <version>${nherve-matrix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>nherve-toolbox</artifactId>
+                <version>${nherve-toolbox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>opencv</artifactId>
+                <version>${opencv.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>orthoviewer</artifactId>
+                <version>${orthoviewer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>oshi-core-jdk6</artifactId>
+                <version>${oshi-core-jdk6.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>parallel-colt</artifactId>
+                <version>${parallel-colt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>particle-animation</artifactId>
+                <version>${particle-animation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>path-intensity-profiler</artifactId>
+                <version>${path-intensity-profiler.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>projection</artifactId>
+                <version>${projection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>protocols</artifactId>
+                <version>${protocols.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>protractor</artifactId>
+                <version>${protractor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>python-extractor</artifactId>
+                <version>${python-extractor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>quickhull</artifactId>
+                <version>${quickhull.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>rescale-roi</artifactId>
+                <version>${rescale.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>rhino</artifactId>
+                <version>${rhino.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>rigid-registration</artifactId>
+                <version>${rigid-registration.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>ring-roi</artifactId>
+                <version>${ring-roi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimagenalysis.icy</groupId>
+                <artifactId>roi-blocks</artifactId>
+                <version>${roi-blocks.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>roi-inclusion-analysis</artifactId>
+                <version>${roi-inclusion-analysis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>roi-itensify-evolution</artifactId>
+                <version>${roi-itensify-evolution.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimagenalaysis.icy</groupId>
+                <artifactId>roi-pool</artifactId>
+                <version>${roi-pool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>roi-proximity-analysis</artifactId>
+                <version>${roi-proximity-analysis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>roi-statistics</artifactId>
+                <version>${roi-statistics.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>roi-tagger</artifactId>
+                <version>${roi-tagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>roi-to-detection</artifactId>
+                <version>${roi-to-detection.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>roi-to-distance-map</artifactId>
+                <version>${roi-to-distance-map.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>roi-tooltip</artifactId>
+                <version>${roi-tooltip.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>rsyntaxtextarea</artifactId>
+                <version>${rsyntaxtextarea.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>ruler-helper</artifactId>
+                <version>${ruler-helper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>scale-bar</artifactId>
+                <version>${scale-bar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>script-editor</artifactId>
+                <version>${script-editor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>sequence-blocks</artifactId>
+                <version>${sequence-blocks.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>slic</artifactId>
+                <version>${slic.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>snake-yaml</artifactId>
+                <version>${snake-yaml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>soda-suite</artifactId>
+                <version>${soda-suite.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>spot-detection-utilities</artifactId>
+                <version>${spot-detection-utilities.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>spot-detector</artifactId>
+                <version>${spot-detector.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>spot-detector-block</artifactId>
+                <version>${spot-detector-block.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimagesanalysis.icy</groupId>
+                <artifactId>spot-tracking</artifactId>
+                <version>${spot-tracking.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>spot-tracking-blocks</artifactId>
+                <version>${spot-tracking-blocks.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>stack-rotation</artifactId>
+                <version>${stack-rotation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>stereo-3d-vtk-canvas</artifactId>
+                <version>${stereo-3d-vtk-canvas.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.swinglabs.swingx</groupId>
+                <artifactId>swingx-all</artifactId>
+                <version>${swingx-all.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>tensor-flow-manager</artifactId>
+                <version>${tensor-flow-manager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>texture-segmentation</artifactId>
+                <version>${texture-segmentation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>thresholder</artifactId>
+                <version>${thresholder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>timestamp-overlay</artifactId>
+                <version>${timestamp-overlay.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>track-manager</artifactId>
+                <version>${track-manager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>track-painter</artifactId>
+                <version>${track-painter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>track-processor-excel-export</artifactId>
+                <version>${track-processor-excel-export.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>track-processor-instant-speed</artifactId>
+                <version>${track-processor-instant-speed.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>track-processor-intensity-profile</artifactId>
+                <version>${track-instensity-profile.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>track-processor-intensity-profile-lagache</artifactId>
+                <version>${track-instensity-profile-lagache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>track-processor-time-clip</artifactId>
+                <version>${track-processor-time-clip.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>tracking-benchmark-generator</artifactId>
+                <version>${tracking-benchmark-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.biomimagenalysis.icy</groupId>
+                <artifactId>vecmath</artifactId>
+                <version>${vecmath.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>video-importer</artifactId>
+                <version>${video-importer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>video-recorder</artifactId>
+                <version>${video-recorder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>voronoi</artifactId>
+                <version>${voronoi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>water-shed-3d</artifactId>
+                <version>${water-shed-3d.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>webcam-capture-example</artifactId>
+                <version>${webcam-capture-example.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>webcam-capture-library</artifactId>
+                <version>${webcam-capture-library.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>well-plate-reader</artifactId>
+                <version>${well-plate-reader.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>workbooks</artifactId>
+                <version>${workbooks.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>workspace-editor</artifactId>
+                <version>${workspace-editor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>xuggler</artifactId>
+                <version>${xuggler.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.bioimageanalysis.icy</groupId>
+            <artifactId>icy-jep</artifactId>
+        </dependency>
+    </dependencies>
+
     <!-- Link to third-party Maven repositories -->
-    <repositories></repositories>
-
-    <!-- Icy Maven repositories for POM deployment -->
-    <distributionManagement>
-        <snapshotRepository>
-            <id>icy-dev</id>
-            <name>Icy Dev's Nexus</name>
-            <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-core/</url>
-        </snapshotRepository>
+    <repositories>
         <repository>
-            <id>icy-prod</id>
+            <id>icy</id>
             <name>Icy's Nexus</name>
-            <url>https://icy-nexus.pasteur.fr/repository/icy-core/</url>
+            <url>https://icy-nexus.pasteur.fr/repository/Icy/</url>
         </repository>
-    </distributionManagement>
-
+    </repositories>
 </project>
