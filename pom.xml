@@ -104,6 +104,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!-- Maven Plugins version -->
+        <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.3.0</maven-dependency-plugin.version>
         <maven-enforcer-plugin.version>3.1.0</maven-enforcer-plugin.version>
@@ -120,7 +121,7 @@
 
         <!-- Maven build configuration -->
         <outputDirectory>${project.build.directory}</outputDirectory>
-
+        <artifact-to-include/>
         <stripVersion>true</stripVersion>
 
         <overWriteIfNewer>true</overWriteIfNewer>
@@ -285,6 +286,7 @@
         <thresholder.version>3.5.2</thresholder.version>
         <timestamp-overlay.version>1.0.6</timestamp-overlay.version>
         <track-manager.version>1.5.0</track-manager.version>
+        <track-overlay.version>1.5.0</track-overlay.version>
         <track-painter.version>2.2.1</track-painter.version>
         <track-processor-excel-export.version>1.2.1</track-processor-excel-export.version>
         <track-processor-instant-speed.version>1.1.2</track-processor-instant-speed.version>
@@ -304,572 +306,6 @@
         <workspace-editor.version>1.3.2</workspace-editor.version>
         <xuggler.version>5.5.3</xuggler.version>
     </properties>
-
-    <!-- POM profiles -->
-    <profiles>
-        <profile>
-            <id>icy-kernel-config</id>
-
-            <build>
-                <defaultGoal>clean package</defaultGoal>
-
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <configuration>
-                            <source>1.8</source>
-                            <target>1.8</target>
-                            <excludes>
-                                <exclude>icy/updater/*.java</exclude>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>build-helper-maven-plugin</artifactId>
-                        <version>3.0.0</version>
-                        <executions>
-                            <execution>
-                                <id>add-resource</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>add-resource</goal>
-                                </goals>
-                                <configuration>
-                                    <resources>
-                                        <resource>
-                                            <directory>ext</directory>
-                                            <targetPath>${outputDirectory}/icy</targetPath>
-                                        </resource>
-                                        <resource>
-                                            <directory>.</directory>
-                                            <targetPath>${outputDirectory}/icy</targetPath>
-                                            <include>CHANGELOG</include>
-                                            <include>LICENSE</include>
-                                            <include>README.md</include>
-                                        </resource>
-                                    </resources>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>copy-dependencies</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>copy-dependencies</goal>
-                                </goals>
-                                <configuration>
-                                    <excludeGroupIds>sun.jdt,jdk.tools,net.imagej</excludeGroupIds>
-                                    <outputDirectory>${outputDirectory}/icy/lib</outputDirectory>
-                                    <stripVersion>${stripVersion}</stripVersion>
-                                    <overWriteIfNewer>true</overWriteIfNewer>
-                                    <excludeTransitive>true</excludeTransitive>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>copy-dependencies-ij</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>copy-dependencies</goal>
-                                </goals>
-                                <configuration>
-                                    <includeArtifactIds>ij</includeArtifactIds>
-                                    <outputDirectory>${outputDirectory}/icy/ij</outputDirectory>
-                                    <stripVersion>${stripVersion}</stripVersion>
-                                    <overWriteIfNewer>true</overWriteIfNewer>
-                                    <excludeTransitive>true</excludeTransitive>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>copy-icy-jar</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>copy</goal>
-                                </goals>
-                                <configuration>
-                                    <artifactItems>
-                                        <artifactItem>
-                                            <groupId>${project.groupId}</groupId>
-                                            <artifactId>${project.artifactId}</artifactId>
-                                            <version>${project.version}</version>
-                                            <type>${project.packaging}</type>
-                                            <outputDirectory>${outputDirectory}/icy</outputDirectory>
-                                            <destFileName>icy.jar</destFileName>
-                                        </artifactItem>
-                                    </artifactItems>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
-                        <configuration>
-                            <excludes>
-                                <exclude>doc/doc-files</exclude>
-                            </excludes>
-                            <archive>
-                                <manifest>
-                                    <classpathLayoutType>custom</classpathLayoutType>
-                                    <!--suppress UnresolvedMavenProperty -->
-                                    <customClasspathLayout>$${artifact.artifactId}.$${artifact.extension}</customClasspathLayout>
-                                    <addClasspath>true</addClasspath>
-                                    <classpathPrefix>lib/</classpathPrefix>
-                                    <mainClass>icy.main.Icy</mainClass>
-                                </manifest>
-                                <manifestEntries>
-                                    <Class-Path>ij/ij.jar</Class-Path>
-                                </manifestEntries>
-                                <addMavenDescriptor>false</addMavenDescriptor>
-                            </archive>
-                        </configuration>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <configuration>
-                            <overview>${basedir}/src/main/javadoc/overview.html</overview>
-                            <stylesheetfile>${basedir}/src/main/javadoc/java7doc.css</stylesheetfile>
-                            <!-- disable javadoc errors for substance library (too many, and we don't care really) -->
-                            <additionalOptions>
-                                <additionalOption>-Xdoclint:none</additionalOption>
-                            </additionalOptions>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-
-            <dependencies>
-                <dependency>
-                    <groupId>net.sf.ehcache</groupId>
-                    <artifactId>ehcache</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>icy-bioformats</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>icy-insubstantial</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>icy-jep</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>icy-vtk</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>net.imagej</groupId>
-                    <artifactId>ij</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>javax.media</groupId>
-                    <artifactId>jai-core</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>com.sun.media</groupId>
-                    <artifactId>jai-codec</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.jogl</groupId>
-                    <artifactId>jogl-all</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.jogl</groupId>
-                    <artifactId>jogl-all-natives-linux-amd64</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.jogl</groupId>
-                    <artifactId>jogl-all-natives-linux-i586</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.jogl</groupId>
-                    <artifactId>jogl-all-natives-macosx-universal</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.jogl</groupId>
-                    <artifactId>jogl-all-natives-windows-amd64</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.jogl</groupId>
-                    <artifactId>jogl-all-natives-windows-i586</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.gluegen</groupId>
-                    <artifactId>gluegen-rt</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.gluegen</groupId>
-                    <artifactId>gluegen-rt-natives-linux-amd64</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.gluegen</groupId>
-                    <artifactId>gluegen-rt-natives-linux-i586</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.gluegen</groupId>
-                    <artifactId>gluegen-rt-natives-macosx-universal</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.gluegen</groupId>
-                    <artifactId>gluegen-rt-natives-windows-amd64</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.jogamp.gluegen</groupId>
-                    <artifactId>gluegen-rt-natives-windows-i586</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.javassist</groupId>
-                    <artifactId>javassist</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>net.sourceforge.jexcelapi</groupId>
-                    <artifactId>jxl</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.swinglabs.swingx</groupId>
-                    <artifactId>swingx-all</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>icy-kernel-deploy</id>
-
-            <build>
-                <defaultGoal>clean deploy</defaultGoal>
-            </build>
-
-            <!-- Icy Maven repositories for deployment -->
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>icy-dev</id>
-                    <name>Icy Dev's Nexus</name>
-                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-core/</url>
-                </snapshotRepository>
-                <repository>
-                    <id>icy-prod</id>
-                    <name>Icy's Nexus</name>
-                    <url>https://icy-nexus.pasteur.fr/repository/icy-core/</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-
-        <profile>
-            <id>icy-plugin</id>
-
-            <build>
-                <defaultGoal>clean package</defaultGoal>
-
-                <!-- Required Maven plugins -->
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-enforcer-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                    </plugin>
-                </plugins>
-            </build>
-
-            <!-- List of main dependencies and plugins -->
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.bioimageanalysis.icy</groupId>
-                        <artifactId>icy-kernel</artifactId>
-                        <version>${icy-kernel.version}</version>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-
-            <!-- Required dependencies and plugins -->
-            <dependencies>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>icy-kernel</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>ezplug</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>protocols</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>icy-plugin-extract-library</id>
-
-            <build>
-                <defaultGoal>clean package</defaultGoal>
-
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-enforcer-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                    </plugin>
-                </plugins>
-            </build>
-
-            <!-- List of main dependencies and plugins -->
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.bioimageanalysis.icy</groupId>
-                        <artifactId>icy-kernel</artifactId>
-                        <version>${icy-kernel.version}</version>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-
-            <!-- Required dependencies and plugins -->
-            <dependencies>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>icy-kernel</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>ezplug</artifactId>
-                </dependency>
-                <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>protocols</artifactId>
-                </dependency>
-            </dependencies>
-        </profile>
-
-        <profile>
-            <id>icy-plugin-deploy-nexus-dev</id>
-
-            <!-- Properties for this profile -->
-            <build>
-                <defaultGoal>clean deploy</defaultGoal>
-            </build>
-            <!-- Repository link for deployment -->
-            <!-- If you want to upload on Pasteur's Nexus, send a mail to get an account to get the rights -->
-            <!-- FOR PASTEUR EMPLOYEES ONLY -->
-            <!-- FOR DEVELOPMENT AND TEST PURPOSES ONLY -->
-            <distributionManagement>
-                <repository>
-                    <id>icy-dev</id>
-                    <name>Icy's Nexus</name>
-                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-plugins/</url>
-                </repository>
-                <snapshotRepository>
-                    <id>icy-dev</id>
-                    <name>Icy Dev's Nexus</name>
-                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-plugins/</url>
-                </snapshotRepository>
-            </distributionManagement>
-        </profile>
-        <profile>
-            <id>icy-plugin-deploy-nexus-prod</id>
-            <!-- Properties for this profile -->
-            <build>
-                <defaultGoal>clean deploy</defaultGoal>
-            </build>
-            <!-- Repository link for deployment -->
-            <!-- If you want to upload on Pasteur's Nexus, send a mail to get an account to get the rights -->
-            <!-- FOR STABLE RELEASES ONLY -->
-            <distributionManagement>
-                <repository>
-                    <id>icy-prod</id>
-                    <name>Icy's Nexus</name>
-                    <url>https://icy-nexus.pasteur.fr/repository/icy-plugins/</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-    </profiles>
-
-    <build>
-        <finalName>${project.artifactId}-${project.version}</finalName>
-
-        <!-- List of pre-configured Maven plugins -->
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven-compiler-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version>${maven-dependency-plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>${project.artifactId}-fetch</id>
-                            <phase>generate-sources</phase>
-                            <goals>
-                                <goal>unpack-dependencies</goal>
-                            </goals>
-                            <configuration>
-                                <includeArtifactIds>commons-csv</includeArtifactIds>
-                                <outputDirectory>${project.build.outputDirectory}</outputDirectory>
-                                <stripVersion>true</stripVersion>
-                                <excludeTransitive>true</excludeTransitive>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>${maven-enforcer-plugin.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.codehaus.mojo</groupId>
-                            <artifactId>extra-enforcer-rules</artifactId>
-                            <version>1.3</version>
-                        </dependency>
-                    </dependencies>
-                    <executions>
-                        <execution>
-                            <id>enforce-rules</id>
-                            <goals>
-                                <goal>enforce</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <rules>
-                            <!-- Check if there is duplicate classes -->
-                            <!--<banDuplicateClasses> <message>No Duplicate
-                                Classes Allowed! - For duplicate transitive dependencies, add dependency
-                                exclusions. - For duplications between direct dependencies, resolve or add
-                                ignored classes to this rule's configuration.</message> <ignoreClasses> <ignoreClass>org.pushingpixels.*</ignoreClass>
-                                <ignoreClass>org.jdesktop.*</ignoreClass> <ignoreClass>org.slf4j.*</ignoreClass>
-                                </ignoreClasses> <findAllDuplicates>true</findAllDuplicates> </banDuplicateClasses> -->
-
-                            <!-- Prevent circular dependencies -->
-                            <!--<banCircularDependencies/> -->
-
-                            <!-- Prevent usage of snapshots dependencies
-                                in the project -->
-                            <requireReleaseDeps>
-                                <message>Your dependency cannot be a snapshot</message>
-                            </requireReleaseDeps>
-                        </rules>
-                        <fail>true</fail>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-help-plugin</artifactId>
-                    <version>${maven-help-plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>show-current-profile</id>
-                            <phase>compile</phase>
-                            <goals>
-                                <goal>active-profiles</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>${maven-jar-plugin.version}</version>
-                    <configuration>
-                        <outputDirectory>${outputDirectory}</outputDirectory>
-                        <archive>
-                            <addMavenDescriptor>${maven-jar-plugin.includeMavenDescriptor}</addMavenDescriptor>
-                        </archive>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>${maven-source-plugin.version}</version>
-                    <configuration>
-                        <outputDirectory>${outputDirectory}</outputDirectory>
-                        <includePom>${maven-source-plugin.includePom}</includePom>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>attach-sources</id>
-                            <goals>
-                                <goal>jar-no-fork</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${maven-javadoc-plugin.version}</version>
-                    <configuration>
-                        <outputDirectory>${outputDirectory}</outputDirectory>
-                        <!-- disable javadoc errors -->
-                        <!-- <additionalOptions> -->
-                        <!-- <additionalOption>-Xdoclint:none</additionalOption> -->
-                        <!-- </additionalOptions> -->
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>attach-javadoc</id>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>${maven-resources-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>${maven-release-plugin.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 
     <dependencyManagement>
         <dependencies>
@@ -1805,12 +1241,641 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.bioimageanalysis.icy</groupId>
-            <artifactId>icy-jep</artifactId>
-        </dependency>
-    </dependencies>
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+
+        <!-- List of pre-configured Maven plugins -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${maven-dependency-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>${maven-enforcer-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-help-plugin</artifactId>
+                    <version>${maven-help-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${maven-source-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven-resources-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>${maven-release-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <!-- POM profiles -->
+    <profiles>
+        <profile>
+            <id>icy-kernel-config</id>
+
+            <build>
+                <defaultGoal>clean package</defaultGoal>
+
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>1.8</source>
+                            <target>1.8</target>
+                            <excludes>
+                                <exclude>icy/updater/*.java</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <version>${build-helper-maven-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>add-resource</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>add-resource</goal>
+                                </goals>
+                                <configuration>
+                                    <resources>
+                                        <resource>
+                                            <directory>ext</directory>
+                                            <targetPath>${outputDirectory}/icy</targetPath>
+                                        </resource>
+                                        <resource>
+                                            <directory>.</directory>
+                                            <targetPath>${outputDirectory}/icy</targetPath>
+                                            <include>CHANGELOG</include>
+                                            <include>LICENSE</include>
+                                            <include>README.md</include>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>copy-dependencies</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <excludeGroupIds>sun.jdt,jdk.tools,net.imagej</excludeGroupIds>
+                                    <outputDirectory>${outputDirectory}/icy/lib</outputDirectory>
+                                    <stripVersion>${stripVersion}</stripVersion>
+                                    <overWriteIfNewer>true</overWriteIfNewer>
+                                    <excludeTransitive>true</excludeTransitive>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>copy-dependencies-ij</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <includeArtifactIds>ij</includeArtifactIds>
+                                    <outputDirectory>${outputDirectory}/icy/ij</outputDirectory>
+                                    <stripVersion>${stripVersion}</stripVersion>
+                                    <overWriteIfNewer>true</overWriteIfNewer>
+                                    <excludeTransitive>true</excludeTransitive>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>copy-icy-jar</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy</goal>
+                                </goals>
+                                <configuration>
+                                    <artifactItems>
+                                        <artifactItem>
+                                            <groupId>${project.groupId}</groupId>
+                                            <artifactId>${project.artifactId}</artifactId>
+                                            <version>${project.version}</version>
+                                            <type>${project.packaging}</type>
+                                            <outputDirectory>${outputDirectory}/icy</outputDirectory>
+                                            <destFileName>icy.jar</destFileName>
+                                        </artifactItem>
+                                    </artifactItems>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <excludes>
+                                <exclude>doc/doc-files</exclude>
+                            </excludes>
+                            <archive>
+                                <manifest>
+                                    <classpathLayoutType>custom</classpathLayoutType>
+                                    <!--suppress UnresolvedMavenProperty -->
+                                    <customClasspathLayout>$${artifact.artifactId}.$${artifact.extension}</customClasspathLayout>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>lib/</classpathPrefix>
+                                    <mainClass>icy.main.Icy</mainClass>
+                                </manifest>
+                                <manifestEntries>
+                                    <Class-Path>ij/ij.jar</Class-Path>
+                                </manifestEntries>
+                                <addMavenDescriptor>false</addMavenDescriptor>
+                            </archive>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <configuration>
+                            <overview>${basedir}/src/main/javadoc/overview.html</overview>
+                            <stylesheetfile>${basedir}/src/main/javadoc/java7doc.css</stylesheetfile>
+                            <!-- disable javadoc errors for substance library (too many, and we don't care really) -->
+                            <additionalOptions>
+                                <additionalOption>-Xdoclint:none</additionalOption>
+                            </additionalOptions>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <dependencies>
+                <dependency>
+                    <groupId>net.sf.ehcache</groupId>
+                    <artifactId>ehcache</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-bioformats</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-insubstantial</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-jep</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-vtk</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>net.imagej</groupId>
+                    <artifactId>ij</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>javax.media</groupId>
+                    <artifactId>jai-core</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>com.sun.media</groupId>
+                    <artifactId>jai-codec</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-linux-amd64</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-linux-i586</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-macosx-universal</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-windows-amd64</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.jogl</groupId>
+                    <artifactId>jogl-all-natives-windows-i586</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-linux-amd64</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-linux-i586</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-macosx-universal</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-windows-amd64</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jogamp.gluegen</groupId>
+                    <artifactId>gluegen-rt-natives-windows-i586</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.javassist</groupId>
+                    <artifactId>javassist</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>net.sourceforge.jexcelapi</groupId>
+                    <artifactId>jxl</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.swinglabs.swingx</groupId>
+                    <artifactId>swingx-all</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>icy-kernel-deploy</id>
+
+            <build>
+                <defaultGoal>clean deploy</defaultGoal>
+            </build>
+
+            <!-- Icy Maven repositories for deployment -->
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>icy-dev</id>
+                    <name>Icy Dev's Nexus</name>
+                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-core/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>icy-prod</id>
+                    <name>Icy's Nexus</name>
+                    <url>https://icy-nexus.pasteur.fr/repository/icy-core/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>icy-plugin</id>
+
+            <build>
+                <defaultGoal>clean package</defaultGoal>
+
+                <!-- Required Maven plugins -->
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>extra-enforcer-rules</artifactId>
+                                <version>1.3</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>enforce-rules</id>
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <rules>
+                                <!-- Check if there is duplicate classes -->
+                                <!--<banDuplicateClasses> <message>No Duplicate
+                                    Classes Allowed! - For duplicate transitive dependencies, add dependency
+                                    exclusions. - For duplications between direct dependencies, resolve or add
+                                    ignored classes to this rule's configuration.</message> <ignoreClasses> <ignoreClass>org.pushingpixels.*</ignoreClass>
+                                    <ignoreClass>org.jdesktop.*</ignoreClass> <ignoreClass>org.slf4j.*</ignoreClass>
+                                    </ignoreClasses> <findAllDuplicates>true</findAllDuplicates> </banDuplicateClasses> -->
+
+                                <!-- Prevent circular dependencies -->
+                                <!--<banCircularDependencies/> -->
+
+                                <!-- Prevent usage of snapshots dependencies
+                                    in the project -->
+                                <requireReleaseDeps>
+                                    <message>Your dependency cannot be a snapshot</message>
+                                </requireReleaseDeps>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-help-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>show-current-profile</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>active-profiles</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <outputDirectory>${outputDirectory}</outputDirectory>
+                            <archive>
+                                <addMavenDescriptor>${maven-jar-plugin.includeMavenDescriptor}</addMavenDescriptor>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <configuration>
+                            <outputDirectory>${outputDirectory}</outputDirectory>
+                            <includePom>${maven-source-plugin.includePom}</includePom>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <configuration>
+                            <outputDirectory>${outputDirectory}</outputDirectory>
+                            <!-- disable javadoc errors -->
+                            <!-- <additionalOptions> -->
+                            <!-- <additionalOption>-Xdoclint:none</additionalOption> -->
+                            <!-- </additionalOptions> -->
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadoc</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <!-- List of main dependencies and plugins -->
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.bioimageanalysis.icy</groupId>
+                        <artifactId>icy-kernel</artifactId>
+                        <version>${icy-kernel.version}</version>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+
+            <!-- Required dependencies and plugins -->
+            <dependencies>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-kernel</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>icy-plugin-extract-library</id>
+
+            <build>
+                <defaultGoal>clean package</defaultGoal>
+
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>${project.artifactId}-fetch</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>unpack-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <includeArtifactIds>${artifact-to-include}</includeArtifactIds>
+                                    <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                                    <stripVersion>true</stripVersion>
+                                    <excludeTransitive>true</excludeTransitive>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>extra-enforcer-rules</artifactId>
+                                <version>1.3</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <id>enforce-rules</id>
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <rules>
+                                <!-- Check if there is duplicate classes -->
+                                <!--<banDuplicateClasses> <message>No Duplicate
+                                    Classes Allowed! - For duplicate transitive dependencies, add dependency
+                                    exclusions. - For duplications between direct dependencies, resolve or add
+                                    ignored classes to this rule's configuration.</message> <ignoreClasses> <ignoreClass>org.pushingpixels.*</ignoreClass>
+                                    <ignoreClass>org.jdesktop.*</ignoreClass> <ignoreClass>org.slf4j.*</ignoreClass>
+                                    </ignoreClasses> <findAllDuplicates>true</findAllDuplicates> </banDuplicateClasses> -->
+
+                                <!-- Prevent circular dependencies -->
+                                <!--<banCircularDependencies/> -->
+
+                                <!-- Prevent usage of snapshots dependencies
+                                    in the project -->
+                                <requireReleaseDeps>
+                                    <message>Your dependency cannot be a snapshot</message>
+                                </requireReleaseDeps>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-help-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>show-current-profile</id>
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>active-profiles</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+                            <outputDirectory>${outputDirectory}</outputDirectory>
+                            <archive>
+                                <addMavenDescriptor>${maven-jar-plugin.includeMavenDescriptor}</addMavenDescriptor>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <configuration>
+                            <outputDirectory>${outputDirectory}</outputDirectory>
+                            <includePom>${maven-source-plugin.includePom}</includePom>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <configuration>
+                            <outputDirectory>${outputDirectory}</outputDirectory>
+                            <!-- disable javadoc errors -->
+                            <!-- <additionalOptions> -->
+                            <!-- <additionalOption>-Xdoclint:none</additionalOption> -->
+                            <!-- </additionalOptions> -->
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadoc</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <!-- List of main dependencies and plugins -->
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.bioimageanalysis.icy</groupId>
+                        <artifactId>icy-kernel</artifactId>
+                        <version>${icy-kernel.version}</version>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+
+            <!-- Required dependencies and plugins -->
+            <dependencies>
+                <dependency>
+                    <groupId>org.bioimageanalysis.icy</groupId>
+                    <artifactId>icy-kernel</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>icy-plugin-deploy-nexus-dev</id>
+
+            <!-- Properties for this profile -->
+            <build>
+                <defaultGoal>clean deploy</defaultGoal>
+            </build>
+            <!-- Repository link for deployment -->
+            <!-- If you want to upload on Pasteur's Nexus, send a mail to get an account to get the rights -->
+            <!-- FOR PASTEUR EMPLOYEES ONLY -->
+            <!-- FOR DEVELOPMENT AND TEST PURPOSES ONLY -->
+            <distributionManagement>
+                <repository>
+                    <id>icy-dev</id>
+                    <name>Icy's Nexus</name>
+                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-plugins/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>icy-dev</id>
+                    <name>Icy Dev's Nexus</name>
+                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-plugins/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>icy-plugin-deploy-nexus-prod</id>
+            <!-- Properties for this profile -->
+            <build>
+                <defaultGoal>clean deploy</defaultGoal>
+            </build>
+            <!-- Repository link for deployment -->
+            <!-- If you want to upload on Pasteur's Nexus, send a mail to get an account to get the rights -->
+            <!-- FOR STABLE RELEASES ONLY -->
+            <distributionManagement>
+                <repository>
+                    <id>icy-prod</id>
+                    <name>Icy's Nexus</name>
+                    <url>https://icy-nexus.pasteur.fr/repository/icy-plugins/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 
     <!-- Link to third-party Maven repositories -->
     <repositories>
