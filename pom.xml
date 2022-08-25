@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Connection to SciJava Maven environment -->
-    <!--<parent>
+    <!--
+    <parent>
         <groupId>org.scijava</groupId>
         <artifactId>pom-scijava</artifactId>
         <version>31.1.0</version>
-    </parent>-->
+    </parent>
+    -->
 
     <groupId>org.bioimageanalysis.icy</groupId>
     <artifactId>pom-icy</artifactId>
@@ -121,7 +123,7 @@
 
         <!-- Maven build configuration -->
         <outputDirectory>${project.build.directory}</outputDirectory>
-        <artifact-to-include/>
+        <artifact-to-extract />
         <stripVersion>true</stripVersion>
 
         <overWriteIfNewer>true</overWriteIfNewer>
@@ -141,7 +143,7 @@
         <jogl.version>${gluegen-rt.version}</jogl.version>
         <jxl.version>2.6.12</jxl.version>
         <swingx-all.version>1.6.5-1</swingx-all.version>
-        
+
         <!-- Default Icy kernel version -->
         <icy-kernel.version>2.4.2</icy-kernel.version>
 
@@ -1298,6 +1300,14 @@
                         <outputDirectory>${outputDirectory}</outputDirectory>
                         <includePom>${maven-source-plugin.includePom}</includePom>
                     </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -1310,6 +1320,14 @@
                             <additionalOption>-Xdoclint:none</additionalOption>
                         </additionalOptions>
                     </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-javadoc</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -1327,6 +1345,29 @@
 
     <!-- POM profiles -->
     <profiles>
+
+        <profile>
+            <id>core</id>
+
+            <build>
+                <defaultGoal>clean package</defaultGoal>
+            </build>
+
+            <!-- Repository link for deployment -->
+            <distributionManagement>
+                <repository>
+                    <id>icy-core-prod</id>
+                    <name>Icy's Nexus</name>
+                    <url>https://icy-nexus.pasteur.fr/repository/icy-core/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>icy-core-dev</id>
+                    <name>Icy Dev's Nexus</name>
+                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-core/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+
         <profile>
             <id>plugin</id>
 
@@ -1356,38 +1397,38 @@
                         <configuration>
                             <rules>
                                 <!-- Check if there is duplicate classes -->
-                                <!--<banDuplicateClasses> <message>No Duplicate
-                                    Classes Allowed! - For duplicate transitive dependencies, add dependency
-                                    exclusions. - For duplications between direct dependencies, resolve or add
-                                    ignored classes to this rule's configuration.</message> <ignoreClasses> <ignoreClass>org.pushingpixels.*</ignoreClass>
-                                    <ignoreClass>org.jdesktop.*</ignoreClass> <ignoreClass>org.slf4j.*</ignoreClass>
+                                <!--<banDuplicateClasses> <message>No Duplicate 
+                                    Classes Allowed! - For duplicate transitive dependencies, add dependency 
+                                    exclusions. - For duplications between direct dependencies, resolve or add 
+                                    ignored classes to this rule's configuration.</message> <ignoreClasses> <ignoreClass>org.pushingpixels.*</ignoreClass> 
+                                    <ignoreClass>org.jdesktop.*</ignoreClass> <ignoreClass>org.slf4j.*</ignoreClass> 
                                     </ignoreClasses> <findAllDuplicates>true</findAllDuplicates> </banDuplicateClasses> -->
 
                                 <!-- Prevent circular dependencies -->
                                 <!--<banCircularDependencies/> -->
 
-                                <!-- Prevent usage of snapshots dependencies
-                                    in the project -->
+                                <!-- Prevent usage of snapshots dependencies in the project -->
                                 <requireReleaseDeps>
-                                    <message>Your dependency cannot be a snapshot</message>
+                                    <message>Your dependency cannot be a
+                                        snapshot</message>
                                 </requireReleaseDeps>
                             </rules>
                             <fail>true</fail>
                         </configuration>
                     </plugin>
-<!--                     <plugin> -->
-<!--                         <groupId>org.apache.maven.plugins</groupId> -->
-<!--                         <artifactId>maven-help-plugin</artifactId> -->
-<!--                         <executions> -->
-<!--                             <execution> -->
-<!--                                 <id>show-current-profile</id> -->
-<!--                                 <phase>compile</phase> -->
-<!--                                 <goals> -->
-<!--                                     <goal>active-profiles</goal> -->
-<!--                                 </goals> -->
-<!--                             </execution> -->
-<!--                         </executions> -->
-<!--                     </plugin> -->
+                    <!-- <plugin> -->
+                    <!-- <groupId>org.apache.maven.plugins</groupId> -->
+                    <!-- <artifactId>maven-help-plugin</artifactId> -->
+                    <!-- <executions> -->
+                    <!-- <execution> -->
+                    <!-- <id>show-current-profile</id> -->
+                    <!-- <phase>compile</phase> -->
+                    <!-- <goals> -->
+                    <!-- <goal>active-profiles</goal> -->
+                    <!-- </goals> -->
+                    <!-- </execution> -->
+                    <!-- </executions> -->
+                    <!-- </plugin> -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jar-plugin</artifactId>
@@ -1395,26 +1436,10 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>attach-javadoc</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
                     </plugin>
                 </plugins>
             </build>
@@ -1427,7 +1452,7 @@
                         <artifactId>icy-kernel</artifactId>
                         <version>${icy-kernel.version}</version>
                     </dependency>
-                    
+
                     <dependency>
                         <groupId>org.bioimageanalysis.icy</groupId>
                         <artifactId>ezplug</artifactId>
@@ -1447,7 +1472,7 @@
                     <groupId>org.bioimageanalysis.icy</groupId>
                     <artifactId>icy-kernel</artifactId>
                 </dependency>
-                
+
                 <dependency>
                     <groupId>org.bioimageanalysis.icy</groupId>
                     <artifactId>ezplug</artifactId>
@@ -1460,22 +1485,22 @@
 
             <!-- Repository link for deployment -->
             <!-- If you want to upload on Pasteur's Nexus, send a mail to get an account to get the rights -->
-            <!-- FOR PASTEUR EMPLOYEES ONLY -->
-            <!-- FOR DEVELOPMENT AND TEST PURPOSES ONLY -->
             <distributionManagement>
                 <repository>
-                    <id>icy-dev</id>
+                    <id>icy-plugin-prod</id>
                     <name>Icy's Nexus</name>
-                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-plugins/</url>
+                    <url>https://icy-nexus.pasteur.fr/repository/icy-plugins/</url>
                 </repository>
+                <!-- FOR PASTEUR EMPLOYEES ONLY -->
+                <!-- FOR DEVELOPMENT AND TEST PURPOSES ONLY -->
                 <snapshotRepository>
-                    <id>icy-dev</id>
+                    <id>icy-plugin-dev</id>
                     <name>Icy Dev's Nexus</name>
                     <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-plugins/</url>
                 </snapshotRepository>
             </distributionManagement>
         </profile>
-        
+
         <profile>
             <id>library</id>
 
@@ -1513,4 +1538,5 @@
             <url>https://icy-nexus.pasteur.fr/repository/Icy/</url>
         </repository>
     </repositories>
+
 </project>
