@@ -24,24 +24,19 @@ This project centralizes the Maven configuration for Icy as well as its plugins 
 <parent>
     <artifactId>pom-icy</artifactId>
     <groupId>org.bioimageanalysis.icy</groupId>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
 </parent>
 ```
 
-There five profiles to facilitate your project management:
-- `icy-kernel-config`: Dedicated to core of Icy to generate the software.
-  - Runs by default `clean` and `package`&ast; goals.
-- `icy-kernel-deploy`: Dedicated to the upload of a project in the icy-core Maven repository of Pasteur's Nexus.
-  - Runs by default `clean` and `deploy` goals.
-- `icy-plugin`: Dedicated to the plugins of Icy to generate a plugin.
-  - Runs by default `clean` and `package`&ast; goals.
-- `icy-plugin-deploy-nexus-dev`: Dedicated to the upload of a project in the icy-plugins Maven development repository of Pasteur's Nexus.
-  - Runs by default `clean` and `deploy` goals.
-  - The Nexus development repositories are accessible only in Pasteur offices or through the private VPN.
-- `icy-plugin-deploy-nexus-dev`: Dedicated to the upload of a project in the icy-plugins Maven production repository of Pasteur's Nexus.
-  - Runs by default `clean` and `deploy` goals.
-  - You want to upload on our repositories, and you do not have an account ? Send a mail to [Icy Team,](mailto:icy.team@pasteur.fr) and we will grant you access.
-  - Are you a Pasteur employee ? A connection through PasteurID is coming soon.
+There is two profiles to facilitate project management:
+- `plugin`: Dedicated to Icy plugin development so it includes default dependencies and rules.
+  Runs by default `clean` and `package`&ast; goals.
+- `library`: Dedicated to plugin library which need dependencies extraction, in which case you define artifact(s) to extract through the `artifact-to-include` property.
+  You should always use this profile along the `plugin` profile.
+
+To deploy the project/artefact to the Icy's Nexus repositories just use the `deploy` goal instead. Note that Nexus development repositories are accessible only in Pasteur offices or through the private VPN.
+You want to upload on our public repositories and you do not have an account ? Send a mail to [Icy Team,](mailto:icy.team@pasteur.fr) and we will grant you access.
+Are you a Pasteur employee ? A connection through PasteurID is coming soon !
 
 To use a profile, you can:
 - Run the command in your terminal: `mvn -P<profile-name>`, and to use multiple profiles, `mvn -P<profile-name-1>,<profile-name-2`
