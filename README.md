@@ -30,9 +30,11 @@ This project centralizes the Maven configuration for Icy as well as its plugins 
 
 There is two profiles to facilitate project management:
 - `plugin`: Dedicated to Icy plugin development so it includes default dependencies and rules.
-  Runs by default `clean` and `package` goals.
+  Runs by default `clean` and `package`&ast; goals.
 - `library`: Dedicated to plugin library which need dependencies extraction, in which case you define artifact(s) to extract through the _artifact-to-include_ property.
   You should always use this profile along the _plugin_ profile.
+
+&ast; The `package` phase generate three JARs: one to executable for Icy, a source JAR and a JavaDoc JAR. 
 
 To deploy the project/artefact to the Icy's Nexus repositories just use the `deploy` goal instead. Note that Nexus development repositories are accessible only in Pasteur offices or through the private VPN.
 You want to upload on our public repositories and you do not have an account ? Send a mail to [Icy Team,](mailto:icy.team@pasteur.fr) and we will grant you access.
@@ -71,8 +73,6 @@ To call them, you need to add the `<dependency>` block as follows:
   <artifactId>name-of-plugin</artifactId>
 </dependency>
 ```
-
-&ast; The `package` phase generate three JARs: one to executable for Icy, a source JAR and a JavaDoc JAR. 
 
 ## Citation
 
