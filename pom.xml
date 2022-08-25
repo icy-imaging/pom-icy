@@ -1348,28 +1348,6 @@
     <profiles>
 
         <profile>
-            <id>core</id>
-
-            <build>
-                <defaultGoal>clean package</defaultGoal>
-            </build>
-
-            <!-- Repository link for deployment -->
-            <distributionManagement>
-                <repository>
-                    <id>icy-core-prod</id>
-                    <name>Icy's Nexus</name>
-                    <url>https://icy-nexus.pasteur.fr/repository/icy-core/</url>
-                </repository>
-                <snapshotRepository>
-                    <id>icy-core-dev</id>
-                    <name>Icy Dev's Nexus</name>
-                    <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-core/</url>
-                </snapshotRepository>
-            </distributionManagement>
-        </profile>
-
-        <profile>
             <id>plugin</id>
 
             <build>
@@ -1530,6 +1508,20 @@
             </build>
         </profile>
     </profiles>
+
+    <!-- Repository link for deployment -->
+    <distributionManagement>
+        <repository>
+            <id>icy-core-prod</id>
+            <name>Icy's Nexus</name>
+            <url>https://icy-nexus.pasteur.fr/repository/icy-core/</url>
+        </repository>
+        <snapshotRepository>
+            <id>icy-core-dev</id>
+            <name>Icy Dev's Nexus</name>
+            <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-core/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <!-- Link to third-party Maven repositories -->
     <repositories>

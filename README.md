@@ -28,9 +28,7 @@ This project centralizes the Maven configuration for Icy as well as its plugins 
 </parent>
 ```
 
-There is three profiles to facilitate project management:
-- `core`: Dedicated to Icy core parts development (kernel and its dependencies).
-  Runs by default `clean` and `package`&ast; goals.
+There is two profiles to facilitate project management:
 - `plugin`: Dedicated to Icy plugin development (including default dependencies and rules).
   Runs by default `clean` and `package`&ast; goals.
 - `library`: Dedicated to plugin library which need dependencies extraction, in which case you need to define artifact(s) to extract through the _artifact-to-extract_ property.
