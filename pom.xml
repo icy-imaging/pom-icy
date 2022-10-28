@@ -15,7 +15,7 @@
 
     <groupId>org.bioimageanalysis.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>2.1.1</version>
+    <version>2.1.2</version>
 
     <packaging>pom</packaging>
 
@@ -134,7 +134,7 @@
         <!-- Default version for kernel libraries -->
         <ehcache.version>2.10.9.2</ehcache.version>
         <gluegen-rt.version>2.4.0-rc-20210111</gluegen-rt.version>
-        <icy-bioformats.version>6.9.1</icy-bioformats.version>
+        <icy-bioformats.version>6.11.0</icy-bioformats.version>
         <icy-insubstantial.version>7.3.10</icy-insubstantial.version>
         <icy-vtk.version>8.0.1</icy-vtk.version>
         <ij.version>1.53r</ij.version>
