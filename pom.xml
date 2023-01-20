@@ -1015,7 +1015,7 @@
                 <version>${ring-roi.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bioimagenalysis.icy</groupId>
+                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-blocks</artifactId>
                 <version>${roi-blocks.version}</version>
             </dependency>
@@ -1205,7 +1205,7 @@
                 <version>${tracking-benchmark-generator.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bioimagenalysis.icy</groupId>
+                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>vecmath</artifactId>
                 <version>${vecmath.version}</version>
             </dependency>
