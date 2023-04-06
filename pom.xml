@@ -210,7 +210,7 @@
         <three-d-rotation.version>1.3.1</three-d-rotation.version>
         <three-d-spheres-vtk.version>1.0.1</three-d-spheres-vtk.version>
         <active-contours.version>4.4.13</active-contours.version>
-        <angle-descriptor.version>1.1.1</angle-descriptor.version>
+        <angle-descriptor.version>1.1.2</angle-descriptor.version>
         <angle-helper.version>1.1.0</angle-helper.version>
         <animation-3d.version>1.3.1</animation-3d.version>
         <apeer-sdk.version>1.0.0</apeer-sdk.version>
