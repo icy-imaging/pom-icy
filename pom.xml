@@ -212,7 +212,7 @@
         <active-contours.version>4.4.13</active-contours.version>
         <angle-descriptor.version>1.1.2</angle-descriptor.version>
         <angle-helper.version>1.1.1</angle-helper.version>
-        <animation-3d.version>1.3.1</animation-3d.version>
+        <animation-3d.version>1.3.2</animation-3d.version>
         <apeer-sdk.version>1.0.0</apeer-sdk.version>
         <autocomplete.version>2.5.0</autocomplete.version>
         <best-threshold.version>1.4.1</best-threshold.version>
@@ -237,7 +237,7 @@
         <fill-holes-in-roi.version>1.3.4</fill-holes-in-roi.version>
         <filter-toolbox.version>4.4.4</filter-toolbox.version>
         <flanagan.version>1.1.1</flanagan.version>
-        <flying-camera.version>1.6.0</flying-camera.version>
+        <flying-camera.version>1.6.1</flying-camera.version>
         <global-visible-persistence.version>1.0.0</global-visible-persistence.version>
         <hk-means.version>2.9.3</hk-means.version>
         <icy-random-roi-coloring.version>1.0.0</icy-random-roi-coloring.version>
