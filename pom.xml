@@ -216,7 +216,7 @@
         <protocols.version>4.0.0</protocols.version>
 
         <!-- Default Icy's plugins version -->
-        <three-d-mesh-roi.version>1.4.9</three-d-mesh-roi.version>
+        <three-d-mesh-roi.version>2.0.0</three-d-mesh-roi.version>
         <three-d-rotation.version>1.3.1</three-d-rotation.version>
         <three-d-spheres-vtk.version>1.0.1</three-d-spheres-vtk.version>
         <active-contours.version>4.4.13</active-contours.version>
@@ -287,7 +287,7 @@
         <projection.version>1.1.0</projection.version>
         <protractor.version>1.1.0</protractor.version>
         <python-extractor.version>2.0.0</python-extractor.version>
-        <quickhull.version>1.0.3</quickhull.version>
+        <quickhull.version>2.0.0</quickhull.version>
         <rescale.version>1.0.0</rescale.version>
         <rigid-registration.version>1.4.0</rigid-registration.version>
         <ring-roi.version>2.0.1</ring-roi.version>
