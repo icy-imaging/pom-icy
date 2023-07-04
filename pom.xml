@@ -218,7 +218,7 @@
         <!-- Default Icy's plugins version -->
         <three-d-mesh-roi.version>2.0.0</three-d-mesh-roi.version>
         <three-d-rotation.version>2.0.0</three-d-rotation.version>
-        <three-d-spheres-vtk.version>1.0.1</three-d-spheres-vtk.version>
+        <three-d-spheres-vtk.version>2.0.0</three-d-spheres-vtk.version>
         <active-contours.version>5.0.0</active-contours.version>
         <angle-descriptor.version>1.1.2</angle-descriptor.version>
         <angle-helper.version>1.1.1</angle-helper.version>
