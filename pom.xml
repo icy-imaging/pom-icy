@@ -221,7 +221,7 @@
         <three-d-spheres-vtk.version>2.0.0</three-d-spheres-vtk.version>
         <active-contours.version>5.0.0</active-contours.version>
         <angle-descriptor.version>2.0.0</angle-descriptor.version>
-        <angle-helper.version>1.1.1</angle-helper.version>
+        <angle-helper.version>2.0.0</angle-helper.version>
         <animation-3d.version>2.0.0</animation-3d.version>
         <best-threshold.version>1.4.2</best-threshold.version>
         <big-image-tools.version>2.2.3</big-image-tools.version>
@@ -301,7 +301,7 @@
         <roi-to-detection.version>1.0.3</roi-to-detection.version>
         <roi-to-distance-map.version>3.0.0</roi-to-distance-map.version>
         <roi-tooltip.version>1.1.4</roi-tooltip.version>
-        <ruler-helper.version>1.2.2</ruler-helper.version>
+        <ruler-helper.version>2.0.0</ruler-helper.version>
         <scale-bar.version>3.2.0</scale-bar.version>
         <script-editor.version>1.17.0</script-editor.version>
         <sequence-blocks.version>2.1.0</sequence-blocks.version>
