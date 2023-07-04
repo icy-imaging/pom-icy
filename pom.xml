@@ -219,7 +219,7 @@
         <three-d-mesh-roi.version>2.0.0</three-d-mesh-roi.version>
         <three-d-rotation.version>2.0.0</three-d-rotation.version>
         <three-d-spheres-vtk.version>1.0.1</three-d-spheres-vtk.version>
-        <active-contours.version>4.4.13</active-contours.version>
+        <active-contours.version>5.0.0</active-contours.version>
         <angle-descriptor.version>1.1.2</angle-descriptor.version>
         <angle-helper.version>1.1.1</angle-helper.version>
         <animation-3d.version>2.0.0</animation-3d.version>
@@ -235,18 +235,18 @@
         <color-bar.version>1.0.2</color-bar.version>
         <color-picker-threshold.version>1.2.2</color-picker-threshold.version>
         <color-track-processor.version>1.1.1</color-track-processor.version>
-        <connected-components.version>4.8.9</connected-components.version>
+        <connected-components.version>5.0.0</connected-components.version>
         <convexify.version>2.0.5</convexify.version>
         <detection-to-roi.version>1.0.1</detection-to-roi.version>
         <distance-profiler.version>1.0.0</distance-profiler.version>
         <distance-transforms.version>3.0.0</distance-transforms.version>
         <ejml.version>0.40.0</ejml.version>
-        <fill-holes-in-roi.version>1.3.4</fill-holes-in-roi.version>
-        <filter-toolbox.version>4.4.4</filter-toolbox.version>
+        <fill-holes-in-roi.version>2.0.0</fill-holes-in-roi.version>
+        <filter-toolbox.version>5.0.0</filter-toolbox.version>
         <flanagan.version>1.1.1</flanagan.version>
         <flying-camera.version>2.0.0</flying-camera.version>
         <global-visible-persistence.version>1.0.0</global-visible-persistence.version>
-        <hk-means.version>2.9.3</hk-means.version>
+        <hk-means.version>3.0.0</hk-means.version>
         <icy-random-roi-coloring.version>1.0.0</icy-random-roi-coloring.version>
         <image-to-workbook.version>2.5.3</image-to-workbook.version>
         <intensity-projection.version>1.8.1</intensity-projection.version>
@@ -256,7 +256,7 @@
         <kinect-driver.version>1.0.0</kinect-driver.version>
         <kmeans-color-quantization.version>1.2.1</kmeans-color-quantization.version>
         <kymograph-tracker.version>1.1.0</kymograph-tracker.version>
-        <label-extractor.version>1.5.2</label-extractor.version>
+        <label-extractor.version>2.0.0</label-extractor.version>
         <linear-programming.version>1.0.2</linear-programming.version>
         <magnifier.version>3.1.3</magnifier.version>
         <mask-editor.version>1.2.1</mask-editor.version>
@@ -307,7 +307,7 @@
         <sequence-blocks.version>2.1.0</sequence-blocks.version>
         <slic.version>1.0.1</slic.version>
         <soda-suite.version>1.1.0</soda-suite.version>
-        <spot-detection-utilities.version>1.1.7</spot-detection-utilities.version>
+        <spot-detection-utilities.version>2.0.0</spot-detection-utilities.version>
         <spot-detector.version>1.9.2</spot-detector.version>
         <spot-detector-block.version>1.0.0</spot-detector-block.version>
         <spot-tracking.version>3.5.2</spot-tracking.version>
@@ -316,9 +316,9 @@
         <stereo-3d-vtk-canvas.version>1.0.2</stereo-3d-vtk-canvas.version>
         <tensor-flow-manager.version>1.0.0</tensor-flow-manager.version>
         <texture-segmentation.version>1.2.1</texture-segmentation.version>
-        <thresholder.version>3.5.4</thresholder.version>
+        <thresholder.version>4.0.0</thresholder.version>
         <timestamp-overlay.version>1.0.6</timestamp-overlay.version>
-        <track-manager.version>1.5.1</track-manager.version>
+        <track-manager.version>2.0.0</track-manager.version>
         <track-overlay.version>1.5.0</track-overlay.version>
         <track-painter.version>2.2.1</track-painter.version>
         <track-processor-excel-export.version>1.2.1</track-processor-excel-export.version>
