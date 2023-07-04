@@ -220,7 +220,7 @@
         <three-d-rotation.version>2.0.0</three-d-rotation.version>
         <three-d-spheres-vtk.version>2.0.0</three-d-spheres-vtk.version>
         <active-contours.version>5.0.0</active-contours.version>
-        <angle-descriptor.version>1.1.2</angle-descriptor.version>
+        <angle-descriptor.version>2.0.0</angle-descriptor.version>
         <angle-helper.version>1.1.1</angle-helper.version>
         <animation-3d.version>2.0.0</animation-3d.version>
         <best-threshold.version>1.4.2</best-threshold.version>
