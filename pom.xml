@@ -183,7 +183,7 @@
         <autocomplete.version>3.0.0</autocomplete.version>
         <docker4icy.version>4.0.0</docker4icy.version>
         <ehcache3.version>4.0.0</ehcache3.version>
-        <graaljs.version>23.0.0</graaljs.version>
+        <graaljs.version>1.0.0</graaljs.version>
         <jama.version>2.0.0</jama.version>
         <java3d.version>2.0.0</java3d.version>
         <javacl.version>2.0.0</javacl.version>
@@ -304,6 +304,7 @@
         <ruler-helper.version>2.0.0</ruler-helper.version>
         <scale-bar.version>3.2.0</scale-bar.version>
         <script-editor.version>1.17.0</script-editor.version>
+        <script-manager.version>1.0.0</script-manager.version>
         <sequence-blocks.version>2.1.0</sequence-blocks.version>
         <slic.version>1.0.1</slic.version>
         <soda-suite.version>1.1.0</soda-suite.version>
@@ -360,12 +361,6 @@
             </dependency>
 
             <!-- Icy - plugins & libraries -->
-            <!-- DEPRECATED -->
-            <!--<dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>3d-active-meshes</artifactId>
-                <version>${three-d-active-meshes.version}</version>
-            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>3d-mesh-roi</artifactId>
@@ -1119,6 +1114,11 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>script-editor</artifactId>
                 <version>${script-editor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>script-manager</artifactId>
+                <version>${script-manager.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
