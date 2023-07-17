@@ -181,6 +181,7 @@
         <apache-xmlbeans.version>6.0.0</apache-xmlbeans.version>
 
         <autocomplete.version>3.0.0</autocomplete.version>
+        <bridj.version>1.0.0</bridj.version>
         <docker4icy.version>4.0.0</docker4icy.version>
         <ehcache3.version>4.0.0</ehcache3.version>
         <graaljs.version>1.0.0</graaljs.version>
@@ -227,7 +228,6 @@
         <big-image-tools.version>3.0.0</big-image-tools.version>
         <bioflow.version>2.1.1</bioflow.version>
         <blockvars.version>1.0.0</blockvars.version>
-        <bridj.version>0.7.0</bridj.version>
         <bunwrap.version>1.2.1</bunwrap.version>
         <channel-montage.version>2.5.1</channel-montage.version>
         <clipper.version>6.4.2</clipper.version>
