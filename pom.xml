@@ -229,7 +229,7 @@
         <bioflow.version>2.1.1</bioflow.version>
         <blockvars.version>1.0.0</blockvars.version>
         <bunwrap.version>2.0.0</bunwrap.version>
-        <channel-montage.version>2.5.1</channel-montage.version>
+        <channel-montage.version>3.0.0</channel-montage.version>
         <clipper.version>6.4.2</clipper.version>
         <clojure.version>1.3.0</clojure.version>
         <color-bar.version>1.0.2</color-bar.version>
