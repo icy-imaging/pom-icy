@@ -205,6 +205,7 @@
         <google-gson.version>3.0.0</google-gson.version>
         <msgpack-core.version>1.0.0</msgpack-core.version>
         <nashorn.version>16.0.0</nashorn.version>
+        <nherve-toolbox.version>2.0.0</nherve-toolbox.version>
         <opencv.version>5.0.0</opencv.version>
         <parallel-colt.version>6.0.0</parallel-colt.version>
         <renjin.version>1.0.0</renjin.version>
@@ -233,7 +234,7 @@
         <bunwrap.version>2.0.0</bunwrap.version>
         <channel-montage.version>3.0.0</channel-montage.version>
         <color-bar.version>2.0.0</color-bar.version>
-        <color-picker-threshold.version>1.2.2</color-picker-threshold.version>
+        <color-picker-threshold.version>2.0.0</color-picker-threshold.version>
         <color-track-processor.version>1.1.1</color-track-processor.version>
         <connected-components.version>5.0.0</connected-components.version>
         <convexify.version>2.0.5</convexify.version>
@@ -274,12 +275,11 @@
         <micromanager.version>1.9.5</micromanager.version>
         <micromanager-block.version>1.0.4</micromanager-block.version>
         <microscope-remote.version>2.3.1</microscope-remote.version>
-        <morphomaths.version>5.0.0</morphomaths.version>
+        <morphomaths.version>6.0.0</morphomaths.version>
         <motion-profiler.version>4.2.0</motion-profiler.version>
         <msd-track-processor.version>1.1.2</msd-track-processor.version>
         <nherve-image-analysis-toolbox.version>1.2.1</nherve-image-analysis-toolbox.version>
-        <nherve-matrix.version>1.1</nherve-matrix.version>
-        <nherve-toolbox.version>1.3.2</nherve-toolbox.version>
+        <nherve-matrix.version>2.0.0</nherve-matrix.version>
         <orthoviewer.version>2.0.8</orthoviewer.version>
         <oshi-core-jdk6.version>3.4.2</oshi-core-jdk6.version>
         <particle-animation.version>1.2.1</particle-animation.version>
