@@ -235,7 +235,7 @@
         <channel-montage.version>3.0.0</channel-montage.version>
         <color-bar.version>2.0.0</color-bar.version>
         <color-picker-threshold.version>2.0.0</color-picker-threshold.version>
-        <color-track-processor.version>1.1.1</color-track-processor.version>
+        <color-track-processor.version>2.0.0</color-track-processor.version>
         <connected-components.version>5.0.0</connected-components.version>
         <convexify.version>2.0.5</convexify.version>
         <detection-to-roi.version>1.0.1</detection-to-roi.version>
