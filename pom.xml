@@ -237,7 +237,7 @@
         <color-picker-threshold.version>2.0.0</color-picker-threshold.version>
         <color-track-processor.version>2.0.0</color-track-processor.version>
         <connected-components.version>5.0.0</connected-components.version>
-        <convexify.version>2.0.5</convexify.version>
+        <convexify.version>3.0.0</convexify.version>
         <detection-to-roi.version>1.0.1</detection-to-roi.version>
         <distance-profiler.version>1.0.0</distance-profiler.version>
         <distance-transforms.version>3.0.0</distance-transforms.version>
