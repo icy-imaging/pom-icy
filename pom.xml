@@ -238,7 +238,7 @@
         <color-track-processor.version>2.0.0</color-track-processor.version>
         <connected-components.version>5.0.0</connected-components.version>
         <convexify.version>3.0.0</convexify.version>
-        <detection-to-roi.version>1.0.1</detection-to-roi.version>
+        <detection-to-roi.version>2.0.0</detection-to-roi.version>
         <distance-profiler.version>1.0.0</distance-profiler.version>
         <distance-transforms.version>3.0.0</distance-transforms.version>
         <ejml.version>0.40.0</ejml.version>
@@ -294,10 +294,10 @@
         <roi-blocks.version>1.4.11</roi-blocks.version>
         <roi-inclusion-analysis.version>1.3.2</roi-inclusion-analysis.version>
         <roi-intensity-evolution.version>2.1.0</roi-intensity-evolution.version>
-        <roi-pool.version>1.0.5</roi-pool.version>
+        <roi-pool.version>2.0.0</roi-pool.version>
         <roi-proximity-analysis.version>1.0.0</roi-proximity-analysis.version>
         <roi-statistics.version>5.11.1</roi-statistics.version>
-        <roi-tagger.version>1.0.2</roi-tagger.version>
+        <roi-tagger.version>2.0.0</roi-tagger.version>
         <roi-to-detection.version>1.0.3</roi-to-detection.version>
         <roi-to-distance-map.version>3.0.0</roi-to-distance-map.version>
         <roi-tooltip.version>1.1.4</roi-tooltip.version>
@@ -309,7 +309,7 @@
         <slic.version>1.0.1</slic.version>
         <soda-suite.version>1.1.0</soda-suite.version>
         <spot-detection-utilities.version>2.0.0</spot-detection-utilities.version>
-        <spot-detector.version>1.9.2</spot-detector.version>
+        <spot-detector.version>2.0.0</spot-detector.version>
         <spot-detector-block.version>1.0.0</spot-detector-block.version>
         <spot-tracking.version>3.5.2</spot-tracking.version>
         <spot-tracking-blocks.version>1.2.2</spot-tracking-blocks.version>
@@ -1061,7 +1061,7 @@
                 <version>${roi-itensify-evolution.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bioimagenalaysis.icy</groupId>
+                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-pool</artifactId>
                 <version>${roi-pool.version}</version>
             </dependency>
