@@ -237,7 +237,7 @@
         <convexify.version>3.0.0</convexify.version>
         <detection-to-roi.version>2.0.0</detection-to-roi.version>
         <distance-profiler.version>2.0.0</distance-profiler.version>
-        <distance-transforms.version>3.0.0</distance-transforms.version>
+        <distance-transforms.version>4.0.0</distance-transforms.version>
         <ejml.version>0.40.0</ejml.version>
         <fill-holes-in-roi.version>2.0.0</fill-holes-in-roi.version>
         <filter-toolbox.version>5.0.0</filter-toolbox.version>
