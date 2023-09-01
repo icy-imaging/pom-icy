@@ -183,6 +183,7 @@
         <clojure.version>2.0.0</clojure.version>
         <docker4icy.version>4.0.0</docker4icy.version>
         <ehcache3.version>4.0.0</ehcache3.version>
+        <ejml.version>1.0.0</ejml.version>
         <graaljs.version>1.0.0</graaljs.version>
         <jama.version>2.0.0</jama.version>
         <java3d.version>2.0.0</java3d.version>
@@ -238,7 +239,6 @@
         <detection-to-roi.version>2.0.0</detection-to-roi.version>
         <distance-profiler.version>2.0.0</distance-profiler.version>
         <distance-transforms.version>4.0.0</distance-transforms.version>
-        <ejml.version>0.40.0</ejml.version>
         <fill-holes-in-roi.version>2.0.0</fill-holes-in-roi.version>
         <filter-toolbox.version>5.0.0</filter-toolbox.version>
         <flanagan.version>1.1.1</flanagan.version>
