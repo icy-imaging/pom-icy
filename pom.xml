@@ -252,7 +252,7 @@
         <intensity-projection.version>2.0.0</intensity-projection.version>
         <invert.version>3.0.0</invert.version>
         <isotropic-wavelet-transform.version>2.0.0</isotropic-wavelet-transform.version>
-        <jython-execnet.version>5.5.2</jython-execnet.version>
+        <jython-execnet.version>6.0.0</jython-execnet.version>
         <kinect-driver.version>1.0.0</kinect-driver.version>
         <kmeans-color-quantization.version>1.2.1</kmeans-color-quantization.version>
         <kymograph-tracker.version>1.1.0</kymograph-tracker.version>
