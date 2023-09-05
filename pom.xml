@@ -248,7 +248,7 @@
         <global-visible-persistence.version>2.0.0</global-visible-persistence.version>
         <hk-means.version>3.0.0</hk-means.version>
         <icy-random-roi-coloring.version>2.0.0</icy-random-roi-coloring.version>
-        <image-to-workbook.version>2.5.3</image-to-workbook.version>
+        <image-to-workbook.version>3.0.0</image-to-workbook.version>
         <intensity-projection.version>1.8.1</intensity-projection.version>
         <invert.version>2.0.3</invert.version>
         <isotropic-wavelet-transform.version>1.1.0</isotropic-wavelet-transform.version>
