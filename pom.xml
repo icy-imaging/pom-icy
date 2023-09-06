@@ -203,6 +203,7 @@
         <google-flatbuffers.version>2.0.0</google-flatbuffers.version>
         <google-gson.version>3.0.0</google-gson.version>
         <log4j.version>1.0.0</log4j.version>
+        <mcib3d-core.version>4.0.0</mcib3d-core.version>
         <msgpack-core.version>1.0.0</msgpack-core.version>
         <nashorn.version>16.0.0</nashorn.version>
         <nherve-toolbox.version>2.0.0</nherve-toolbox.version>
@@ -267,7 +268,6 @@
         <matlab-importer.version>2.5.1</matlab-importer.version>
         <matlab-io.version>2.5.2</matlab-io.version>
         <matlab-x-server.version>3.2.0</matlab-x-server.version>
-        <mcib3d-core.version>3.96.0</mcib3d-core.version>
         <median-filter.version>2.0.0</median-filter.version>
         <mice-profile-tracker.version>7.1.4</mice-profile-tracker.version>
         <micromanager.version>1.9.5</micromanager.version>
