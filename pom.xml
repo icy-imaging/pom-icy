@@ -269,7 +269,7 @@
         <matlab-io.version>2.5.2</matlab-io.version>
         <matlab-x-server.version>3.2.0</matlab-x-server.version>
         <median-filter.version>2.0.0</median-filter.version>
-        <mice-profile-tracker.version>7.1.4</mice-profile-tracker.version>
+        <mice-profile-tracker.version>8.0.0</mice-profile-tracker.version>
         <micromanager.version>1.9.5</micromanager.version>
         <micromanager-block.version>1.0.4</micromanager-block.version>
         <microscope-remote.version>2.3.1</microscope-remote.version>
