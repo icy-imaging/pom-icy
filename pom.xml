@@ -273,7 +273,7 @@
         <mice-profile-tracker.version>8.0.0</mice-profile-tracker.version>
         <micromanager.version>2.0.0</micromanager.version>
         <micromanager-block.version>2.0.0</micromanager-block.version>
-        <microscope-remote.version>2.3.1</microscope-remote.version>
+        <microscope-remote.version>3.0.0</microscope-remote.version>
         <morphomaths.version>6.0.0</morphomaths.version>
         <motion-profiler.version>5.0.0</motion-profiler.version>
         <msd-track-processor.version>1.1.2</msd-track-processor.version>
