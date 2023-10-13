@@ -131,7 +131,7 @@
 
         <!-- Default version for kernel libraries -->
         <ehcache.version>2.10.9.2</ehcache.version>
-        <gluegen-rt.version>2.4.0-rc-20210111</gluegen-rt.version>
+        <gluegen-rt.version>2.5.0</gluegen-rt.version>
         <icy-bioformats.version>6.11.0</icy-bioformats.version>
         <icy-insubstantial.version>7.3.11</icy-insubstantial.version>
         <icy-vtk.version>8.0.1</icy-vtk.version>
@@ -1543,6 +1543,13 @@
             <url>https://icy-nexus.pasteur.fr/repository/Icy/</url>
         </repository>
 
+        <repository>
+            <id>jogamp</id>
+            <name>JogAmp repo</name>
+            <url>https://jogamp.org/deployment/maven/</url>
+        </repository>
+
+ 
         <repository>
             <id>netbeans</id>
             <name>NetBeans</name>
