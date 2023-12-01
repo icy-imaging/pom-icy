@@ -144,7 +144,7 @@
         <swingx-all.version>1.6.5-1</swingx-all.version>
 
         <!-- Default Icy kernel version -->
-        <icy-kernel.version>2.4.4</icy-kernel.version>
+        <icy-kernel.version>2.5.0</icy-kernel.version>
 
         <!-- Default libraries version -->
         <apache-commons-codec.version>1.1.15</apache-commons-codec.version>
