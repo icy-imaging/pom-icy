@@ -107,10 +107,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>[${java-target},)</jdk.version>
 
-        <!-- Compile information -->
-        <!--<maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>-->
-
         <!-- Maven Plugins version -->
         <build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
@@ -141,24 +137,38 @@
         <overWriteReleases>true</overWriteReleases>
 
         <!-- Default version for kernel libraries -->
-        <annotations.version>24.0.1</annotations.version>
-        <ehcache.version>2.10.9.2</ehcache.version>
-        <flatlaf.version>3.1.1</flatlaf.version>
-        <flatlaf-intellij.version>${flatlaf.version}</flatlaf-intellij.version>
-        <gluegen-rt.version>2.5.0</gluegen-rt.version>
-        <icy-bioformats.version>7.0.0</icy-bioformats.version>
-        <icy-insubstantial.version>7.3.11</icy-insubstantial.version>
-        <icy-vtk.version>9.2.1</icy-vtk.version>
-        <ij.version>1.53r</ij.version>
-        <jai-core.version>1.1.3</jai-core.version>
-        <jai-codec.version>${jai-core.version}</jai-codec.version>
-        <javassist.version>3.29.0-GA</javassist.version>
-        <jiconfont.version>1.0.0</jiconfont.version>
-        <jiconfont-swing.version>1.0.1</jiconfont-swing.version>
-        <jiconfont-google.version>2.2.0.2</jiconfont-google.version>
-        <jogl.version>${gluegen-rt.version}</jogl.version>
-        <jxl.version>2.6.12</jxl.version>
-        <swingx-all.version>1.6.5-1</swingx-all.version>
+        <library.annotations.version>24.1.0</library.annotations.version>
+        <library.batik-transcoder.version>1.17</library.batik-transcoder.version>
+        <library.bioformats.version>7.1.0</library.bioformats.version>
+        <library.commons-io.version>2.15.1</library.commons-io.version>
+        <library.ehcache.version>3.10.8</library.ehcache.version>
+        <library.flatlaf.version>3.3</library.flatlaf.version>
+        <library.flatlaf-intellij.version>${library.flatlaf.version}</library.flatlaf-intellij.version>
+        <library.gluegen-rt.version>2.5.0</library.gluegen-rt.version>
+        <library.jai-core.version>1.1.3</library.jai-core.version>
+        <library.jai-codec.version>${library.jai-core.version}</library.jai-codec.version>
+        <library.jansi.version>2.4.1</library.jansi.version>
+        <library.javassist.version>3.29.0-GA</library.javassist.version>
+        <library.jaxb-runtime.version>4.0.4</library.jaxb-runtime.version>
+        <library.jiconfont.version>1.0.0</library.jiconfont.version>
+        <library.jiconfont-swing.version>1.0.1</library.jiconfont-swing.version>
+        <library.jiconfont-google.version>2.2.0.2</library.jiconfont-google.version>
+        <library.jogl.version>${library.gluegen-rt.version}</library.jogl.version>
+        <library.junit-jupiter.version>5.10.1</library.junit-jupiter.version>
+        <library.log4j-api.version>2.22.1</library.log4j-api.version>
+        <library.log4j-core.version>${library.log4j-api.version}</library.log4j-core.version>
+        <library.poi.version>5.2.5</library.poi.version>
+        <library.poi-ooxml.version>${library.poi.version}</library.poi-ooxml.version>
+        <library.snakeyaml.version>2.2</library.snakeyaml.version>
+        <library.swingx-all.version>1.6.5-1</library.swingx-all.version>
+
+        <library.icy.batik.version>1.0.0</library.icy.batik.version>
+        <library.icy.bioformats.version>7.0.0</library.icy.bioformats.version>
+        <library.icy.poi.version>1.0.0</library.icy.poi.version>
+        <library.icy.snakeyaml.version>1.0.0</library.icy.snakeyaml.version>
+        <library.icy.vtk.version>9.2.1</library.icy.vtk.version>
+        <library.icy.vtk-os.version>9.2.6</library.icy.vtk-os.version>
+        <library.icy.vtk-all.version>1.0.0</library.icy.vtk-all.version>
 
         <!-- Default Icy kernel version -->
         <icy-kernel.version>3.0.0</icy-kernel.version>
@@ -299,7 +309,7 @@
         <ruler-helper.version>2.0.0</ruler-helper.version>
         <scale-bar.version>3.2.0</scale-bar.version>
         <script-editor.version>1.17.0</script-editor.version>
-        <script-manager.version>1.0.0</script-manager.version>
+        <script-manager-core.version>1.0.0</script-manager-core.version>
         <sequence-blocks.version>3.0.0</sequence-blocks.version>
         <slic.version>1.0.1</slic.version>
         <soda-suite.version>1.1.0</soda-suite.version>
@@ -333,6 +343,17 @@
         <workspace-editor.version>1.3.2</workspace-editor.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+    </dependencies>
+
     <dependencyManagement>
         <dependencies>
             <!-- Icy - Kernel -->
@@ -340,6 +361,202 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-kernel</artifactId>
                 <version>${icy-kernel.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Icy - Default external lib versions to prevent conflict -->
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${library.annotations.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-transcoder</artifactId>
+                <version>${library.batik-transcoder.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>ome</groupId>
+                <artifactId>bioformats_package</artifactId>
+                <version>${library.bioformats.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${library.commons-io.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${library.ehcache.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.formdev</groupId>
+                <artifactId>flatlaf</artifactId>
+                <version>${library.flatlaf.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.formdev</groupId>
+                <artifactId>flatlaf-intellij-themes</artifactId>
+                <version>${library.flatlaf-intellij.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt</artifactId>
+                <version>${library.gluegen-rt.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt-natives-all</artifactId>
+                <version>${library.gluegen-rt.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.media</groupId>
+                <artifactId>jai-core</artifactId>
+                <version>${library.jai-core.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.media</groupId>
+                <artifactId>jai-codec</artifactId>
+                <version>${library.jai-codec.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.fusesource.jansi</groupId>
+                <artifactId>jansi</artifactId>
+                <version>${library.jansi.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${library.javassist.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jiconfont</groupId>
+                <artifactId>jiconfont</artifactId>
+                <version>${library.jiconfont.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jiconfont</groupId>
+                <artifactId>jiconfont-swing</artifactId>
+                <version>${library.jiconfont-swing.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jiconfont</groupId>
+                <artifactId>jiconfont-google_material_design_icons</artifactId>
+                <version>${library.jiconfont-google.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all</artifactId>
+                <version>${library.jogl.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all-natives-all</artifactId>
+                <version>${library.jogl.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${library.junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${library.log4j-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${library.log4j-core.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${library.poi.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${library.poi-ooxml.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${library.snakeyaml.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.swinglabs.swingx</groupId>
+                <artifactId>swingx-all</artifactId>
+                <version>${library.swingx-all.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Icy - library packages -->
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-batik</artifactId>
+                <version>${library.icy.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-bioformats</artifactId>
+                <version>${library.icy.bioformats.version}</version>
+                <scope>provided</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>*</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-poi</artifactId>
+                <version>${library.icy.poi.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-snakeyaml</artifactId>
+                <version>${library.icy.snakeyaml.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-vtk</artifactId>
+                <version>${library.icy.vtk.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-vtk-all</artifactId>
+                <version>${library.icy.vtk-all.version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -398,12 +615,6 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>animation-3d</artifactId>
                 <version>${animation-3d.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains</groupId>
-                <artifactId>annotations</artifactId>
-                <version>${annotations.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -569,18 +780,6 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache</artifactId>
-                <version>${ehcache.version}</version>
-                <scope>provided</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ehcache3</artifactId>
                 <version>${ehcache3.version}</version>
@@ -611,18 +810,6 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.formdev</groupId>
-                <artifactId>flatlaf</artifactId>
-                <version>${flatlaf.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.formdev</groupId>
-                <artifactId>flatlaf-intellij-themes</artifactId>
-                <version>${flatlaf-intellij.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>flying-camera</artifactId>
                 <version>${flying-camera.version}</version>
@@ -632,12 +819,6 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>global-visible-persistence</artifactId>
                 <version>${global-visible-persistence.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jogamp.gluegen</groupId>
-                <artifactId>gluegen-rt</artifactId>
-                <version>${gluegen-rt.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -660,33 +841,9 @@
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-bioformats</artifactId>
-                <version>${icy-bioformats.version}</version>
-                <scope>provided</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>*</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-graaljs</artifactId>
                 <version>${graaljs.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-insubstantial</artifactId>
-                <version>${icy-insubstantial.version}</version>
-                <scope>provided</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>*</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
@@ -708,12 +865,6 @@
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-log4j</artifactId>
-                <version>${log4j.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-random-roi-coloring</artifactId>
                 <version>${icy-random-roi-coloring.version}</version>
                 <scope>provided</scope>
@@ -723,24 +874,6 @@
                 <artifactId>icy-renjin</artifactId>
                 <version>${renjin.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-vtk</artifactId>
-                <version>${icy-vtk.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>net.imagej</groupId>
-                <artifactId>ij</artifactId>
-                <version>${ij.version}</version>
-                <scope>provided</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.sun</groupId>
-                        <artifactId>tools</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
@@ -764,18 +897,6 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>isotropic-wavelet-transform</artifactId>
                 <version>${isotropic-wavelet-transform.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.media</groupId>
-                <artifactId>jai-core</artifactId>
-                <version>${jai-core.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.sun.media</groupId>
-                <artifactId>jai-codec</artifactId>
-                <version>${jai-codec.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -803,12 +924,6 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>${javassist.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jfree-common</artifactId>
                 <version>${jfree-common.version}</version>
@@ -818,24 +933,6 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jfreechart</artifactId>
                 <version>${jfreechart.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.github.jiconfont</groupId>
-                <artifactId>jiconfont</artifactId>
-                <version>${jiconfont.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.github.jiconfont</groupId>
-                <artifactId>jiconfont-swing</artifactId>
-                <version>${jiconfont-swing.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.github.jiconfont</groupId>
-                <artifactId>jiconfont-google_material_design_icons</artifactId>
-                <version>${jiconfont-google.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -863,12 +960,6 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.jogamp.jogl</groupId>
-                <artifactId>jogl-all</artifactId>
-                <version>${jogl.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jython</artifactId>
                 <version>${jython.version}</version>
@@ -884,12 +975,6 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jython-execnet</artifactId>
                 <version>${jython-execnet.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>net.sourceforge.jexcelapi</groupId>
-                <artifactId>jxl</artifactId>
-                <version>${jxl.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1224,8 +1309,8 @@
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>script-manager</artifactId>
-                <version>${script-manager.version}</version>
+                <artifactId>script-manager-core</artifactId>
+                <version>${script-manager-core.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1292,12 +1377,6 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>stereo-3d-vtk-canvas</artifactId>
                 <version>${stereo-3d-vtk-canvas.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.swinglabs.swingx</groupId>
-                <artifactId>swingx-all</artifactId>
-                <version>${swingx-all.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1569,6 +1648,14 @@
     <profiles>
         <profile>
             <id>plugin</id>
+            <activation>
+                <!--<file>
+                    <missing>ext/</missing>
+                </file>-->
+                <property>
+                    <name>!kernel</name>
+                </property>
+            </activation>
 
             <build>
                 <defaultGoal>clean package</defaultGoal>
@@ -1644,7 +1731,8 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-assembly-plugin</artifactId>
                         <configuration>
-                            <appendAssemblyId>true</appendAssemblyId>
+                            <finalName>${project.artifactId}-${project.version}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
                             <descriptorRefs>
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
                             </descriptorRefs>
@@ -1673,15 +1761,7 @@
                     <groupId>org.bioimageanalysis.icy</groupId>
                     <artifactId>icy-kernel</artifactId>
                 </dependency>
-                <dependency>
-                    <groupId>org.jetbrains</groupId>
-                    <artifactId>annotations</artifactId>
-                </dependency>
             </dependencies>
-        </profile>
-
-        <profile>
-            <id>plugin-ehcache3</id>
 
             <dependencyManagement>
                 <dependencies>
@@ -1689,7 +1769,7 @@
                     <dependency>
                         <groupId>org.glassfish.jaxb</groupId>
                         <artifactId>jaxb-runtime</artifactId>
-                        <version>4.0.3</version>
+                        <version>${library.jaxb-runtime.version}</version>
                     </dependency>
                 </dependencies>
             </dependencyManagement>
