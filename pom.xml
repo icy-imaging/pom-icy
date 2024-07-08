@@ -6,7 +6,7 @@
 
     <groupId>org.bioimageanalysis.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.0-a.1</version>
 
     <packaging>pom</packaging>
 
@@ -150,9 +150,6 @@
         <library.jansi.version>2.4.1</library.jansi.version>
         <library.javassist.version>3.29.0-GA</library.javassist.version>
         <library.jaxb-runtime.version>4.0.4</library.jaxb-runtime.version>
-        <library.jiconfont.version>1.0.0</library.jiconfont.version>
-        <library.jiconfont-swing.version>1.0.1</library.jiconfont-swing.version>
-        <library.jiconfont-google.version>2.2.0.2</library.jiconfont-google.version>
         <library.jogl.version>${library.gluegen-rt.version}</library.jogl.version>
         <library.junit-jupiter.version>5.10.1</library.junit-jupiter.version>
         <library.log4j-api.version>2.22.1</library.log4j-api.version>
@@ -161,17 +158,141 @@
         <library.poi-ooxml.version>${library.poi.version}</library.poi-ooxml.version>
         <library.snakeyaml.version>2.2</library.snakeyaml.version>
         <library.swingx-all.version>1.6.5-1</library.swingx-all.version>
+        <library.vtk.version>9.2.6</library.vtk.version>
 
-        <library.icy.batik.version>1.0.0</library.icy.batik.version>
-        <library.icy.bioformats.version>7.0.0</library.icy.bioformats.version>
-        <library.icy.poi.version>1.0.0</library.icy.poi.version>
-        <library.icy.snakeyaml.version>1.0.0</library.icy.snakeyaml.version>
-        <library.icy.vtk.version>9.2.1</library.icy.vtk.version>
-        <library.icy.vtk-os.version>9.2.6</library.icy.vtk-os.version>
-        <library.icy.vtk-all.version>1.0.0</library.icy.vtk-all.version>
+        <icy.library.batik.version>1.0.0-a.1</icy.library.batik.version>
+        <icy.library.bioformats.version>7.0.0-a.1</icy.library.bioformats.version>
+        <icy.library.poi.version>1.0.0-a.1</icy.library.poi.version>
+        <icy.library.snakeyaml.version>1.0.0-a.1</icy.library.snakeyaml.version>
+        <icy.library.vtk-os.version>${library.vtk.version}</icy.library.vtk-os.version>
+        <icy.library.vtk-all.version>1.0.0-a.1</icy.library.vtk-all.version>
 
         <!-- Default Icy kernel version -->
-        <icy-kernel.version>3.0.0</icy-kernel.version>
+        <icy.kernel.version>3.0.0-a.1</icy.kernel.version>
+
+        <!-- Default main Icy's extensions version -->
+        <icy.extension.icy2-api.version>1.0.0-a.1</icy.extension.icy2-api.version>
+        <icy.extension.kernel.version>1.0.0-a.1</icy.extension.kernel.version>
+        <icy.extension.ezplug.version>4.0.0-a.1</icy.extension.ezplug.version>
+        <icy.extension.protocols.version>4.0.0-a.1</icy.extension.protocols.version>
+
+        <!-- Default Icy's extensions version -->
+        <icy.extension.3d-mesh-roi.version>2.0.0-a.1</icy.extension.3d-mesh-roi.version>
+        <icy.extension.3d-rotation.version>2.0.0-a.1</icy.extension.3d-rotation.version>
+        <icy.extension.3d-spheres-vtk.version>2.0.0-a.1</icy.extension.3d-spheres-vtk.version>
+        <icy.extension.active-contours.version>5.0.0-a.1</icy.extension.active-contours.version>
+        <icy.extension.angle-descriptor.version>2.0.0-a.1</icy.extension.angle-descriptor.version>
+        <icy.extension.angle-helper.version>2.0.0-a.1</icy.extension.angle-helper.version>
+        <icy.extension.best-threshold.version>2.0.0-a.1</icy.extension.best-threshold.version>
+        <icy.extension.blockvars.version>1.0.0-a.1</icy.extension.blockvars.version>
+        <icy.extension.channel-montage.version>3.0.0-a.1</icy.extension.channel-montage.version>
+        <icy.extension.color-bar.version>2.0.0-a.1</icy.extension.color-bar.version>
+        <icy.extension.color-picker-threshold.version>2.0.0-a.1</icy.extension.color-picker-threshold.version>
+        <icy.extension.color-track-processor.version>2.0.0-a.1</icy.extension.color-track-processor.version>
+        <icy.extension.connected-components.version>5.0.0-a.1</icy.extension.connected-components.version>
+        <icy.extension.convexify.version>3.0.0-a.1</icy.extension.convexify.version>
+        <icy.extension.detection-to-roi.version>2.0.0-a.1</icy.extension.detection-to-roi.version>
+        <icy.extension.distance-profiler.version>2.0.0-a.1</icy.extension.distance-profiler.version>
+        <icy.extension.emory-jtransforms.version>1.0.0-a.1</icy.extension.emory-jtransforms.version>
+        <icy.extension.fill-holes-in-roi.version>2.0.0-a.1</icy.extension.fill-holes-in-roi.version>
+        <icy.extension.filter-toolbox.version>5.0.0-a.1</icy.extension.filter-toolbox.version>
+        <icy.extension.flanagan.version>2.0.0-a.1</icy.extension.flanagan.version>
+        <icy.extension.flying-camera.version>2.0.0-a.1</icy.extension.flying-camera.version>
+        <icy.extension.global-visible-persistence.version>2.0.0-a.1</icy.extension.global-visible-persistence.version>
+        <icy.extension.graaljs.version>1.0.0-a.1</icy.extension.graaljs.version>
+        <icy.extension.hk-means.version>3.0.0-a.1</icy.extension.hk-means.version>
+        <icy.extension.image-to-workbook.version>3.0.0-a.1</icy.extension.image-to-workbook.version>
+        <icy.extension.intensity-projection.version>2.0.0-a.1</icy.extension.intensity-projection.version>
+        <icy.extension.invert.version>3.0.0-a.1</icy.extension.invert.version>
+        <icy.extension.isotropic-wavelet-transform.version>2.0.0-a.1</icy.extension.isotropic-wavelet-transform.version>
+        <icy.extension.jama.version>2.0.0-a.1</icy.extension.jama.version>
+        <icy.extension.java3d.version>2.0.0-a.1</icy.extension.java3d.version>
+        <icy.extension.javacl.version>2.0.0-a.1</icy.extension.javacl.version>
+        <icy.extension.jfreechart.version>2.0.0-a.1</icy.extension.jfreechart.version>
+        <icy.extension.jmath.version>1.0.0-a.1</icy.extension.jmath.version>
+        <icy.extension.jna.version>6.0.0-a.1</icy.extension.jna.version>
+        <icy.extension.jep.version>5.0.0-a.1</icy.extension.jep.version>
+        <icy.extension.jruby.version>1.0.0-a.1</icy.extension.jruby.version>
+        <icy.extension.kmeans-color-quantization.version>2.0.0-a.1</icy.extension.kmeans-color-quantization.version>
+        <icy.extension.kymograph-tracker.version>2.0.0-a.1</icy.extension.kymograph-tracker.version>
+        <icy.extension.label-extractor.version>2.0.0-a.1</icy.extension.label-extractor.version>
+        <icy.extension.linear-programming.version>2.0.0-a.1</icy.extension.linear-programming.version>
+        <icy.extension.magnifier.version>4.0.0-a.1</icy.extension.magnifier.version>
+        <icy.extension.mask-editor.version>2.0.0-a.1</icy.extension.mask-editor.version>
+        <icy.extension.median-filter.version>3.0.0-a.1</icy.extension.median-filter.version>
+        <icy.extension.micromanager.version>2.0.0-a.1</icy.extension.micromanager.version>
+        <icy.extension.micromanager-block.version>2.0.0-a.1</icy.extension.micromanager-block.version>
+        <icy.extension.microscope-remote.version>3.0.0-a.1</icy.extension.microscope-remote.version>
+        <icy.extension.morphomaths.version>6.0.0-a.1</icy.extension.morphomaths.version>
+        <icy.extension.motion-profiler.version>5.0.0-a.1</icy.extension.motion-profiler.version>
+        <icy.extension.msd-track-processor.version>2.0.0-a.1</icy.extension.msd-track-processor.version>
+        <icy.extension.nherve-image-analysis-toolbox.version>2.0.0-a.1</icy.extension.nherve-image-analysis-toolbox.version>
+        <icy.extension.nherve-matrix.version>2.0.0-a.1</icy.extension.nherve-matrix.version>
+        <icy.extension.nherve-toolbox.version>2.0.0-a.1</icy.extension.nherve-toolbox.version>
+        <icy.extension.orthoviewer.version>3.0.0-a.1</icy.extension.orthoviewer.version>
+        <icy.extension.particle-animation.version>2.0.0-a.1</icy.extension.particle-animation.version>
+        <icy.extension.path-intensity-profiler.version>2.0.0-a.1</icy.extension.path-intensity-profiler.version>
+        <icy.extension.projection.version>2.0.0-a.1</icy.extension.projection.version>
+        <icy.extension.protractor.version>2.0.0-a.1</icy.extension.protractor.version>
+        <icy.extension.quickhull.version>2.0.0-a.1</icy.extension.quickhull.version>
+        <icy.extension.random-roi-coloring.version>2.0.0-a.1</icy.extension.random-roi-coloring.version>
+        <icy.extension.renjin.version>1.0.0-a.1</icy.extension.renjin.version>
+        <icy.extension.rescale-roi.version>2.0.0-a.1</icy.extension.rescale-roi.version>
+        <icy.extension.ring-roi.version>3.0.0-a.1</icy.extension.ring-roi.version>
+        <icy.extension.roi-blocks.version>2.0.0-a.1</icy.extension.roi-blocks.version>
+        <icy.extension.roi-inclusion-analysis.version>2.0.0-a.1</icy.extension.roi-inclusion-analysis.version>
+        <icy.extension.roi-intensity-evolution.version>3.0.0-a.1</icy.extension.roi-intensity-evolution.version>
+        <icy.extension.roi-pool.version>2.0.0-a.1</icy.extension.roi-pool.version>
+        <icy.extension.roi-proximity-analysis.version>2.0.0-a.1</icy.extension.roi-proximity-analysis.version>
+        <icy.extension.roi-statistics.version>6.0.0-a.1</icy.extension.roi-statistics.version>
+        <icy.extension.roi-tagger.version>2.0.0-a.1</icy.extension.roi-tagger.version>
+        <icy.extension.roi-to-detection.version>2.0.0-a.1</icy.extension.roi-to-detection.version>
+        <icy.extension.roi-to-distance-map.version>4.0.0-a.1</icy.extension.roi-to-distance-map.version>
+        <icy.extension.roi-tooltip.version>2.0.0-a.1</icy.extension.roi-tooltip.version>
+        <icy.extension.rsyntaxtextarea.version>3.0.0-a.1</icy.extension.rsyntaxtextarea.version>
+        <icy.extension.ruler-helper.version>2.0.0-a.1</icy.extension.ruler-helper.version>
+        <icy.extension.scale-bar.version>4.0.0-a.1</icy.extension.scale-bar.version>
+        <icy.extension.script-manager-core.version>1.0.0-a.1</icy.extension.script-manager-core.version>
+        <icy.extension.script-manager-gui.version>1.0.0-a.1</icy.extension.script-manager-gui.version>
+        <icy.extension.sequence-blocks.version>3.0.0-a.1</icy.extension.sequence-blocks.version>
+        <icy.extension.slic.version>2.0.0-a.1</icy.extension.slic.version>
+        <icy.extension.soda-suite.version>2.0.0-a.1</icy.extension.soda-suite.version>
+        <icy.extension.spot-detection-utilities.version>2.0.0-a.1</icy.extension.spot-detection-utilities.version>
+        <icy.extension.spot-detector.version>2.0.0-a.1</icy.extension.spot-detector.version>
+        <icy.extension.spot-detector-block.version>2.0.0-a.1</icy.extension.spot-detector-block.version>
+        <icy.extension.spot-tracking.version>4.0.0-a.1</icy.extension.spot-tracking.version>
+        <icy.extension.spot-tracking-blocks.version>2.0.0-a.1</icy.extension.spot-tracking-blocks.version>
+        <icy.extension.stack-rotation.version>2.0.0-a.1</icy.extension.stack-rotation.version>
+        <icy.extension.stereo-3d-vtk-canvas.version>2.0.0-a.1</icy.extension.stereo-3d-vtk-canvas.version>
+        <icy.extension.texture-segmentation.version>2.0.0-a.1</icy.extension.texture-segmentation.version>
+        <icy.extension.thresholder.version>4.0.0-a.1</icy.extension.thresholder.version>
+        <icy.extension.timestamp-overlay.version>2.0.0-a.1</icy.extension.timestamp-overlay.version>
+        <icy.extension.track-manager.version>2.0.0-a.1</icy.extension.track-manager.version>
+        <icy.extension.track-painter.version>3.0.0-a.1</icy.extension.track-painter.version>
+        <icy.extension.track-processor-excel-export.version>2.0.0-a.1</icy.extension.track-processor-excel-export.version>
+        <icy.extension.track-processor-instant-speed.version>2.0.0-a.1</icy.extension.track-processor-instant-speed.version>
+        <icy.extension.track-processor-intensity-profile.version>2.0.0-a.1</icy.extension.track-processor-intensity-profile.version>
+        <icy.extension.tracking-benchmark-generator.version>2.0.0-a.1</icy.extension.tracking-benchmark-generator.version>
+        <icy.extension.vecmath.version>2.0.0-a.1</icy.extension.vecmath.version>
+        <icy.extension.workbooks.version>4.0.0-a.1</icy.extension.workbooks.version>
+
+        <!-- Broken extensions -->
+        <!--<icy.extension.intensity-profile.version>2.0.0-a.1</icy.extension.intensity-profile.version>-->
+
+        <!-- Deprecated extensions -->
+        <!--<icy.extension.animation-3d.version>2.0.0</icy.extension.animation-3d.version>-->
+        <!--<icy.extension.apache-poi.version>6.0.0</icy.extension.apache-poi.version>-->
+        <!--<icy.extension.bioflow.version>2.1.1</icy.extension.bioflow.version>-->
+        <!--<icy.extension.javadocparser.version>1.0.2</icy.extension.javadocparser.version>-->
+        <!--<icy.extension.jython.version>3.0.0</icy.extension.jython.version>-->
+        <!--<icy.extension.jython-execnet.version>6.0.0</icy.extension.jython-execnet.version>-->
+        <!--<icy.extension.log4j.version>1.0.0</icy.extension.log4j.version>-->
+        <!--<icy.extension.nashorn.version>16.0.0</icy.extension.nashorn.version>-->
+        <!--<icy.extension.python-extractor.version>2.0.0</icy.extension.python-extractor.version>-->
+        <!--<icy.extension.rhino.version>2.0.0</icy.extension.rhino.version>-->
+        <!--<icy.extension.script-editor.version>1.17.0</icy.extension.script-editor.version>-->
+        <!--<icy.extension.snake-yaml.version>2.0.0</icy.extension.snake-yaml.version>-->
+        <!--<icy.extension.xuggler.version>6.0.0</icy.extension.xuggler.version>-->
 
         <!-- Default libraries version -->
         <apache-commons-codec.version>2.0.0</apache-commons-codec.version>
@@ -180,159 +301,42 @@
         <apache-commons-lang.version>4.0.0</apache-commons-lang.version>
         <apache-commons-logging.version>2.0.0</apache-commons-logging.version>
         <apache-httpclient.version>5.0.0</apache-httpclient.version>
-        <apache-poi.version>6.0.0</apache-poi.version>
         <apache-xmlbeans.version>6.0.0</apache-xmlbeans.version>
-
         <autocomplete.version>3.0.0</autocomplete.version>
         <bridj.version>1.0.0</bridj.version>
         <clipper.version>7.0.0</clipper.version>
         <clojure.version>2.0.0</clojure.version>
         <docker4icy.version>4.0.0</docker4icy.version>
-        <ehcache3.version>4.0.0</ehcache3.version>
         <ejml.version>1.0.0</ejml.version>
-        <flanagan.version>2.0.0</flanagan.version>
-        <graaljs.version>1.0.0</graaljs.version>
-        <jama.version>2.0.0</jama.version>
-        <java3d.version>2.0.0</java3d.version>
-        <javacl.version>2.0.0</javacl.version>
         <javacpp.version>2.0.0</javacpp.version>
-        <javadocparser.version>1.0.2</javadocparser.version>
         <jfree-common.version>2.0.0</jfree-common.version>
-        <jfreechart.version>2.0.0</jfreechart.version>
-        <jmath.version>1.0.0</jmath.version>
         <jmf.version>3.0.0</jmf.version>
-        <jna.version>6.0.0</jna.version>
         <joal.version>3.0.0</joal.version>
         <jocl.version>6.0.0</jocl.version>
-        <jep.version>5.0.0</jep.version>
-        <jython.version>3.0.0</jython.version>
-        <jruby.version>1.0.0</jruby.version>
         <google-flatbuffers.version>2.0.0</google-flatbuffers.version>
         <google-gson.version>3.0.0</google-gson.version>
-        <log4j.version>1.0.0</log4j.version>
         <mcib3d-core.version>4.0.0</mcib3d-core.version>
         <msgpack-core.version>1.0.0</msgpack-core.version>
-        <nashorn.version>16.0.0</nashorn.version>
-        <nherve-toolbox.version>2.0.0</nherve-toolbox.version>
         <opencv.version>5.0.0</opencv.version>
         <parallel-colt.version>6.0.0</parallel-colt.version>
-        <renjin.version>1.0.0</renjin.version>
-        <rhino.version>2.0.0</rhino.version>
-        <rsyntaxtextarea.version>3.0.0</rsyntaxtextarea.version>
-        <snake-yaml.version>2.0.0</snake-yaml.version>
-        <vecmath.version>2.0.0</vecmath.version>
-        <workbooks.version>4.0.0</workbooks.version>
-        <xuggler.version>6.0.0</xuggler.version>
-
-        <!-- Default main Icy's plugins version -->
-        <ezplug.version>4.0.0</ezplug.version>
-        <protocols.version>4.0.0</protocols.version>
 
         <!-- Default Icy's plugins version -->
-        <three-d-mesh-roi.version>2.0.0</three-d-mesh-roi.version>
-        <three-d-rotation.version>2.0.0</three-d-rotation.version>
-        <three-d-spheres-vtk.version>2.0.0</three-d-spheres-vtk.version>
-        <active-contours.version>5.0.0</active-contours.version>
-        <angle-descriptor.version>2.0.0</angle-descriptor.version>
-        <angle-helper.version>2.0.0</angle-helper.version>
-        <animation-3d.version>2.0.0</animation-3d.version>
-        <best-threshold.version>2.0.0</best-threshold.version>
         <big-image-tools.version>3.0.0</big-image-tools.version>
-        <bioflow.version>2.1.1</bioflow.version>
-        <blockvars.version>1.0.0</blockvars.version>
         <bunwrap.version>2.0.0</bunwrap.version>
-        <channel-montage.version>3.0.0</channel-montage.version>
-        <color-bar.version>2.0.0</color-bar.version>
-        <color-picker-threshold.version>2.0.0</color-picker-threshold.version>
-        <color-track-processor.version>2.0.0</color-track-processor.version>
-        <connected-components.version>5.0.0</connected-components.version>
-        <convexify.version>3.0.0</convexify.version>
-        <detection-to-roi.version>2.0.0</detection-to-roi.version>
-        <distance-profiler.version>2.0.0</distance-profiler.version>
-        <distance-transforms.version>4.0.0</distance-transforms.version>
-        <fill-holes-in-roi.version>2.0.0</fill-holes-in-roi.version>
-        <filter-toolbox.version>5.0.0</filter-toolbox.version>
-        <flying-camera.version>2.0.0</flying-camera.version>
-        <global-visible-persistence.version>2.0.0</global-visible-persistence.version>
-        <hk-means.version>3.0.0</hk-means.version>
-        <icy-random-roi-coloring.version>2.0.0</icy-random-roi-coloring.version>
-        <image-to-workbook.version>3.0.0</image-to-workbook.version>
-        <intensity-projection.version>2.0.0</intensity-projection.version>
-        <invert.version>3.0.0</invert.version>
-        <isotropic-wavelet-transform.version>2.0.0</isotropic-wavelet-transform.version>
-        <jython-execnet.version>6.0.0</jython-execnet.version>
-        <kmeans-color-quantization.version>2.0.0</kmeans-color-quantization.version>
-        <kymograph-tracker.version>2.0.0</kymograph-tracker.version>
-        <label-extractor.version>2.0.0</label-extractor.version>
-        <linear-programming.version>2.0.0</linear-programming.version>
-        <magnifier.version>4.0.0</magnifier.version>
-        <mask-editor.version>2.0.0</mask-editor.version>
         <math-operations.version>3.0.0</math-operations.version>
         <math-operations-pp.version>3.0.0</math-operations-pp.version>
-        <matlab-communicator.version>1.0.5</matlab-communicator.version>
-        <matlab-exporter.version>2.5.1</matlab-exporter.version>
-        <matlab-function-caller.version>1.0.0</matlab-function-caller.version>
-        <matlab-importer.version>2.5.1</matlab-importer.version>
-        <matlab-io.version>2.5.2</matlab-io.version>
-        <matlab-x-server.version>3.2.0</matlab-x-server.version>
-        <median-filter.version>2.0.0</median-filter.version>
+        <!--<matlab-communicator.version>1.0.5</matlab-communicator.version>-->
+        <!--<matlab-exporter.version>2.5.1</matlab-exporter.version>-->
+        <!--<matlab-function-caller.version>1.0.0</matlab-function-caller.version>-->
+        <!--<matlab-importer.version>2.5.1</matlab-importer.version>-->
+        <!--<matlab-io.version>2.5.2</matlab-io.version>-->
+        <!--<matlab-x-server.version>3.2.0</matlab-x-server.version>-->
         <mice-profile-tracker.version>8.0.0</mice-profile-tracker.version>
-        <micromanager.version>2.0.0</micromanager.version>
-        <micromanager-block.version>2.0.0</micromanager-block.version>
-        <microscope-remote.version>3.0.0</microscope-remote.version>
-        <morphomaths.version>6.0.0</morphomaths.version>
-        <motion-profiler.version>5.0.0</motion-profiler.version>
-        <msd-track-processor.version>1.1.2</msd-track-processor.version>
-        <nherve-image-analysis-toolbox.version>1.2.1</nherve-image-analysis-toolbox.version>
-        <nherve-matrix.version>2.0.0</nherve-matrix.version>
-        <orthoviewer.version>2.0.8</orthoviewer.version>
         <oshi-core-jdk6.version>3.4.2</oshi-core-jdk6.version>
-        <particle-animation.version>1.2.1</particle-animation.version>
-        <path-intensity-profiler.version>1.2.2</path-intensity-profiler.version>
-        <projection.version>1.1.0</projection.version>
-        <protractor.version>1.1.0</protractor.version>
-        <python-extractor.version>2.0.0</python-extractor.version>
-        <quickhull.version>2.0.0</quickhull.version>
-        <rescale.version>1.0.0</rescale.version>
         <rigid-registration.version>1.4.0</rigid-registration.version>
-        <ring-roi.version>2.0.1</ring-roi.version>
-        <roi-blocks.version>2.0.0</roi-blocks.version>
-        <roi-inclusion-analysis.version>1.3.2</roi-inclusion-analysis.version>
-        <roi-intensity-evolution.version>2.1.0</roi-intensity-evolution.version>
-        <roi-pool.version>2.0.0</roi-pool.version>
-        <roi-proximity-analysis.version>1.0.0</roi-proximity-analysis.version>
-        <roi-statistics.version>6.0.0</roi-statistics.version>
-        <roi-tagger.version>2.0.0</roi-tagger.version>
-        <roi-to-detection.version>1.0.3</roi-to-detection.version>
-        <roi-to-distance-map.version>3.0.0</roi-to-distance-map.version>
-        <roi-tooltip.version>1.1.4</roi-tooltip.version>
-        <ruler-helper.version>2.0.0</ruler-helper.version>
-        <scale-bar.version>3.2.0</scale-bar.version>
-        <script-editor.version>1.17.0</script-editor.version>
-        <script-manager-core.version>1.0.0</script-manager-core.version>
-        <sequence-blocks.version>3.0.0</sequence-blocks.version>
-        <slic.version>1.0.1</slic.version>
-        <soda-suite.version>1.1.0</soda-suite.version>
-        <spot-detection-utilities.version>2.0.0</spot-detection-utilities.version>
-        <spot-detector.version>2.0.0</spot-detector.version>
-        <spot-detector-block.version>1.0.0</spot-detector-block.version>
-        <spot-tracking.version>4.0.0</spot-tracking.version>
-        <spot-tracking-blocks.version>1.2.2</spot-tracking-blocks.version>
-        <stack-rotation.version>1.2.1</stack-rotation.version>
-        <stereo-3d-vtk-canvas.version>1.0.2</stereo-3d-vtk-canvas.version>
-        <tensor-flow-manager.version>1.0.0</tensor-flow-manager.version>
-        <texture-segmentation.version>1.2.1</texture-segmentation.version>
-        <thresholder.version>4.0.0</thresholder.version>
-        <timestamp-overlay.version>1.0.6</timestamp-overlay.version>
-        <track-manager.version>2.0.0</track-manager.version>
-        <track-overlay.version>1.5.0</track-overlay.version>
-        <track-painter.version>2.2.1</track-painter.version>
-        <track-processor-excel-export.version>2.0.0</track-processor-excel-export.version>
-        <track-processor-instant-speed.version>1.1.2</track-processor-instant-speed.version>
-        <track-processor-instensity-profile.version>1.0.0</track-processor-instensity-profile.version>
-        <track-instensity-profile-lagache.version>1.0.1</track-instensity-profile-lagache.version>
+        <!--<tensor-flow-manager.version>1.0.0</tensor-flow-manager.version>-->
+        <track-processor-intensity-profile-lagache.version>1.0.1</track-processor-intensity-profile-lagache.version>
         <track-processor-time-clip.version>1.0.1</track-processor-time-clip.version>
-        <tracking-benchmark-generator.version>2.0.0</tracking-benchmark-generator.version>
         <video-importer.version>1.1.3</video-importer.version>
         <video-recorder.version>1.2.2</video-recorder.version>
         <voronoi.version>1.0.0</voronoi.version>
@@ -341,6 +345,16 @@
         <webcam-capture-library.version>1.0.0</webcam-capture-library.version>
         <well-plate-reader.version>3.0.3</well-plate-reader.version>
         <workspace-editor.version>1.3.2</workspace-editor.version>
+
+        <!-- for testing purpose only -->
+        <!--<extension.name>${project.name}</extension.name>
+        <extension.version>${project.version}</extension.version>
+        <extension.description>${project.description}</extension.description>
+        <extension.icon/>
+        <extension.tags/>
+        <extension.authors/>
+        <extension.minkernel>${icy.kernel.version}</extension.minkernel>
+        <extension.java>${java-target}</extension.java>-->
     </properties>
 
     <dependencies>
@@ -360,7 +374,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-kernel</artifactId>
-                <version>${icy-kernel.version}</version>
+                <version>${icy.kernel.version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -415,7 +429,19 @@
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
-                <artifactId>gluegen-rt-natives-all</artifactId>
+                <artifactId>gluegen-rt-natives-linux-amd64</artifactId>
+                <version>${library.gluegen-rt.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt-natives-macosx-universal</artifactId>
+                <version>${library.gluegen-rt.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.gluegen</groupId>
+                <artifactId>gluegen-rt-natives-windows-amd64</artifactId>
                 <version>${library.gluegen-rt.version}</version>
                 <scope>provided</scope>
             </dependency>
@@ -444,24 +470,6 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>com.github.jiconfont</groupId>
-                <artifactId>jiconfont</artifactId>
-                <version>${library.jiconfont.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.github.jiconfont</groupId>
-                <artifactId>jiconfont-swing</artifactId>
-                <version>${library.jiconfont-swing.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.github.jiconfont</groupId>
-                <artifactId>jiconfont-google_material_design_icons</artifactId>
-                <version>${library.jiconfont-google.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
                 <version>${library.jogl.version}</version>
@@ -469,7 +477,19 @@
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
-                <artifactId>jogl-all-natives-all</artifactId>
+                <artifactId>jogl-all-natives-linux-amd64</artifactId>
+                <version>${library.jogl.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all-natives-macosx-universal</artifactId>
+                <version>${library.jogl.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jogamp.jogl</groupId>
+                <artifactId>jogl-all-natives-windows-amd64</artifactId>
                 <version>${library.jogl.version}</version>
                 <scope>provided</scope>
             </dependency>
@@ -520,13 +540,13 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-batik</artifactId>
-                <version>${library.icy.batik.version}</version>
+                <version>${icy.library.batik.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-bioformats</artifactId>
-                <version>${library.icy.bioformats.version}</version>
+                <version>${icy.library.bioformats.version}</version>
                 <scope>provided</scope>
                 <exclusions>
                     <exclusion>
@@ -538,39 +558,69 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-poi</artifactId>
-                <version>${library.icy.poi.version}</version>
+                <version>${icy.library.poi.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-snakeyaml</artifactId>
-                <version>${library.icy.snakeyaml.version}</version>
+                <version>${icy.library.snakeyaml.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-vtk</artifactId>
-                <version>${library.icy.vtk.version}</version>
+                <artifactId>icy-vtk-linux-x64</artifactId>
+                <version>${icy.library.vtk-os.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-vtk-macos-arm64</artifactId>
+                <version>${icy.library.vtk-os.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-vtk-macos-x64</artifactId>
+                <version>${icy.library.vtk-os.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-vtk-windows-x64</artifactId>
+                <version>${icy.library.vtk-os.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-vtk-all</artifactId>
-                <version>${library.icy.vtk-all.version}</version>
+                <version>${icy.library.vtk-all.version}</version>
                 <scope>provided</scope>
             </dependency>
 
             <!-- Icy - Main plugins -->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy2-api</artifactId>
+                <version>${icy.extension.icy2-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>kernel-extensions</artifactId>
+                <version>${icy.extension.kernel.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ezplug</artifactId>
-                <version>${ezplug.version}</version>
+                <version>${icy.extension.ezplug.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>protocols</artifactId>
-                <version>${protocols.version}</version>
+                <version>${icy.extension.protocols.version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -578,45 +628,46 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>3d-mesh-roi</artifactId>
-                <version>${three-d-mesh-roi.version}</version>
+                <version>${icy.extension.3d-mesh-roi.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>3d-rotation</artifactId>
-                <version>${three-d-rotation.version}</version>
+                <version>${icy.extension.3d-rotation.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>3d-spheres-vtk</artifactId>
-                <version>${three-d-spheres-vtk.version}</version>
+                <version>${icy.extension.3d-spheres-vtk.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>active-contours</artifactId>
-                <version>${active-contours.version}</version>
+                <version>${icy.extension.active-contours.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>angle-descriptor</artifactId>
-                <version>${angle-descriptor.version}</version>
+                <version>${icy.extension.angle-descriptor.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>angle-helper</artifactId>
-                <version>${angle-helper.version}</version>
+                <version>${icy.extension.angle-helper.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>animation-3d</artifactId>
-                <version>${animation-3d.version}</version>
+                <version>${icy.extension.animation-3d.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-codec</artifactId>
@@ -653,12 +704,13 @@
                 <version>${apache-httpclient.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-poi</artifactId>
-                <version>${apache-poi.version}</version>
+                <version>${icy.extension.apache-poi.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-xmlbeans</artifactId>
@@ -674,7 +726,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>best-threshold</artifactId>
-                <version>${best-threshold.version}</version>
+                <version>${icy.extension.best-threshold.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -683,16 +735,17 @@
                 <version>${big-image-tools.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>bioflow</artifactId>
-                <version>${bioflow.version}</version>
+                <version>${icy.extension.bioflow.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>blockvars</artifactId>
-                <version>${blockvars.version}</version>
+                <version>${icy.extension.blockvars.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -710,7 +763,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>channel-montage</artifactId>
-                <version>${channel-montage.version}</version>
+                <version>${icy.extension.channel-montage.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -728,49 +781,43 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>color-bar</artifactId>
-                <version>${color-bar.version}</version>
+                <version>${icy.extension.color-bar.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>color-picker-threshold</artifactId>
-                <version>${color-picker-threshold.version}</version>
+                <version>${icy.extension.color-picker-threshold.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>color-track-processor</artifactId>
-                <version>${color-track-processor.version}</version>
+                <version>${icy.extension.color-track-processor.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>connected-components</artifactId>
-                <version>${connected-components.version}</version>
+                <version>${icy.extension.connected-components.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>convexify</artifactId>
-                <version>${convexify.version}</version>
+                <version>${icy.extension.convexify.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>detection-to-roi</artifactId>
-                <version>${detection-to-roi.version}</version>
+                <version>${icy.extension.detection-to-roi.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>distance-profiler</artifactId>
-                <version>${distance-profiler.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>distance-transforms</artifactId>
-                <version>${distance-transforms.version}</version>
+                <version>${icy.extension.distance-profiler.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -781,44 +828,44 @@
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>ehcache3</artifactId>
-                <version>${ehcache3.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ejml-all</artifactId>
                 <version>${ejml.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>emory-jtransforms</artifactId>
+                <version>${icy.extension.emory-jtransforms.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>fill-holes-in-roi</artifactId>
-                <version>${fill-holes-in-roi.version}</version>
+                <version>${icy.extension.fill-holes-in-roi.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>filter-toolbox</artifactId>
-                <version>${filter-toolbox.version}</version>
+                <version>${icy.extension.filter-toolbox.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>flanagan</artifactId>
-                <version>${flanagan.version}</version>
+                <version>${icy.extension.flanagan.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>flying-camera</artifactId>
-                <version>${flying-camera.version}</version>
+                <version>${icy.extension.flying-camera.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>global-visible-persistence</artifactId>
-                <version>${global-visible-persistence.version}</version>
+                <version>${icy.extension.global-visible-persistence.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -836,85 +883,80 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>hk-means</artifactId>
-                <version>${hk-means.version}</version>
+                <version>${icy.extension.hk-means.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-graaljs</artifactId>
-                <version>${graaljs.version}</version>
+                <version>${icy.extension.graaljs.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-jep</artifactId>
-                <version>${jep.version}</version>
+                <version>${icy.extension.jep.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-jmath</artifactId>
-                <version>${jmath.version}</version>
+                <version>${icy.extension.jmath.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-jruby</artifactId>
-                <version>${jruby.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-random-roi-coloring</artifactId>
-                <version>${icy-random-roi-coloring.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-renjin</artifactId>
-                <version>${renjin.version}</version>
+                <version>${icy.extension.jruby.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>image-to-workbook</artifactId>
-                <version>${image-to-workbook.version}</version>
+                <version>${icy.extension.image-to-workbook.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <!-- BROKEN -->
+            <!--<dependency>
+                <groupId>org.bioimageanalysis.org</groupId>
+                <artifactId>intensity-profile</artifactId>
+                <version>${icy.extension.intensity-profile.version}</version>
+                <scope>provided</scope>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>intensity-projection</artifactId>
-                <version>${intensity-projection.version}</version>
+                <version>${icy.extension.intensity-projection.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>invert</artifactId>
-                <version>${invert.version}</version>
+                <version>${icy.extension.invert.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>isotropic-wavelet-transform</artifactId>
-                <version>${isotropic-wavelet-transform.version}</version>
+                <version>${icy.extension.isotropic-wavelet-transform.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jama</artifactId>
-                <version>${jama.version}</version>
+                <version>${icy.extension.jama.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>java3d</artifactId>
-                <version>${java3d.version}</version>
+                <version>${icy.extension.java3d.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>javacl</artifactId>
-                <version>${javacl.version}</version>
+                <version>${icy.extension.javacl.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -932,7 +974,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jfreechart</artifactId>
-                <version>${jfreechart.version}</version>
+                <version>${icy.extension.jfreechart.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -944,7 +986,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jna</artifactId>
-                <version>${jna.version}</version>
+                <version>${icy.extension.jna.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -959,58 +1001,61 @@
                 <version>${jocl.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jython</artifactId>
-                <version>${jython.version}</version>
+                <version>${icy.extension.jython.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nashorn</artifactId>
-                <version>${nashorn.version}</version>
+                <version>${icy.extension.nashorn.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jython-execnet</artifactId>
-                <version>${jython-execnet.version}</version>
+                <version>${icy.extension.jython-execnet.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>kmeans-color-quantization</artifactId>
-                <version>${kmeans-color-quantization.version}</version>
+                <version>${icy.extension.kmeans-color-quantization.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>kymograph-tracker</artifactId>
-                <version>${kymograph-tracker.version}</version>
+                <version>${icy.extension.kymograph-tracker.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>label-extractor</artifactId>
-                <version>${label-extractor.version}</version>
+                <version>${icy.extension.label-extractor.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>linear-programming</artifactId>
-                <version>${linear-programming.version}</version>
+                <version>${icy.extension.linear-programming.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>magnifier</artifactId>
-                <version>${magnifier.version}</version>
+                <version>${icy.extension.magnifier.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>mask-editor</artifactId>
-                <version>${mask-editor.version}</version>
+                <version>${icy.extension.mask-editor.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1070,7 +1115,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>median-filter</artifactId>
-                <version>${median-filter.version}</version>
+                <version>${icy.extension.median-filter.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1082,37 +1127,37 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>micromanager</artifactId>
-                <version>${micromanager.version}</version>
+                <version>${icy.extension.micromanager.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>micromanager-block</artifactId>
-                <version>${micromanager-block.version}</version>
+                <version>${icy.extension.micromanager-block.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>microscope-remote</artifactId>
-                <version>${microscope-remote.version}</version>
+                <version>${icy.extension.microscope-remote.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>morphomaths</artifactId>
-                <version>${morphomaths.version}</version>
+                <version>${icy.extension.morphomaths.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>motion-profiler</artifactId>
-                <version>${motion-profiler.version}</version>
+                <version>${icy.extension.motion-profiler.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>msd-track-processor</artifactId>
-                <version>${msd-track-processor.version}</version>
+                <version>${icy.extension.msd-track-processor.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1124,19 +1169,19 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nherve-image-analysis-toolbox</artifactId>
-                <version>${nherve-image-analysis-toolbox.version}</version>
+                <version>${icy.extension.nherve-image-analysis-toolbox.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nherve-matrix</artifactId>
-                <version>${nherve-matrix.version}</version>
+                <version>${icy.extension.nherve-matrix.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nherve-toolbox</artifactId>
-                <version>${nherve-toolbox.version}</version>
+                <version>${icy.extension.nherve-toolbox.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1148,7 +1193,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>orthoviewer</artifactId>
-                <version>${orthoviewer.version}</version>
+                <version>${icy.extension.orthoviewer.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1166,51 +1211,65 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>particle-animation</artifactId>
-                <version>${particle-animation.version}</version>
+                <version>${icy.extension.particle-animation.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>path-intensity-profiler</artifactId>
-                <version>${path-intensity-profiler.version}</version>
+                <version>${icy.extension.path-intensity-profiler.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>projection</artifactId>
-                <version>${projection.version}</version>
+                <version>${icy.extension.projection.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>protractor</artifactId>
-                <version>${protractor.version}</version>
+                <version>${icy.extension.protractor.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>python-extractor</artifactId>
-                <version>${python-extractor.version}</version>
+                <version>${icy.extension.python-extractor.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>quickhull</artifactId>
-                <version>${quickhull.version}</version>
+                <version>${icy.extension.quickhull.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-random-roi-coloring</artifactId>
+                <version>${icy.extension.random-roi-coloring.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-renjin</artifactId>
+                <version>${icy.extension.renjin.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>rescale-roi</artifactId>
-                <version>${rescale.version}</version>
+                <version>${icy.extension.rescale-roi.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>rhino</artifactId>
-                <version>${rhino.version}</version>
+                <version>${icy.extension.rhino.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>rigid-registration</artifactId>
@@ -1220,163 +1279,171 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ring-roi</artifactId>
-                <version>${ring-roi.version}</version>
+                <version>${icy.extension.ring-roi.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-blocks</artifactId>
-                <version>${roi-blocks.version}</version>
+                <version>${icy.extension.roi-blocks.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-inclusion-analysis</artifactId>
-                <version>${roi-inclusion-analysis.version}</version>
+                <version>${icy.extension.roi-inclusion-analysis.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>roi-itensify-evolution</artifactId>
-                <version>${roi-itensify-evolution.version}</version>
+                <artifactId>roi-intensity-evolution</artifactId>
+                <version>${icy.extension.roi-intensity-evolution.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-pool</artifactId>
-                <version>${roi-pool.version}</version>
+                <version>${icy.extension.roi-pool.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-proximity-analysis</artifactId>
-                <version>${roi-proximity-analysis.version}</version>
+                <version>${icy.extension.roi-proximity-analysis.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-statistics</artifactId>
-                <version>${roi-statistics.version}</version>
+                <version>${icy.extension.roi-statistics.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-tagger</artifactId>
-                <version>${roi-tagger.version}</version>
+                <version>${icy.extension.roi-tagger.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-to-detection</artifactId>
-                <version>${roi-to-detection.version}</version>
+                <version>${icy.extension.roi-to-detection.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-to-distance-map</artifactId>
-                <version>${roi-to-distance-map.version}</version>
+                <version>${icy.extension.roi-to-distance-map.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-tooltip</artifactId>
-                <version>${roi-tooltip.version}</version>
+                <version>${icy.extension.roi-tooltip.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>rsyntaxtextarea</artifactId>
-                <version>${rsyntaxtextarea.version}</version>
+                <version>${icy.extension.rsyntaxtextarea.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ruler-helper</artifactId>
-                <version>${ruler-helper.version}</version>
+                <version>${icy.extension.ruler-helper.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>scale-bar</artifactId>
-                <version>${scale-bar.version}</version>
+                <version>${icy.extension.scale-bar.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>script-editor</artifactId>
-                <version>${script-editor.version}</version>
+                <version>${icy.extension.script-editor.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>script-manager-core</artifactId>
-                <version>${script-manager-core.version}</version>
+                <version>${icy.extension.script-manager-core.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>script-manager-gui</artifactId>
+                <version>${icy.extension.script-manager-gui.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>sequence-blocks</artifactId>
-                <version>${sequence-blocks.version}</version>
+                <version>${icy.extension.sequence-blocks.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>slic</artifactId>
-                <version>${slic.version}</version>
+                <version>${icy.extension.slic.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>snake-yaml</artifactId>
-                <version>${snake-yaml.version}</version>
+                <version>${icy.extension.snake-yaml.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>soda-suite</artifactId>
-                <version>${soda-suite.version}</version>
+                <version>${icy.extension.soda-suite.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-detection-utilities</artifactId>
-                <version>${spot-detection-utilities.version}</version>
+                <version>${icy.extension.spot-detection-utilities.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-detector</artifactId>
-                <version>${spot-detector.version}</version>
+                <version>${icy.extension.spot-detector.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-detector-block</artifactId>
-                <version>${spot-detector-block.version}</version>
+                <version>${icy.extension.spot-detector-block.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-tracking</artifactId>
-                <version>${spot-tracking.version}</version>
+                <version>${icy.extension.spot-tracking.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-tracking-blocks</artifactId>
-                <version>${spot-tracking-blocks.version}</version>
+                <version>${icy.extension.spot-tracking-blocks.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>stack-rotation</artifactId>
-                <version>${stack-rotation.version}</version>
+                <version>${icy.extension.stack-rotation.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>stereo-3d-vtk-canvas</artifactId>
-                <version>${stereo-3d-vtk-canvas.version}</version>
+                <version>${icy.extension.stereo-3d-vtk-canvas.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1388,55 +1455,55 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>texture-segmentation</artifactId>
-                <version>${texture-segmentation.version}</version>
+                <version>${icy.extension.texture-segmentation.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>thresholder</artifactId>
-                <version>${thresholder.version}</version>
+                <version>${icy.extension.thresholder.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>timestamp-overlay</artifactId>
-                <version>${timestamp-overlay.version}</version>
+                <version>${icy.extension.timestamp-overlay.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-manager</artifactId>
-                <version>${track-manager.version}</version>
+                <version>${icy.extension.track-manager.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-painter</artifactId>
-                <version>${track-painter.version}</version>
+                <version>${icy.extension.track-painter.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-excel-export</artifactId>
-                <version>${track-processor-excel-export.version}</version>
+                <version>${icy.extension.track-processor-excel-export.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-instant-speed</artifactId>
-                <version>${track-processor-instant-speed.version}</version>
+                <version>${icy.extension.track-processor-instant-speed.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-intensity-profile</artifactId>
-                <version>${track-instensity-profile.version}</version>
+                <version>${icy.extension.track-processor-intensity-profile.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-intensity-profile-lagache</artifactId>
-                <version>${track-instensity-profile-lagache.version}</version>
+                <version>${track-processor-intensity-profile-lagache.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1448,13 +1515,13 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>tracking-benchmark-generator</artifactId>
-                <version>${tracking-benchmark-generator.version}</version>
+                <version>${icy.extension.tracking-benchmark-generator.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>vecmath</artifactId>
-                <version>${vecmath.version}</version>
+                <version>${icy.extension.vecmath.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1502,7 +1569,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>workbooks</artifactId>
-                <version>${workbooks.version}</version>
+                <version>${icy.extension.workbooks.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1511,12 +1578,12 @@
                 <version>${workspace-editor.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>xuggler</artifactId>
-                <version>${xuggler.version}</version>
+                <version>${icy.extension.xuggler.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
@@ -1647,11 +1714,39 @@
     <!-- POM profiles -->
     <profiles>
         <profile>
+            <id>kernel</id>
+            <activation>
+                <property>
+                    <name>kernel</name>
+                </property>
+            </activation>
+
+            <dependencyManagement>
+                <dependencies>
+                    <!-- This will prevent Maven downloading from old http repository -->
+                    <dependency>
+                        <groupId>org.glassfish.jaxb</groupId>
+                        <artifactId>jaxb-runtime</artifactId>
+                        <version>${library.jaxb-runtime.version}</version>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+
+            <distributionManagement>
+                <repository>
+                    <id>icy-core</id>
+                    <url>https://nexus-icy.pasteur.cloud/repository/icy-core/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>icy-core-snapshots</id>
+                    <url>https://nexus-icy.pasteur.cloud/repository/icy-core-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
             <id>plugin</id>
             <activation>
-                <!--<file>
-                    <missing>ext/</missing>
-                </file>-->
                 <property>
                     <name>!kernel</name>
                 </property>
@@ -1773,30 +1868,26 @@
                     </dependency>
                 </dependencies>
             </dependencyManagement>
+
+            <distributionManagement>
+                <repository>
+                    <id>icy-extensions</id>
+                    <url>https://nexus-icy.pasteur.cloud/repository/icy-extensions/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>icy-extensions-snapshots</id>
+                    <url>https://nexus-icy.pasteur.cloud/repository/icy-extensions-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
         </profile>
     </profiles>
-
-    <!-- Repository link for deployment -->
-    <distributionManagement>
-        <repository>
-            <id>icy-core-prod</id>
-            <name>Icy's Nexus</name>
-            <url>https://icy-nexus.pasteur.fr/repository/icy-core/</url>
-        </repository>
-        <!-- DEPRECATED -->
-        <!--<snapshotRepository>
-            <id>icy-core-dev</id>
-            <name>Icy Dev's Nexus</name>
-            <url>https://icy-nexus-dev.pasteur.cloud/repository/icy-core/</url>
-        </snapshotRepository>-->
-    </distributionManagement>
 
     <!-- Link to third-party Maven repositories -->
     <repositories>
         <repository>
             <id>icy</id>
             <name>Icy's Nexus</name>
-            <url>https://icy-nexus.pasteur.fr/repository/Icy/</url>
+            <url>https://nexus-icy.pasteur.cloud/repository/icy/</url>
         </repository>
 
         <repository>
@@ -1809,6 +1900,18 @@
             <id>jogamp</id>
             <name>JogAmp</name>
             <url>https://jogamp.org/deployment/maven/</url>
+        </repository>
+
+        <repository>
+            <id>ome-repo</id>
+            <name>OME repository</name>
+            <url>https://artifacts.openmicroscopy.org/artifactory/ome.releases/</url>
+        </repository>
+
+        <repository>
+            <id>scijava-public</id>
+            <name>SciJava</name>
+            <url>https://maven.scijava.org/content/repositories/public/</url>
         </repository>
     </repositories>
 
