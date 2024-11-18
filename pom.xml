@@ -6,7 +6,7 @@
 
     <groupId>org.bioimageanalysis.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.1</version>
+    <version>3.0.0-a.2</version>
 
     <packaging>pom</packaging>
 
@@ -158,14 +158,14 @@
         <library.poi-ooxml.version>${library.poi.version}</library.poi-ooxml.version>
         <library.snakeyaml.version>2.2</library.snakeyaml.version>
         <library.swingx-all.version>1.6.5-1</library.swingx-all.version>
-        <library.vtk.version>9.2.6</library.vtk.version>
+        <library.vtk.version>9.3.1</library.vtk.version>
 
         <icy.library.batik.version>1.0.0-a.1</icy.library.batik.version>
         <icy.library.bioformats.version>7.0.0-a.1</icy.library.bioformats.version>
         <icy.library.poi.version>1.0.0-a.1</icy.library.poi.version>
         <icy.library.snakeyaml.version>1.0.0-a.1</icy.library.snakeyaml.version>
         <icy.library.vtk-os.version>${library.vtk.version}</icy.library.vtk-os.version>
-        <icy.library.vtk-all.version>1.0.0-a.1</icy.library.vtk-all.version>
+        <icy.library.vtk-all.version>1.0.0-a.2</icy.library.vtk-all.version>
 
         <!-- Default Icy kernel version -->
         <icy.kernel.version>3.0.0-a.1</icy.kernel.version>
@@ -219,6 +219,7 @@
         <icy.extension.linear-programming.version>2.0.0-a.1</icy.extension.linear-programming.version>
         <icy.extension.magnifier.version>4.0.0-a.1</icy.extension.magnifier.version>
         <icy.extension.mask-editor.version>2.0.0-a.1</icy.extension.mask-editor.version>
+        <icy.extension.mcib3d-core.version>4.0.0-a.1</icy.extension.mcib3d-core.version>
         <icy.extension.median-filter.version>3.0.0-a.1</icy.extension.median-filter.version>
         <icy.extension.micromanager.version>2.0.0-a.1</icy.extension.micromanager.version>
         <icy.extension.micromanager-block.version>2.0.0-a.1</icy.extension.micromanager-block.version>
@@ -229,6 +230,7 @@
         <icy.extension.nherve-image-analysis-toolbox.version>2.0.0-a.1</icy.extension.nherve-image-analysis-toolbox.version>
         <icy.extension.nherve-matrix.version>2.0.0-a.1</icy.extension.nherve-matrix.version>
         <icy.extension.nherve-toolbox.version>2.0.0-a.1</icy.extension.nherve-toolbox.version>
+        <icy.extension.opencv.version>5.0.0-a.1</icy.extension.opencv.version>
         <icy.extension.orthoviewer.version>3.0.0-a.1</icy.extension.orthoviewer.version>
         <icy.extension.particle-animation.version>2.0.0-a.1</icy.extension.particle-animation.version>
         <icy.extension.path-intensity-profiler.version>2.0.0-a.1</icy.extension.path-intensity-profiler.version>
@@ -274,6 +276,7 @@
         <icy.extension.track-processor-intensity-profile.version>2.0.0-a.1</icy.extension.track-processor-intensity-profile.version>
         <icy.extension.tracking-benchmark-generator.version>2.0.0-a.1</icy.extension.tracking-benchmark-generator.version>
         <icy.extension.vecmath.version>2.0.0-a.1</icy.extension.vecmath.version>
+        <icy.extension.water-shed-3d.version>2.0.0-a.1</icy.extension.water-shed-3d.version>
         <icy.extension.workbooks.version>4.0.0-a.1</icy.extension.workbooks.version>
 
         <!-- Broken extensions -->
@@ -315,9 +318,7 @@
         <jocl.version>6.0.0</jocl.version>
         <google-flatbuffers.version>2.0.0</google-flatbuffers.version>
         <google-gson.version>3.0.0</google-gson.version>
-        <mcib3d-core.version>4.0.0</mcib3d-core.version>
         <msgpack-core.version>1.0.0</msgpack-core.version>
-        <opencv.version>5.0.0</opencv.version>
         <parallel-colt.version>6.0.0</parallel-colt.version>
 
         <!-- Default Icy's plugins version -->
@@ -340,7 +341,6 @@
         <video-importer.version>1.1.3</video-importer.version>
         <video-recorder.version>1.2.2</video-recorder.version>
         <voronoi.version>1.0.0</voronoi.version>
-        <water-shed-3d.version>1.1.1</water-shed-3d.version>
         <webcam-capture-example.version>1.0.4</webcam-capture-example.version>
         <webcam-capture-library.version>1.0.0</webcam-capture-library.version>
         <well-plate-reader.version>3.0.3</well-plate-reader.version>
@@ -1109,7 +1109,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>mcib3d-core</artifactId>
-                <version>${mcib3d-core.version}</version>
+                <version>${icy.extension.mcib3d-core.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1187,7 +1187,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>opencv</artifactId>
-                <version>${opencv.version}</version>
+                <version>${icy.extension.opencv.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -1545,7 +1545,7 @@
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>water-shed-3d</artifactId>
-                <version>${water-shed-3d.version}</version>
+                <version>${icy.extension.water-shed-3d.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
