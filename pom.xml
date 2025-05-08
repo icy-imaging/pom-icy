@@ -175,7 +175,7 @@
         <icy.extension.icy2-api.version>1.0.0-a.1</icy.extension.icy2-api.version>
         <icy.extension.kernel.version>1.0.0-a.2</icy.extension.kernel.version>
         <icy.extension.ezplug.version>4.0.0-a.3</icy.extension.ezplug.version>
-        <icy.extension.protocols.version>4.0.0-a.2</icy.extension.protocols.version>
+        <icy.extension.protocols.version>4.0.0-a.3</icy.extension.protocols.version>
 
         <!-- Default Icy's extensions version -->
         <icy.extension.3d-mesh-roi.version>2.0.0-a.2</icy.extension.3d-mesh-roi.version>
@@ -216,10 +216,9 @@
         <icy.extension.isotropic-wavelet-transform.version>2.0.0-a.1</icy.extension.isotropic-wavelet-transform.version> <!-- Not working with alpha 4 -->
         <icy.extension.jama.version>2.0.0-a.3</icy.extension.jama.version>
         <icy.extension.java3d.version>2.0.0-a.2</icy.extension.java3d.version>
-        <icy.extension.javacl.version>2.0.0-a.2</icy.extension.javacl.version>
         <icy.extension.jfreechart.version>2.0.0-a.3</icy.extension.jfreechart.version>
         <icy.extension.jmath.version>1.0.0-a.1</icy.extension.jmath.version> <!-- Not working with alpha 4 -->
-        <icy.extension.jna.version>6.0.0-a.2</icy.extension.jna.version>
+        <icy.extension.jna.version>6.0.0-a.3</icy.extension.jna.version>
         <icy.extension.jep.version>5.0.0-a.1</icy.extension.jep.version> <!-- Not working with alpha 4 -->
         <icy.extension.jruby.version>1.0.0-a.1</icy.extension.jruby.version> <!-- Not working with alpha 4 -->
         <icy.extension.kmeans-color-quantization.version>2.0.0-a.1</icy.extension.kmeans-color-quantization.version> <!-- Not working with alpha 4 -->
@@ -240,6 +239,7 @@
         <icy.extension.nherve-image-analysis-toolbox.version>2.0.0-a.1</icy.extension.nherve-image-analysis-toolbox.version> <!-- Not working with alpha 4 -->
         <icy.extension.nherve-matrix.version>2.0.0-a.1</icy.extension.nherve-matrix.version> <!-- Not working with alpha 4 -->
         <icy.extension.nherve-toolbox.version>2.0.0-a.1</icy.extension.nherve-toolbox.version> <!-- Not working with alpha 4 -->
+        <icy.extension.ochafik.version>1.0.0-a.1</icy.extension.ochafik.version>
         <icy.extension.opencv.version>5.0.0-a.1</icy.extension.opencv.version> <!-- Not working with alpha 4 -->
         <icy.extension.orthoviewer.version>3.0.0-a.2</icy.extension.orthoviewer.version>
         <icy.extension.particle-animation.version>2.0.0-a.1</icy.extension.particle-animation.version> <!-- Not working with alpha 4 -->
@@ -297,6 +297,7 @@
         <!--<icy.extension.animation-3d.version>2.0.0</icy.extension.animation-3d.version>-->
         <!--<icy.extension.apache-poi.version>6.0.0</icy.extension.apache-poi.version>-->
         <!--<icy.extension.bioflow.version>2.1.1</icy.extension.bioflow.version>-->
+        <!--<icy.extension.javacl.version>2.0.0-a.2</icy.extension.javacl.version>-->
         <!--<icy.extension.javadocparser.version>1.0.2</icy.extension.javadocparser.version>-->
         <!--<icy.extension.jfree-common.version>2.0.0</icy.extension.jfree-common.version>-->
         <!--<icy.extension.jython.version>3.0.0</icy.extension.jython.version>-->
@@ -990,12 +991,13 @@
                 <version>${icy.extension.java3d.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>javacl</artifactId>
                 <version>${icy.extension.javacl.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>javacpp</artifactId>
@@ -1226,6 +1228,12 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nherve-toolbox</artifactId>
                 <version>${icy.extension.nherve-toolbox.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>ochafik</artifactId>
+                <version>${icy.extension.ochafik.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
