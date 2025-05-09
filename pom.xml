@@ -266,7 +266,7 @@
         <icy.extension.scale-bar.version>4.0.0-a.2</icy.extension.scale-bar.version>
         <icy.extension.script-manager-core.version>1.0.0-a.2</icy.extension.script-manager-core.version>
         <icy.extension.script-manager-gui.version>1.0.0-a.2</icy.extension.script-manager-gui.version>
-        <icy.extension.sequence-blocks.version>3.0.0-a.1</icy.extension.sequence-blocks.version> <!-- Not working with alpha 4 -->
+        <icy.extension.sequence-blocks.version>3.0.0-a.2</icy.extension.sequence-blocks.version>
         <icy.extension.slic.version>2.0.0-a.1</icy.extension.slic.version> <!-- Not working with alpha 4 -->
         <icy.extension.soda-suite.version>2.0.0-a.1</icy.extension.soda-suite.version> <!-- Not working with alpha 4 -->
         <icy.extension.spot-detection-utilities.version>2.0.0-a.3</icy.extension.spot-detection-utilities.version>
