@@ -277,7 +277,7 @@
         <icy.extension.stack-rotation.version>2.0.0-a.1</icy.extension.stack-rotation.version> <!-- Not working with alpha 4 -->
         <icy.extension.stereo-3d-vtk-canvas.version>2.0.0-a.1</icy.extension.stereo-3d-vtk-canvas.version> <!-- Not working with alpha 4 -->
         <icy.extension.texture-segmentation.version>2.0.0-a.1</icy.extension.texture-segmentation.version> <!-- Not working with alpha 4 -->
-        <icy.extension.thresholder.version>4.0.0-a.2</icy.extension.thresholder.version>
+        <icy.extension.thresholder.version>4.0.0-a.3</icy.extension.thresholder.version>
         <icy.extension.timestamp-overlay.version>2.0.0-a.1</icy.extension.timestamp-overlay.version> <!-- Not working with alpha 4 -->
         <icy.extension.track-manager.version>2.0.0-a.3</icy.extension.track-manager.version>
         <icy.extension.track-painter.version>3.0.0-a.1</icy.extension.track-painter.version> <!-- Not working with alpha 4 -->
