@@ -181,7 +181,7 @@
         <icy.extension.3d-mesh-roi.version>2.0.0-a.2</icy.extension.3d-mesh-roi.version>
         <icy.extension.3d-rotation.version>2.0.0-a.2</icy.extension.3d-rotation.version>
         <icy.extension.3d-spheres-vtk.version>2.0.0-a.1</icy.extension.3d-spheres-vtk.version> <!-- Not working with alpha 4 -->
-        <icy.extension.active-contours.version>5.0.0-a.2</icy.extension.active-contours.version>
+        <icy.extension.active-contours.version>5.0.0-a.3</icy.extension.active-contours.version>
         <icy.extension.angle-descriptor.version>2.0.0-a.1</icy.extension.angle-descriptor.version> <!-- Not working with alpha 4 -->
         <icy.extension.angle-helper.version>2.0.0-a.1</icy.extension.angle-helper.version> <!-- Not working with alpha 4 -->
         <icy.extension.apache-commons-codec.version>2.0.0-a.1</icy.extension.apache-commons-codec.version>
@@ -207,7 +207,7 @@
         <icy.extension.flying-camera.version>2.0.0-a.1</icy.extension.flying-camera.version> <!-- Not working with alpha 4 -->
         <icy.extension.global-visible-persistence.version>2.0.0-a.1</icy.extension.global-visible-persistence.version> <!-- Not working with alpha 4 -->
         <icy.extension.graaljs.version>1.0.0-a.1</icy.extension.graaljs.version> <!-- Not working with alpha 4 -->
-        <icy.extension.hk-means.version>3.0.0-a.2</icy.extension.hk-means.version>
+        <icy.extension.hk-means.version>3.0.0-a.3</icy.extension.hk-means.version>
         <icy.extension.image-to-workbook.version>3.0.0-a.1</icy.extension.image-to-workbook.version> <!-- Not working with alpha 4 -->
         <icy.extension.imglib2-icy.version>8.0.0-a.3</icy.extension.imglib2-icy.version>
         <icy.extension.intensity-profile.version>2.0.0-a.1</icy.extension.intensity-profile.version>
