@@ -223,7 +223,7 @@
         <icy.extension.jruby.version>1.0.0-a.1</icy.extension.jruby.version> <!-- Not working with alpha 4 -->
         <icy.extension.kmeans-color-quantization.version>2.0.0-a.1</icy.extension.kmeans-color-quantization.version> <!-- Not working with alpha 4 -->
         <icy.extension.kymograph-tracker.version>2.0.0-a.1</icy.extension.kymograph-tracker.version> <!-- Not working with alpha 4 -->
-        <icy.extension.label-extractor.version>2.0.0-a.2</icy.extension.label-extractor.version>
+        <icy.extension.label-extractor.version>2.0.0-a.3</icy.extension.label-extractor.version>
         <icy.extension.linear-programming.version>2.0.0-a.3</icy.extension.linear-programming.version>
         <icy.extension.magnifier.version>4.0.0-a.1</icy.extension.magnifier.version> <!-- Not working with alpha 4 -->
         <icy.extension.mask-editor.version>2.0.0-a.1</icy.extension.mask-editor.version> <!-- Not working with alpha 4 -->
