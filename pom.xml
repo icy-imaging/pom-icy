@@ -211,7 +211,7 @@
         <icy.extension.image-to-workbook.version>3.0.0-a.1</icy.extension.image-to-workbook.version> <!-- Not working with alpha 4 -->
         <icy.extension.imglib2-icy.version>8.0.0-a.3</icy.extension.imglib2-icy.version>
         <icy.extension.intensity-profile.version>2.0.0-a.1</icy.extension.intensity-profile.version>
-        <icy.extension.intensity-projection.version>2.0.0-a.1</icy.extension.intensity-projection.version> <!-- Not working with alpha 4 -->
+        <icy.extension.intensity-projection.version>2.0.0-a.2</icy.extension.intensity-projection.version>
         <icy.extension.invert.version>3.0.0-a.1</icy.extension.invert.version> <!-- Not working with alpha 4 -->
         <icy.extension.isotropic-wavelet-transform.version>2.0.0-a.1</icy.extension.isotropic-wavelet-transform.version> <!-- Not working with alpha 4 -->
         <icy.extension.jama.version>2.0.0-a.3</icy.extension.jama.version>
