@@ -251,7 +251,7 @@
         <icy.extension.renjin.version>1.0.0-a.1</icy.extension.renjin.version> <!-- Not working with alpha 4 -->
         <icy.extension.rescale-roi.version>2.0.0-a.1</icy.extension.rescale-roi.version> <!-- Not working with alpha 4 -->
         <icy.extension.ring-roi.version>3.0.0-a.1</icy.extension.ring-roi.version> <!-- Not working with alpha 4 -->
-        <icy.extension.roi-blocks.version>2.0.0-a.1</icy.extension.roi-blocks.version> <!-- Not working with alpha 4 -->
+        <icy.extension.roi-blocks.version>2.0.0-a.2</icy.extension.roi-blocks.version>
         <icy.extension.roi-inclusion-analysis.version>2.0.0-a.1</icy.extension.roi-inclusion-analysis.version> <!-- Not working with alpha 4 -->
         <icy.extension.roi-intensity-evolution.version>3.0.0-a.1</icy.extension.roi-intensity-evolution.version> <!-- Not working with alpha 4 -->
         <icy.extension.roi-pool.version>2.0.0-a.3</icy.extension.roi-pool.version>
