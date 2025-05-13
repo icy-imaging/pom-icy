@@ -188,7 +188,7 @@
         <icy.extension.apache-commons-compress.version>2.0.0-a.2</icy.extension.apache-commons-compress.version>
         <icy.extension.apache-commons-io.version>2.0.0-a.1</icy.extension.apache-commons-io.version>
         <icy.extension.apache-commons-lang.version>4.0.0-a.1</icy.extension.apache-commons-lang.version>
-        <icy.extension.best-threshold.version>2.0.0-a.1</icy.extension.best-threshold.version> <!-- Not working with alpha 4 -->
+        <icy.extension.best-threshold.version>2.0.0-a.2</icy.extension.best-threshold.version>
         <icy.extension.blockvars.version>1.0.0-a.2</icy.extension.blockvars.version>
         <icy.extension.channel-montage.version>3.0.0-a.2</icy.extension.channel-montage.version>
         <icy.extension.color-bar.version>2.0.0-a.1</icy.extension.color-bar.version> <!-- Not working with alpha 4 -->
