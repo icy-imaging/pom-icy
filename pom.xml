@@ -196,7 +196,7 @@
         <icy.extension.color-track-processor.version>2.0.0-a.2</icy.extension.color-track-processor.version>
         <icy.extension.connected-components.version>5.0.0-a.3</icy.extension.connected-components.version>
         <icy.extension.convexify.version>3.0.0-a.2</icy.extension.convexify.version>
-        <icy.extension.detection-to-roi.version>2.0.0-a.1</icy.extension.detection-to-roi.version> <!-- Not working with alpha 4 -->
+        <icy.extension.detection-to-roi.version>2.0.0-a.2</icy.extension.detection-to-roi.version>
         <icy.extension.distance-profiler.version>2.0.0-a.1</icy.extension.distance-profiler.version> <!-- Not working with alpha 4 -->
         <icy.extension.edge-detection.version>1.0.0-a.2</icy.extension.edge-detection.version>
         <icy.extension.elevation-map.version>3.0.0-a.1</icy.extension.elevation-map.version>
