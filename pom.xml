@@ -180,7 +180,7 @@
         <!-- Default Icy's extensions version -->
         <icy.extension.3d-mesh-roi.version>2.0.0-a.2</icy.extension.3d-mesh-roi.version>
         <icy.extension.3d-rotation.version>2.0.0-a.2</icy.extension.3d-rotation.version>
-        <icy.extension.3d-spheres-vtk.version>2.0.0-a.1</icy.extension.3d-spheres-vtk.version> <!-- Not working with alpha 4 -->
+        <icy.extension.3d-spheres-vtk.version>2.0.0-a.2</icy.extension.3d-spheres-vtk.version>
         <icy.extension.active-contours.version>5.0.0-a.4</icy.extension.active-contours.version>
         <icy.extension.angle-descriptor.version>2.0.0-a.1</icy.extension.angle-descriptor.version> <!-- Not working with alpha 4 -->
         <icy.extension.angle-helper.version>2.0.0-a.1</icy.extension.angle-helper.version> <!-- Not working with alpha 4 -->
