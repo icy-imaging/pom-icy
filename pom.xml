@@ -258,7 +258,7 @@
         <icy.extension.roi-proximity-analysis.version>2.0.0-a.1</icy.extension.roi-proximity-analysis.version> <!-- Not working with alpha 4 -->
         <icy.extension.roi-statistics.version>6.0.0-a.3</icy.extension.roi-statistics.version>
         <icy.extension.roi-tagger.version>2.0.0-a.3</icy.extension.roi-tagger.version>
-        <icy.extension.roi-to-detection.version>2.0.0-a.1</icy.extension.roi-to-detection.version> <!-- Not working with alpha 4 -->
+        <icy.extension.roi-to-detection.version>2.0.0-a.2</icy.extension.roi-to-detection.version>
         <icy.extension.roi-to-distance-map.version>4.0.0-a.1</icy.extension.roi-to-distance-map.version> <!-- Not working with alpha 4 -->
         <icy.extension.roi-tooltip.version>2.0.0-a.1</icy.extension.roi-tooltip.version> <!-- Not working with alpha 4 -->
         <icy.extension.rsyntaxtextarea.version>3.0.0-a.2</icy.extension.rsyntaxtextarea.version>
