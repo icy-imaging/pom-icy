@@ -192,7 +192,7 @@
         <icy.extension.blockvars.version>1.0.0-a.2</icy.extension.blockvars.version>
         <icy.extension.channel-montage.version>3.0.0-a.2</icy.extension.channel-montage.version>
         <icy.extension.color-bar.version>2.0.0-a.2</icy.extension.color-bar.version>
-        <icy.extension.color-picker-threshold.version>2.0.0-a.1</icy.extension.color-picker-threshold.version> <!-- Not working with alpha 4 -->
+        <icy.extension.color-picker-threshold.version>2.0.0-a.2</icy.extension.color-picker-threshold.version>
         <icy.extension.color-track-processor.version>2.0.0-a.2</icy.extension.color-track-processor.version>
         <icy.extension.connected-components.version>5.0.0-a.3</icy.extension.connected-components.version>
         <icy.extension.convexify.version>3.0.0-a.2</icy.extension.convexify.version>
