@@ -200,7 +200,7 @@
         <icy.extension.distance-profiler.version>2.0.0-a.1</icy.extension.distance-profiler.version> <!-- Not working with alpha 4 -->
         <icy.extension.edge-detection.version>1.0.0-a.2</icy.extension.edge-detection.version>
         <icy.extension.elevation-map.version>3.0.0-a.1</icy.extension.elevation-map.version>
-        <icy.extension.emory-jtransforms.version>1.0.0-a.1</icy.extension.emory-jtransforms.version> <!-- Not working with alpha 4 -->
+        <icy.extension.emory-jtransforms.version>1.0.0-a.2</icy.extension.emory-jtransforms.version>
         <icy.extension.fill-holes-in-roi.version>2.0.0-a.2</icy.extension.fill-holes-in-roi.version>
         <icy.extension.filter-toolbox.version>5.0.0-a.2</icy.extension.filter-toolbox.version>
         <icy.extension.flanagan.version>2.0.0-a.4</icy.extension.flanagan.version>
@@ -233,12 +233,12 @@
         <icy.extension.micromanager-block.version>2.0.0-a.1</icy.extension.micromanager-block.version> <!-- Not working with alpha 4 -->
         <icy.extension.microscope-remote.version>3.0.0-a.1</icy.extension.microscope-remote.version> <!-- Not working with alpha 4 -->
         <icy.extension.montage-2d.version>1.0.0-a.2</icy.extension.montage-2d.version>
-        <icy.extension.morphomaths.version>6.0.0-a.1</icy.extension.morphomaths.version> <!-- Not working with alpha 4 -->
+        <icy.extension.morphomaths.version>6.0.0-a.2</icy.extension.morphomaths.version>
         <icy.extension.motion-profiler.version>5.0.0-a.3</icy.extension.motion-profiler.version>
         <icy.extension.msd-track-processor.version>2.0.0-a.1</icy.extension.msd-track-processor.version> <!-- Not working with alpha 4 -->
         <icy.extension.nherve-image-analysis-toolbox.version>2.0.0-a.1</icy.extension.nherve-image-analysis-toolbox.version> <!-- Not working with alpha 4 -->
-        <icy.extension.nherve-matrix.version>2.0.0-a.1</icy.extension.nherve-matrix.version> <!-- Not working with alpha 4 -->
-        <icy.extension.nherve-toolbox.version>2.0.0-a.1</icy.extension.nherve-toolbox.version> <!-- Not working with alpha 4 -->
+        <icy.extension.nherve-matrix.version>2.0.0-a.2</icy.extension.nherve-matrix.version>
+        <icy.extension.nherve-toolbox.version>2.0.0-a.2</icy.extension.nherve-toolbox.version>
         <icy.extension.ochafik.version>1.0.0-a.1</icy.extension.ochafik.version>
         <icy.extension.opencv.version>5.0.0-a.1</icy.extension.opencv.version> <!-- Not working with alpha 4 -->
         <icy.extension.orthoviewer.version>3.0.0-a.2</icy.extension.orthoviewer.version>
