@@ -6,7 +6,7 @@
 
     <groupId>org.bioimageanalysis.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.4</version>
+    <version>3.0.0-a.5</version>
 
     <packaging>pom</packaging>
 
@@ -97,7 +97,7 @@
 
     <issueManagement>
         <system>GitLab</system>
-        <url>https://gitlab.pasteur.fr/bia/parent-pom-base/-/issues</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/parent-pom-base/-/issues</url>
     </issueManagement>
 
     <properties>
@@ -139,37 +139,73 @@
 
         <!-- Default version for kernel libraries -->
         <library.annotations.version>26.0.2</library.annotations.version>
-        <library.batik-transcoder.version>1.18</library.batik-transcoder.version>
+        <library.batik.version>1.19</library.batik.version>
         <library.bioformats.version>8.1.1</library.bioformats.version>
+        <library.commons-codec.version>1.18.0</library.commons-codec.version>
+        <library.commons-collections.version>4.5.0</library.commons-collections.version>
+        <library.commons-compress.version>1.27.1</library.commons-compress.version>
+        <library.commons-csv.version>1.14.0</library.commons-csv.version>
+        <library.commons-exec.version>1.4.0</library.commons-exec.version>
+        <library.commons-geometry.version>1.0</library.commons-geometry.version>
         <library.commons-io.version>2.19.0</library.commons-io.version>
+        <library.commons-lang.version>3.17.0</library.commons-lang.version>
+        <library.commons-logging.version>1.3.5</library.commons-logging.version>
+        <!--<library.commons.math.version>4.0-beta1</library.commons.math.version>-->
+        <library.commons.math.version>3.6.1</library.commons.math.version>
+        <library.commons.net.version>3.11.1</library.commons.net.version>
+        <library.commons-numbers.version>1.2</library.commons-numbers.version>
+        <library.commons-pool.version>2.12.1</library.commons-pool.version>
+        <library.commons-rng.version>1.6</library.commons-rng.version>
+        <library.commons-statistics>1.1</library.commons-statistics>
+        <library.commons-text>1.13.1</library.commons-text>
+        <!--<library.commons-validator>1.9.0</library.commons-validator>-->
+        <library.commons-vfs>2.10.0</library.commons-vfs>
         <library.ehcache.version>3.10.8</library.ehcache.version>
         <library.flatlaf.version>3.6</library.flatlaf.version>
-        <library.flatlaf-intellij.version>${library.flatlaf.version}</library.flatlaf-intellij.version>
         <library.gluegen-rt.version>2.5.0</library.gluegen-rt.version>
-        <library.jai-core.version>1.1.3</library.jai-core.version>
-        <library.jai-codec.version>${library.jai-core.version}</library.jai-codec.version>
-        <library.jansi.version>2.4.1</library.jansi.version>
-        <library.javassist.version>3.30.2-GA</library.javassist.version>
+        <library.google-http-client.version>1.47.0</library.google-http-client.version>
+        <library.guava.version>33.4.8-jre</library.guava.version>
+        <library.httpclient.version>5.5</library.httpclient.version>
+        <library.httpcore.version>5.3.4</library.httpcore.version>
+        <library.jackson.version>2.19.0</library.jackson.version>
+        <library.jai.version>1.1.3</library.jai.version>
+        <library.jansi.version>2.4.2</library.jansi.version>
         <library.jaxb-runtime.version>4.0.5</library.jaxb-runtime.version>
         <library.jogl.version>${library.gluegen-rt.version}</library.jogl.version>
         <library.junit-jupiter.version>5.12.2</library.junit-jupiter.version>
-        <library.log4j-api.version>2.24.3</library.log4j-api.version>
-        <library.log4j-core.version>${library.log4j-api.version}</library.log4j-core.version>
+        <library.log4j.version>2.24.3</library.log4j.version>
+        <library.minio.version>5.0.6</library.minio.version>
+        <library.okhttp.version>4.12.0</library.okhttp.version>
+        <library.okio.version>3.12.0</library.okio.version>
+        <library.ome-codecs.version>1.1.0</library.ome-codecs.version>
+        <library.ome-common.version>6.0.25</library.ome-common.version>
+        <library.ome-specification.version>6.4.0</library.ome-specification.version>
+        <library.ome-xml.version>6.4.0</library.ome-xml.version>
         <library.poi.version>5.4.1</library.poi.version>
-        <library.poi-ooxml.version>${library.poi.version}</library.poi-ooxml.version>
+        <library.slf4j.version>2.0.17</library.slf4j.version>
         <library.snakeyaml.version>2.4</library.snakeyaml.version>
+        <library.sqlite-jdbc.version>3.50.1.0</library.sqlite-jdbc.version>
         <library.swingx-all.version>1.6.5-1</library.swingx-all.version>
-        <library.vtk.version>9.3.1</library.vtk.version>
+        <library.vtk.version>9.4.2</library.vtk.version>
+        <library.xml-apis.version>1.4.01</library.xml-apis.version>
+        <library.xml-apis-ext.version>1.3.04</library.xml-apis-ext.version>
 
-        <icy.library.batik.version>1.0.0-a.2</icy.library.batik.version>
-        <icy.library.bioformats.version>7.0.0-a.2</icy.library.bioformats.version>
-        <icy.library.poi.version>1.0.0-a.3</icy.library.poi.version>
-        <icy.library.snakeyaml.version>1.0.0-a.2</icy.library.snakeyaml.version>
+        <icy.library.apache-commons.version>1.0.0-a.5</icy.library.apache-commons.version>
+        <icy.library.apache-http.version>5.0.0-a.5</icy.library.apache-http.version>
+        <icy.library.batik.version>1.0.0-a.5</icy.library.batik.version>
+        <icy.library.bioformats.version>8.0.0-a.5</icy.library.bioformats.version>
+        <icy.library.ehcache.version>3.0.0-a.5</icy.library.ehcache.version>
+        <icy.library.flatlaf.version>3.0.0-a.5</icy.library.flatlaf.version>
+        <icy.library.jai.version>1.0.0-a.5</icy.library.jai.version>
+        <icy.library.jogamp.version>2.0.0-a.5</icy.library.jogamp.version>
+        <icy.library.log4j.version>2.0.0-a.5</icy.library.log4j.version>
+        <icy.library.poi.version>5.0.0-a.5</icy.library.poi.version>
+        <icy.library.snakeyaml.version>2.0.0-a.5</icy.library.snakeyaml.version>
         <icy.library.vtk-os.version>${library.vtk.version}</icy.library.vtk-os.version>
-        <icy.library.vtk-all.version>1.0.0-a.2</icy.library.vtk-all.version>
+        <icy.library.vtk-all.version>9.0.0-a.5</icy.library.vtk-all.version>
 
         <!-- Default Icy kernel version -->
-        <icy.kernel.version>3.0.0-a.4</icy.kernel.version>
+        <icy.kernel.version>3.0.0-a.5</icy.kernel.version>
 
         <!-- Default main Icy's extensions version -->
         <icy.extension.icy2-api.version>1.0.0-a.1</icy.extension.icy2-api.version>
@@ -370,10 +406,12 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
+            <version>${library.annotations.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
+            <version>${library.junit-jupiter.version}</version>
         </dependency>
     </dependencies>
 
@@ -396,8 +434,104 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-anim</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-awt-util</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-bridge</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-css</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-constants</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-dom</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-ext</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-gvt</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-i18n</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-parser</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-script</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-shared-resources</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-svg-dom</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-svggen</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-transcoder</artifactId>
-                <version>${library.batik-transcoder.version}</version>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-util</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-xml</artifactId>
+                <version>${library.batik.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -407,9 +541,273 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
+                <groupId>ome</groupId>
+                <artifactId>bio-formats_plugins</artifactId>
+                <version>${library.bioformats.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>ome</groupId>
+                <artifactId>bio-formats-tools</artifactId>
+                <version>${library.bioformats.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${library.commons-codec.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${library.commons-collections.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>${library.commons-compress.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-csv</artifactId>
+                <version>${library.commons-csv.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-exec</artifactId>
+                <version>${library.commons-exec.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-geometry-core</artifactId>
+                <version>${library.commons-geometry.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--<dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-geometry-enclosing</artifactId>
+                <version>${library.commons-geometry.version}</version>
+                <scope>compile</scope>
+            </dependency>-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-geometry-euclidean</artifactId>
+                <version>${library.commons-geometry.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-geometry-io-core</artifactId>
+                <version>${library.commons-geometry.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-geometry-io-euclidean</artifactId>
+                <version>${library.commons-geometry.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-geometry-spherical</artifactId>
+                <version>${library.commons-geometry.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${library.commons-io.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${library.commons-lang.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${library.commons-logging.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math3</artifactId>
+                <version>${library.commons.math.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--<dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math4-core</artifactId>
+                <version>${library.commons.math.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math4-neuralnet</artifactId>
+                <version>${library.commons.math.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math4-transform</artifactId>
+                <version>${library.commons.math.version}</version>
+                <scope>provided</scope>
+            </dependency>-->
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${library.commons.net.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-angle</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-arrays</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-combinatorics</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--<dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-complex-streams</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-complex</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-core</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-field</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-fraction</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-gamma</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-primes</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-quaternion</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-numbers-rootfinder</artifactId>
+                <version>${library.commons-numbers.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${library.commons-pool.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-rng-client-api</artifactId>
+                <version>${library.commons-rng.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-rng-core</artifactId>
+                <version>${library.commons-rng.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-rng-sampling</artifactId>
+                <version>${library.commons-rng.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-rng-simple</artifactId>
+                <version>${library.commons-rng.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-statistics-descriptive</artifactId>
+                <version>${library.commons-statistics}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-statistics-distribution</artifactId>
+                <version>${library.commons-statistics}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-statistics-inference</artifactId>
+                <version>${library.commons-statistics}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-statistics-ranking</artifactId>
+                <version>${library.commons-statistics}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-text</artifactId>
+                <version>${library.commons-text}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--<dependency>
+                <groupId>commons-validator</groupId>
+                <artifactId>commons-validator</artifactId>
+                <version>${library.commons-validator.version}</version>
+                <scope>provided</scope>
+            </dependency>-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-vfs2</artifactId>
+                <version>${library.commons-vfs}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -426,8 +824,38 @@
             </dependency>
             <dependency>
                 <groupId>com.formdev</groupId>
+                <artifactId>flatlaf-extras</artifactId>
+                <version>${library.flatlaf.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.formdev</groupId>
                 <artifactId>flatlaf-intellij-themes</artifactId>
-                <version>${library.flatlaf-intellij.version}</version>
+                <version>${library.flatlaf.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.formdev</groupId>
+                <artifactId>flatlaf-swingx</artifactId>
+                <version>${library.flatlaf.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>ome</groupId>
+                <artifactId>formats-api</artifactId>
+                <version>${library.bioformats.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>ome</groupId>
+                <artifactId>formats-bsd</artifactId>
+                <version>${library.bioformats.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>ome</groupId>
+                <artifactId>formats-gpl</artifactId>
+                <version>${library.bioformats.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -455,27 +883,57 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5</artifactId>
+                <version>${library.httpclient.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5-cache</artifactId>
+                <version>${library.httpclient.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5-fluent</artifactId>
+                <version>${library.httpclient.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.core5</groupId>
+                <artifactId>httpcore5</artifactId>
+                <version>${library.httpcore.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.core5</groupId>
+                <artifactId>httpcore5-h2</artifactId>
+                <version>${library.httpcore.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents.core5</groupId>
+                <artifactId>httpcore5-reactive</artifactId>
+                <version>${library.httpcore.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
                 <groupId>javax.media</groupId>
                 <artifactId>jai-core</artifactId>
-                <version>${library.jai-core.version}</version>
+                <version>${library.jai.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.sun.media</groupId>
                 <artifactId>jai-codec</artifactId>
-                <version>${library.jai-codec.version}</version>
+                <version>${library.jai.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.fusesource.jansi</groupId>
                 <artifactId>jansi</artifactId>
                 <version>${library.jansi.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>${library.javassist.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -511,13 +969,31 @@
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
-                <version>${library.log4j-api.version}</version>
+                <version>${library.log4j.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-core</artifactId>
-                <version>${library.log4j-core.version}</version>
+                <version>${library.log4j.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.openmicroscopy</groupId>
+                <artifactId>ome-codecs</artifactId>
+                <version>${library.ome-codecs.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.openmicroscopy</groupId>
+                <artifactId>ome-common</artifactId>
+                <version>${library.ome-common.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.openmicroscopy</groupId>
+                <artifactId>ome-xml</artifactId>
+                <version>${library.ome-xml.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -529,7 +1005,13 @@
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
-                <version>${library.poi-ooxml.version}</version>
+                <version>${library.poi.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-lite</artifactId>
+                <version>${library.poi.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -539,13 +1021,37 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
+                <groupId>org.openmicroscopy</groupId>
+                <artifactId>specification</artifactId>
+                <version>${library.ome-specification.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.swinglabs.swingx</groupId>
                 <artifactId>swingx-all</artifactId>
                 <version>${library.swingx-all.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>ome</groupId>
+                <artifactId>turbojpeg</artifactId>
+                <version>${library.bioformats.version}</version>
+                <scope>provided</scope>
+            </dependency>
 
             <!-- Icy - library packages -->
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-apache-commons</artifactId>
+                <version>${icy.library.apache-commons.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-apache-http</artifactId>
+                <version>${icy.library.apache-http.version}</version>
+                <scope>provided</scope>
+            </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-batik</artifactId>
@@ -557,12 +1063,36 @@
                 <artifactId>icy-bioformats</artifactId>
                 <version>${icy.library.bioformats.version}</version>
                 <scope>provided</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>*</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-ehcache</artifactId>
+                <version>${icy.library.ehcache.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-flatlaf</artifactId>
+                <version>${icy.library.flatlaf.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-jai</artifactId>
+                <version>${icy.library.jai.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-jogamp</artifactId>
+                <version>${icy.library.jogamp.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.bioimageanalysis.icy</groupId>
+                <artifactId>icy-log4j</artifactId>
+                <version>${icy.library.log4j.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
@@ -1654,6 +2184,73 @@
                 <version>${icy.extension.xuggler.version}</version>
                 <scope>provided</scope>
             </dependency>-->
+
+            <!-- replaced version to prevent vulnerabilities -->
+            <!-- BioFormats -->
+            <dependency>
+                <groupId>com.google.http-client</groupId>
+                <artifactId>google-http-client</artifactId>
+                <version>${library.google-http-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.http-client</groupId>
+                <artifactId>google-http-client-xml</artifactId>
+                <version>${library.google-http-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${library.guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${library.jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${library.jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${library.jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${library.minio.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${library.okhttp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okio</groupId>
+                <artifactId>okio</artifactId>
+                <version>${library.okio.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.xerial</groupId>
+                <artifactId>sqlite-jdbc</artifactId>
+                <version>${library.sqlite-jdbc.version}</version>
+            </dependency>
+
+            <!-- EhCache -->
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${library.jaxb-runtime.version}</version>
+            </dependency>
+
+            <!-- Slf4j -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${library.slf4j.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -1665,6 +2262,11 @@
         <!-- List of pre-configured Maven plugins -->
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>${build-helper-maven-plugin.version}</version>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
@@ -1786,21 +2388,72 @@
         <profile>
             <id>kernel</id>
             <activation>
-                <property>
-                    <name>kernel</name>
-                </property>
+                <activeByDefault>false</activeByDefault>
             </activation>
 
-            <dependencyManagement>
-                <dependencies>
-                    <!-- This will prevent Maven downloading from old http repository -->
-                    <dependency>
-                        <groupId>org.glassfish.jaxb</groupId>
-                        <artifactId>jaxb-runtime</artifactId>
-                        <version>${library.jaxb-runtime.version}</version>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
+            <build>
+                <defaultGoal>clean install</defaultGoal>
+            </build>
+
+            <distributionManagement>
+                <repository>
+                    <id>icy-core</id>
+                    <url>https://nexus-icy.pasteur.cloud/repository/icy-core/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>icy-core-snapshots</id>
+                    <url>https://nexus-icy.pasteur.cloud/repository/icy-core-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>library</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+
+            <build>
+                <defaultGoal>clean install</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>default-jar</id>
+                                <phase>none</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <configuration>
+                            <finalName>${project.artifactId}-${project.version}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>${project.artifactId}-assembly</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>single</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
 
             <distributionManagement>
                 <repository>
@@ -1817,13 +2470,11 @@
         <profile>
             <id>plugin</id>
             <activation>
-                <property>
-                    <name>!kernel</name>
-                </property>
+                <activeByDefault>true</activeByDefault>
             </activation>
 
             <build>
-                <defaultGoal>clean package</defaultGoal>
+                <defaultGoal>clean install</defaultGoal>
 
                 <plugins>
                     <plugin>
@@ -1833,12 +2484,12 @@
                             <dependency>
                                 <groupId>org.apache.maven.enforcer</groupId>
                                 <artifactId>enforcer-api</artifactId>
-                                <version>3.3.0</version>
+                                <version>${maven-enforcer-plugin.version}</version>
                             </dependency>
                             <dependency>
                                 <groupId>org.apache.maven.enforcer</groupId>
                                 <artifactId>enforcer-rules</artifactId>
-                                <version>3.3.0</version>
+                                <version>${maven-enforcer-plugin.version}</version>
                             </dependency>
                         </dependencies>
                         <executions>
@@ -1928,17 +2579,6 @@
                 </dependency>
             </dependencies>
 
-            <dependencyManagement>
-                <dependencies>
-                    <!-- This will prevent Maven downloading from old http repository -->
-                    <dependency>
-                        <groupId>org.glassfish.jaxb</groupId>
-                        <artifactId>jaxb-runtime</artifactId>
-                        <version>${library.jaxb-runtime.version}</version>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-
             <distributionManagement>
                 <repository>
                     <id>icy-extensions</id>
@@ -1984,5 +2624,4 @@
             <url>https://maven.scijava.org/content/repositories/public/</url>
         </repository>
     </repositories>
-
 </project>
