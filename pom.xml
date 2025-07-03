@@ -208,8 +208,8 @@
         <icy.kernel.version>3.0.0-a.5</icy.kernel.version>
 
         <!-- Default main Icy's extensions version -->
-        <icy.extension.icy2-api.version>1.0.0-a.1</icy.extension.icy2-api.version>
-        <icy.extension.kernel.version>1.0.0-a.2</icy.extension.kernel.version>
+        <icy.extension.icy2-api.version>1.0.0-a.5</icy.extension.icy2-api.version>
+        <icy.extension.kernel.version>1.0.0-a.5</icy.extension.kernel.version>
         <icy.extension.ezplug.version>4.0.0-a.3</icy.extension.ezplug.version>
         <icy.extension.protocols.version>4.0.0-a.3</icy.extension.protocols.version>
 
@@ -390,16 +390,6 @@
         <webcam-capture-library.version>1.0.0</webcam-capture-library.version>
         <well-plate-reader.version>3.0.3</well-plate-reader.version>
         <workspace-editor.version>1.3.2</workspace-editor.version>
-
-        <!-- for testing purpose only -->
-        <!--<extension.name>${project.name}</extension.name>
-        <extension.version>${project.version}</extension.version>
-        <extension.description>${project.description}</extension.description>
-        <extension.icon/>
-        <extension.tags/>
-        <extension.authors/>
-        <extension.minkernel>${icy.kernel.version}</extension.minkernel>
-        <extension.java>${java-target}</extension.java>-->
     </properties>
 
     <dependencies>
@@ -2473,6 +2463,11 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
 
+            <properties>
+                <extension.tags/>
+                <extension.authors/>
+            </properties>
+
             <build>
                 <defaultGoal>clean install</defaultGoal>
 
@@ -2524,6 +2519,48 @@
                             </rules>
                             <fail>true</fail>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.bioimageanalysis.icy.maven3</groupId>
+                        <artifactId>extension-properties-plugin</artifactId>
+                        <version>1.0.0-a.5</version>
+                        <executions>
+                            <execution>
+                                <id>generate-properties</id>
+                                <goals>
+                                    <goal>generate-extension-properties</goal>
+                                    <goal>generate-dependencies-properties</goal>
+                                </goals>
+                                <configuration>
+                                    <excludeArtifactIds>annotations,icy-kernel</excludeArtifactIds>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>copy-icons</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>copy-resources</goal>
+                                </goals>
+                                <configuration>
+                                    <outputDirectory>${project.build.outputDirectory}/META-INF/</outputDirectory>
+                                    <resources>
+                                        <resource>
+                                            <directory>${project.basedir}</directory>
+                                            <includes>
+                                                <include>icon.svg</include>
+                                                <include>icon_dark.svg</include>
+                                            </includes>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
