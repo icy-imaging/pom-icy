@@ -141,32 +141,32 @@
         <library.annotations.version>26.0.2</library.annotations.version>
         <library.batik.version>1.19</library.batik.version>
         <library.bioformats.version>8.1.1</library.bioformats.version>
-        <library.commons-codec.version>1.18.0</library.commons-codec.version>
+        <library.commons-codec.version>1.19.0</library.commons-codec.version>
         <library.commons-collections.version>4.5.0</library.commons-collections.version>
-        <library.commons-compress.version>1.27.1</library.commons-compress.version>
-        <library.commons-csv.version>1.14.0</library.commons-csv.version>
-        <library.commons-exec.version>1.4.0</library.commons-exec.version>
+        <library.commons-compress.version>1.28.0</library.commons-compress.version>
+        <library.commons-csv.version>1.14.1</library.commons-csv.version>
+        <library.commons-exec.version>1.5.0</library.commons-exec.version>
         <library.commons-geometry.version>1.0</library.commons-geometry.version>
-        <library.commons-io.version>2.19.0</library.commons-io.version>
-        <library.commons-lang.version>3.17.0</library.commons-lang.version>
+        <library.commons-io.version>2.20.0</library.commons-io.version>
+        <library.commons-lang.version>3.19.0</library.commons-lang.version>
         <library.commons-logging.version>1.3.5</library.commons-logging.version>
         <!--<library.commons.math.version>4.0-beta1</library.commons.math.version>-->
         <library.commons.math.version>3.6.1</library.commons.math.version>
-        <library.commons.net.version>3.11.1</library.commons.net.version>
+        <library.commons.net.version>3.12.0</library.commons.net.version>
         <library.commons-numbers.version>1.2</library.commons-numbers.version>
         <library.commons-pool.version>2.12.1</library.commons-pool.version>
         <library.commons-rng.version>1.6</library.commons-rng.version>
         <library.commons-statistics>1.1</library.commons-statistics>
-        <library.commons-text>1.13.1</library.commons-text>
+        <library.commons-text>1.14.0</library.commons-text>
         <!--<library.commons-validator>1.9.0</library.commons-validator>-->
         <library.commons-vfs>2.10.0</library.commons-vfs>
-        <library.ehcache.version>3.10.8</library.ehcache.version>
-        <library.flatlaf.version>3.6</library.flatlaf.version>
+        <library.ehcache.version>3.11.1</library.ehcache.version>
+        <library.flatlaf.version>3.6.2</library.flatlaf.version>
         <library.gluegen-rt.version>2.5.0</library.gluegen-rt.version>
         <library.google-http-client.version>1.47.0</library.google-http-client.version>
-        <library.guava.version>33.4.8-jre</library.guava.version>
-        <library.httpclient.version>5.5</library.httpclient.version>
-        <library.httpcore.version>5.3.4</library.httpcore.version>
+        <library.guava.version>33.5.0-jre</library.guava.version>
+        <library.httpclient.version>5.5.1</library.httpclient.version>
+        <library.httpcore.version>5.3.6</library.httpcore.version>
         <library.jackson.version>2.19.0</library.jackson.version>
         <library.jai.version>1.1.3</library.jai.version>
         <library.jansi.version>2.4.2</library.jansi.version>
@@ -210,130 +210,130 @@
         <!-- Default main Icy's extensions version -->
         <icy.extension.icy2-api.version>1.0.0-a.5</icy.extension.icy2-api.version>
         <icy.extension.kernel.version>1.0.0-a.5</icy.extension.kernel.version>
-        <icy.extension.ezplug.version>4.0.0-a.3</icy.extension.ezplug.version>
-        <icy.extension.protocols.version>4.0.0-a.3</icy.extension.protocols.version>
+        <icy.extension.ezplug.version>4.0.0-a.5</icy.extension.ezplug.version>
+        <icy.extension.protocols.version>4.0.0-a.5</icy.extension.protocols.version>
 
         <!-- Default Icy's extensions version -->
-        <icy.extension.3d-mesh-roi.version>2.0.0-a.2</icy.extension.3d-mesh-roi.version>
-        <icy.extension.3d-rotation.version>2.0.0-a.2</icy.extension.3d-rotation.version>
-        <icy.extension.3d-spheres-vtk.version>2.0.0-a.2</icy.extension.3d-spheres-vtk.version>
-        <icy.extension.active-contours.version>5.0.0-a.4</icy.extension.active-contours.version>
-        <icy.extension.angle-descriptor.version>2.0.0-a.2</icy.extension.angle-descriptor.version>
-        <icy.extension.angle-helper.version>2.0.0-a.2</icy.extension.angle-helper.version>
-        <icy.extension.apache-commons-codec.version>2.0.0-a.1</icy.extension.apache-commons-codec.version>
-        <icy.extension.apache-commons-compress.version>2.0.0-a.2</icy.extension.apache-commons-compress.version>
-        <icy.extension.apache-commons-io.version>2.0.0-a.1</icy.extension.apache-commons-io.version>
-        <icy.extension.apache-commons-lang.version>4.0.0-a.1</icy.extension.apache-commons-lang.version>
-        <icy.extension.best-threshold.version>2.0.0-a.2</icy.extension.best-threshold.version>
-        <icy.extension.blockvars.version>1.0.0-a.2</icy.extension.blockvars.version>
-        <icy.extension.channel-montage.version>3.0.0-a.2</icy.extension.channel-montage.version>
-        <icy.extension.color-bar.version>2.0.0-a.2</icy.extension.color-bar.version>
-        <icy.extension.color-picker-threshold.version>2.0.0-a.2</icy.extension.color-picker-threshold.version>
-        <icy.extension.color-track-processor.version>2.0.0-a.2</icy.extension.color-track-processor.version>
-        <icy.extension.connected-components.version>5.0.0-a.3</icy.extension.connected-components.version>
-        <icy.extension.convexify.version>3.0.0-a.2</icy.extension.convexify.version>
-        <icy.extension.detection-to-roi.version>2.0.0-a.2</icy.extension.detection-to-roi.version>
-        <icy.extension.distance-profiler.version>2.0.0-a.2</icy.extension.distance-profiler.version>
-        <icy.extension.edge-detection.version>1.0.0-a.2</icy.extension.edge-detection.version>
-        <icy.extension.elevation-map.version>3.0.0-a.1</icy.extension.elevation-map.version>
-        <icy.extension.emory-jtransforms.version>1.0.0-a.2</icy.extension.emory-jtransforms.version>
-        <icy.extension.fill-holes-in-roi.version>2.0.0-a.2</icy.extension.fill-holes-in-roi.version>
-        <icy.extension.filter-toolbox.version>5.0.0-a.2</icy.extension.filter-toolbox.version>
-        <icy.extension.flanagan.version>2.0.0-a.4</icy.extension.flanagan.version>
-        <icy.extension.flying-camera.version>2.0.0-a.1</icy.extension.flying-camera.version> <!-- Not working with alpha 4 -->
-        <icy.extension.global-visible-persistence.version>2.0.0-a.1</icy.extension.global-visible-persistence.version> <!-- Not working with alpha 4 -->
-        <icy.extension.graaljs.version>1.0.0-a.1</icy.extension.graaljs.version> <!-- Not working with alpha 4 -->
-        <icy.extension.hk-means.version>3.0.0-a.3</icy.extension.hk-means.version>
-        <icy.extension.image-to-workbook.version>3.0.0-a.1</icy.extension.image-to-workbook.version> <!-- Not working with alpha 4 -->
+        <icy.extension.3d-mesh-roi.version>2.0.0-a.5</icy.extension.3d-mesh-roi.version>
+        <icy.extension.3d-rotation.version>2.0.0-a.5</icy.extension.3d-rotation.version>
+        <icy.extension.3d-spheres-vtk.version>2.0.0-a.5</icy.extension.3d-spheres-vtk.version>
+        <icy.extension.active-contours.version>5.0.0-a.5</icy.extension.active-contours.version>
+        <icy.extension.angle-descriptor.version>2.0.0-a.5</icy.extension.angle-descriptor.version>
+        <icy.extension.angle-helper.version>2.0.0-a.5</icy.extension.angle-helper.version>
+        <!--<icy.extension.apache-commons-codec.version>2.0.0-a.1</icy.extension.apache-commons-codec.version>-->
+        <!--<icy.extension.apache-commons-compress.version>2.0.0-a.2</icy.extension.apache-commons-compress.version>-->
+        <!--<icy.extension.apache-commons-io.version>2.0.0-a.1</icy.extension.apache-commons-io.version>-->
+        <!--<icy.extension.apache-commons-lang.version>4.0.0-a.1</icy.extension.apache-commons-lang.version>-->
+        <icy.extension.best-threshold.version>2.0.0-a.5</icy.extension.best-threshold.version>
+        <icy.extension.blockvars.version>1.0.0-a.5</icy.extension.blockvars.version>
+        <icy.extension.channel-montage.version>3.0.0-a.5</icy.extension.channel-montage.version>
+        <icy.extension.color-bar.version>2.0.0-a.5</icy.extension.color-bar.version>
+        <icy.extension.color-picker-threshold.version>2.0.0-a.5</icy.extension.color-picker-threshold.version>
+        <icy.extension.color-track-processor.version>2.0.0-a.5</icy.extension.color-track-processor.version>
+        <icy.extension.connected-components.version>5.0.0-a.5</icy.extension.connected-components.version>
+        <icy.extension.convexify.version>3.0.0-a.5</icy.extension.convexify.version>
+        <icy.extension.detection-to-roi.version>2.0.0-a.5</icy.extension.detection-to-roi.version>
+        <icy.extension.distance-profiler.version>2.0.0-a.5</icy.extension.distance-profiler.version>
+        <icy.extension.edge-detection.version>1.0.0-a.5</icy.extension.edge-detection.version>
+        <icy.extension.elevation-map.version>3.0.0-a.5</icy.extension.elevation-map.version>
+        <icy.extension.emory-jtransforms.version>1.0.0-a.5</icy.extension.emory-jtransforms.version>
+        <icy.extension.fill-holes-in-roi.version>2.0.0-a.5</icy.extension.fill-holes-in-roi.version>
+        <icy.extension.filter-toolbox.version>5.0.0-a.5</icy.extension.filter-toolbox.version>
+        <icy.extension.flanagan.version>2.0.0-a.5</icy.extension.flanagan.version>
+        <icy.extension.flying-camera.version>2.0.0-a.5</icy.extension.flying-camera.version>
+        <icy.extension.global-visible-persistence.version>2.0.0-a.5</icy.extension.global-visible-persistence.version>
+        <icy.extension.graaljs.version>1.0.0-a.5</icy.extension.graaljs.version>
+        <icy.extension.hk-means.version>3.0.0-a.5</icy.extension.hk-means.version>
+        <icy.extension.image-to-workbook.version>3.0.0-a.1</icy.extension.image-to-workbook.version>
         <icy.extension.imglib2-icy.version>8.0.0-a.3</icy.extension.imglib2-icy.version>
         <icy.extension.intensity-profile.version>2.0.0-a.1</icy.extension.intensity-profile.version>
         <icy.extension.intensity-projection.version>2.0.0-a.2</icy.extension.intensity-projection.version>
         <icy.extension.invert.version>3.0.0-a.2</icy.extension.invert.version>
-        <icy.extension.isotropic-wavelet-transform.version>2.0.0-a.1</icy.extension.isotropic-wavelet-transform.version> <!-- Not working with alpha 4 -->
-        <icy.extension.jama.version>2.0.0-a.3</icy.extension.jama.version>
-        <icy.extension.java3d.version>2.0.0-a.2</icy.extension.java3d.version>
-        <icy.extension.jfreechart.version>2.0.0-a.3</icy.extension.jfreechart.version>
-        <icy.extension.jmath.version>1.0.0-a.1</icy.extension.jmath.version> <!-- Not working with alpha 4 -->
+        <icy.extension.isotropic-wavelet-transform.version>2.0.0-a.1</icy.extension.isotropic-wavelet-transform.version>
+        <icy.extension.jama.version>2.0.0-a.5</icy.extension.jama.version>
+        <icy.extension.java3d.version>2.0.0-a.5</icy.extension.java3d.version>
+        <icy.extension.javacl.version>2.0.0-a.5</icy.extension.javacl.version>
+        <icy.extension.jfreechart.version>2.0.0-a.5</icy.extension.jfreechart.version>
+        <icy.extension.jmath.version>1.0.0-a.5</icy.extension.jmath.version>
         <icy.extension.jna.version>6.0.0-a.3</icy.extension.jna.version>
-        <icy.extension.jep.version>5.0.0-a.1</icy.extension.jep.version> <!-- Not working with alpha 4 -->
-        <icy.extension.jruby.version>1.0.0-a.1</icy.extension.jruby.version> <!-- Not working with alpha 4 -->
-        <icy.extension.kmeans-color-quantization.version>2.0.0-a.1</icy.extension.kmeans-color-quantization.version> <!-- Not working with alpha 4 -->
-        <icy.extension.kymograph-tracker.version>2.0.0-a.1</icy.extension.kymograph-tracker.version> <!-- Not working with alpha 4 -->
-        <icy.extension.label-extractor.version>2.0.0-a.3</icy.extension.label-extractor.version>
-        <icy.extension.linear-programming.version>2.0.0-a.3</icy.extension.linear-programming.version>
-        <icy.extension.magnifier.version>4.0.0-a.1</icy.extension.magnifier.version> <!-- Not working with alpha 4 -->
-        <icy.extension.mask-editor.version>2.0.0-a.1</icy.extension.mask-editor.version> <!-- Not working with alpha 4 -->
+        <icy.extension.jep.version>5.0.0-a.5</icy.extension.jep.version>
+        <icy.extension.jruby.version>1.0.0-a.5</icy.extension.jruby.version>
+        <icy.extension.kmeans-color-quantization.version>2.0.0-a.1</icy.extension.kmeans-color-quantization.version>
+        <icy.extension.kymograph-tracker.version>2.0.0-a.1</icy.extension.kymograph-tracker.version>
+        <icy.extension.label-extractor.version>2.0.0-a.5</icy.extension.label-extractor.version>
+        <icy.extension.linear-programming.version>2.0.0-a.5</icy.extension.linear-programming.version>
+        <icy.extension.magnifier.version>4.0.0-a.1</icy.extension.magnifier.version>
+        <icy.extension.mask-editor.version>2.0.0-a.1</icy.extension.mask-editor.version>
         <icy.extension.mcib3d-core.version>4.0.0-a.2</icy.extension.mcib3d-core.version>
-        <icy.extension.median-filter.version>3.0.0-a.1</icy.extension.median-filter.version> <!-- Not working with alpha 4 -->
-        <icy.extension.micromanager.version>2.0.0-a.1</icy.extension.micromanager.version> <!-- Not working with alpha 4 -->
-        <icy.extension.micromanager-block.version>2.0.0-a.1</icy.extension.micromanager-block.version> <!-- Not working with alpha 4 -->
-        <icy.extension.microscope-remote.version>3.0.0-a.1</icy.extension.microscope-remote.version> <!-- Not working with alpha 4 -->
+        <icy.extension.median-filter.version>3.0.0-a.1</icy.extension.median-filter.version>
+        <icy.extension.micromanager.version>2.0.0-a.1</icy.extension.micromanager.version>
+        <icy.extension.micromanager-block.version>2.0.0-a.1</icy.extension.micromanager-block.version>
+        <icy.extension.microscope-remote.version>3.0.0-a.1</icy.extension.microscope-remote.version>
         <icy.extension.montage-2d.version>1.0.0-a.2</icy.extension.montage-2d.version>
-        <icy.extension.morphomaths.version>6.0.0-a.2</icy.extension.morphomaths.version>
+        <icy.extension.morphomaths.version>6.0.0-a.5</icy.extension.morphomaths.version>
         <icy.extension.motion-profiler.version>5.0.0-a.3</icy.extension.motion-profiler.version>
-        <icy.extension.msd-track-processor.version>2.0.0-a.1</icy.extension.msd-track-processor.version> <!-- Not working with alpha 4 -->
-        <icy.extension.nherve-image-analysis-toolbox.version>2.0.0-a.1</icy.extension.nherve-image-analysis-toolbox.version> <!-- Not working with alpha 4 -->
-        <icy.extension.nherve-matrix.version>2.0.0-a.2</icy.extension.nherve-matrix.version>
-        <icy.extension.nherve-toolbox.version>2.0.0-a.2</icy.extension.nherve-toolbox.version>
-        <icy.extension.ochafik.version>1.0.0-a.1</icy.extension.ochafik.version>
-        <icy.extension.opencv.version>5.0.0-a.1</icy.extension.opencv.version> <!-- Not working with alpha 4 -->
+        <icy.extension.msd-track-processor.version>2.0.0-a.1</icy.extension.msd-track-processor.version>
+        <icy.extension.nherve-image-analysis-toolbox.version>2.0.0-a.1</icy.extension.nherve-image-analysis-toolbox.version>
+        <icy.extension.nherve-matrix.version>2.0.0-a.5</icy.extension.nherve-matrix.version>
+        <icy.extension.nherve-toolbox.version>2.0.0-a.5</icy.extension.nherve-toolbox.version>
+        <!--<icy.extension.ochafik.version>1.0.0-a.5</icy.extension.ochafik.version>-->
+        <icy.extension.opencv.version>5.0.0-a.1</icy.extension.opencv.version>
         <icy.extension.orthoviewer.version>3.0.0-a.2</icy.extension.orthoviewer.version>
-        <icy.extension.particle-animation.version>2.0.0-a.1</icy.extension.particle-animation.version> <!-- Not working with alpha 4 -->
-        <icy.extension.path-intensity-profiler.version>2.0.0-a.1</icy.extension.path-intensity-profiler.version> <!-- Not working with alpha 4 -->
-        <icy.extension.projection.version>2.0.0-a.1</icy.extension.projection.version> <!-- Not working with alpha 4 -->
-        <icy.extension.protractor.version>2.0.0-a.1</icy.extension.protractor.version> <!-- Not working with alpha 4 -->
-        <icy.extension.quickhull.version>2.0.0-a.3</icy.extension.quickhull.version>
-        <icy.extension.random-roi-coloring.version>2.0.0-a.1</icy.extension.random-roi-coloring.version> <!-- Not working with alpha 4 -->
-        <icy.extension.renjin.version>1.0.0-a.1</icy.extension.renjin.version> <!-- Not working with alpha 4 -->
-        <icy.extension.rescale-roi.version>2.0.0-a.1</icy.extension.rescale-roi.version> <!-- Not working with alpha 4 -->
-        <icy.extension.ring-roi.version>3.0.0-a.1</icy.extension.ring-roi.version> <!-- Not working with alpha 4 -->
-        <icy.extension.roi-blocks.version>2.0.0-a.2</icy.extension.roi-blocks.version>
-        <icy.extension.roi-inclusion-analysis.version>2.0.0-a.1</icy.extension.roi-inclusion-analysis.version> <!-- Not working with alpha 4 -->
-        <icy.extension.roi-intensity-evolution.version>3.0.0-a.1</icy.extension.roi-intensity-evolution.version> <!-- Not working with alpha 4 -->
-        <icy.extension.roi-pool.version>2.0.0-a.3</icy.extension.roi-pool.version>
-        <icy.extension.roi-proximity-analysis.version>2.0.0-a.1</icy.extension.roi-proximity-analysis.version> <!-- Not working with alpha 4 -->
+        <icy.extension.particle-animation.version>2.0.0-a.1</icy.extension.particle-animation.version>
+        <icy.extension.path-intensity-profiler.version>2.0.0-a.1</icy.extension.path-intensity-profiler.version>
+        <icy.extension.projection.version>2.0.0-a.1</icy.extension.projection.version>
+        <icy.extension.protractor.version>2.0.0-a.1</icy.extension.protractor.version>
+        <icy.extension.quickhull.version>2.0.0-a.5</icy.extension.quickhull.version>
+        <icy.extension.random-roi-coloring.version>2.0.0-a.1</icy.extension.random-roi-coloring.version>
+        <icy.extension.renjin.version>1.0.0-a.5</icy.extension.renjin.version>
+        <icy.extension.rescale-roi.version>2.0.0-a.1</icy.extension.rescale-roi.version>
+        <icy.extension.ring-roi.version>3.0.0-a.1</icy.extension.ring-roi.version>
+        <icy.extension.roi-blocks.version>2.0.0-a.5</icy.extension.roi-blocks.version>
+        <icy.extension.roi-inclusion-analysis.version>2.0.0-a.1</icy.extension.roi-inclusion-analysis.version>
+        <icy.extension.roi-intensity-evolution.version>3.0.0-a.1</icy.extension.roi-intensity-evolution.version>
+        <icy.extension.roi-pool.version>2.0.0-a.5</icy.extension.roi-pool.version>
+        <icy.extension.roi-proximity-analysis.version>2.0.0-a.1</icy.extension.roi-proximity-analysis.version>
         <icy.extension.roi-statistics.version>6.0.0-a.3</icy.extension.roi-statistics.version>
-        <icy.extension.roi-tagger.version>2.0.0-a.3</icy.extension.roi-tagger.version>
+        <icy.extension.roi-tagger.version>2.0.0-a.5</icy.extension.roi-tagger.version>
         <icy.extension.roi-to-detection.version>2.0.0-a.2</icy.extension.roi-to-detection.version>
-        <icy.extension.roi-to-distance-map.version>4.0.0-a.1</icy.extension.roi-to-distance-map.version> <!-- Not working with alpha 4 -->
-        <icy.extension.roi-tooltip.version>2.0.0-a.1</icy.extension.roi-tooltip.version> <!-- Not working with alpha 4 -->
-        <icy.extension.rsyntaxtextarea.version>3.0.0-a.2</icy.extension.rsyntaxtextarea.version>
-        <icy.extension.ruler-helper.version>2.0.0-a.2</icy.extension.ruler-helper.version>
+        <icy.extension.roi-to-distance-map.version>4.0.0-a.1</icy.extension.roi-to-distance-map.version>
+        <icy.extension.roi-tooltip.version>2.0.0-a.1</icy.extension.roi-tooltip.version>
+        <icy.extension.rsyntaxtextarea.version>3.0.0-a.5</icy.extension.rsyntaxtextarea.version>
+        <icy.extension.ruler-helper.version>2.0.0-a.5</icy.extension.ruler-helper.version>
         <icy.extension.scale-bar.version>4.0.0-a.2</icy.extension.scale-bar.version>
-        <icy.extension.script-manager-core.version>1.0.0-a.2</icy.extension.script-manager-core.version>
-        <icy.extension.script-manager-gui.version>1.0.0-a.2</icy.extension.script-manager-gui.version>
-        <icy.extension.sequence-blocks.version>3.0.0-a.2</icy.extension.sequence-blocks.version>
-        <icy.extension.slic.version>2.0.0-a.1</icy.extension.slic.version> <!-- Not working with alpha 4 -->
-        <icy.extension.soda-suite.version>2.0.0-a.1</icy.extension.soda-suite.version> <!-- Not working with alpha 4 -->
-        <icy.extension.spot-detection-utilities.version>2.0.0-a.3</icy.extension.spot-detection-utilities.version>
-        <icy.extension.spot-detector.version>2.0.0-a.3</icy.extension.spot-detector.version>
-        <icy.extension.spot-detector-block.version>2.0.0-a.1</icy.extension.spot-detector-block.version> <!-- Not working with alpha 4 -->
-        <icy.extension.spot-tracking.version>4.0.0-a.3</icy.extension.spot-tracking.version>
-        <icy.extension.spot-tracking-blocks.version>2.0.0-a.1</icy.extension.spot-tracking-blocks.version> <!-- Not working with alpha 4 -->
-        <icy.extension.stack-rotation.version>2.0.0-a.1</icy.extension.stack-rotation.version> <!-- Not working with alpha 4 -->
-        <icy.extension.stereo-3d-vtk-canvas.version>2.0.0-a.1</icy.extension.stereo-3d-vtk-canvas.version> <!-- Not working with alpha 4 -->
-        <icy.extension.texture-segmentation.version>2.0.0-a.1</icy.extension.texture-segmentation.version> <!-- Not working with alpha 4 -->
-        <icy.extension.thresholder.version>4.0.0-a.3</icy.extension.thresholder.version>
-        <icy.extension.timestamp-overlay.version>2.0.0-a.1</icy.extension.timestamp-overlay.version> <!-- Not working with alpha 4 -->
-        <icy.extension.track-manager.version>2.0.0-a.3</icy.extension.track-manager.version>
-        <icy.extension.track-painter.version>3.0.0-a.1</icy.extension.track-painter.version> <!-- Not working with alpha 4 -->
-        <icy.extension.track-processor-excel-export.version>2.0.0-a.2</icy.extension.track-processor-excel-export.version>
+        <icy.extension.script-manager-core.version>1.0.0-a.5</icy.extension.script-manager-core.version>
+        <icy.extension.script-manager-gui.version>1.0.0-a.5</icy.extension.script-manager-gui.version>
+        <icy.extension.sequence-blocks.version>3.0.0-a.5</icy.extension.sequence-blocks.version>
+        <icy.extension.slic.version>2.0.0-a.1</icy.extension.slic.version>
+        <icy.extension.soda-suite.version>2.0.0-a.1</icy.extension.soda-suite.version>
+        <icy.extension.spot-detection-utilities.version>2.0.0-a.5</icy.extension.spot-detection-utilities.version>
+        <icy.extension.spot-detector.version>2.0.0-a.5</icy.extension.spot-detector.version>
+        <icy.extension.spot-detector-block.version>2.0.0-a.1</icy.extension.spot-detector-block.version>
+        <icy.extension.spot-tracking.version>4.0.0-a.5</icy.extension.spot-tracking.version>
+        <icy.extension.spot-tracking-blocks.version>2.0.0-a.1</icy.extension.spot-tracking-blocks.version>
+        <icy.extension.stack-rotation.version>2.0.0-a.1</icy.extension.stack-rotation.version>
+        <icy.extension.stereo-3d-vtk-canvas.version>2.0.0-a.1</icy.extension.stereo-3d-vtk-canvas.version>
+        <icy.extension.texture-segmentation.version>2.0.0-a.1</icy.extension.texture-segmentation.version>
+        <icy.extension.thresholder.version>4.0.0-a.5</icy.extension.thresholder.version>
+        <icy.extension.timestamp-overlay.version>2.0.0-a.1</icy.extension.timestamp-overlay.version>
+        <icy.extension.track-manager.version>2.0.0-a.5</icy.extension.track-manager.version>
+        <icy.extension.track-painter.version>3.0.0-a.1</icy.extension.track-painter.version>
+        <icy.extension.track-processor-excel-export.version>2.0.0-a.5</icy.extension.track-processor-excel-export.version>
         <icy.extension.track-processor-filtered-rois.version>2.0.0-a.1</icy.extension.track-processor-filtered-rois.version>
         <icy.extension.track-processor-flow.version>2.0.0-a.1</icy.extension.track-processor-flow.version>
-        <icy.extension.track-processor-instant-speed.version>2.0.0-a.1</icy.extension.track-processor-instant-speed.version> <!-- Not working with alpha 4 -->
+        <icy.extension.track-processor-instant-speed.version>2.0.0-a.1</icy.extension.track-processor-instant-speed.version>
         <icy.extension.track-processor-intensity-profile.version>2.0.0-a.2</icy.extension.track-processor-intensity-profile.version>
         <icy.extension.track-processor-roi-gate.version>2.0.0-a.1</icy.extension.track-processor-roi-gate.version>
         <icy.extension.track-processor-time-clip.version>2.0.0-a.1</icy.extension.track-processor-time-clip.version>
-        <icy.extension.tracking-benchmark-generator.version>2.0.0-a.2</icy.extension.tracking-benchmark-generator.version>
-        <icy.extension.vecmath.version>2.0.0-a.3</icy.extension.vecmath.version>
+        <icy.extension.tracking-benchmark-generator.version>2.0.0-a.5</icy.extension.tracking-benchmark-generator.version>
+        <icy.extension.vecmath.version>2.0.0-a.5</icy.extension.vecmath.version>
         <icy.extension.water-shed-3d.version>2.0.0-a.2</icy.extension.water-shed-3d.version>
-        <icy.extension.workbooks.version>4.0.0-a.2</icy.extension.workbooks.version>
+        <icy.extension.workbooks.version>4.0.0-a.5</icy.extension.workbooks.version>
 
         <!-- Deprecated extensions -->
         <!--<icy.extension.animation-3d.version>2.0.0</icy.extension.animation-3d.version>-->
         <!--<icy.extension.apache-poi.version>6.0.0</icy.extension.apache-poi.version>-->
         <!--<icy.extension.bioflow.version>2.1.1</icy.extension.bioflow.version>-->
-        <!--<icy.extension.javacl.version>2.0.0-a.2</icy.extension.javacl.version>-->
         <!--<icy.extension.javadocparser.version>1.0.2</icy.extension.javadocparser.version>-->
         <!--<icy.extension.jfree-common.version>2.0.0</icy.extension.jfree-common.version>-->
         <!--<icy.extension.jython.version>3.0.0</icy.extension.jython.version>-->
@@ -347,11 +347,11 @@
         <!--<icy.extension.xuggler.version>6.0.0</icy.extension.xuggler.version>-->
 
         <!-- Default plugin-libraries version -->
-        <apache-commons-collections.version>5.0.0</apache-commons-collections.version>
-        <apache-commons-csv.version>2.0.0</apache-commons-csv.version>
-        <apache-commons-logging.version>2.0.0</apache-commons-logging.version>
-        <apache-httpclient.version>5.0.0</apache-httpclient.version>
-        <apache-xmlbeans.version>6.0.0</apache-xmlbeans.version>
+        <!--<apache-commons-collections.version>5.0.0</apache-commons-collections.version>-->
+        <!--<apache-commons-csv.version>2.0.0</apache-commons-csv.version>-->
+        <!--<apache-commons-logging.version>2.0.0</apache-commons-logging.version>-->
+        <!--<apache-httpclient.version>5.0.0</apache-httpclient.version>-->
+        <!--<apache-xmlbeans.version>6.0.0</apache-xmlbeans.version>-->
         <autocomplete.version>3.0.0</autocomplete.version>
         <bridj.version>1.0.0</bridj.version>
         <clipper.version>7.0.0</clipper.version>
@@ -443,6 +443,12 @@
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-css</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-codec</artifactId>
                 <version>${library.batik.version}</version>
                 <scope>provided</scope>
             </dependency>
@@ -1136,7 +1142,7 @@
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>kernel-extensions</artifactId>
+                <artifactId>kernel-extension</artifactId>
                 <version>${icy.extension.kernel.version}</version>
                 <scope>provided</scope>
             </dependency>
@@ -1197,54 +1203,62 @@
                 <version>${icy.extension.animation-3d.version}</version>
                 <scope>provided</scope>
             </dependency>-->
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-codec</artifactId>
                 <version>${icy.extension.apache-commons-codec.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-collections</artifactId>
                 <version>${apache-commons-collections.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-compress</artifactId>
                 <version>${icy.extension.apache-commons-compress.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-io</artifactId>
                 <version>${icy.extension.apache-commons-io.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-csv</artifactId>
                 <version>${apache-commons-csv.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-lang</artifactId>
                 <version>${icy.extension.apache-commons-lang.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-logging</artifactId>
                 <version>${apache-commons-logging.version}</version>
                 <scope>provided</scope>
-            </dependency>
-            <dependency>
+            </dependency>-->
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-httpclient</artifactId>
                 <version>${apache-httpclient.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
@@ -1252,12 +1266,13 @@
                 <version>${icy.extension.apache-poi.version}</version>
                 <scope>provided</scope>
             </dependency>-->
-            <dependency>
+            <!-- DEPRECATED -->
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-xmlbeans</artifactId>
                 <version>${apache-xmlbeans.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>autocomplete</artifactId>
@@ -1512,12 +1527,12 @@
                 <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
-            <!--<dependency>
+            <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>javacl</artifactId>
                 <version>${icy.extension.javacl.version}</version>
                 <scope>provided</scope>
-            </dependency>-->
+            </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>javacpp</artifactId>
@@ -2542,7 +2557,7 @@
                         <artifactId>maven-resources-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>copy-icons</id>
+                                <id>copy-extension-data</id>
                                 <phase>generate-sources</phase>
                                 <goals>
                                     <goal>copy-resources</goal>
@@ -2554,7 +2569,31 @@
                                             <directory>${project.basedir}</directory>
                                             <includes>
                                                 <include>icon.svg</include>
-                                                <include>icon_dark.svg</include>
+                                                <include>CHANGELOG.md</include>
+                                                <include>README.md</include>
+                                            </includes>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>copy-icons-dir</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>copy-resources</goal>
+                                </goals>
+                                <configuration>
+                                    <outputDirectory>${project.build.outputDirectory}/META-INF/icons/</outputDirectory>
+                                    <filters>
+                                        <filter>
+
+                                        </filter>
+                                    </filters>
+                                    <resources>
+                                        <resource>
+                                            <directory>${project.basedir}/icons/</directory>
+                                            <includes>
+                                                <include>**/*.svg</include>
                                             </includes>
                                         </resource>
                                     </resources>
@@ -2593,6 +2632,9 @@
                                 <manifest>
                                     <addClasspath>true</addClasspath>
                                 </manifest>
+                                <manifestEntries>
+                                    <Multi-Release>true</Multi-Release>
+                                </manifestEntries>
                             </archive>
                         </configuration>
                         <executions>
