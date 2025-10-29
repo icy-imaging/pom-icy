@@ -2550,6 +2550,12 @@
                                     <excludeArtifactIds>annotations,icy-kernel</excludeArtifactIds>
                                 </configuration>
                             </execution>
+                            <execution>
+                                <id>install-extension</id>
+                                <goals>
+                                    <goal>install-icy-extension</goal>
+                                </goals>
+                            </execution>
                         </executions>
                     </plugin>
                     <plugin>
@@ -2679,7 +2685,7 @@
             <url>https://nexus-icy.pasteur.cloud/repository/icy/</url>
         </repository>
 
-        <repository>
+        <!--<repository>
             <id>netbeans</id>
             <name>NetBeans</name>
             <url>https://netbeans.apidesign.org/maven2/</url>
@@ -2701,6 +2707,6 @@
             <id>scijava-public</id>
             <name>SciJava</name>
             <url>https://maven.scijava.org/content/repositories/public/</url>
-        </repository>
+        </repository>-->
     </repositories>
 </project>
