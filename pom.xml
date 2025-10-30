@@ -862,20 +862,23 @@
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
-                <artifactId>gluegen-rt-natives-linux-amd64</artifactId>
+                <artifactId>gluegen-rt</artifactId>
                 <version>${library.gluegen-rt.version}</version>
+                <classifier>natives-linux-amd64</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
-                <artifactId>gluegen-rt-natives-macosx-universal</artifactId>
+                <artifactId>gluegen-rt</artifactId>
                 <version>${library.gluegen-rt.version}</version>
+                <classifier>natives-macosx-universal</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
-                <artifactId>gluegen-rt-natives-windows-amd64</artifactId>
+                <artifactId>gluegen-rt</artifactId>
                 <version>${library.gluegen-rt.version}</version>
+                <classifier>natives-windows-amd64</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -940,20 +943,23 @@
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
-                <artifactId>jogl-all-natives-linux-amd64</artifactId>
+                <artifactId>jogl-all</artifactId>
                 <version>${library.jogl.version}</version>
+                <classifier>natives-linux-amd64</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
-                <artifactId>jogl-all-natives-macosx-universal</artifactId>
+                <artifactId>jogl-all</artifactId>
                 <version>${library.jogl.version}</version>
+                <classifier>natives-macosx-universal</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
-                <artifactId>jogl-all-natives-windows-amd64</artifactId>
+                <artifactId>jogl-all</artifactId>
                 <version>${library.jogl.version}</version>
+                <classifier>natives-windows-amd64</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -2393,7 +2399,9 @@
         <profile>
             <id>kernel</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <file>
+                    <exists>${project.basedir}/kernel</exists>
+                </file>
             </activation>
 
             <build>
@@ -2415,7 +2423,9 @@
         <profile>
             <id>library</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <file>
+                    <exists>${project.basedir}/library</exists>
+                </file>
             </activation>
 
             <build>
