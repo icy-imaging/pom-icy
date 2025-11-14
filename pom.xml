@@ -4,6 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.scijava</groupId>
+        <artifactId>pom-scijava</artifactId>
+        <version>43.0.0</version>
+    </parent>
+
     <groupId>org.bioimageanalysis.icy</groupId>
     <artifactId>pom-icy</artifactId>
     <version>3.0.0-a.5</version>
@@ -14,6 +20,20 @@
     <description>Common parent POM for all Icy related projects</description>
     <url>https://icy.bioimageanalysis.org/</url>
     <inceptionYear>2020</inceptionYear>
+
+    <scm>
+        <url>https://gitlab.pasteur.fr/bia/icy/parent-pom-base</url>
+        <tag>v${project.version}</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitLab Issues</system>
+        <url>https://gitlab.pasteur.fr/bia/icy/parent-pom-base/-/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>GitLab CI</system>
+        <url>https://gitlab.pasteur.fr/bia/icy/parent-pom-base/-/pipelines</url>
+    </ciManagement>
 
     <organization>
         <name>Institut Pasteur</name>
@@ -30,20 +50,6 @@
 
     <developers>
         <developer>
-            <id>stef</id>
-            <name>Stéphane Dallongeville</name>
-            <url>https://icy.bioimageanalysis.org/author/stef/</url>
-            <roles>
-                <role>founder</role>
-                <role>lead</role>
-                <role>developer</role>
-                <role>debugger</role>
-                <role>reviewer</role>
-                <role>support</role>
-                <role>maintainer</role>
-            </roles>
-        </developer>
-        <developer>
             <id>tmusset</id>
             <name>Thomas Musset</name>
             <url>https://icy.bioimageanalysis.org/author/tmusset/</url>
@@ -56,37 +62,25 @@
                 <role>maintainer</role>
             </roles>
         </developer>
-        <developer>
-            <id>jtinevez</id>
+    </developers>
+
+    <contributors>
+        <contributor>
+            <name>Stéphane Dallongeville</name>
+            <url>https://icy.bioimageanalysis.org/author/stef/</url>
+            <roles>
+                <role>founder</role>
+            </roles>
+        </contributor>
+        <contributor>
+            <name>Amandine Tournay</name>
+            <url>https://icy.bioimageanalysis.org/author/amandine-tournay/</url>
+        </contributor>
+        <contributor>
             <name>Jean-Yves Tinevez</name>
             <url>https://icy.bioimageanalysis.org/author/tinevez/</url>
-            <roles>
-                <role>lead</role>
-                <role>reviewer</role>
-                <role>support</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>dgonzalez</id>
-            <name>Daniel Felipe González Obando</name>
-            <url>https://icy.bioimageanalysis.org/author/danyfel80/</url>
-            <roles>
-                <role>developer</role>
-                <role>debugger</role>
-                <role>maintainer</role>
-                <role>support</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>atournay</id>
-            <name>Amandine Tournay</name>
-            <url>https://icy.bioimageanalysis.org/author/atournay/</url>
-            <roles>
-                <role>developer</role>
-                <role>maintainer</role>
-            </roles>
-        </developer>
-    </developers>
+        </contributor>
+    </contributors>
 
     <mailingLists>
         <mailingList>
@@ -95,22 +89,17 @@
         </mailingList>
     </mailingLists>
 
-    <issueManagement>
-        <system>GitLab</system>
-        <url>https://gitlab.pasteur.fr/bia/icy/parent-pom-base/-/issues</url>
-    </issueManagement>
-
     <properties>
-        <java-target>21</java-target>
+        <license.licenseName>GPLv3</license.licenseName>
+        <license.copyrightOwners>Institut Pasteur</license.copyrightOwners>
 
         <!-- Project Information -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>[${java-target},)</jdk.version>
+        <jdk.version>[25,)</jdk.version>
 
         <!-- Maven Plugins version -->
         <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
 
-        <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
         <maven-clean-plugin.version>3.4.1</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
@@ -128,7 +117,7 @@
 
         <!-- Maven plugin properties -->
         <maven-source-plugin.includePom>true</maven-source-plugin.includePom>
-        <maven-jar-plugin.includeMavenDescriptor>false</maven-jar-plugin.includeMavenDescriptor>
+        <maven-jar-plugin.includeMavenDescriptor>true</maven-jar-plugin.includeMavenDescriptor>
 
         <!-- Maven build configuration -->
         <outputDirectory>${project.build.directory}</outputDirectory>
@@ -138,9 +127,9 @@
         <overWriteReleases>true</overWriteReleases>
 
         <!-- Default version for kernel libraries -->
-        <library.annotations.version>26.0.2</library.annotations.version>
+        <library.annotations.version>26.0.2-1</library.annotations.version>
         <library.batik.version>1.19</library.batik.version>
-        <library.bioformats.version>8.1.1</library.bioformats.version>
+        <library.bioformats.version>8.3.0</library.bioformats.version>
         <library.commons-codec.version>1.19.0</library.commons-codec.version>
         <library.commons-collections.version>4.5.0</library.commons-collections.version>
         <library.commons-compress.version>1.28.0</library.commons-compress.version>
@@ -162,7 +151,7 @@
         <library.commons-vfs>2.10.0</library.commons-vfs>
         <library.ehcache.version>3.11.1</library.ehcache.version>
         <library.flatlaf.version>3.6.2</library.flatlaf.version>
-        <library.gluegen-rt.version>2.5.0</library.gluegen-rt.version>
+        <library.jogamp.version>2.6.0</library.jogamp.version>
         <library.google-http-client.version>1.47.0</library.google-http-client.version>
         <library.guava.version>33.5.0-jre</library.guava.version>
         <library.httpclient.version>5.5.1</library.httpclient.version>
@@ -170,10 +159,9 @@
         <library.jackson.version>2.19.0</library.jackson.version>
         <library.jai.version>1.1.3</library.jai.version>
         <library.jansi.version>2.4.2</library.jansi.version>
-        <library.jaxb-runtime.version>4.0.5</library.jaxb-runtime.version>
-        <library.jogl.version>${library.gluegen-rt.version}</library.jogl.version>
-        <library.junit-jupiter.version>5.12.2</library.junit-jupiter.version>
-        <library.log4j.version>2.24.3</library.log4j.version>
+        <library.jaxb-runtime.version>4.0.6</library.jaxb-runtime.version>
+        <library.junit-jupiter.version>6.0.1</library.junit-jupiter.version>
+        <library.log4j.version>2.25.2</library.log4j.version>
         <library.minio.version>5.0.6</library.minio.version>
         <library.okhttp.version>4.12.0</library.okhttp.version>
         <library.okio.version>3.12.0</library.okio.version>
@@ -183,14 +171,14 @@
         <library.ome-xml.version>6.4.0</library.ome-xml.version>
         <library.poi.version>5.4.1</library.poi.version>
         <library.slf4j.version>2.0.17</library.slf4j.version>
-        <library.snakeyaml.version>2.4</library.snakeyaml.version>
+        <library.snakeyaml.version>2.5</library.snakeyaml.version>
         <library.sqlite-jdbc.version>3.50.1.0</library.sqlite-jdbc.version>
         <library.swingx-all.version>1.6.5-1</library.swingx-all.version>
         <library.vtk.version>9.4.2</library.vtk.version>
         <library.xml-apis.version>1.4.01</library.xml-apis.version>
         <library.xml-apis-ext.version>1.3.04</library.xml-apis-ext.version>
 
-        <icy.library.apache-commons.version>1.0.0-a.5</icy.library.apache-commons.version>
+        <!--<icy.library.apache-commons.version>1.0.0-a.5</icy.library.apache-commons.version>
         <icy.library.apache-http.version>5.0.0-a.5</icy.library.apache-http.version>
         <icy.library.batik.version>1.0.0-a.5</icy.library.batik.version>
         <icy.library.bioformats.version>8.0.0-a.5</icy.library.bioformats.version>
@@ -200,9 +188,9 @@
         <icy.library.jogamp.version>2.0.0-a.5</icy.library.jogamp.version>
         <icy.library.log4j.version>2.0.0-a.5</icy.library.log4j.version>
         <icy.library.poi.version>5.0.0-a.5</icy.library.poi.version>
-        <icy.library.snakeyaml.version>2.0.0-a.5</icy.library.snakeyaml.version>
+        <icy.library.snakeyaml.version>2.0.0-a.5</icy.library.snakeyaml.version>-->
         <icy.library.vtk-os.version>${library.vtk.version}</icy.library.vtk-os.version>
-        <icy.library.vtk-all.version>9.0.0-a.5</icy.library.vtk-all.version>
+        <!--<icy.library.vtk-all.version>9.0.0-a.5</icy.library.vtk-all.version>-->
 
         <!-- Default Icy kernel version -->
         <icy.kernel.version>3.0.0-a.5</icy.kernel.version>
@@ -397,11 +385,13 @@
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>${library.annotations.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${library.junit-jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -420,6 +410,12 @@
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
                 <version>${library.annotations.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik</artifactId>
+                <version>${library.batik.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -527,6 +523,12 @@
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-xml</artifactId>
+                <version>${library.batik.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-all</artifactId>
                 <version>${library.batik.version}</version>
                 <scope>provided</scope>
             </dependency>
@@ -857,27 +859,27 @@
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
                 <artifactId>gluegen-rt</artifactId>
-                <version>${library.gluegen-rt.version}</version>
+                <version>${library.jogamp.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
                 <artifactId>gluegen-rt</artifactId>
-                <version>${library.gluegen-rt.version}</version>
+                <version>${library.jogamp.version}</version>
                 <classifier>natives-linux-amd64</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
                 <artifactId>gluegen-rt</artifactId>
-                <version>${library.gluegen-rt.version}</version>
+                <version>${library.jogamp.version}</version>
                 <classifier>natives-macosx-universal</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
                 <artifactId>gluegen-rt</artifactId>
-                <version>${library.gluegen-rt.version}</version>
+                <version>${library.jogamp.version}</version>
                 <classifier>natives-windows-amd64</classifier>
                 <scope>provided</scope>
             </dependency>
@@ -938,27 +940,27 @@
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
-                <version>${library.jogl.version}</version>
+                <version>${library.jogamp.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
-                <version>${library.jogl.version}</version>
+                <version>${library.jogamp.version}</version>
                 <classifier>natives-linux-amd64</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
-                <version>${library.jogl.version}</version>
+                <version>${library.jogamp.version}</version>
                 <classifier>natives-macosx-universal</classifier>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
-                <version>${library.jogl.version}</version>
+                <version>${library.jogamp.version}</version>
                 <classifier>natives-windows-amd64</classifier>
                 <scope>provided</scope>
             </dependency>
@@ -1006,6 +1008,18 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
+                <artifactId>poi-excelant</artifactId>
+                <version>${library.poi.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-full</artifactId>
+                <version>${library.poi.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>${library.poi.version}</version>
                 <scope>provided</scope>
@@ -1042,7 +1056,7 @@
             </dependency>
 
             <!-- Icy - library packages -->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-apache-commons</artifactId>
                 <version>${icy.library.apache-commons.version}</version>
@@ -1107,7 +1121,7 @@
                 <artifactId>icy-snakeyaml</artifactId>
                 <version>${icy.library.snakeyaml.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-vtk-linux-x64</artifactId>
@@ -1132,12 +1146,12 @@
                 <version>${icy.library.vtk-os.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
+            <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-vtk-all</artifactId>
                 <version>${icy.library.vtk-all.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
 
             <!-- Icy - Main plugins -->
             <dependency>
@@ -2189,6 +2203,7 @@
                 <version>${workspace-editor.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>xuggler</artifactId>
@@ -2308,9 +2323,46 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <source>${java-target}</source>
-                        <target>${java-target}</target>
+                        <source>17</source>
+                        <target>17</target>
+                        <release>17</release>
                     </configuration>
+                    <executions>
+                        <execution>
+                            <id>default-compile</id>
+                            <configuration>
+                                <release>17</release>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>java21-compile</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                            <configuration>
+                                <release>21</release>
+                                <compileSourceRoots>
+                                    <compileSourceRoot>${project.basedir}/src/main/java21</compileSourceRoot>
+                                </compileSourceRoots>
+                                <outputDirectory>${project.build.outputDirectory}/META-INF/versions/21</outputDirectory>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>java25-compile</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                            <configuration>
+                                <release>25</release>
+                                <compileSourceRoots>
+                                    <compileSourceRoot>${project.basedir}/src/main/java25</compileSourceRoot>
+                                </compileSourceRoots>
+                                <outputDirectory>${project.build.outputDirectory}/META-INF/versions/25</outputDirectory>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -2335,6 +2387,9 @@
                         <outputDirectory>${outputDirectory}</outputDirectory>
                         <archive>
                             <addMavenDescriptor>${maven-jar-plugin.includeMavenDescriptor}</addMavenDescriptor>
+                            <manifestEntries>
+                                <Multi-Release>true</Multi-Release>
+                            </manifestEntries>
                         </archive>
                     </configuration>
                 </plugin>
@@ -2385,11 +2440,6 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>${maven-release-plugin.version}</version>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <version>${maven-assembly-plugin.version}</version>
-                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -2397,10 +2447,10 @@
     <!-- POM profiles -->
     <profiles>
         <profile>
-            <id>kernel</id>
+            <id>icy-kernel</id>
             <activation>
                 <file>
-                    <exists>${project.basedir}/kernel</exists>
+                    <exists>${project.basedir}/.kernel</exists>
                 </file>
             </activation>
 
@@ -2421,69 +2471,7 @@
         </profile>
 
         <profile>
-            <id>library</id>
-            <activation>
-                <file>
-                    <exists>${project.basedir}/library</exists>
-                </file>
-            </activation>
-
-            <build>
-                <defaultGoal>clean install</defaultGoal>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>default-jar</id>
-                                <phase>none</phase>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <configuration>
-                            <finalName>${project.artifactId}-${project.version}</finalName>
-                            <appendAssemblyId>false</appendAssemblyId>
-                            <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
-                            </descriptorRefs>
-                            <archive>
-                                <manifest>
-                                    <addClasspath>true</addClasspath>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>${project.artifactId}-assembly</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-
-            <distributionManagement>
-                <repository>
-                    <id>icy-core</id>
-                    <url>https://nexus-icy.pasteur.cloud/repository/icy-core/</url>
-                </repository>
-                <snapshotRepository>
-                    <id>icy-core-snapshots</id>
-                    <url>https://nexus-icy.pasteur.cloud/repository/icy-core-snapshots/</url>
-                </snapshotRepository>
-            </distributionManagement>
-        </profile>
-
-        <profile>
-            <id>plugin</id>
+            <id>icy-extension</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -2554,10 +2542,15 @@
                                 <id>generate-properties</id>
                                 <goals>
                                     <goal>generate-extension-properties</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>generate-deps-properties</id>
+                                <goals>
                                     <goal>generate-dependencies-properties</goal>
                                 </goals>
                                 <configuration>
-                                    <excludeArtifactIds>annotations,icy-kernel</excludeArtifactIds>
+                                    <excludeArtifactIds>annotations,icy-kernel,junit</excludeArtifactIds>
                                 </configuration>
                             </execution>
                             <execution>
@@ -2619,11 +2612,27 @@
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jar-plugin</artifactId>
+                        <artifactId>maven-dependency-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>default-jar</id>
-                                <phase>none</phase>
+                                <id>copy-dependencies</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>copy-dependencies</goal>
+                                </goals>
+                                <configuration>
+                                    <prependGroupId>true</prependGroupId>
+                                    <stripVersion>false</stripVersion>
+                                    <!-- Put them next to the JAR; change to ${project.build.directory} to mix in same folder -->
+                                    <outputDirectory>${project.build.directory}/deps</outputDirectory>
+                                    <includeScope>runtime</includeScope>
+                                    <includeTypes>jar</includeTypes>
+                                    <excludeScope>provided,test</excludeScope>
+                                    <excludeGroupIds>${project.groupId}*.*</excludeGroupIds>
+                                    <overWriteIfNewer>true</overWriteIfNewer>
+                                    <!-- Transitive is true by default; included for clarity -->
+                                    <excludeTransitive>false</excludeTransitive>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -2634,34 +2643,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <configuration>
-                            <finalName>${project.artifactId}-${project.version}</finalName>
-                            <appendAssemblyId>false</appendAssemblyId>
-                            <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
-                            </descriptorRefs>
-                            <archive>
-                                <manifest>
-                                    <addClasspath>true</addClasspath>
-                                </manifest>
-                                <manifestEntries>
-                                    <Multi-Release>true</Multi-Release>
-                                </manifestEntries>
-                            </archive>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>${project.artifactId}-assembly</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
-                                </goals>
-                            </execution>
-                        </executions>
                     </plugin>
                 </plugins>
             </build>
