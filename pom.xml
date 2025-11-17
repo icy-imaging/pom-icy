@@ -90,7 +90,7 @@
     </mailingLists>
 
     <properties>
-        <license.licenseName>GNU GPLv3</license.licenseName>
+        <license.licenseName>GNU LGPLv3</license.licenseName>
         <license.copyrightOwners>Institut Pasteur</license.copyrightOwners>
 
         <scijava.jvm.version>17</scijava.jvm.version>
