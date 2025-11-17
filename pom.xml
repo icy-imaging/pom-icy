@@ -22,17 +22,17 @@
     <inceptionYear>2020</inceptionYear>
 
     <scm>
-        <url>https://gitlab.pasteur.fr/bia/icy/parent-pom-base</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/pom-icy</url>
         <tag>v${project.version}</tag>
     </scm>
 
     <issueManagement>
         <system>GitLab Issues</system>
-        <url>https://gitlab.pasteur.fr/bia/icy/parent-pom-base/-/issues</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/pom-icy/-/issues</url>
     </issueManagement>
     <ciManagement>
         <system>GitLab CI</system>
-        <url>https://gitlab.pasteur.fr/bia/icy/parent-pom-base/-/pipelines</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/pom-icy/-/pipelines</url>
     </ciManagement>
 
     <organization>
@@ -42,8 +42,8 @@
 
     <licenses>
         <license>
-            <name>GNU GPLv3</name>
-            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <name>GNU GPLv2</name>
+            <url>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -90,8 +90,10 @@
     </mailingLists>
 
     <properties>
-        <license.licenseName>GPLv3</license.licenseName>
+        <license.licenseName>GPLv2</license.licenseName>
         <license.copyrightOwners>Institut Pasteur</license.copyrightOwners>
+
+        <scijava.jvm.version>17</scijava.jvm.version>
 
         <!-- Project Information -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -150,7 +152,12 @@
         <!--<library.commons-validator>1.9.0</library.commons-validator>-->
         <library.commons-vfs>2.10.0</library.commons-vfs>
         <library.ehcache.version>3.11.1</library.ehcache.version>
+        <library.ejml.version>0.44.0</library.ejml.version>
         <library.flatlaf.version>3.6.2</library.flatlaf.version>
+        <library.imglib2.version>8.0.0</library.imglib2.version>
+        <library.imglib2-algorithm.version>0.18.2</library.imglib2-algorithm.version>
+        <library.imglib2-ij.version>2.0.3</library.imglib2-ij.version>
+        <library.imglib2-realtransform.version>4.0.4</library.imglib2-realtransform.version>
         <library.jogamp.version>2.6.0</library.jogamp.version>
         <library.google-http-client.version>1.47.0</library.google-http-client.version>
         <library.guava.version>33.5.0-jre</library.guava.version>
@@ -165,10 +172,10 @@
         <library.minio.version>5.0.6</library.minio.version>
         <library.okhttp.version>4.12.0</library.okhttp.version>
         <library.okio.version>3.12.0</library.okio.version>
-        <library.ome-codecs.version>1.1.0</library.ome-codecs.version>
-        <library.ome-common.version>6.0.25</library.ome-common.version>
-        <library.ome-specification.version>6.4.0</library.ome-specification.version>
-        <library.ome-xml.version>6.4.0</library.ome-xml.version>
+        <library.ome-codecs.version>1.1.2</library.ome-codecs.version>
+        <library.ome-common.version>6.1.1</library.ome-common.version>
+        <library.ome-specification.version>6.5.1</library.ome-specification.version>
+        <library.ome-xml.version>6.5.1</library.ome-xml.version>
         <library.poi.version>5.4.1</library.poi.version>
         <library.slf4j.version>2.0.17</library.slf4j.version>
         <library.snakeyaml.version>2.5</library.snakeyaml.version>
@@ -815,6 +822,12 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
+                <groupId>org.ejml</groupId>
+                <artifactId>ejml-all</artifactId>
+                <version>${library.ejml.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
                 <groupId>com.formdev</groupId>
                 <artifactId>flatlaf</artifactId>
                 <version>${library.flatlaf.version}</version>
@@ -917,6 +930,30 @@
                 <groupId>org.apache.httpcomponents.core5</groupId>
                 <artifactId>httpcore5-reactive</artifactId>
                 <version>${library.httpcore.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.imglib2</groupId>
+                <artifactId>imglib2</artifactId>
+                <version>${library.imglib2.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.imglib2</groupId>
+                <artifactId>imglib2-algorithm</artifactId>
+                <version>${library.imglib2-algorithm.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.imglib2</groupId>
+                <artifactId>imglib2-ij</artifactId>
+                <version>${library.imglib2-ij.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.imglib2</groupId>
+                <artifactId>imglib2-realtransform</artifactId>
+                <version>${library.imglib2-realtransform.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
