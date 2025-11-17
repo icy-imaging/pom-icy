@@ -4,7 +4,7 @@
 
 <!-- badges: start -->
 ![version](https://img.shields.io/badge/v3.0.0-alpha_5-royalblue) 
-[![License: GPL v2](https://img.shields.io/badge/GPL_v2-A42E2B?logo=GNU)](https://www.gnu.org/licenses/old-licenses/gpl-2.0) 
+[![License: GPL v3](https://img.shields.io/badge/GPL_v3-BD0000?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/gpl-3.0) 
 [![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging) 
 [![Image.sc forum](https://img.shields.io/badge/discourse-forum-seagreen)](https://forum.image.sc/tag/icy)
 <!-- badges: end -->
@@ -12,9 +12,9 @@
 This is the repository for the Maven configuration of *pom-icy, Icy's Parent POM*,
 a Maven file for [bioimage analysis software Icy](http://icy.bioimageanalysis.org/) and its plugins,
 which was developed by members or former members of the [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/).
-This project is licensed under GPL v2 license.     
+This project is licensed under GPL v3 license.     
 Icy is developed and maintained by [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/).
-The [source code of Icy](https://gitlab.pasteur.fr/bia/icy) is also licensed under a GPL license. 
+The [source code of Icy](https://gitlab.pasteur.fr/bia/icy) is also licensed under a GPL v3 license. 
 
 ## Description
 
