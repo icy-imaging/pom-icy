@@ -1,13 +1,10 @@
+![Version 3.0.0 alpha 5](https://img.shields.io/badge/v3.0.0-alpha_5-royalblue)
+![Java 17+](https://img.shields.io/badge/OpenJDK-17+-5382A1?labelColor=E76F00)
+[![License: LGPL v3](https://img.shields.io/badge/LGPLv3-008033?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/lgpl-3.0)
+[![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging)
+[![Image.sc forum](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fforum.image.sc%2Ftag%2Ficy.json&query=%24.topic_list.tags.0.topic_count&suffix=%20topics&label=forum&color=0AA0B4)](https://forum.image.sc/tag/icy)
+
 # Icy Parent POM
-
-![Maven logo](https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg)
-
-<!-- badges: start -->
-![version](https://img.shields.io/badge/v3.0.0-alpha_5-royalblue) 
-[![License: LGPL v3](https://img.shields.io/badge/LGPLv3-BD0000?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/lgpl-3.0) 
-[![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging) 
-[![Image.sc forum](https://img.shields.io/badge/discourse-forum-seagreen)](https://forum.image.sc/tag/icy)
-<!-- badges: end -->
 
 This is the repository for the Maven configuration of *pom-icy, Icy's Parent POM*,
 a Maven file for [bioimage analysis software Icy](https://icy.bioimageanalysis.org/) and its plugins,
@@ -50,39 +47,44 @@ mvn clean package
 
 TODO: explain how to use the `deploy` phase.
 
--> To see which profiles are activated, run the command `mvn help:active-profiles` in your terminal.
+→ To see which profiles are activated, run the command `mvn help:active-profiles` in your terminal.
 
 ## Dependency list
 
-To keep a cohesion between Icy and all extensions, we have listed all the extensions provided by Institut Pasteur/BIA,
-some third parties can also be added to the list.
+To keep a cohesion between Icy and all extensions, we have listed all the extensions provided by Institut Pasteur/BIA.
+Some third parties can also be added to the list.
 
 To know them, check the `<properties>` block in the `pom.xml`.
 
 To call them, you need to add the `<dependency>` block as follows:
 ```xml
-<dependency>
-  <groupId>org.bioimagenalaysis.icy</groupId>
-  <artifactId>name-of-plugin</artifactId>
-</dependency>
+<dependencies>
+    <dependency>
+        <groupId>org.bioimagenalaysis.icy</groupId>
+        <artifactId>name-of-extension</artifactId>
+    </dependency>
+</dependencies>
 ```
 Usually you do not need to specify the version number, as it is already set in the pom-icy.
 
 If your dependency is an Icy's extension that is not present in the default list of provided extension, you must add `<scope>provided</scope>` to the dependency block as follows:
 ```xml
-<dependency>
-    <groupId>org.bioimagenalaysis.icy</groupId>
-    <artifactId>name-of-plugin</artifactId>
-    <scope>provided</scope>
-</dependency>
+<dependencies>
+    <dependency>
+        <groupId>org.bioimagenalaysis.icy</groupId>
+        <artifactId>name-of-extension</artifactId>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
 ```
 
 ## Citation
 
 Please also cite the Icy software and mention the version of Icy you used (bottom right corner of the GUI or first lines of the Output tab):     
 de Chaumont, F. et al. (2012) Icy: an open bioimage informatics platform for extended reproducible research, [Nature Methods](https://www.nature.com/articles/nmeth.2075), 9, pp. 690-696       
-http://icy.bioimageanalysis.org    
+https://icy.bioimageanalysis.org    
 
 ## Authors
 
-Amandine TOURNAY
+- Amandine Tournay
+- Thomas Musset
