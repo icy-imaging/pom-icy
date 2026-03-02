@@ -1,4 +1,4 @@
-![Version 3.0.0 alpha 5](https://img.shields.io/badge/v3.0.0-alpha_5-royalblue)
+![Version 3.0.0 alpha 6](https://img.shields.io/badge/v3.0.0-alpha_6-royalblue)
 ![Java 17+](https://img.shields.io/badge/OpenJDK-17+-5382A1?labelColor=E76F00)
 [![License: LGPL v3](https://img.shields.io/badge/LGPLv3-008033?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging)
@@ -24,13 +24,13 @@ To know more about how POM file in Maven projects works, you can check those res
 This project centralizes the Maven configuration for Icy as well as its plugins in one file. It will be inherited to the other projects with the `parent` block:
 ```xml
 <parent>
-    <groupId>org.bioimageanalysis.icy</groupId>
+    <groupId>fr.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.5</version>
+    <version>3.0.0-a.6</version>
 </parent>
 ```
 
-Maven profiles are completely automated, so you shouldn't do anything to activate or deactivate profiles.
+Maven profiles are completely automated with `pom-icy`, so you shouldn't do anything to activate or deactivate profiles.
 You just need to run the command just below to execute the default maven goals (clean and install)
 ```shell
 mvn
@@ -60,8 +60,8 @@ To call them, you need to add the `<dependency>` block as follows:
 ```xml
 <dependencies>
     <dependency>
-        <groupId>org.bioimagenalaysis.icy</groupId>
-        <artifactId>name-of-extension</artifactId>
+        <groupId>com.example</groupId>
+        <artifactId>extension-name</artifactId>
     </dependency>
 </dependencies>
 ```
@@ -71,8 +71,8 @@ If your dependency is an Icy's extension that is not present in the default list
 ```xml
 <dependencies>
     <dependency>
-        <groupId>org.bioimagenalaysis.icy</groupId>
-        <artifactId>name-of-extension</artifactId>
+        <groupId>com.example</groupId>
+        <artifactId>extension-name</artifactId>
         <scope>provided</scope>
     </dependency>
 </dependencies>
