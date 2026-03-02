@@ -2470,7 +2470,7 @@
                         </configuration>
                     </plugin>
                     <plugin>
-                        <groupId>org.bioimageanalysis.icy.maven3</groupId>
+                        <groupId>fr.icy.maven3</groupId>
                         <artifactId>extension-properties-plugin</artifactId>
                         <version>1.0.0-a.6</version>
                         <executions>
