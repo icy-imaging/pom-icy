@@ -10,9 +10,10 @@
         <version>43.0.0</version>
     </parent>
 
-    <groupId>org.bioimageanalysis.icy</groupId>
+    <!--<groupId>org.bioimageanalysis.icy</groupId>-->
+    <groupId>fr.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.5</version>
+    <version>3.0.0-a.6</version>
 
     <packaging>pom</packaging>
 
@@ -131,7 +132,7 @@
         <!-- Default version for kernel libraries -->
         <library.annotations.version>26.0.2-1</library.annotations.version>
         <library.batik.version>1.19</library.batik.version>
-        <library.bioformats.version>8.3.0</library.bioformats.version>
+        <library.bioformats.version>8.4.0</library.bioformats.version>
         <library.commons-codec.version>1.19.0</library.commons-codec.version>
         <library.commons-collections.version>4.5.0</library.commons-collections.version>
         <library.commons-compress.version>1.28.0</library.commons-compress.version>
@@ -153,8 +154,8 @@
         <library.commons-vfs>2.10.0</library.commons-vfs>
         <library.ehcache.version>3.11.1</library.ehcache.version>
         <library.ejml.version>0.44.0</library.ejml.version>
-        <library.flatlaf.version>3.6.2</library.flatlaf.version>
-        <library.imglib2.version>8.0.0</library.imglib2.version>
+        <library.flatlaf.version>3.7</library.flatlaf.version>
+        <library.imglib2.version>8.0.1</library.imglib2.version>
         <library.imglib2-algorithm.version>0.18.2</library.imglib2-algorithm.version>
         <library.imglib2-ij.version>2.0.3</library.imglib2-ij.version>
         <library.imglib2-realtransform.version>4.0.4</library.imglib2-realtransform.version>
@@ -168,17 +169,18 @@
         <library.jansi.version>2.4.2</library.jansi.version>
         <library.jaxb-runtime.version>4.0.6</library.jaxb-runtime.version>
         <library.junit-jupiter.version>6.0.1</library.junit-jupiter.version>
-        <library.log4j.version>2.25.2</library.log4j.version>
-        <library.minio.version>5.0.6</library.minio.version>
+        <library.log4j.version>2.25.3</library.log4j.version>
+        <!--<library.minio.version>5.0.6</library.minio.version>-->
+        <library.minio.version>8.6.0</library.minio.version>
         <library.okhttp.version>4.12.0</library.okhttp.version>
         <library.okio.version>3.12.0</library.okio.version>
         <library.ome-codecs.version>1.1.2</library.ome-codecs.version>
-        <library.ome-common.version>6.1.1</library.ome-common.version>
-        <library.ome-specification.version>6.5.1</library.ome-specification.version>
-        <library.ome-xml.version>6.5.1</library.ome-xml.version>
-        <library.poi.version>5.4.1</library.poi.version>
+        <library.ome-common.version>6.1.2</library.ome-common.version>
+        <library.ome-specification.version>6.5.2</library.ome-specification.version>
+        <library.ome-xml.version>6.5.2</library.ome-xml.version>
+        <library.poi.version>5.5.1</library.poi.version>
         <library.slf4j.version>2.0.17</library.slf4j.version>
-        <library.snakeyaml.version>2.5</library.snakeyaml.version>
+        <library.snakeyaml-engine.version>3.0.1</library.snakeyaml-engine.version>
         <library.sqlite-jdbc.version>3.50.1.0</library.sqlite-jdbc.version>
         <library.swingx-all.version>1.6.5-1</library.swingx-all.version>
         <library.vtk.version>9.4.2</library.vtk.version>
@@ -1057,9 +1059,9 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.yaml</groupId>
-                <artifactId>snakeyaml</artifactId>
-                <version>${library.snakeyaml.version}</version>
+                <groupId>org.snakeyaml</groupId>
+                <artifactId>snakeyaml-engine</artifactId>
+                <version>${library.snakeyaml-engine.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -2470,8 +2472,20 @@
                     <plugin>
                         <groupId>org.bioimageanalysis.icy.maven3</groupId>
                         <artifactId>extension-properties-plugin</artifactId>
-                        <version>1.0.0-a.5</version>
+                        <version>1.0.0-a.6</version>
                         <executions>
+                            <execution>
+                                <id>check-properties</id>
+                                <goals>
+                                    <goal>check-extension-properties</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>copy-natives</id>
+                                <goals>
+                                    <goal>include-natives</goal>
+                                </goals>
+                            </execution>
                             <execution>
                                 <id>generate-properties</id>
                                 <goals>
