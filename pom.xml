@@ -12,7 +12,7 @@
 
     <groupId>org.bioimageanalysis.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.5</version>
+    <version>3.0.0-a.6</version>
 
     <packaging>pom</packaging>
 
@@ -189,12 +189,12 @@
         <icy.library.vtk-all.version>9.0.0-a.5</icy.library.vtk-all.version>
 
         <!-- Default Icy kernel version -->
-        <icy.kernel.version>3.0.0-a.5</icy.kernel.version>
+        <icy.kernel.version>3.0.0-a.6</icy.kernel.version>
 
         <!-- Default main Icy's extensions version -->
         <icy.extension.icy2-api.version>1.0.0-a.5</icy.extension.icy2-api.version>
-        <icy.extension.kernel.version>1.0.0-a.5</icy.extension.kernel.version>
-        <icy.extension.ezplug.version>4.0.0-a.5</icy.extension.ezplug.version>
+        <icy.extension.kernel.version>1.0.0-a.6</icy.extension.kernel.version>
+        <icy.extension.ezplug.version>4.0.0-a.6</icy.extension.ezplug.version>
         <icy.extension.protocols.version>4.0.0-a.5</icy.extension.protocols.version>
 
         <!-- Default Icy's extensions version -->
@@ -398,7 +398,6 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-kernel</artifactId>
                 <version>${icy.kernel.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <!-- Icy - Default external lib versions to prevent conflict -->
@@ -406,181 +405,151 @@
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
                 <version>${library.annotations.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-anim</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-awt-util</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-bridge</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-css</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-codec</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-constants</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-dom</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-ext</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-gvt</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-i18n</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-parser</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-script</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-shared-resources</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-svg-dom</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-svggen</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-transcoder</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-util</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-xml</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.xmlgraphics</groupId>
                 <artifactId>batik-all</artifactId>
                 <version>${library.batik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>ome</groupId>
                 <artifactId>bioformats_package</artifactId>
                 <version>${library.bioformats.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>ome</groupId>
                 <artifactId>bio-formats_plugins</artifactId>
                 <version>${library.bioformats.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>ome</groupId>
                 <artifactId>bio-formats-tools</artifactId>
                 <version>${library.bioformats.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version>${library.commons-codec.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
                 <version>${library.commons-collections.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-compress</artifactId>
                 <version>${library.commons-compress.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-csv</artifactId>
                 <version>${library.commons-csv.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-exec</artifactId>
                 <version>${library.commons-exec.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-geometry-core</artifactId>
                 <version>${library.commons-geometry.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!--<dependency>
                 <groupId>org.apache.commons</groupId>
@@ -592,403 +561,337 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-geometry-euclidean</artifactId>
                 <version>${library.commons-geometry.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-geometry-io-core</artifactId>
                 <version>${library.commons-geometry.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-geometry-io-euclidean</artifactId>
                 <version>${library.commons-geometry.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-geometry-spherical</artifactId>
                 <version>${library.commons-geometry.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${library.commons-io.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${library.commons-lang.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
                 <version>${library.commons-logging.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-math3</artifactId>
                 <version>${library.commons.math.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!--<dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-math4-core</artifactId>
                 <version>${library.commons.math.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-math4-neuralnet</artifactId>
                 <version>${library.commons.math.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-math4-transform</artifactId>
                 <version>${library.commons.math.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>commons-net</groupId>
                 <artifactId>commons-net</artifactId>
                 <version>${library.commons.net.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-angle</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-arrays</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-combinatorics</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!--<dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-complex-streams</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-complex</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-core</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-field</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-fraction</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-gamma</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-primes</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-quaternion</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-numbers-rootfinder</artifactId>
                 <version>${library.commons-numbers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-pool2</artifactId>
                 <version>${library.commons-pool.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-rng-client-api</artifactId>
                 <version>${library.commons-rng.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-rng-core</artifactId>
                 <version>${library.commons-rng.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-rng-sampling</artifactId>
                 <version>${library.commons-rng.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-rng-simple</artifactId>
                 <version>${library.commons-rng.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-statistics-descriptive</artifactId>
                 <version>${library.commons-statistics}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-statistics-distribution</artifactId>
                 <version>${library.commons-statistics}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-statistics-inference</artifactId>
                 <version>${library.commons-statistics}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-statistics-ranking</artifactId>
                 <version>${library.commons-statistics}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-text</artifactId>
                 <version>${library.commons-text}</version>
-                <scope>provided</scope>
             </dependency>
             <!--<dependency>
                 <groupId>commons-validator</groupId>
                 <artifactId>commons-validator</artifactId>
                 <version>${library.commons-validator.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-vfs2</artifactId>
                 <version>${library.commons-vfs}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${library.ehcache.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.ejml</groupId>
                 <artifactId>ejml-all</artifactId>
                 <version>${library.ejml.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.formdev</groupId>
                 <artifactId>flatlaf</artifactId>
                 <version>${library.flatlaf.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.formdev</groupId>
                 <artifactId>flatlaf-extras</artifactId>
                 <version>${library.flatlaf.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.formdev</groupId>
                 <artifactId>flatlaf-intellij-themes</artifactId>
                 <version>${library.flatlaf.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.formdev</groupId>
                 <artifactId>flatlaf-swingx</artifactId>
                 <version>${library.flatlaf.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>ome</groupId>
                 <artifactId>formats-api</artifactId>
                 <version>${library.bioformats.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>ome</groupId>
                 <artifactId>formats-bsd</artifactId>
                 <version>${library.bioformats.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>ome</groupId>
                 <artifactId>formats-gpl</artifactId>
                 <version>${library.bioformats.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
                 <artifactId>gluegen-rt</artifactId>
                 <version>${library.jogamp.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
                 <artifactId>gluegen-rt</artifactId>
                 <version>${library.jogamp.version}</version>
                 <classifier>natives-linux-amd64</classifier>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
                 <artifactId>gluegen-rt</artifactId>
                 <version>${library.jogamp.version}</version>
                 <classifier>natives-macosx-universal</classifier>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.gluegen</groupId>
                 <artifactId>gluegen-rt</artifactId>
                 <version>${library.jogamp.version}</version>
                 <classifier>natives-windows-amd64</classifier>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.client5</groupId>
                 <artifactId>httpclient5</artifactId>
                 <version>${library.httpclient.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.client5</groupId>
                 <artifactId>httpclient5-cache</artifactId>
                 <version>${library.httpclient.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.client5</groupId>
                 <artifactId>httpclient5-fluent</artifactId>
                 <version>${library.httpclient.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.core5</groupId>
                 <artifactId>httpcore5</artifactId>
                 <version>${library.httpcore.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.core5</groupId>
                 <artifactId>httpcore5-h2</artifactId>
                 <version>${library.httpcore.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.core5</groupId>
                 <artifactId>httpcore5-reactive</artifactId>
                 <version>${library.httpcore.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>net.imglib2</groupId>
                 <artifactId>imglib2</artifactId>
                 <version>${library.imglib2.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>net.imglib2</groupId>
                 <artifactId>imglib2-algorithm</artifactId>
                 <version>${library.imglib2-algorithm.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>net.imglib2</groupId>
                 <artifactId>imglib2-ij</artifactId>
                 <version>${library.imglib2-ij.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>net.imglib2</groupId>
                 <artifactId>imglib2-realtransform</artifactId>
                 <version>${library.imglib2-realtransform.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>javax.media</groupId>
                 <artifactId>jai-core</artifactId>
                 <version>${library.jai.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.sun.media</groupId>
                 <artifactId>jai-codec</artifactId>
                 <version>${library.jai.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.fusesource.jansi</groupId>
                 <artifactId>jansi</artifactId>
                 <version>${library.jansi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
                 <version>${library.jogamp.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
                 <version>${library.jogamp.version}</version>
                 <classifier>natives-linux-amd64</classifier>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
                 <version>${library.jogamp.version}</version>
                 <classifier>natives-macosx-universal</classifier>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jogamp.jogl</groupId>
                 <artifactId>jogl-all</artifactId>
                 <version>${library.jogamp.version}</version>
                 <classifier>natives-windows-amd64</classifier>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
@@ -1000,85 +903,71 @@
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
                 <version>${library.log4j.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-core</artifactId>
                 <version>${library.log4j.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.openmicroscopy</groupId>
                 <artifactId>ome-codecs</artifactId>
                 <version>${library.ome-codecs.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.openmicroscopy</groupId>
                 <artifactId>ome-common</artifactId>
                 <version>${library.ome-common.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.openmicroscopy</groupId>
                 <artifactId>ome-xml</artifactId>
                 <version>${library.ome-xml.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
                 <version>${library.poi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-excelant</artifactId>
                 <version>${library.poi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml-full</artifactId>
                 <version>${library.poi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>${library.poi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml-lite</artifactId>
                 <version>${library.poi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>${library.snakeyaml.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.openmicroscopy</groupId>
                 <artifactId>specification</artifactId>
                 <version>${library.ome-specification.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.swinglabs.swingx</groupId>
                 <artifactId>swingx-all</artifactId>
                 <version>${library.swingx-all.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>ome</groupId>
                 <artifactId>turbojpeg</artifactId>
                 <version>${library.bioformats.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <!-- Icy - library packages -->
@@ -1086,31 +975,26 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-vtk-linux-x64</artifactId>
                 <version>${icy.library.vtk-os.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-vtk-macos-arm64</artifactId>
                 <version>${icy.library.vtk-os.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-vtk-macos-x64</artifactId>
                 <version>${icy.library.vtk-os.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-vtk-windows-x64</artifactId>
                 <version>${icy.library.vtk-os.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-vtk-all</artifactId>
                 <version>${icy.library.vtk-all.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <!-- Icy - Main plugins -->
@@ -1118,25 +1002,21 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy2-api</artifactId>
                 <version>${icy.extension.icy2-api.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>kernel-extension</artifactId>
                 <version>${icy.extension.kernel.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ezplug</artifactId>
                 <version>${icy.extension.ezplug.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>protocols</artifactId>
                 <version>${icy.extension.protocols.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <!-- Icy - plugins & libraries -->
@@ -1144,1031 +1024,863 @@
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>3d-mesh-roi</artifactId>
                 <version>${icy.extension.3d-mesh-roi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>3d-rotation</artifactId>
                 <version>${icy.extension.3d-rotation.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>3d-spheres-vtk</artifactId>
                 <version>${icy.extension.3d-spheres-vtk.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>active-contours</artifactId>
                 <version>${icy.extension.active-contours.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>angle-descriptor</artifactId>
                 <version>${icy.extension.angle-descriptor.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>angle-helper</artifactId>
                 <version>${icy.extension.angle-helper.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>animation-3d</artifactId>
                 <version>${icy.extension.animation-3d.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-codec</artifactId>
                 <version>${icy.extension.apache-commons-codec.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-collections</artifactId>
                 <version>${apache-commons-collections.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-compress</artifactId>
                 <version>${icy.extension.apache-commons-compress.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-io</artifactId>
                 <version>${icy.extension.apache-commons-io.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-csv</artifactId>
                 <version>${apache-commons-csv.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-lang</artifactId>
                 <version>${icy.extension.apache-commons-lang.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-commons-logging</artifactId>
                 <version>${apache-commons-logging.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-httpclient</artifactId>
                 <version>${apache-httpclient.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-poi</artifactId>
                 <version>${icy.extension.apache-poi.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>apache-xmlbeans</artifactId>
                 <version>${apache-xmlbeans.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>autocomplete</artifactId>
                 <version>${autocomplete.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>best-threshold</artifactId>
                 <version>${icy.extension.best-threshold.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>big-image-tools</artifactId>
                 <version>${big-image-tools.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>bioflow</artifactId>
                 <version>${icy.extension.bioflow.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>blockvars</artifactId>
                 <version>${icy.extension.blockvars.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>bridj</artifactId>
                 <version>${bridj.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>bunwarp</artifactId>
                 <version>${bunwrap.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>channel-montage</artifactId>
                 <version>${icy.extension.channel-montage.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>clipper</artifactId>
                 <version>${clipper.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>clojure</artifactId>
                 <version>${clojure.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>color-bar</artifactId>
                 <version>${icy.extension.color-bar.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>color-picker-threshold</artifactId>
                 <version>${icy.extension.color-picker-threshold.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>color-track-processor</artifactId>
                 <version>${icy.extension.color-track-processor.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>connected-components</artifactId>
                 <version>${icy.extension.connected-components.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>convexify</artifactId>
                 <version>${icy.extension.convexify.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>detection-to-roi</artifactId>
                 <version>${icy.extension.detection-to-roi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>distance-profiler</artifactId>
                 <version>${icy.extension.distance-profiler.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>docker4icy</artifactId>
                 <version>${docker4icy.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ejml-all</artifactId>
                 <version>${ejml.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>edge-detection</artifactId>
                 <version>${icy.extension.edge-detection.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>elevation-map</artifactId>
                 <version>${icy.extension.elevation-map.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>emory-jtransforms</artifactId>
                 <version>${icy.extension.emory-jtransforms.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>fill-holes-in-roi</artifactId>
                 <version>${icy.extension.fill-holes-in-roi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>filter-toolbox</artifactId>
                 <version>${icy.extension.filter-toolbox.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>flanagan</artifactId>
                 <version>${icy.extension.flanagan.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>flying-camera</artifactId>
                 <version>${icy.extension.flying-camera.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>global-visible-persistence</artifactId>
                 <version>${icy.extension.global-visible-persistence.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>google-flatbuffers</artifactId>
                 <version>${google-flatbuffers.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>google-gson</artifactId>
                 <version>${google-gson.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>hk-means</artifactId>
                 <version>${icy.extension.hk-means.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-graaljs</artifactId>
                 <version>${icy.extension.graaljs.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-jep</artifactId>
                 <version>${icy.extension.jep.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jmath</artifactId>
                 <version>${icy.extension.jmath.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-jruby</artifactId>
                 <version>${icy.extension.jruby.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>image-to-workbook</artifactId>
                 <version>${icy.extension.image-to-workbook.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>imglib2-icy</artifactId>
                 <version>${icy.extension.imglib2-icy.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.org</groupId>
                 <artifactId>intensity-profile</artifactId>
                 <version>${icy.extension.intensity-profile.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>intensity-projection</artifactId>
                 <version>${icy.extension.intensity-projection.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>invert</artifactId>
                 <version>${icy.extension.invert.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>isotropic-wavelet-transform</artifactId>
                 <version>${icy.extension.isotropic-wavelet-transform.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jama</artifactId>
                 <version>${icy.extension.jama.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>java3d</artifactId>
                 <version>${icy.extension.java3d.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>javacl</artifactId>
                 <version>${icy.extension.javacl.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>javacpp</artifactId>
                 <version>${javacpp.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jfree-common</artifactId>
                 <version>${icy.extension.jfree-common.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jfreechart</artifactId>
                 <version>${icy.extension.jfreechart.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jmf</artifactId>
                 <version>${jmf.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jna</artifactId>
                 <version>${icy.extension.jna.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>joal</artifactId>
                 <version>${joal.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jocl</artifactId>
                 <version>${jocl.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jython</artifactId>
                 <version>${icy.extension.jython.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nashorn</artifactId>
                 <version>${icy.extension.nashorn.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>jython-execnet</artifactId>
                 <version>${icy.extension.jython-execnet.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>kmeans-color-quantization</artifactId>
                 <version>${icy.extension.kmeans-color-quantization.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>kymograph-tracker</artifactId>
                 <version>${icy.extension.kymograph-tracker.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>label-extractor</artifactId>
                 <version>${icy.extension.label-extractor.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>linear-programming</artifactId>
                 <version>${icy.extension.linear-programming.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>magnifier</artifactId>
                 <version>${icy.extension.magnifier.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>mask-editor</artifactId>
                 <version>${icy.extension.mask-editor.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>math-operations</artifactId>
                 <version>${math-operations.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>math-operations-pp</artifactId>
                 <version>${math-operations-pp.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>matlab-communicator</artifactId>
                 <version>${matlab-communicator.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>matlab-exporter</artifactId>
                 <version>${matlab-exporter.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>matlab-function-caller</artifactId>
                 <version>${matlab-function-caller.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>matlab-importer</artifactId>
                 <version>${matlab-importer.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>matlab-io</artifactId>
                 <version>${matlab-io.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>matlab-x-server</artifactId>
                 <version>${matlab-x-server.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>mcib3d-core</artifactId>
                 <version>${icy.extension.mcib3d-core.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>median-filter</artifactId>
                 <version>${icy.extension.median-filter.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>mice-profiler-tracker</artifactId>
                 <version>${mice-profile-tracker.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>micromanager</artifactId>
                 <version>${icy.extension.micromanager.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>micromanager-block</artifactId>
                 <version>${icy.extension.micromanager-block.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>microscope-remote</artifactId>
                 <version>${icy.extension.microscope-remote.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>montage-2d</artifactId>
                 <version>${icy.extension.montage-2d.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>morphomaths</artifactId>
                 <version>${icy.extension.morphomaths.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>motion-profiler</artifactId>
                 <version>${icy.extension.motion-profiler.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>msd-track-processor</artifactId>
                 <version>${icy.extension.msd-track-processor.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>msgpack-core</artifactId>
                 <version>${msgpack-core.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nherve-image-analysis-toolbox</artifactId>
                 <version>${icy.extension.nherve-image-analysis-toolbox.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nherve-matrix</artifactId>
                 <version>${icy.extension.nherve-matrix.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>nherve-toolbox</artifactId>
                 <version>${icy.extension.nherve-toolbox.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ochafik</artifactId>
                 <version>${icy.extension.ochafik.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>opencv</artifactId>
                 <version>${icy.extension.opencv.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>orthoviewer</artifactId>
                 <version>${icy.extension.orthoviewer.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>oshi-core-jdk6</artifactId>
                 <version>${oshi-core-jdk6.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>parallel-colt</artifactId>
                 <version>${parallel-colt.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>particle-animation</artifactId>
                 <version>${icy.extension.particle-animation.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>path-intensity-profiler</artifactId>
                 <version>${icy.extension.path-intensity-profiler.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>projection</artifactId>
                 <version>${icy.extension.projection.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>protractor</artifactId>
                 <version>${icy.extension.protractor.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>python-extractor</artifactId>
                 <version>${icy.extension.python-extractor.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>quickhull</artifactId>
                 <version>${icy.extension.quickhull.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-random-roi-coloring</artifactId>
                 <version>${icy.extension.random-roi-coloring.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>icy-renjin</artifactId>
                 <version>${icy.extension.renjin.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>rescale-roi</artifactId>
                 <version>${icy.extension.rescale-roi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>rhino</artifactId>
                 <version>${icy.extension.rhino.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>rigid-registration</artifactId>
                 <version>${rigid-registration.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ring-roi</artifactId>
                 <version>${icy.extension.ring-roi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-blocks</artifactId>
                 <version>${icy.extension.roi-blocks.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-inclusion-analysis</artifactId>
                 <version>${icy.extension.roi-inclusion-analysis.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-intensity-evolution</artifactId>
                 <version>${icy.extension.roi-intensity-evolution.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-pool</artifactId>
                 <version>${icy.extension.roi-pool.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-proximity-analysis</artifactId>
                 <version>${icy.extension.roi-proximity-analysis.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-statistics</artifactId>
                 <version>${icy.extension.roi-statistics.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-tagger</artifactId>
                 <version>${icy.extension.roi-tagger.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-to-detection</artifactId>
                 <version>${icy.extension.roi-to-detection.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-to-distance-map</artifactId>
                 <version>${icy.extension.roi-to-distance-map.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>roi-tooltip</artifactId>
                 <version>${icy.extension.roi-tooltip.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>rsyntaxtextarea</artifactId>
                 <version>${icy.extension.rsyntaxtextarea.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ruler-helper</artifactId>
                 <version>${icy.extension.ruler-helper.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>scale-bar</artifactId>
                 <version>${icy.extension.scale-bar.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>script-editor</artifactId>
                 <version>${icy.extension.script-editor.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>script-manager-core</artifactId>
                 <version>${icy.extension.script-manager-core.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>script-manager-gui</artifactId>
                 <version>${icy.extension.script-manager-gui.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>sequence-blocks</artifactId>
                 <version>${icy.extension.sequence-blocks.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>slic</artifactId>
                 <version>${icy.extension.slic.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>snake-yaml</artifactId>
                 <version>${icy.extension.snake-yaml.version}</version>
-                <scope>provided</scope>
             </dependency>-->
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>soda-suite</artifactId>
                 <version>${icy.extension.soda-suite.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-detection-utilities</artifactId>
                 <version>${icy.extension.spot-detection-utilities.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-detector</artifactId>
                 <version>${icy.extension.spot-detector.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-detector-block</artifactId>
                 <version>${icy.extension.spot-detector-block.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-tracking</artifactId>
                 <version>${icy.extension.spot-tracking.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>spot-tracking-blocks</artifactId>
                 <version>${icy.extension.spot-tracking-blocks.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>stack-rotation</artifactId>
                 <version>${icy.extension.stack-rotation.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>stereo-3d-vtk-canvas</artifactId>
                 <version>${icy.extension.stereo-3d-vtk-canvas.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>tensor-flow-manager</artifactId>
                 <version>${tensor-flow-manager.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>texture-segmentation</artifactId>
                 <version>${icy.extension.texture-segmentation.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>thresholder</artifactId>
                 <version>${icy.extension.thresholder.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>timestamp-overlay</artifactId>
                 <version>${icy.extension.timestamp-overlay.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-manager</artifactId>
                 <version>${icy.extension.track-manager.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-painter</artifactId>
                 <version>${icy.extension.track-painter.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-excel-export</artifactId>
                 <version>${icy.extension.track-processor-excel-export.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-filtered-rois</artifactId>
                 <version>${icy.extension.track-processor-filtered-rois.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-flow</artifactId>
                 <version>${icy.extension.track-processor-flow.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-instant-speed</artifactId>
                 <version>${icy.extension.track-processor-instant-speed.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-intensity-profile</artifactId>
                 <version>${icy.extension.track-processor-intensity-profile.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-intensity-profile-lagache</artifactId>
                 <version>${track-processor-intensity-profile-lagache.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-roi-gate</artifactId>
                 <version>${icy.extension.track-processor-roi-gate.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>track-processor-time-clip</artifactId>
                 <version>${icy.extension.track-processor-time-clip.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>tracking-benchmark-generator</artifactId>
                 <version>${icy.extension.tracking-benchmark-generator.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>vecmath</artifactId>
                 <version>${icy.extension.vecmath.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>video-importer</artifactId>
                 <version>${video-importer.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>video-recorder</artifactId>
                 <version>${video-recorder.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>voronoi</artifactId>
                 <version>${voronoi.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>water-shed-3d</artifactId>
                 <version>${icy.extension.water-shed-3d.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>webcam-capture-example</artifactId>
                 <version>${webcam-capture-example.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>webcam-capture-library</artifactId>
                 <version>${webcam-capture-library.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>well-plate-reader</artifactId>
                 <version>${well-plate-reader.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>workbooks</artifactId>
                 <version>${icy.extension.workbooks.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>workspace-editor</artifactId>
                 <version>${workspace-editor.version}</version>
-                <scope>provided</scope>
             </dependency>
             <!-- DEPRECATED -->
             <!--<dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>xuggler</artifactId>
                 <version>${icy.extension.xuggler.version}</version>
-                <scope>provided</scope>
             </dependency>-->
 
             <!-- replaced version to prevent vulnerabilities -->
