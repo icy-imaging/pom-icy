@@ -1,4 +1,4 @@
-![Version 3.0.0 alpha 5](https://img.shields.io/badge/v3.0.0-alpha_5-royalblue)
+![Version 3.0.0 alpha 6](https://img.shields.io/badge/v3.0.0-alpha_6-royalblue)
 ![Java 17+](https://img.shields.io/badge/OpenJDK-17+-5382A1?labelColor=E76F00)
 [![License: LGPL v3](https://img.shields.io/badge/LGPLv3-008033?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging)
@@ -11,7 +11,7 @@ a Maven file for [bioimage analysis software Icy](https://icy.bioimageanalysis.o
 which was developed by members or former members of the [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/).
 This project is licensed under an LGPLv3 license.     
 Icy is developed and maintained by [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/).
-The [source code of Icy](https://gitlab.pasteur.fr/bia/icy) is also licensed under an LGPLv3 license. 
+The [source code of Icy](https://gitlab.pasteur.fr/bia/icy/icy) is also licensed under an LGPLv3 license. 
 
 ## Description
 
@@ -26,12 +26,12 @@ This project centralizes the Maven configuration for Icy as well as its plugins 
 <parent>
     <groupId>org.bioimageanalysis.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.5</version>
+    <version>3.0.0-a.6</version>
 </parent>
 ```
 
 Maven profiles are completely automated, so you shouldn't do anything to activate or deactivate profiles.
-You just need to run the command just below to execute the default maven goals (clean and install)
+You need to run the command just below to execute the default maven goals (`clean` and `install`)
 ```shell
 mvn
 ```
@@ -45,9 +45,9 @@ mvn clean package
 - The `package` phase generate three JARs: one to executable for Icy, a source JAR and a Javadoc JAR. 
 - The `install` phase will compile and install the project in your local Maven repository, and in your Icy's extensions folder.
 
-TODO: explain how to use the `deploy` phase.
+***TODO**: explain how to use the `deploy` phase.*
 
-→ To see which profiles are activated, run the command `mvn help:active-profiles` in your terminal.
+> To see which profiles are activated, run the command `mvn help:active-profiles` in your terminal.
 
 ## Dependency list
 
@@ -67,16 +67,22 @@ To call them, you need to add the `<dependency>` block as follows:
 ```
 Usually you do not need to specify the version number, as it is already set in the pom-icy.
 
-If your dependency is an Icy's extension that is not present in the default list of provided extension, you must add `<scope>provided</scope>` to the dependency block as follows:
-```xml
-<dependencies>
-    <dependency>
-        <groupId>org.bioimagenalaysis.icy</groupId>
-        <artifactId>name-of-extension</artifactId>
-        <scope>provided</scope>
-    </dependency>
-</dependencies>
-```
+## Installation
+
+To install the POM in your local Maven repository, follow the instructions below:
+
+1. clone the repository: 
+    ```shell
+    git clone https://gitlab.pasteur.fr/bia/icy/pom-icy.git
+    ```
+2. go to the directory:
+    ```shell
+    cd pom-icy
+    ```
+3. run the Maven command: 
+    ```shell
+    mvn
+    ```
 
 ## Citation
 
