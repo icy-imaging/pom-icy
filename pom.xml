@@ -195,7 +195,7 @@
         <icy.extension.icy2-api.version>1.0.0-a.5</icy.extension.icy2-api.version>
         <icy.extension.kernel.version>1.0.0-a.6</icy.extension.kernel.version>
         <icy.extension.ezplug.version>4.0.0-a.6</icy.extension.ezplug.version>
-        <icy.extension.protocols.version>4.0.0-a.5</icy.extension.protocols.version>
+        <icy.extension.protocols.version>4.0.0-a.6</icy.extension.protocols.version>
 
         <!-- Default Icy's extensions version -->
         <icy.extension.3d-mesh-roi.version>2.0.0-a.5</icy.extension.3d-mesh-roi.version>
