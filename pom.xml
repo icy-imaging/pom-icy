@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.scijava</groupId>
         <artifactId>pom-scijava</artifactId>
-        <version>43.0.0</version>
+        <version>44.0.0</version>
     </parent>
 
     <groupId>org.bioimageanalysis.icy</groupId>
@@ -282,11 +282,10 @@
         <icy.extension.roi-to-detection.version>2.0.0-a.2</icy.extension.roi-to-detection.version>
         <icy.extension.roi-to-distance-map.version>4.0.0-a.1</icy.extension.roi-to-distance-map.version>
         <icy.extension.roi-tooltip.version>2.0.0-a.1</icy.extension.roi-tooltip.version>
-        <icy.extension.rsyntaxtextarea.version>3.0.0-a.5</icy.extension.rsyntaxtextarea.version>
         <icy.extension.ruler-helper.version>2.0.0-a.5</icy.extension.ruler-helper.version>
         <icy.extension.scale-bar.version>4.0.0-a.2</icy.extension.scale-bar.version>
-        <icy.extension.script-manager-core.version>1.0.0-a.5</icy.extension.script-manager-core.version>
-        <icy.extension.script-manager-gui.version>1.0.0-a.5</icy.extension.script-manager-gui.version>
+        <icy.extension.script-manager-core.version>1.0.0-a.6</icy.extension.script-manager-core.version>
+        <icy.extension.script-manager-gui.version>1.0.0-a.6</icy.extension.script-manager-gui.version>
         <icy.extension.sequence-blocks.version>3.0.0-a.5</icy.extension.sequence-blocks.version>
         <icy.extension.slic.version>2.0.0-a.1</icy.extension.slic.version>
         <icy.extension.soda-suite.version>2.0.0-a.1</icy.extension.soda-suite.version>
@@ -313,6 +312,8 @@
         <icy.extension.vecmath.version>2.0.0-a.5</icy.extension.vecmath.version>
         <icy.extension.water-shed-3d.version>2.0.0-a.2</icy.extension.water-shed-3d.version>
         <icy.extension.workbooks.version>4.0.0-a.5</icy.extension.workbooks.version>
+
+        <!-- Default external libraries for Icy extensions -->
 
         <!-- Deprecated extensions -->
         <!--<icy.extension.animation-3d.version>2.0.0</icy.extension.animation-3d.version>-->
@@ -1666,11 +1667,6 @@
             </dependency>
             <dependency>
                 <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>rsyntaxtextarea</artifactId>
-                <version>${icy.extension.rsyntaxtextarea.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
                 <artifactId>ruler-helper</artifactId>
                 <version>${icy.extension.ruler-helper.version}</version>
             </dependency>
@@ -1882,6 +1878,8 @@
                 <artifactId>xuggler</artifactId>
                 <version>${icy.extension.xuggler.version}</version>
             </dependency>-->
+
+            <!-- external libraries for extensions -->
 
             <!-- replaced version to prevent vulnerabilities -->
             <!-- BioFormats -->
