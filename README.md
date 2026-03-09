@@ -1,4 +1,4 @@
-![Version 3.0.0 alpha 6](https://img.shields.io/badge/v3.0.0-alpha_6-royalblue)
+![Version 3.0.0 alpha 7](https://img.shields.io/badge/v3.0.0-alpha_7-royalblue)
 ![Java 17+](https://img.shields.io/badge/OpenJDK-17+-5382A1?labelColor=E76F00)
 [![License: LGPL v3](https://img.shields.io/badge/LGPLv3-008033?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging)
@@ -24,9 +24,9 @@ To know more about how a POM file in Maven projects works, you can check those r
 This project centralizes the Maven configuration for Icy as well as its plugins in one file. It will be inherited to the other projects with the `parent` block:
 ```xml
 <parent>
-    <groupId>org.bioimageanalysis.icy</groupId>
+    <groupId>fr.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.6</version>
+    <version>3.0.0-a.7</version>
 </parent>
 ```
 
@@ -60,8 +60,8 @@ To call them, you need to add the `<dependency>` block as follows:
 ```xml
 <dependencies>
     <dependency>
-        <groupId>org.bioimagenalaysis.icy</groupId>
-        <artifactId>name-of-extension</artifactId>
+        <groupId>com.example</groupId>
+        <artifactId>extension-name</artifactId>
     </dependency>
 </dependencies>
 ```
