@@ -100,9 +100,9 @@
         <jdk.version>[17,)</jdk.version>
 
         <!-- Maven Plugins version -->
-        <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
+        <!--<build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>-->
 
-        <maven-clean-plugin.version>3.4.1</maven-clean-plugin.version>
+        <!--<maven-clean-plugin.version>3.4.1</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
         <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
@@ -115,7 +115,11 @@
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <maven-site-plugin.version>3.21.0</maven-site-plugin.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>-->
+
+        <icy.maven.plugin.version>1.0.0-a.7</icy.maven.plugin.version>
+        <icy.maven.plugin.enforcer.version>${icy.maven.plugin.version}</icy.maven.plugin.enforcer.version>
+        <icy.maven.plugin.mojo.version>${icy.maven.plugin.version}</icy.maven.plugin.mojo.version>
 
         <!-- Maven plugin properties -->
         <maven-source-plugin.includePom>true</maven-source-plugin.includePom>
@@ -161,6 +165,9 @@
 
         <!-- ## JAXB ## -->
         <library.jaxb-runtime.version>4.0.6</library.jaxb-runtime.version>
+
+        <!-- ## JSpecify -->
+        <library.jspecify.version>1.0.0</library.jspecify.version>
 
         <!-- ## SwingX ## -->
         <library.swingx-all.version>1.6.5-1</library.swingx-all.version>
@@ -330,7 +337,7 @@
         <clipper.version>7.0.0</clipper.version>
         <clojure.version>2.0.0</clojure.version>
         <docker4icy.version>4.0.0</docker4icy.version>
-        <ejml.version>1.0.0</ejml.version>
+        <!--<ejml.version>1.0.0</ejml.version>-->
         <javacpp.version>2.0.0</javacpp.version>
         <jmf.version>3.0.0</jmf.version>
         <joal.version>3.0.0</joal.version>
@@ -369,8 +376,10 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>${library.annotations.version}</version>
-            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
         </dependency>
     </dependencies>
 
@@ -439,6 +448,13 @@
                 <groupId>org.fusesource.jansi</groupId>
                 <artifactId>jansi</artifactId>
                 <version>${library.jansi.version}</version>
+            </dependency>
+
+            <!-- ## JSpecify ## -->
+            <dependency>
+                <groupId>org.jspecify</groupId>
+                <artifactId>jspecify</artifactId>
+                <version>${library.jspecify.version}</version>
             </dependency>
 
             <!-- ## SwingX ## -->
@@ -532,39 +548,8 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>build-helper-maven-plugin</artifactId>
-                    <version>${build-helper-maven-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>${maven-install-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>${maven-clean-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>${maven-site-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>${maven-deploy-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${maven-surefire-plugin.version}</version>
-                </plugin>
-                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven-compiler-plugin.version}</version>
                     <configuration>
                         <source>17</source>
                         <target>17</target>
@@ -583,23 +568,7 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version>${maven-dependency-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>${maven-enforcer-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-help-plugin</artifactId>
-                    <version>${maven-help-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>${maven-jar-plugin.version}</version>
                     <configuration>
                         <outputDirectory>${outputDirectory}</outputDirectory>
                         <archive>
@@ -613,7 +582,6 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>${maven-source-plugin.version}</version>
                     <configuration>
                         <outputDirectory>${outputDirectory}</outputDirectory>
                         <includePom>${maven-source-plugin.includePom}</includePom>
@@ -630,7 +598,6 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${maven-javadoc-plugin.version}</version>
                     <configuration>
                         <outputDirectory>${outputDirectory}/javadoc</outputDirectory>
                         <!-- disable javadoc errors (we definitely do not consider them as severe) -->
@@ -652,13 +619,19 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>${maven-resources-plugin.version}</version>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <dependencies>
+                        <dependency>
+                            <groupId>fr.icy.maven</groupId>
+                            <artifactId>enforcer-maven-plugin</artifactId>
+                            <version>${icy.maven.plugin.enforcer.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>${maven-release-plugin.version}</version>
+                    <groupId>fr.icy.maven</groupId>
+                    <artifactId>mojo-maven-plugin</artifactId>
+                    <version>${icy.maven.plugin.mojo.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -678,7 +651,7 @@
                 <defaultGoal>clean install</defaultGoal>
             </build>
 
-            <distributionManagement>
+            <!--<distributionManagement>
                 <repository>
                     <id>icy-core</id>
                     <url>https://nexus-icy.pasteur.cloud/repository/icy-core/</url>
@@ -687,7 +660,7 @@
                     <id>icy-core-snapshots</id>
                     <url>https://nexus-icy.pasteur.cloud/repository/icy-core-snapshots/</url>
                 </snapshotRepository>
-            </distributionManagement>
+            </distributionManagement>-->
         </profile>
 
         <profile>
@@ -705,53 +678,23 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-enforcer-plugin</artifactId>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.apache.maven.enforcer</groupId>
-                                <artifactId>enforcer-api</artifactId>
-                                <version>${maven-enforcer-plugin.version}</version>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.apache.maven.enforcer</groupId>
-                                <artifactId>enforcer-rules</artifactId>
-                                <version>${maven-enforcer-plugin.version}</version>
-                            </dependency>
-                        </dependencies>
                         <executions>
                             <execution>
-                                <id>enforce-rules</id>
+                                <id>icy-enforcer</id>
                                 <goals>
                                     <goal>enforce</goal>
                                 </goals>
+                                <configuration>
+                                    <rules>
+                                        <validateVersion implementation="fr.icy.maven.plugin.enforcer.ValidateVersion"/>
+                                    </rules>
+                                </configuration>
                             </execution>
                         </executions>
-                        <configuration>
-                            <rules>
-                                <!-- Check if there are duplicate classes -->
-                                <!--<banDuplicateClasses>
-                                    <message>
-                                        No Duplicate Classes Allowed! - For duplicate transitive dependencies, add dependency
-                                        exclusions. - For duplications between direct dependencies, resolve or add
-                                        ignored classes to this rule's configuration.
-                                    </message>
-                                    <ignoreClasses>
-                                        <ignoreClass>org.slf4j.*</ignoreClass>
-                                    </ignoreClasses>
-                                    <findAllDuplicates>true</findAllDuplicates>
-                                </banDuplicateClasses>-->
-
-                                <!-- Prevent usage of snapshot dependencies in the project -->
-                                <requireReleaseDeps>
-                                    <message>Your dependency cannot be a snapshot</message>
-                                </requireReleaseDeps>
-                            </rules>
-                            <fail>true</fail>
-                        </configuration>
                     </plugin>
                     <plugin>
-                        <groupId>org.bioimageanalysis.icy.maven3</groupId>
-                        <artifactId>extension-properties-plugin</artifactId>
-                        <version>1.0.0-a.5</version>
+                        <groupId>fr.icy.maven</groupId>
+                        <artifactId>mojo-maven-plugin</artifactId>
                         <executions>
                             <execution>
                                 <id>generate-properties</id>
@@ -762,7 +705,7 @@
                             <execution>
                                 <id>install-extension</id>
                                 <goals>
-                                    <goal>install-icy-extension</goal>
+                                    <goal>install-extension</goal>
                                 </goals>
                             </execution>
                         </executions>
@@ -778,11 +721,12 @@
                                     <goal>copy-resources</goal>
                                 </goals>
                                 <configuration>
-                                    <outputDirectory>${project.build.outputDirectory}/META-INF/</outputDirectory>
+                                    <outputDirectory>${project.build.outputDirectory}/META-INF/data/</outputDirectory>
                                     <resources>
                                         <resource>
                                             <directory>${project.basedir}</directory>
                                             <includes>
+                                                <include>icon.png</include>
                                                 <include>icon.svg</include>
                                                 <include>CHANGELOG.md</include>
                                                 <include>README.md</include>
@@ -818,32 +762,6 @@
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>copy-dependencies</id>
-                                <phase>none</phase>
-                                <goals>
-                                    <goal>copy-dependencies</goal>
-                                </goals>
-                                <configuration>
-                                    <prependGroupId>true</prependGroupId>
-                                    <stripVersion>false</stripVersion>
-                                    <!-- Put them next to the JAR; change to ${project.build.directory} to mix in same folder -->
-                                    <outputDirectory>${project.build.directory}/deps/</outputDirectory>
-                                    <includeScope>runtime</includeScope>
-                                    <includeTypes>jar</includeTypes>
-                                    <excludeScope>provided,test</excludeScope>
-                                    <excludeGroupIds>org.bioimageanalysis.icy,${project.groupId}</excludeGroupIds>
-                                    <overWriteIfNewer>true</overWriteIfNewer>
-                                    <!-- Transitive is true by default; included for clarity -->
-                                    <excludeTransitive>false</excludeTransitive>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
                     </plugin>
                     <plugin>
@@ -853,16 +771,16 @@
                 </plugins>
             </build>
 
-            <!-- Required dependencies and plugins -->
+            <!-- Required dependencies -->
             <dependencies>
                 <dependency>
-                    <groupId>org.bioimageanalysis.icy</groupId>
-                    <artifactId>icy-kernel</artifactId>
+                    <groupId>fr.icy</groupId>
+                    <artifactId>icy</artifactId>
                     <version>${icy.version}</version>
                 </dependency>
             </dependencies>
 
-            <distributionManagement>
+            <!--<distributionManagement>
                 <repository>
                     <id>icy-extensions</id>
                     <url>https://nexus-icy.pasteur.cloud/repository/icy-extensions/</url>
@@ -871,7 +789,7 @@
                     <id>icy-extensions-snapshots</id>
                     <url>https://nexus-icy.pasteur.cloud/repository/icy-extensions-snapshots/</url>
                 </snapshotRepository>
-            </distributionManagement>
+            </distributionManagement>-->
         </profile>
 
         <profile>
@@ -884,7 +802,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <version>${maven-compiler-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>java21-compile</id>
@@ -918,7 +835,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <version>${maven-compiler-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>java25-compile</id>
@@ -945,10 +861,30 @@
 
     <!-- Link to third-party Maven repositories -->
     <repositories>
-        <repository>
+        <!--<repository>
             <id>icy</id>
             <name>Icy's Nexus</name>
             <url>https://nexus-icy.pasteur.cloud/repository/icy/</url>
+        </repository>-->
+        <repository>
+            <id>scijava-public</id>
+            <name>SciJava</name>
+            <url>https://maven.scijava.org/content/repositories/public/</url>
+        </repository>
+        <repository>
+            <id>ome-repo</id>
+            <name>OME repository</name>
+            <url>https://artifacts.openmicroscopy.org/artifactory/ome.releases/</url>
+        </repository>
+        <!--<repository>
+            <id>netbeans</id>
+            <name>NetBeans</name>
+            <url>https://netbeans.apidesign.org/maven2/</url>
+        </repository>-->
+        <repository>
+            <id>jogamp</id>
+            <name>JogAmp</name>
+            <url>https://jogamp.org/deployment/maven/</url>
         </repository>
     </repositories>
 </project>
