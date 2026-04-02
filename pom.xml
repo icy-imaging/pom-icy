@@ -617,22 +617,6 @@
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-enforcer-plugin</artifactId>
-                    <dependencies>
-                        <dependency>
-                            <groupId>fr.icy.maven</groupId>
-                            <artifactId>enforcer-maven-plugin</artifactId>
-                            <version>${icy.maven.plugin.enforcer.version}</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-                <plugin>
-                    <groupId>fr.icy.maven</groupId>
-                    <artifactId>mojo-maven-plugin</artifactId>
-                    <version>${icy.maven.plugin.mojo.version}</version>
-                </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -678,6 +662,13 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-enforcer-plugin</artifactId>
+                        <dependencies>
+                            <dependency>
+                                <groupId>fr.icy.maven</groupId>
+                                <artifactId>enforcer-maven-plugin</artifactId>
+                                <version>${icy.maven.plugin.enforcer.version}</version>
+                            </dependency>
+                        </dependencies>
                         <executions>
                             <execution>
                                 <id>icy-enforcer</id>
@@ -695,6 +686,7 @@
                     <plugin>
                         <groupId>fr.icy.maven</groupId>
                         <artifactId>mojo-maven-plugin</artifactId>
+                        <version>${icy.maven.plugin.mojo.version}</version>
                         <executions>
                             <execution>
                                 <id>generate-properties</id>
