@@ -2,8 +2,9 @@ image: registry-gitlab.pasteur.fr/bia/icy/gitlab-ci:v1.0.0
 
 workflow:
   rules:
-    - if: $CI_PIPELINE_SOURCE != "push"
-      when: never
+    - if: $CI_PIPELINE_SOURCE == "push"
+      when: always
+    - when: never
 
 variables:
   MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
@@ -61,8 +62,8 @@ deploy-snapshot-job:
     paths:
       - target/*.jar
   rules:
-    - if: $CI_COMMIT_TAG =~ /^v(\d+\.\d+\.\d+)(-(a|b|rc)(.\d+)?)?$/
-      when: on_failure
+    - if: $CI_COMMIT_TAG !~ /^v(\d+\.\d+\.\d+)(-(a|b|rc)(.\d+)?)?$/
+      when: manual
 
 deploy-release-job:
   stage: deploy-release
@@ -82,4 +83,4 @@ deploy-release-job:
       - target/*.jar
   rules:
     - if: $CI_COMMIT_TAG =~ /^v(\d+\.\d+\.\d+)(-(a|b|rc)(.\d+)?)?$/
-      when: on_success
+      when: manual
