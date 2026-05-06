@@ -93,4 +93,5 @@ https://icy.bioimageanalysis.org
 ## Authors
 
 - Amandine Tournay
+- Stéphane Dallongeville
 - Thomas Musset
