@@ -90,36 +90,21 @@
     </mailingLists>
 
     <properties>
+        <!-- Project licence -->
         <license.licenseName>GNU LGPLv3</license.licenseName>
         <license.copyrightOwners>Institut Pasteur</license.copyrightOwners>
 
-        <scijava.jvm.version>17</scijava.jvm.version>
-
         <!-- Project Information -->
+        <min.java.version>17</min.java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>[17,)</jdk.version>
+        <jdk.version>[${min.java.version},)</jdk.version>
+        <scijava.jvm.version>${min.java.version}</scijava.jvm.version>
 
         <!-- Maven Plugins version -->
-        <!--<build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>-->
-
-        <!--<maven-clean-plugin.version>3.4.1</maven-clean-plugin.version>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-        <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
-        <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
-        <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
-        <maven-help-plugin.version>3.5.1</maven-help-plugin.version>
-        <maven-install-plugin.version>3.1.4</maven-install-plugin.version>
-        <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
-        <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
-        <maven-release-plugin.version>3.1.1</maven-release-plugin.version>
-        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-        <maven-site-plugin.version>3.21.0</maven-site-plugin.version>
-        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>-->
-
-        <icy.maven.plugin.version>1.0.0-a.7</icy.maven.plugin.version>
-        <icy.maven.plugin.enforcer.version>${icy.maven.plugin.version}</icy.maven.plugin.enforcer.version>
-        <icy.maven.plugin.mojo.version>${icy.maven.plugin.version}</icy.maven.plugin.mojo.version>
+        <enforcer-maven-plugin.version>1.0.0-a.7</enforcer-maven-plugin.version>
+        <fr.icy.maven.enforcer-maven-plugin.version>${enforcer-maven-plugin.version}</fr.icy.maven.enforcer-maven-plugin.version>
+        <mojo-maven-plugin.version>1.0.0-a.7</mojo-maven-plugin.version>
+        <fr.icy.maven.mojo-maven-plugin.version>${mojo-maven-plugin.version}</fr.icy.maven.mojo-maven-plugin.version>
 
         <!-- Maven plugin properties -->
         <maven-source-plugin.includePom>true</maven-source-plugin.includePom>
@@ -132,77 +117,82 @@
         <overWriteSnapshots>true</overWriteSnapshots>
         <overWriteReleases>true</overWriteReleases>
 
-        <!-- # Default version for Icy libraries # -->
-        <!-- ## JetBrains Annotations ## -->
-        <library.annotations.version>26.0.2-1</library.annotations.version>
+        <!-- Icy third-party versions # -->
+        <!-- # JetBrains Annotations -->
+        <annotations.version>26.0.2-1</annotations.version>
+        <org.jetbrains.annotations.version>${annotations.version}</org.jetbrains.annotations.version>
 
-        <!-- ## Apache Commons ## -->
-        <!--<library.commons-exec.version>1.5.0</library.commons-exec.version>-->
-        <!--<library.commons-geometry.version>1.0</library.commons-geometry.version>-->
-        <!--<library.commons.net.version>3.12.0</library.commons.net.version>-->
-        <!--<library.commons-numbers.version>1.2</library.commons-numbers.version>-->
-        <!--<library.commons-rng.version>1.6</library.commons-rng.version>-->
-        <!--<library.commons-statistics>1.1</library.commons-statistics>-->
-        <!--<library.commons-validator>1.9.0</library.commons-validator>-->
-        <!--<library.commons-vfs>2.10.0</library.commons-vfs>-->
+        <!-- # EhCache -->
+        <ehcache.version>3.11.1</ehcache.version>
+        <org.ehcache.ehcache.version>${ehcache.version}</org.ehcache.ehcache.version>
 
-        <!-- ## EhCache ## -->
-        <library.ehcache.version>3.11.1</library.ehcache.version>
+        <!-- # HTTP Client -->
+        <httpclient5.version>5.5.1</httpclient5.version>
+        <httpclient5-cache.version>${httpclient5.version}</httpclient5-cache.version>
+        <httpclient5-fluent.version>${httpclient5.version}</httpclient5-fluent.version>
+        <org.apache.httpcomponents.client5.httpclient5.version>${httpclient5.version}</org.apache.httpcomponents.client5.httpclient5.version>
+        <org.apache.httpcomponents.client5.httpclient5-cache.version>${httpclient5-cache.version}</org.apache.httpcomponents.client5.httpclient5-cache.version>
+        <org.apache.httpcomponents.client5.httpclient5-fluent.version>${httpclient5-fluent.version}</org.apache.httpcomponents.client5.httpclient5-fluent.version>
+        <httpcore5.version>5.3.6</httpcore5.version>
+        <httpcore5-h2.version>${httpcore5.version}</httpcore5-h2.version>
+        <httpcore5-reactive.version>${httpcore5.version}</httpcore5-reactive.version>
+        <org.apache.httpcomponents.core5.httpcore5.version>${httpcore5.version}</org.apache.httpcomponents.core5.httpcore5.version>
+        <org.apache.httpcomponents.core5.httpcore5-h2.version>${httpcore5-h2.version}</org.apache.httpcomponents.core5.httpcore5-h2.version>
+        <org.apache.httpcomponents.core5.httpcore5-reactive.version>${httpcore5-reactive.version}</org.apache.httpcomponents.core5.httpcore5-reactive.version>
 
-        <!-- ## Google ## -->
-        <library.google-http-client.version>1.47.0</library.google-http-client.version>
-        <library.guava.version>33.5.0-jre</library.guava.version>
+        <!-- # JANSI -->
+        <jansi.version>2.4.2</jansi.version>
+        <org.fusesource.jansi.version>${jansi.version}</org.fusesource.jansi.version>
 
-        <!-- ## HttpClient5 -->
-        <library.httpclient.version>5.5.1</library.httpclient.version>
-        <library.httpcore.version>5.3.6</library.httpcore.version>
+        <!-- # JAXB -->
+        <jaxb-runtime.version>4.0.6</jaxb-runtime.version>
+        <org.glassfish.jaxb.jaxb-runtime.version>${jaxb-runtime.version}</org.glassfish.jaxb.jaxb-runtime.version>
 
-        <!-- ## Jackson ## -->
-        <library.jackson.version>2.19.0</library.jackson.version>
+        <!-- # JSpecify -->
+        <jspecify.version>1.0.0</jspecify.version>
+        <org.jspecify.jspecify.version>${jspecify.version}</org.jspecify.jspecify.version>
 
-        <!-- ## JANSI ## -->
-        <library.jansi.version>2.4.2</library.jansi.version>
+        <!-- # SwingX -->
+        <swingx-all.version>1.6.5-1</swingx-all.version>
+        <org.swinglabs.swingx.swingx-all.version>${swingx-all.version}</org.swinglabs.swingx.swingx-all.version>
 
-        <!-- ## JAXB ## -->
-        <library.jaxb-runtime.version>4.0.6</library.jaxb-runtime.version>
+        <!-- # VTK -->
+        <vtk.version>9.4.2</vtk.version>
+        <fr.icy.thirdparty.vtk.version>1.0.0-a.7</fr.icy.thirdparty.vtk.version>
 
-        <!-- ## JSpecify -->
-        <library.jspecify.version>1.0.0</library.jspecify.version>
-
-        <!-- ## SwingX ## -->
-        <library.swingx-all.version>1.6.5-1</library.swingx-all.version>
-
-        <!-- ## VTK ## -->
-        <library.vtk.version>9.4.2</library.vtk.version>
-
-        <library.xml-apis.version>1.4.01</library.xml-apis.version>
-        <library.xml-apis-ext.version>1.3.04</library.xml-apis-ext.version>
-
-        <!-- # Default version for Icy specific libraries # -->
-        <!-- ## VTK ## -->
-        <icy.library.vtk-os.version>${library.vtk.version}</icy.library.vtk-os.version>
-        <icy.library.vtk-all.version>9.0.0-a.5</icy.library.vtk-all.version>
-
-        <!-- Default Icy kernel version -->
+        <!-- Icy version -->
         <icy.version>3.0.0-a.7</icy.version>
+        <fr.icy.icy.version>${icy.version}</fr.icy.icy.version>
 
-        <!-- Default main Icy's extensions version -->
-        <icy.extension.icy2-api.version>1.0.0-a.5</icy.extension.icy2-api.version>
-        <icy.extension.kernel.version>1.0.0-a.6</icy.extension.kernel.version>
-        <icy.extension.ezplug.version>4.0.0-a.6</icy.extension.ezplug.version>
-        <icy.extension.protocols.version>4.0.0-a.6</icy.extension.protocols.version>
+        <!-- Icy library versions -->
+        <!-- # Task -->
+        <task.version>1.0.0-a.7</task.version>
+        <fr.icy.lib.task>${task.version}</fr.icy.lib.task>
 
-        <!-- Default Icy's extensions version -->
+        <!-- Icy core extension versions -->
+        <!-- # Icy2API -->
+        <icy2api.version>1.0.0-a.5</icy2api.version>
+        <fr.icy.ext.icy2-api.version>${icy2api.version}</fr.icy.ext.icy2-api.version>
+
+        <!-- # Kernel extension -->
+        <kernel.version>1.0.0-a.6</kernel.version>
+        <fr.icy.ext.kernel.version>${kernel.version}</fr.icy.ext.kernel.version>
+
+        <!-- # EzPlug -->
+        <ezplug.version>4.0.0-a.6</ezplug.version>
+        <fr.icy.ext.ezplug.version>${ezplug.version}</fr.icy.ext.ezplug.version>
+
+        <!-- # Protocols -->
+        <protocols.version>4.0.0-a.6</protocols.version>
+        <fr.icy.ext.protocols.version>${protocols.version}</fr.icy.ext.protocols.version>
+
+        <!-- Icy extension versions -->
         <icy.extension.3d-mesh-roi.version>2.0.0-a.5</icy.extension.3d-mesh-roi.version>
         <icy.extension.3d-rotation.version>2.0.0-a.5</icy.extension.3d-rotation.version>
         <icy.extension.3d-spheres-vtk.version>2.0.0-a.5</icy.extension.3d-spheres-vtk.version>
         <icy.extension.active-contours.version>5.0.0-a.5</icy.extension.active-contours.version>
         <icy.extension.angle-descriptor.version>2.0.0-a.5</icy.extension.angle-descriptor.version>
         <icy.extension.angle-helper.version>2.0.0-a.5</icy.extension.angle-helper.version>
-        <!--<icy.extension.apache-commons-codec.version>2.0.0-a.1</icy.extension.apache-commons-codec.version>-->
-        <!--<icy.extension.apache-commons-compress.version>2.0.0-a.2</icy.extension.apache-commons-compress.version>-->
-        <!--<icy.extension.apache-commons-io.version>2.0.0-a.1</icy.extension.apache-commons-io.version>-->
-        <!--<icy.extension.apache-commons-lang.version>4.0.0-a.1</icy.extension.apache-commons-lang.version>-->
         <icy.extension.best-threshold.version>2.0.0-a.5</icy.extension.best-threshold.version>
         <icy.extension.blockvars.version>1.0.0-a.5</icy.extension.blockvars.version>
         <icy.extension.channel-montage.version>3.0.0-a.5</icy.extension.channel-montage.version>
@@ -255,7 +245,7 @@
         <icy.extension.nherve-image-analysis-toolbox.version>2.0.0-a.1</icy.extension.nherve-image-analysis-toolbox.version>
         <icy.extension.nherve-matrix.version>2.0.0-a.5</icy.extension.nherve-matrix.version>
         <icy.extension.nherve-toolbox.version>2.0.0-a.5</icy.extension.nherve-toolbox.version>
-        <!--<icy.extension.ochafik.version>1.0.0-a.5</icy.extension.ochafik.version>-->
+        <icy.extension.ochafik.version>1.0.0-a.5</icy.extension.ochafik.version>
         <icy.extension.opencv.version>5.0.0-a.1</icy.extension.opencv.version>
         <icy.extension.orthoviewer.version>3.0.0-a.2</icy.extension.orthoviewer.version>
         <icy.extension.particle-animation.version>2.0.0-a.1</icy.extension.particle-animation.version>
@@ -308,60 +298,22 @@
         <icy.extension.water-shed-3d.version>2.0.0-a.2</icy.extension.water-shed-3d.version>
         <icy.extension.workbooks.version>4.0.0-a.5</icy.extension.workbooks.version>
 
-        <!-- Default external libraries for Icy extensions -->
-
-        <!-- Deprecated extensions -->
-        <!--<icy.extension.animation-3d.version>2.0.0</icy.extension.animation-3d.version>-->
-        <!--<icy.extension.apache-poi.version>6.0.0</icy.extension.apache-poi.version>-->
-        <!--<icy.extension.bioflow.version>2.1.1</icy.extension.bioflow.version>-->
-        <!--<icy.extension.javadocparser.version>1.0.2</icy.extension.javadocparser.version>-->
-        <!--<icy.extension.jfree-common.version>2.0.0</icy.extension.jfree-common.version>-->
-        <!--<icy.extension.jython.version>3.0.0</icy.extension.jython.version>-->
-        <!--<icy.extension.jython-execnet.version>6.0.0</icy.extension.jython-execnet.version>-->
-        <!--<icy.extension.log4j.version>1.0.0</icy.extension.log4j.version>-->
-        <!--<icy.extension.nashorn.version>16.0.0</icy.extension.nashorn.version>-->
-        <!--<icy.extension.python-extractor.version>2.0.0</icy.extension.python-extractor.version>-->
-        <!--<icy.extension.rhino.version>2.0.0</icy.extension.rhino.version>-->
-        <!--<icy.extension.script-editor.version>1.17.0</icy.extension.script-editor.version>-->
-        <!--<icy.extension.snake-yaml.version>2.0.0</icy.extension.snake-yaml.version>-->
-        <!--<icy.extension.xuggler.version>6.0.0</icy.extension.xuggler.version>-->
-
-        <!-- Default plugin-libraries version -->
-        <!--<apache-commons-collections.version>5.0.0</apache-commons-collections.version>-->
-        <!--<apache-commons-csv.version>2.0.0</apache-commons-csv.version>-->
-        <!--<apache-commons-logging.version>2.0.0</apache-commons-logging.version>-->
-        <!--<apache-httpclient.version>5.0.0</apache-httpclient.version>-->
-        <!--<apache-xmlbeans.version>6.0.0</apache-xmlbeans.version>-->
-        <autocomplete.version>3.0.0</autocomplete.version>
-        <bridj.version>1.0.0</bridj.version>
-        <clipper.version>7.0.0</clipper.version>
-        <clojure.version>2.0.0</clojure.version>
-        <docker4icy.version>4.0.0</docker4icy.version>
-        <!--<ejml.version>1.0.0</ejml.version>-->
-        <javacpp.version>2.0.0</javacpp.version>
-        <jmf.version>3.0.0</jmf.version>
-        <joal.version>3.0.0</joal.version>
-        <jocl.version>6.0.0</jocl.version>
-        <google-flatbuffers.version>2.0.0</google-flatbuffers.version>
-        <google-gson.version>3.0.0</google-gson.version>
-        <msgpack-core.version>1.0.0</msgpack-core.version>
-        <parallel-colt.version>6.0.0</parallel-colt.version>
-
-        <!-- Default Icy's plugins version -->
+        <!-- DO NOT USE -->
+        <!-- Old Icy plugin versions -->
         <big-image-tools.version>3.0.0</big-image-tools.version>
         <bunwrap.version>2.0.0</bunwrap.version>
         <math-operations.version>3.0.0</math-operations.version>
         <math-operations-pp.version>3.0.0</math-operations-pp.version>
-        <!--<matlab-communicator.version>1.0.5</matlab-communicator.version>-->
-        <!--<matlab-exporter.version>2.5.1</matlab-exporter.version>-->
-        <!--<matlab-function-caller.version>1.0.0</matlab-function-caller.version>-->
-        <!--<matlab-importer.version>2.5.1</matlab-importer.version>-->
-        <!--<matlab-io.version>2.5.2</matlab-io.version>-->
-        <!--<matlab-x-server.version>3.2.0</matlab-x-server.version>-->
+        <matlab-communicator.version>1.0.5</matlab-communicator.version>
+        <matlab-exporter.version>2.5.1</matlab-exporter.version>
+        <matlab-function-caller.version>1.0.0</matlab-function-caller.version>
+        <matlab-importer.version>2.5.1</matlab-importer.version>
+        <matlab-io.version>2.5.2</matlab-io.version>
+        <matlab-x-server.version>3.2.0</matlab-x-server.version>
         <mice-profile-tracker.version>8.0.0</mice-profile-tracker.version>
         <oshi-core-jdk6.version>3.4.2</oshi-core-jdk6.version>
         <rigid-registration.version>1.4.0</rigid-registration.version>
-        <!--<tensor-flow-manager.version>1.0.0</tensor-flow-manager.version>-->
+        <tensor-flow-manager.version>1.0.0</tensor-flow-manager.version>
         <track-processor-intensity-profile-lagache.version>1.0.1</track-processor-intensity-profile-lagache.version>
         <video-importer.version>1.1.3</video-importer.version>
         <video-recorder.version>1.2.2</video-recorder.version>
@@ -370,6 +322,27 @@
         <webcam-capture-library.version>1.0.0</webcam-capture-library.version>
         <well-plate-reader.version>3.0.3</well-plate-reader.version>
         <workspace-editor.version>1.3.2</workspace-editor.version>
+
+        <!-- Old Icy plugin-library versions (obsolete) -->
+        <apache-commons-collections.version>5.0.0</apache-commons-collections.version>
+        <apache-commons-csv.version>2.0.0</apache-commons-csv.version>
+        <apache-commons-logging.version>2.0.0</apache-commons-logging.version>
+        <apache-httpclient.version>5.0.0</apache-httpclient.version>
+        <apache-xmlbeans.version>6.0.0</apache-xmlbeans.version>
+        <autocomplete.version>3.0.0</autocomplete.version>
+        <bridj.version>1.0.0</bridj.version>
+        <clipper.version>7.0.0</clipper.version>
+        <clojure.version>2.0.0</clojure.version>
+        <docker4icy.version>4.0.0</docker4icy.version>
+        <ejml.version>1.0.0</ejml.version>
+        <javacpp.version>2.0.0</javacpp.version>
+        <jmf.version>3.0.0</jmf.version>
+        <joal.version>3.0.0</joal.version>
+        <jocl.version>6.0.0</jocl.version>
+        <google-flatbuffers.version>2.0.0</google-flatbuffers.version>
+        <google-gson.version>3.0.0</google-gson.version>
+        <msgpack-core.version>1.0.0</msgpack-core.version>
+        <parallel-colt.version>6.0.0</parallel-colt.version>
     </properties>
 
     <dependencies>
@@ -381,57 +354,86 @@
             <groupId>org.jspecify</groupId>
             <artifactId>jspecify</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
-            <!-- Icy - Kernel -->
+            <!-- Icy -->
             <dependency>
                 <groupId>fr.icy</groupId>
                 <artifactId>icy</artifactId>
-                <version>${icy.version}</version>
+                <version>${fr.icy.icy.version}</version>
             </dependency>
 
-            <!-- Icy extensions - Main -->
+            <!-- Icy libraries -->
             <dependency>
-                <groupId>fr.icy</groupId>
+                <groupId>fr.icy.lib</groupId>
+                <artifactId>task</artifactId>
+                <version>${fr.icy.lib.task}</version>
+            </dependency>
+
+            <!-- Icy core extensions -->
+            <dependency>
+                <groupId>fr.icy.ext</groupId>
                 <artifactId>icy2-api</artifactId>
-                <version>${icy.extension.icy2-api.version}</version>
+                <version>${fr.icy.ext.icy2-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy</groupId>
-                <artifactId>kernel-extension</artifactId>
-                <version>${icy.extension.kernel.version}</version>
+                <groupId>fr.icy.ext</groupId>
+                <artifactId>kernel</artifactId>
+                <version>${fr.icy.ext.kernel.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy</groupId>
+                <groupId>fr.icy.ext</groupId>
                 <artifactId>ezplug</artifactId>
-                <version>${icy.extension.ezplug.version}</version>
+                <version>${fr.icy.ext.ezplug.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy</groupId>
+                <groupId>fr.icy.ext</groupId>
                 <artifactId>protocols</artifactId>
-                <version>${icy.extension.protocols.version}</version>
+                <version>${fr.icy.ext.protocols.version}</version>
             </dependency>
 
             <!-- Icy extensions -->
 
-            <!-- Icy - libraries -->
-            <!-- ## JetBrains Annotations ## -->
+            <!-- Icy third parties -->
+            <!-- # JetBrains Annotations -->
             <dependency>
                 <groupId>org.jetbrains</groupId>
                 <artifactId>annotations</artifactId>
-                <version>${library.annotations.version}</version>
+                <version>${org.jetbrains.annotations.version}</version>
             </dependency>
 
-            <!-- ## EhCache ## -->
+            <!-- # EhCache -->
             <dependency>
                 <groupId>org.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
-                <version>${library.ehcache.version}</version>
+                <version>${org.ehcache.ehcache.version}</version>
+            </dependency>
+            <!-- # JAXB (used by EhCache) -->
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${org.glassfish.jaxb.jaxb-runtime.version}</version>
             </dependency>
 
-            <!-- ## FlatLaf ## -->
+            <!-- # FlatLaf -->
             <dependency>
                 <groupId>com.formdev</groupId>
                 <artifactId>flatlaf-extras</artifactId>
@@ -443,98 +445,89 @@
                 <version>${com.formdev.flatlaf.version}</version>
             </dependency>
 
-            <!-- ## JANSI ## -->
+            <!-- # JANSI -->
             <dependency>
                 <groupId>org.fusesource.jansi</groupId>
                 <artifactId>jansi</artifactId>
-                <version>${library.jansi.version}</version>
+                <version>${org.fusesource.jansi.version}</version>
             </dependency>
 
-            <!-- ## JSpecify ## -->
+            <!-- # JSpecify -->
             <dependency>
                 <groupId>org.jspecify</groupId>
                 <artifactId>jspecify</artifactId>
-                <version>${library.jspecify.version}</version>
+                <version>${org.jspecify.jspecify.version}</version>
             </dependency>
 
-            <!-- ## SwingX ## -->
+            <!-- # SwingX -->
             <dependency>
                 <groupId>org.swinglabs.swingx</groupId>
                 <artifactId>swingx-all</artifactId>
-                <version>${library.swingx-all.version}</version>
+                <version>${org.swinglabs.swingx.swingx-all.version}</version>
             </dependency>
 
-            <!-- ## VTK ## -->
+            <!-- # VTK (recompiled) -->
             <dependency>
-                <groupId>fr.icy</groupId>
+                <groupId>fr.icy.thirdparty</groupId>
                 <artifactId>vtk</artifactId>
-                <version>${library.vtk.version}</version>
+                <version>${fr.icy.thirdparty.vtk.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-vtk-linux-x64</artifactId>
-                <version>${icy.library.vtk-os.version}</version>
+                <groupId>fr.icy.thirdparty</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.thirdparty.vtk.version}</version>
+                <classifier>natives-linux-amd64</classifier>
             </dependency>
             <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-vtk-macos-arm64</artifactId>
-                <version>${icy.library.vtk-os.version}</version>
+                <groupId>fr.icy.thirdparty</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.thirdparty.vtk.version}</version>
+                <classifier>natives-macos-amd64</classifier>
             </dependency>
             <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-vtk-macos-x64</artifactId>
-                <version>${icy.library.vtk-os.version}</version>
+                <groupId>fr.icy.thirdparty</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.thirdparty.vtk.version}</version>
+                <classifier>natives-macos-arm64</classifier>
             </dependency>
             <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-vtk-windows-x64</artifactId>
-                <version>${icy.library.vtk-os.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.bioimageanalysis.icy</groupId>
-                <artifactId>icy-vtk-all</artifactId>
-                <version>${icy.library.vtk-all.version}</version>
+                <groupId>fr.icy.thirdparty</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.thirdparty.vtk.version}</version>
+                <classifier>natives-windows-amd64</classifier>
             </dependency>
 
-            <!-- Icy extensions -  libraries -->
-            <!-- ## HttpClient5 / HttpCore5 ## -->
+            <!-- Icy extensions third parties -->
+            <!-- # HttpClient5 / HttpCore5 -->
             <dependency>
                 <groupId>org.apache.httpcomponents.client5</groupId>
                 <artifactId>httpclient5</artifactId>
-                <version>${library.httpclient.version}</version>
+                <version>${org.apache.httpcomponents.client5.httpclient5.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.client5</groupId>
                 <artifactId>httpclient5-cache</artifactId>
-                <version>${library.httpclient.version}</version>
+                <version>${org.apache.httpcomponents.client5.httpclient5-cache.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.client5</groupId>
                 <artifactId>httpclient5-fluent</artifactId>
-                <version>${library.httpclient.version}</version>
+                <version>${org.apache.httpcomponents.client5.httpclient5-fluent.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.core5</groupId>
                 <artifactId>httpcore5</artifactId>
-                <version>${library.httpcore.version}</version>
+                <version>${org.apache.httpcomponents.core5.httpcore5.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.core5</groupId>
                 <artifactId>httpcore5-h2</artifactId>
-                <version>${library.httpcore.version}</version>
+                <version>${org.apache.httpcomponents.core5.httpcore5-h2.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents.core5</groupId>
                 <artifactId>httpcore5-reactive</artifactId>
-                <version>${library.httpcore.version}</version>
-            </dependency>
-
-            <!-- replaced version to prevent vulnerabilities -->
-            <!-- EhCache -->
-            <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
-                <artifactId>jaxb-runtime</artifactId>
-                <version>${library.jaxb-runtime.version}</version>
+                <version>${org.apache.httpcomponents.core5.httpcore5-reactive.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -544,8 +537,9 @@
         <finalName>${project.artifactId}-${project.version}</finalName>
         <defaultGoal>clean install</defaultGoal>
 
-        <!-- List of pre-configured Maven plugins -->
+        <!-- List of Maven plugins for the default build -->
         <pluginManagement>
+            <!-- Set the default compilation target to 17 -->
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -566,6 +560,7 @@
                         </execution>
                     </executions>
                 </plugin>
+                <!-- Enable the multi-release support in jar -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
@@ -579,41 +574,31 @@
                         </archive>
                     </configuration>
                 </plugin>
+
+                <!-- Fix for multi-release support -->
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <configuration>
-                        <outputDirectory>${outputDirectory}</outputDirectory>
-                        <includePom>${maven-source-plugin.includePom}</includePom>
-                    </configuration>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco-maven-plugin.version}</version>
                     <executions>
                         <execution>
-                            <id>attach-sources</id>
+                            <id>jacoco-initialize</id>
                             <goals>
-                                <goal>jar</goal>
+                                <goal>prepare-agent</goal>
                             </goals>
                         </execution>
-                    </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <configuration>
-                        <outputDirectory>${outputDirectory}/javadoc</outputDirectory>
-                        <!-- disable javadoc errors (we definitely do not consider them as severe) -->
-                        <additionalOptions>
-                            <additionalOption>-Xdoclint:none</additionalOption>
-                        </additionalOptions>
-                        <failOnError>false</failOnError>
-                        <detectJavaApiLink>false</detectJavaApiLink>
-                        <legacyMode>true</legacyMode>
-                    </configuration>
-                    <executions>
                         <execution>
-                            <id>attach-javadoc</id>
+                            <id>jacoco-site</id>
+                            <phase>package</phase>
                             <goals>
-                                <goal>jar</goal>
+                                <goal>report</goal>
                             </goals>
+                            <configuration>
+                                <!-- Exclude alternate versions for multi-release modules-->
+                                <excludes>
+                                    <exclude>META-INF/**/*</exclude>
+                                </excludes>
+                            </configuration>
                         </execution>
                     </executions>
                 </plugin>
@@ -621,8 +606,9 @@
         </pluginManagement>
     </build>
 
-    <!-- POM profiles -->
     <profiles>
+        <!-- Default profile for kernel-related projects -->
+        <!-- Such as 'fr.icy:pom-icy', 'fr.ic:icy', custom maven plugins, recompiled third-parties and libraries -->
         <profile>
             <id>icy-kernel</id>
             <activation>
@@ -630,23 +616,9 @@
                     <exists>${project.basedir}/.kernel</exists>
                 </file>
             </activation>
-
-            <build>
-                <defaultGoal>clean install</defaultGoal>
-            </build>
-
-            <!--<distributionManagement>
-                <repository>
-                    <id>icy-core</id>
-                    <url>https://nexus-icy.pasteur.cloud/repository/icy-core/</url>
-                </repository>
-                <snapshotRepository>
-                    <id>icy-core-snapshots</id>
-                    <url>https://nexus-icy.pasteur.cloud/repository/icy-core-snapshots/</url>
-                </snapshotRepository>
-            </distributionManagement>-->
         </profile>
 
+        <!-- Default profile for non-kernel projects (non-kernel projects are considered as extensions) -->
         <profile>
             <id>icy-extension</id>
             <activation>
@@ -656,9 +628,8 @@
             </activation>
 
             <build>
-                <defaultGoal>clean install</defaultGoal>
-
                 <plugins>
+                    <!-- Custom enforcer rules for Icy extensions -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-enforcer-plugin</artifactId>
@@ -666,7 +637,7 @@
                             <dependency>
                                 <groupId>fr.icy.maven</groupId>
                                 <artifactId>enforcer-maven-plugin</artifactId>
-                                <version>${icy.maven.plugin.enforcer.version}</version>
+                                <version>${fr.icy.maven.enforcer-maven-plugin.version}</version>
                             </dependency>
                         </dependencies>
                         <executions>
@@ -683,10 +654,11 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <!-- Custom mojo helper for Icy extensions -->
                     <plugin>
                         <groupId>fr.icy.maven</groupId>
                         <artifactId>mojo-maven-plugin</artifactId>
-                        <version>${icy.maven.plugin.mojo.version}</version>
+                        <version>${fr.icy.maven.mojo-maven-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>generate-properties</id>
@@ -702,6 +674,7 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <!-- Populate resources folder -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-resources-plugin</artifactId>
@@ -752,38 +725,20 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                    </plugin>
                 </plugins>
             </build>
 
-            <!-- Required dependencies -->
+            <!-- Required dependencies for Icy extensions -->
             <dependencies>
                 <dependency>
                     <groupId>fr.icy</groupId>
                     <artifactId>icy</artifactId>
-                    <version>${icy.version}</version>
+                    <version>${fr.icy.icy.version}</version>
                 </dependency>
             </dependencies>
-
-            <!--<distributionManagement>
-                <repository>
-                    <id>icy-extensions</id>
-                    <url>https://nexus-icy.pasteur.cloud/repository/icy-extensions/</url>
-                </repository>
-                <snapshotRepository>
-                    <id>icy-extensions-snapshots</id>
-                    <url>https://nexus-icy.pasteur.cloud/repository/icy-extensions-snapshots/</url>
-                </snapshotRepository>
-            </distributionManagement>-->
         </profile>
 
+        <!-- Enable compiling target for Java 21 compatible projects -->
         <profile>
             <id>multi-release-21</id>
             <activation>
@@ -817,6 +772,7 @@
             </build>
         </profile>
 
+        <!-- Enable compiling target for Java 25 compatible projects -->
         <profile>
             <id>multi-release-25</id>
             <activation>
@@ -849,15 +805,91 @@
                 </plugins>
             </build>
         </profile>
+
+        <!-- Distribution profile -->
+        <profile>
+            <id>deploy-to-central</id>
+
+            <build>
+                <plugins>
+                    <!-- Source required by Central -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <configuration>
+                            <outputDirectory>${outputDirectory}</outputDirectory>
+                            <includePom>${maven-source-plugin.includePom}</includePom>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Javadoc required by Central -->
+                    <plugin>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Signing with GPG required by Central -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.2.8</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals><goal>sign</goal></goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Central publishing maven plugin -->
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.10.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>false</autoPublish>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <distributionManagement>
+                <repository>
+                    <id>central</id>
+                    <url>https://central.sonatype.com/api/v1/publisher/upload</url>
+                </repository>
+                <snapshotRepository>
+                    <id>central</id>
+                    <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
     </profiles>
 
-    <!-- Link to third-party Maven repositories -->
     <repositories>
-        <!--<repository>
-            <id>icy</id>
-            <name>Icy's Nexus</name>
-            <url>https://nexus-icy.pasteur.cloud/repository/icy/</url>
-        </repository>-->
+        <!-- Central first to prevent from searching through every other repository for each dependency (faster) -->
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+
+        <!-- Every custom / self-hosted artifact repository required by Icy (must be called AFTER Central!) -->
         <repository>
             <id>scijava-public</id>
             <name>SciJava</name>
