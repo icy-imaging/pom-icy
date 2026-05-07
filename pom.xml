@@ -117,23 +117,23 @@
         <overWriteSnapshots>true</overWriteSnapshots>
         <overWriteReleases>true</overWriteReleases>
 
-        <!-- Icy third-party versions # -->
+        <!-- Icy third-party versions -->
         <!-- # JetBrains Annotations -->
-        <annotations.version>26.0.2-1</annotations.version>
+        <annotations.version>26.1.0</annotations.version>
         <org.jetbrains.annotations.version>${annotations.version}</org.jetbrains.annotations.version>
 
         <!-- # EhCache -->
-        <ehcache.version>3.11.1</ehcache.version>
+        <ehcache.version>3.12.0</ehcache.version>
         <org.ehcache.ehcache.version>${ehcache.version}</org.ehcache.ehcache.version>
 
-        <!-- # HTTP Client -->
-        <httpclient5.version>5.5.1</httpclient5.version>
+        <!-- # HTTP Components -->
+        <httpclient5.version>5.6.1</httpclient5.version>
         <httpclient5-cache.version>${httpclient5.version}</httpclient5-cache.version>
         <httpclient5-fluent.version>${httpclient5.version}</httpclient5-fluent.version>
         <org.apache.httpcomponents.client5.httpclient5.version>${httpclient5.version}</org.apache.httpcomponents.client5.httpclient5.version>
         <org.apache.httpcomponents.client5.httpclient5-cache.version>${httpclient5-cache.version}</org.apache.httpcomponents.client5.httpclient5-cache.version>
         <org.apache.httpcomponents.client5.httpclient5-fluent.version>${httpclient5-fluent.version}</org.apache.httpcomponents.client5.httpclient5-fluent.version>
-        <httpcore5.version>5.3.6</httpcore5.version>
+        <httpcore5.version>5.4.2</httpcore5.version>
         <httpcore5-h2.version>${httpcore5.version}</httpcore5-h2.version>
         <httpcore5-reactive.version>${httpcore5.version}</httpcore5-reactive.version>
         <org.apache.httpcomponents.core5.httpcore5.version>${httpcore5.version}</org.apache.httpcomponents.core5.httpcore5.version>
@@ -141,11 +141,11 @@
         <org.apache.httpcomponents.core5.httpcore5-reactive.version>${httpcore5-reactive.version}</org.apache.httpcomponents.core5.httpcore5-reactive.version>
 
         <!-- # JANSI -->
-        <jansi.version>2.4.2</jansi.version>
+        <jansi.version>2.4.3</jansi.version>
         <org.fusesource.jansi.version>${jansi.version}</org.fusesource.jansi.version>
 
         <!-- # JAXB -->
-        <jaxb-runtime.version>4.0.6</jaxb-runtime.version>
+        <jaxb-runtime.version>4.0.8</jaxb-runtime.version>
         <org.glassfish.jaxb.jaxb-runtime.version>${jaxb-runtime.version}</org.glassfish.jaxb.jaxb-runtime.version>
 
         <!-- # JSpecify -->
@@ -158,6 +158,7 @@
 
         <!-- # VTK -->
         <vtk.version>9.4.2</vtk.version>
+        <org.vtk.vtk.version>${vtk.version}</org.vtk.vtk.version>
         <fr.icy.thirdparty.vtk.version>1.0.0-a.7</fr.icy.thirdparty.vtk.version>
 
         <!-- Icy version -->
@@ -171,19 +172,19 @@
 
         <!-- Icy core extension versions -->
         <!-- # Icy2API -->
-        <icy2api.version>1.0.0-a.5</icy2api.version>
+        <icy2api.version>1.0.0-a.7</icy2api.version>
         <fr.icy.ext.icy2-api.version>${icy2api.version}</fr.icy.ext.icy2-api.version>
 
         <!-- # Kernel extension -->
-        <kernel.version>1.0.0-a.6</kernel.version>
+        <kernel.version>1.0.0-a.7</kernel.version>
         <fr.icy.ext.kernel.version>${kernel.version}</fr.icy.ext.kernel.version>
 
         <!-- # EzPlug -->
-        <ezplug.version>4.0.0-a.6</ezplug.version>
+        <ezplug.version>4.0.0-a.7</ezplug.version>
         <fr.icy.ext.ezplug.version>${ezplug.version}</fr.icy.ext.ezplug.version>
 
         <!-- # Protocols -->
-        <protocols.version>4.0.0-a.6</protocols.version>
+        <protocols.version>4.0.0-a.7</protocols.version>
         <fr.icy.ext.protocols.version>${protocols.version}</fr.icy.ext.protocols.version>
 
         <!-- Icy extension versions -->
@@ -542,8 +543,8 @@
             <!-- Set the default compilation target to 17 -->
             <plugins>
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
                     <configuration>
                         <source>17</source>
                         <target>17</target>
@@ -562,8 +563,8 @@
                 </plugin>
                 <!-- Enable the multi-release support in jar -->
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
+                    <version>${maven-jar-plugin.version}</version>
                     <configuration>
                         <outputDirectory>${outputDirectory}</outputDirectory>
                         <archive>
@@ -631,8 +632,8 @@
                 <plugins>
                     <!-- Custom enforcer rules for Icy extensions -->
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-enforcer-plugin</artifactId>
+                        <version>${maven-enforcer-plugin.version}</version>
                         <dependencies>
                             <dependency>
                                 <groupId>fr.icy.maven</groupId>
@@ -676,8 +677,8 @@
                     </plugin>
                     <!-- Populate resources folder -->
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-resources-plugin</artifactId>
+                        <version>${maven-resources-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>copy-extension-data</id>
@@ -747,8 +748,8 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
+                        <version>${maven-compiler-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>java21-compile</id>
@@ -781,8 +782,8 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
+                        <version>${maven-compiler-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>java25-compile</id>
@@ -812,10 +813,19 @@
 
             <build>
                 <plugins>
+                    <!-- Since we publish on Central, default deploy method is not necessary -->
+                    <plugin>
+                        <artifactId>maven-deploy-plugin</artifactId>
+                        <version>${maven-deploy-plugin.version}</version>
+                        <inherited>true</inherited>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </plugin>
                     <!-- Source required by Central -->
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven-source-plugin.version}</version>
                         <configuration>
                             <outputDirectory>${outputDirectory}</outputDirectory>
                             <includePom>${maven-source-plugin.includePom}</includePom>
@@ -832,6 +842,7 @@
                     <!-- Javadoc required by Central -->
                     <plugin>
                         <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven-javadoc-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
@@ -842,23 +853,16 @@
                         </executions>
                     </plugin>
                     <!-- Signing with GPG required by Central -->
+                    <!-- If snapshot, skip using -Dgpg.skip=true -->
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.2.8</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals><goal>sign</goal></goals>
-                            </execution>
-                        </executions>
+                        <version>${maven-gpg-plugin.version}</version>
                     </plugin>
                     <!-- Central publishing maven plugin -->
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>0.10.0</version>
+                        <version>${central-publishing-maven-plugin.version}</version>
                         <extensions>true</extensions>
                         <configuration>
                             <publishingServerId>central</publishingServerId>
@@ -870,11 +874,11 @@
 
             <distributionManagement>
                 <repository>
-                    <id>central</id>
+                    <id>central.releases</id>
                     <url>https://central.sonatype.com/api/v1/publisher/upload</url>
                 </repository>
                 <snapshotRepository>
-                    <id>central</id>
+                    <id>central.snapshots</id>
                     <url>https://central.sonatype.com/repository/maven-snapshots/</url>
                 </snapshotRepository>
             </distributionManagement>
