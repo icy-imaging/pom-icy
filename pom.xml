@@ -156,11 +156,6 @@
         <swingx-all.version>1.6.5-1</swingx-all.version>
         <org.swinglabs.swingx.swingx-all.version>${swingx-all.version}</org.swinglabs.swingx.swingx-all.version>
 
-        <!-- # VTK -->
-        <vtk.version>9.4.2</vtk.version>
-        <org.vtk.vtk.version>${vtk.version}</org.vtk.vtk.version>
-        <fr.icy.thirdparty.vtk.version>1.0.0-a.7</fr.icy.thirdparty.vtk.version>
-
         <!-- Icy version -->
         <icy.version>3.0.0-a.7</icy.version>
         <fr.icy.icy.version>${icy.version}</fr.icy.icy.version>
@@ -169,6 +164,12 @@
         <!-- # Task -->
         <task.version>1.0.0-a.7</task.version>
         <fr.icy.lib.task>${task.version}</fr.icy.lib.task>
+
+        <!-- # VTK -->
+        <vtk.version>9.4.2</vtk.version>
+        <org.vtk.vtk.version>${vtk.version}</org.vtk.vtk.version>
+        <icy.vtk.version>1.0.0-a.7</icy.vtk.version>
+        <fr.icy.lib.vtk.version>${icy.vtk.version}</fr.icy.lib.vtk.version>
 
         <!-- Icy core extension versions -->
         <!-- # Icy2API -->
@@ -383,10 +384,42 @@
             </dependency>
 
             <!-- Icy libraries -->
+            <!-- # Task -->
             <dependency>
                 <groupId>fr.icy.lib</groupId>
                 <artifactId>task</artifactId>
                 <version>${fr.icy.lib.task}</version>
+            </dependency>
+
+            <!-- # VTK (recompiled) -->
+            <dependency>
+                <groupId>fr.icy.lib</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.lib.vtk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.lib</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.lib.vtk.version}</version>
+                <classifier>natives-linux-amd64</classifier>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.lib</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.lib.vtk.version}</version>
+                <classifier>natives-macos-amd64</classifier>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.lib</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.lib.vtk.version}</version>
+                <classifier>natives-macos-arm64</classifier>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.lib</groupId>
+                <artifactId>vtk</artifactId>
+                <version>${fr.icy.lib.vtk.version}</version>
+                <classifier>natives-windows-amd64</classifier>
             </dependency>
 
             <!-- Icy core extensions -->
@@ -467,38 +500,7 @@
                 <version>${org.swinglabs.swingx.swingx-all.version}</version>
             </dependency>
 
-            <!-- # VTK (recompiled) -->
-            <dependency>
-                <groupId>fr.icy.thirdparty</groupId>
-                <artifactId>vtk</artifactId>
-                <version>${fr.icy.thirdparty.vtk.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>fr.icy.thirdparty</groupId>
-                <artifactId>vtk</artifactId>
-                <version>${fr.icy.thirdparty.vtk.version}</version>
-                <classifier>natives-linux-amd64</classifier>
-            </dependency>
-            <dependency>
-                <groupId>fr.icy.thirdparty</groupId>
-                <artifactId>vtk</artifactId>
-                <version>${fr.icy.thirdparty.vtk.version}</version>
-                <classifier>natives-macos-amd64</classifier>
-            </dependency>
-            <dependency>
-                <groupId>fr.icy.thirdparty</groupId>
-                <artifactId>vtk</artifactId>
-                <version>${fr.icy.thirdparty.vtk.version}</version>
-                <classifier>natives-macos-arm64</classifier>
-            </dependency>
-            <dependency>
-                <groupId>fr.icy.thirdparty</groupId>
-                <artifactId>vtk</artifactId>
-                <version>${fr.icy.thirdparty.vtk.version}</version>
-                <classifier>natives-windows-amd64</classifier>
-            </dependency>
-
-            <!-- Icy extensions third parties -->
+            <!-- Icy extension third parties -->
             <!-- # HttpClient5 / HttpCore5 -->
             <dependency>
                 <groupId>org.apache.httpcomponents.client5</groupId>
@@ -671,6 +673,12 @@
                                 <id>install-extension</id>
                                 <goals>
                                     <goal>install-extension</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>deploy-extension</id>
+                                <goals>
+                                    <goal>deploy-extension</goal>
                                 </goals>
                             </execution>
                         </executions>
