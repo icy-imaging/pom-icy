@@ -98,7 +98,11 @@
         <min.java.version>17</min.java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>[${min.java.version},)</jdk.version>
+
+        <!-- SciJava settings -->
         <scijava.jvm.version>${min.java.version}</scijava.jvm.version>
+        <scijava.javadoc.url.java>https://javadoc.scijava.org/Java${min.java.version}/</scijava.javadoc.url.java>
+        <scijava.javadoc.url.javafx>https://javadoc.scijava.org/JavaFX${min.java.version}/</scijava.javadoc.url.javafx>
 
         <!-- Maven Plugins version -->
         <enforcer-maven-plugin.version>1.0.0-a.7</enforcer-maven-plugin.version>
