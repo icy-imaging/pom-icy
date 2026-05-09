@@ -609,6 +609,15 @@
                         </execution>
                     </executions>
                 </plugin>
+
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                    <configuration>
+                        <!-- Remove custom tags defined in pom-scijava-base, prevent throwing warning about @implNote -->
+                        <tags combine.self="override"/>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
