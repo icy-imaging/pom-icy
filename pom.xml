@@ -164,33 +164,33 @@
         <icy.version>3.0.0-a.7</icy.version>
         <fr.icy.icy.version>${icy.version}</fr.icy.icy.version>
 
-        <!-- Icy library versions -->
+        <!-- Icy shared library versions -->
         <!-- # Task -->
-        <task.version>1.0.0-a.7</task.version>
-        <fr.icy.lib.task>${task.version}</fr.icy.lib.task>
+        <icy.task.version>1.0.0-a.7</icy.task.version>
+        <fr.icy.shared.task>${icy.task.version}</fr.icy.shared.task>
 
         <!-- # VTK -->
         <vtk.version>9.4.2</vtk.version>
         <org.vtk.vtk.version>${vtk.version}</org.vtk.vtk.version>
         <icy.vtk.version>1.0.0-a.7</icy.vtk.version>
-        <fr.icy.lib.vtk.version>${icy.vtk.version}</fr.icy.lib.vtk.version>
+        <fr.icy.shared.vtk.version>${icy.vtk.version}</fr.icy.shared.vtk.version>
 
         <!-- Icy core extension versions -->
         <!-- # Icy2API -->
-        <icy2api.version>1.0.0-a.7</icy2api.version>
-        <fr.icy.ext.icy2-api.version>${icy2api.version}</fr.icy.ext.icy2-api.version>
+        <icy.icy2api.version>1.0.0-a.7</icy.icy2api.version>
+        <fr.icy.extension.icy2-api.version>${icy.icy2api.version}</fr.icy.extension.icy2-api.version>
 
         <!-- # Kernel extension -->
-        <kernel.version>1.0.0-a.7</kernel.version>
-        <fr.icy.ext.kernel.version>${kernel.version}</fr.icy.ext.kernel.version>
+        <icy.kernel.version>1.0.0-a.7</icy.kernel.version>
+        <fr.icy.extension.kernel.version>${icy.kernel.version}</fr.icy.extension.kernel.version>
 
         <!-- # EzPlug -->
-        <ezplug.version>4.0.0-a.7</ezplug.version>
-        <fr.icy.ext.ezplug.version>${ezplug.version}</fr.icy.ext.ezplug.version>
+        <icy.ezplug.version>4.0.0-a.7</icy.ezplug.version>
+        <fr.icy.extension.ezplug.version>${icy.ezplug.version}</fr.icy.extension.ezplug.version>
 
         <!-- # Protocols -->
-        <protocols.version>4.0.0-a.7</protocols.version>
-        <fr.icy.ext.protocols.version>${protocols.version}</fr.icy.ext.protocols.version>
+        <icy.protocols.version>4.0.0-a.7</icy.protocols.version>
+        <fr.icy.extension.protocols.version>${icy.protocols.version}</fr.icy.extension.protocols.version>
 
         <!-- Icy extension versions -->
         <icy.extension.3d-mesh-roi.version>2.0.0-a.5</icy.extension.3d-mesh-roi.version>
@@ -306,49 +306,49 @@
 
         <!-- DO NOT USE -->
         <!-- Old Icy plugin versions -->
-        <big-image-tools.version>3.0.0</big-image-tools.version>
-        <bunwrap.version>2.0.0</bunwrap.version>
-        <math-operations.version>3.0.0</math-operations.version>
-        <math-operations-pp.version>3.0.0</math-operations-pp.version>
-        <matlab-communicator.version>1.0.5</matlab-communicator.version>
-        <matlab-exporter.version>2.5.1</matlab-exporter.version>
-        <matlab-function-caller.version>1.0.0</matlab-function-caller.version>
-        <matlab-importer.version>2.5.1</matlab-importer.version>
-        <matlab-io.version>2.5.2</matlab-io.version>
-        <matlab-x-server.version>3.2.0</matlab-x-server.version>
-        <mice-profile-tracker.version>8.0.0</mice-profile-tracker.version>
-        <oshi-core-jdk6.version>3.4.2</oshi-core-jdk6.version>
-        <rigid-registration.version>1.4.0</rigid-registration.version>
-        <tensor-flow-manager.version>1.0.0</tensor-flow-manager.version>
-        <track-processor-intensity-profile-lagache.version>1.0.1</track-processor-intensity-profile-lagache.version>
-        <video-importer.version>1.1.3</video-importer.version>
-        <video-recorder.version>1.2.2</video-recorder.version>
-        <voronoi.version>1.0.0</voronoi.version>
-        <webcam-capture-example.version>1.0.4</webcam-capture-example.version>
-        <webcam-capture-library.version>1.0.0</webcam-capture-library.version>
-        <well-plate-reader.version>3.0.3</well-plate-reader.version>
-        <workspace-editor.version>1.3.2</workspace-editor.version>
+        <icy.plugin.big-image-tools.version>3.0.0</icy.plugin.big-image-tools.version>
+        <icy.plugin.bunwrap.version>2.0.0</icy.plugin.bunwrap.version>
+        <icy.plugin.math-operations.version>3.0.0</icy.plugin.math-operations.version>
+        <icy.plugin.math-operations-pp.version>3.0.0</icy.plugin.math-operations-pp.version>
+        <icy.plugin.matlab-communicator.version>1.0.5</icy.plugin.matlab-communicator.version>
+        <icy.plugin.matlab-exporter.version>2.5.1</icy.plugin.matlab-exporter.version>
+        <icy.plugin.matlab-function-caller.version>1.0.0</icy.plugin.matlab-function-caller.version>
+        <icy.plugin.matlab-importer.version>2.5.1</icy.plugin.matlab-importer.version>
+        <icy.plugin.matlab-io.version>2.5.2</icy.plugin.matlab-io.version>
+        <icy.plugin.matlab-x-server.version>3.2.0</icy.plugin.matlab-x-server.version>
+        <icy.plugin.mice-profile-tracker.version>8.0.0</icy.plugin.mice-profile-tracker.version>
+        <icy.plugin.oshi-core-jdk6.version>3.4.2</icy.plugin.oshi-core-jdk6.version>
+        <icy.plugin.rigid-registration.version>1.4.0</icy.plugin.rigid-registration.version>
+        <icy.plugin.tensor-flow-manager.version>1.0.0</icy.plugin.tensor-flow-manager.version>
+        <icy.plugin.track-processor-intensity-profile-lagache.version>1.0.1</icy.plugin.track-processor-intensity-profile-lagache.version>
+        <icy.plugin.video-importer.version>1.1.3</icy.plugin.video-importer.version>
+        <icy.plugin.video-recorder.version>1.2.2</icy.plugin.video-recorder.version>
+        <icy.plugin.voronoi.version>1.0.0</icy.plugin.voronoi.version>
+        <icy.plugin.webcam-capture-example.version>1.0.4</icy.plugin.webcam-capture-example.version>
+        <icy.plugin.webcam-capture-library.version>1.0.0</icy.plugin.webcam-capture-library.version>
+        <icy.plugin.well-plate-reader.version>3.0.3</icy.plugin.well-plate-reader.version>
+        <icy.plugin.workspace-editor.version>1.3.2</icy.plugin.workspace-editor.version>
 
         <!-- Old Icy plugin-library versions (obsolete) -->
-        <apache-commons-collections.version>5.0.0</apache-commons-collections.version>
-        <apache-commons-csv.version>2.0.0</apache-commons-csv.version>
-        <apache-commons-logging.version>2.0.0</apache-commons-logging.version>
-        <apache-httpclient.version>5.0.0</apache-httpclient.version>
-        <apache-xmlbeans.version>6.0.0</apache-xmlbeans.version>
-        <autocomplete.version>3.0.0</autocomplete.version>
-        <bridj.version>1.0.0</bridj.version>
-        <clipper.version>7.0.0</clipper.version>
-        <clojure.version>2.0.0</clojure.version>
-        <docker4icy.version>4.0.0</docker4icy.version>
-        <ejml.version>1.0.0</ejml.version>
-        <javacpp.version>2.0.0</javacpp.version>
-        <jmf.version>3.0.0</jmf.version>
-        <joal.version>3.0.0</joal.version>
-        <jocl.version>6.0.0</jocl.version>
-        <google-flatbuffers.version>2.0.0</google-flatbuffers.version>
-        <google-gson.version>3.0.0</google-gson.version>
-        <msgpack-core.version>1.0.0</msgpack-core.version>
-        <parallel-colt.version>6.0.0</parallel-colt.version>
+        <icy.plugin-library.apache-commons-collections.version>5.0.0</icy.plugin-library.apache-commons-collections.version>
+        <icy.plugin-library.apache-commons-csv.version>2.0.0</icy.plugin-library.apache-commons-csv.version>
+        <icy.plugin-library.apache-commons-logging.version>2.0.0</icy.plugin-library.apache-commons-logging.version>
+        <icy.plugin-library.apache-httpclient.version>5.0.0</icy.plugin-library.apache-httpclient.version>
+        <icy.plugin-library.apache-xmlbeans.version>6.0.0</icy.plugin-library.apache-xmlbeans.version>
+        <icy.plugin-library.autocomplete.version>3.0.0</icy.plugin-library.autocomplete.version>
+        <icy.plugin-library.bridj.version>1.0.0</icy.plugin-library.bridj.version>
+        <icy.plugin-library.clipper.version>7.0.0</icy.plugin-library.clipper.version>
+        <icy.plugin-library.clojure.version>2.0.0</icy.plugin-library.clojure.version>
+        <icy.plugin-library.docker4icy.version>4.0.0</icy.plugin-library.docker4icy.version>
+        <icy.plugin-library.ejml.version>1.0.0</icy.plugin-library.ejml.version>
+        <icy.plugin-library.javacpp.version>2.0.0</icy.plugin-library.javacpp.version>
+        <icy.plugin-library.jmf.version>3.0.0</icy.plugin-library.jmf.version>
+        <icy.plugin-library.joal.version>3.0.0</icy.plugin-library.joal.version>
+        <icy.plugin-library.jocl.version>6.0.0</icy.plugin-library.jocl.version>
+        <icy.plugin-library.google-flatbuffers.version>2.0.0</icy.plugin-library.google-flatbuffers.version>
+        <icy.plugin-library.google-gson.version>3.0.0</icy.plugin-library.google-gson.version>
+        <icy.plugin-library.msgpack-core.version>1.0.0</icy.plugin-library.msgpack-core.version>
+        <icy.plugin-library.parallel-colt.version>6.0.0</icy.plugin-library.parallel-colt.version>
     </properties>
 
     <dependencies>
@@ -390,62 +390,62 @@
             <!-- Icy libraries -->
             <!-- # Task -->
             <dependency>
-                <groupId>fr.icy.lib</groupId>
+                <groupId>fr.icy.shared</groupId>
                 <artifactId>task</artifactId>
-                <version>${fr.icy.lib.task}</version>
+                <version>${fr.icy.shared.task}</version>
             </dependency>
 
             <!-- # VTK (recompiled) -->
             <dependency>
-                <groupId>fr.icy.lib</groupId>
+                <groupId>fr.icy.shared</groupId>
                 <artifactId>vtk</artifactId>
-                <version>${fr.icy.lib.vtk.version}</version>
+                <version>${fr.icy.shared.vtk.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy.lib</groupId>
+                <groupId>fr.icy.shared</groupId>
                 <artifactId>vtk</artifactId>
-                <version>${fr.icy.lib.vtk.version}</version>
+                <version>${fr.icy.shared.vtk.version}</version>
                 <classifier>natives-linux-amd64</classifier>
             </dependency>
             <dependency>
-                <groupId>fr.icy.lib</groupId>
+                <groupId>fr.icy.shared</groupId>
                 <artifactId>vtk</artifactId>
-                <version>${fr.icy.lib.vtk.version}</version>
+                <version>${fr.icy.shared.vtk.version}</version>
                 <classifier>natives-macos-amd64</classifier>
             </dependency>
             <dependency>
-                <groupId>fr.icy.lib</groupId>
+                <groupId>fr.icy.shared</groupId>
                 <artifactId>vtk</artifactId>
-                <version>${fr.icy.lib.vtk.version}</version>
+                <version>${fr.icy.shared.vtk.version}</version>
                 <classifier>natives-macos-arm64</classifier>
             </dependency>
             <dependency>
-                <groupId>fr.icy.lib</groupId>
+                <groupId>fr.icy.shared</groupId>
                 <artifactId>vtk</artifactId>
-                <version>${fr.icy.lib.vtk.version}</version>
+                <version>${fr.icy.shared.vtk.version}</version>
                 <classifier>natives-windows-amd64</classifier>
             </dependency>
 
             <!-- Icy core extensions -->
             <dependency>
-                <groupId>fr.icy.ext</groupId>
+                <groupId>fr.icy.extension</groupId>
                 <artifactId>icy2-api</artifactId>
-                <version>${fr.icy.ext.icy2-api.version}</version>
+                <version>${fr.icy.extension.icy2-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy.ext</groupId>
+                <groupId>fr.icy.extension</groupId>
                 <artifactId>kernel</artifactId>
-                <version>${fr.icy.ext.kernel.version}</version>
+                <version>${fr.icy.extension.kernel.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy.ext</groupId>
+                <groupId>fr.icy.extension</groupId>
                 <artifactId>ezplug</artifactId>
-                <version>${fr.icy.ext.ezplug.version}</version>
+                <version>${fr.icy.extension.ezplug.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy.ext</groupId>
+                <groupId>fr.icy.extension</groupId>
                 <artifactId>protocols</artifactId>
-                <version>${fr.icy.ext.protocols.version}</version>
+                <version>${fr.icy.extension.protocols.version}</version>
             </dependency>
 
             <!-- Icy extensions -->
@@ -918,7 +918,7 @@
         <repository>
             <id>scijava-public</id>
             <name>SciJava</name>
-            <url>https://maven.scijava.org/content/repositories/public/</url>
+            <url>https://maven.scijava.org/repository/public/</url>
         </repository>
         <repository>
             <id>ome-repo</id>
