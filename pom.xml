@@ -12,7 +12,7 @@
 
     <groupId>fr.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.7-SNAPSHOT</version>
+    <version>3.0.0-a.7</version>
 
     <packaging>pom</packaging>
 
