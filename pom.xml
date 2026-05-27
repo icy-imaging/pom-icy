@@ -178,7 +178,7 @@
         <!-- Icy core extension versions -->
         <!-- # Icy2API -->
         <icy.icy2api.version>1.0.0-a.7</icy.icy2api.version>
-        <fr.icy.extension.icy2-api.version>${icy.icy2api.version}</fr.icy.extension.icy2-api.version>
+        <fr.icy.extensions.icy2-api.version>${icy.icy2api.version}</fr.icy.extensions.icy2-api.version>
 
         <!-- # Kernel extension -->
         <icy.kernel.version>1.0.0-a.7</icy.kernel.version>
@@ -430,22 +430,22 @@
             <dependency>
                 <groupId>fr.icy.extensions</groupId>
                 <artifactId>icy2-api</artifactId>
-                <version>${fr.icy.extension.icy2-api.version}</version>
+                <version>${fr.icy.extensions.icy2-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extensions</groupId>
                 <artifactId>kernel</artifactId>
-                <version>${fr.icy.extension.kernel.version}</version>
+                <version>${fr.icy.extensions.kernel.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extensions</groupId>
                 <artifactId>ezplug</artifactId>
-                <version>${fr.icy.extension.ezplug.version}</version>
+                <version>${fr.icy.extensions.ezplug.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extensions</groupId>
                 <artifactId>protocols</artifactId>
-                <version>${fr.icy.extension.protocols.version}</version>
+                <version>${fr.icy.extensions.protocols.version}</version>
             </dependency>
 
             <!-- Icy extensions -->
