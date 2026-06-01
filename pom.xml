@@ -12,7 +12,7 @@
 
     <groupId>fr.icy</groupId>
     <artifactId>pom-icy</artifactId>
-    <version>3.0.0-a.7</version>
+    <version>3.0.0-a.8-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -888,6 +888,7 @@
                         <configuration>
                             <publishingServerId>central</publishingServerId>
                             <autoPublish>false</autoPublish>
+                            <forcedOutputDirectory>${project.build.directory}/central-publishing</forcedOutputDirectory>
                         </configuration>
                     </plugin>
                 </plugins>
