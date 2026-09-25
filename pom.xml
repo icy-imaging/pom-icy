@@ -18,7 +18,7 @@
 
     <name>Parent POM base</name>
     <description>Common parent POM for all Icy related projects</description>
-    <url>https://icy.bioimageanalysis.org/</url>
+    <url>http://icy.fr/</url>
     <inceptionYear>2020</inceptionYear>
 
     <scm>
@@ -53,6 +53,7 @@
             <id>tmusset</id>
             <name>Thomas Musset</name>
             <url>https://icy.bioimageanalysis.org/author/tmusset/</url>
+            <timezone>Europe/Paris</timezone>
             <roles>
                 <role>lead</role>
                 <role>developer</role>
@@ -68,17 +69,18 @@
         <contributor>
             <name>Stéphane Dallongeville</name>
             <url>https://icy.bioimageanalysis.org/author/stef/</url>
-            <roles>
-                <role>founder</role>
-            </roles>
+            <timezone>Europe/Paris</timezone>
+            <roles><role>founder</role></roles>
         </contributor>
         <contributor>
             <name>Amandine Tournay</name>
             <url>https://icy.bioimageanalysis.org/author/amandine-tournay/</url>
+            <timezone>Europe/Paris</timezone>
         </contributor>
         <contributor>
             <name>Jean-Yves Tinevez</name>
             <url>https://icy.bioimageanalysis.org/author/tinevez/</url>
+            <timezone>Europe/Paris</timezone>
         </contributor>
     </contributors>
 
@@ -105,10 +107,23 @@
         <scijava.javadoc.url.javafx>https://javadoc.scijava.org/JavaFX${min.java.version}/</scijava.javadoc.url.javafx>
 
         <!-- Maven Plugins version -->
-        <enforcer-maven-plugin.version>1.0.0-a.7</enforcer-maven-plugin.version>
-        <fr.icy.maven.enforcer-maven-plugin.version>${enforcer-maven-plugin.version}</fr.icy.maven.enforcer-maven-plugin.version>
-        <mojo-maven-plugin.version>1.0.0-a.7</mojo-maven-plugin.version>
-        <fr.icy.maven.mojo-maven-plugin.version>${mojo-maven-plugin.version}</fr.icy.maven.mojo-maven-plugin.version>
+        <maven-core.version>3.9.16</maven-core.version>
+        <org.apache.maven.maven-core.version>${maven-core.version}</org.apache.maven.maven-core.version>
+        <maven-plugin-api.version>${maven-core.version}</maven-plugin-api.version>
+        <org.apache.maven.maven-plugin-api.version>${maven-plugin-api.version}</org.apache.maven.maven-plugin-api.version>
+        <maven-plugin-annotations.version>3.15.2</maven-plugin-annotations.version>
+        <org.apache.maven.plugin-tools.maven-plugin-annotations.version>${maven-plugin-annotations.version}</org.apache.maven.plugin-tools.maven-plugin-annotations.version>
+        <enforcer-api.version>3.6.3</enforcer-api.version>
+        <org.apache.maven.enforcer.enforcer-api.version>${enforcer-api.version}</org.apache.maven.enforcer.enforcer-api.version>
+        <javax.inject.version>1</javax.inject.version>
+        <javax.inject.javax.inject.version>${javax.inject.version}</javax.inject.javax.inject.version>
+        <sisu-maven-plugin.version>1.0.0</sisu-maven-plugin.version>
+        <org.eclipse.sisu.sisu-maven-plugin.version>${sisu-maven-plugin.version}</org.eclipse.sisu.sisu-maven-plugin.version>
+
+        <icy.enforcer-maven-plugin.version>1.0.0-a.8-SNAPSHOT</icy.enforcer-maven-plugin.version>
+        <fr.icy.maven.enforcer-maven-plugin.version>${icy.enforcer-maven-plugin.version}</fr.icy.maven.enforcer-maven-plugin.version>
+        <icy.mojo-maven-plugin.version>1.0.0-a.8</icy.mojo-maven-plugin.version>
+        <fr.icy.maven.mojo-maven-plugin.version>${icy.mojo-maven-plugin.version}</fr.icy.maven.mojo-maven-plugin.version>
 
         <!-- Maven plugin properties -->
         <maven-source-plugin.includePom>true</maven-source-plugin.includePom>
@@ -149,47 +164,57 @@
         <org.fusesource.jansi.version>${jansi.version}</org.fusesource.jansi.version>
 
         <!-- # JAXB -->
-        <jaxb-runtime.version>4.0.8</jaxb-runtime.version>
+        <jaxb-runtime.version>4.0.9</jaxb-runtime.version>
         <org.glassfish.jaxb.jaxb-runtime.version>${jaxb-runtime.version}</org.glassfish.jaxb.jaxb-runtime.version>
 
         <!-- # JSpecify -->
         <jspecify.version>1.0.0</jspecify.version>
         <org.jspecify.jspecify.version>${jspecify.version}</org.jspecify.jspecify.version>
 
+        <!-- # Log4j -> SLF4J -->
+        <log4j-over-slf4j.version>2.0.18</log4j-over-slf4j.version>
+        <org.slf4j.log4j-over-slf4j.version>${log4j-over-slf4j.version}</org.slf4j.log4j-over-slf4j.version>
+        <log4j-to-slf4j.version>2.26.0</log4j-to-slf4j.version>
+        <org.apache.logging.log4j.log4j-to-slf4j.version>${log4j-to-slf4j.version}</org.apache.logging.log4j.log4j-to-slf4j.version>
+
         <!-- # SwingX -->
         <swingx-all.version>1.6.5-1</swingx-all.version>
         <org.swinglabs.swingx.swingx-all.version>${swingx-all.version}</org.swinglabs.swingx.swingx-all.version>
 
         <!-- Icy version -->
-        <icy.version>3.0.0-a.7</icy.version>
+        <icy.version>3.0.0-a.8-SNAPSHOT</icy.version>
         <fr.icy.icy.version>${icy.version}</fr.icy.icy.version>
 
         <!-- Icy shared library versions -->
+        <!-- # Logging -->
+        <icy.logging.version>1.0.0-a.8-SNAPSHOT</icy.logging.version>
+        <fr.icy.shared.logging.version>${icy.logging.version}</fr.icy.shared.logging.version>
+
         <!-- # Task -->
-        <icy.task.version>1.0.0-a.7</icy.task.version>
+        <icy.task.version>1.0.0-a.8-SNAPSHOT</icy.task.version>
         <fr.icy.shared.task>${icy.task.version}</fr.icy.shared.task>
 
         <!-- # VTK -->
         <vtk.version>9.4.2</vtk.version>
         <org.vtk.vtk.version>${vtk.version}</org.vtk.vtk.version>
-        <icy.vtk.version>1.0.0-a.7</icy.vtk.version>
+        <icy.vtk.version>1.0.0-a.8-SNAPSHOT</icy.vtk.version>
         <fr.icy.shared.vtk.version>${icy.vtk.version}</fr.icy.shared.vtk.version>
 
         <!-- Icy core extension versions -->
         <!-- # Icy2API -->
-        <icy.icy2api.version>1.0.0-a.7</icy.icy2api.version>
+        <icy.icy2api.version>1.0.0-a.8-SNAPSHOT</icy.icy2api.version>
         <fr.icy.extensions.icy2-api.version>${icy.icy2api.version}</fr.icy.extensions.icy2-api.version>
 
         <!-- # Kernel extension -->
-        <icy.kernel.version>1.0.0-a.7</icy.kernel.version>
+        <icy.kernel.version>1.0.0-a.8-SNAPSHOT</icy.kernel.version>
         <fr.icy.extensions.kernel.version>${icy.kernel.version}</fr.icy.extensions.kernel.version>
 
         <!-- # EzPlug -->
-        <icy.ezplug.version>4.0.0-a.7</icy.ezplug.version>
+        <icy.ezplug.version>4.0.0-a.8-SNAPSHOT</icy.ezplug.version>
         <fr.icy.extensions.ezplug.version>${icy.ezplug.version}</fr.icy.extensions.ezplug.version>
 
         <!-- # Protocols -->
-        <icy.protocols.version>4.0.0-a.7</icy.protocols.version>
+        <icy.protocols.version>4.0.0-a.8-SNAPSHOT</icy.protocols.version>
         <fr.icy.extensions.protocols.version>${icy.protocols.version}</fr.icy.extensions.protocols.version>
 
         <!-- Icy extension versions -->
@@ -388,6 +413,13 @@
             </dependency>
 
             <!-- Icy libraries -->
+            <!-- # Logging -->
+            <dependency>
+                <groupId>fr.icy.shared</groupId>
+                <artifactId>logging</artifactId>
+                <version>${fr.icy.shared.logging.version}</version>
+            </dependency>
+
             <!-- # Task -->
             <dependency>
                 <groupId>fr.icy.shared</groupId>
@@ -544,6 +576,25 @@
         <finalName>${project.artifactId}-${project.version}</finalName>
         <defaultGoal>clean install</defaultGoal>
 
+        <plugins>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <configuration>
+                    <outputDirectory>${outputDirectory}</outputDirectory>
+                    <includePom>${maven-source-plugin.includePom}</includePom>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
         <!-- List of Maven plugins for the default build -->
         <pluginManagement>
             <!-- Set the default compilation target to 17 -->
@@ -678,18 +729,21 @@
                         <executions>
                             <execution>
                                 <id>generate-properties</id>
+                                <phase>generate-resources</phase>
                                 <goals>
                                     <goal>generate-extension-properties</goal>
                                 </goals>
                             </execution>
                             <execution>
                                 <id>install-extension</id>
+                                <phase>install</phase>
                                 <goals>
                                     <goal>install-extension</goal>
                                 </goals>
                             </execution>
                             <execution>
                                 <id>deploy-extension</id>
+                                <phase>deploy</phase>
                                 <goals>
                                     <goal>deploy-extension</goal>
                                 </goals>
@@ -844,22 +898,7 @@
                         </configuration>
                     </plugin>
                     <!-- Source required by Central -->
-                    <plugin>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${maven-source-plugin.version}</version>
-                        <configuration>
-                            <outputDirectory>${outputDirectory}</outputDirectory>
-                            <includePom>${maven-source-plugin.includePom}</includePom>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+
                     <!-- Javadoc required by Central -->
                     <plugin>
                         <artifactId>maven-javadoc-plugin</artifactId>
@@ -888,6 +927,7 @@
                         <configuration>
                             <publishingServerId>central</publishingServerId>
                             <autoPublish>false</autoPublish>
+                            <!-- Prevent plugin from erasing target folder -->
                             <forcedOutputDirectory>${project.build.directory}/central-publishing</forcedOutputDirectory>
                         </configuration>
                     </plugin>
@@ -895,10 +935,6 @@
             </build>
 
             <distributionManagement>
-                <repository>
-                    <id>central.releases</id>
-                    <url>https://central.sonatype.com/api/v1/publisher/upload</url>
-                </repository>
                 <snapshotRepository>
                     <id>central.snapshots</id>
                     <url>https://central.sonatype.com/repository/maven-snapshots/</url>
