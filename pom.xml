@@ -234,7 +234,11 @@
         <icy.extension.detection-to-roi.version>2.0.0-a.5</icy.extension.detection-to-roi.version>
         <icy.extension.distance-profiler.version>2.0.0-a.5</icy.extension.distance-profiler.version>
         <icy.extension.edge-detection.version>1.0.0-a.5</icy.extension.edge-detection.version>
-        <icy.extension.elevation-map.version>3.0.0-a.5</icy.extension.elevation-map.version>
+
+        <!-- # Elevation Map -->
+        <icy.elevation-map.version>3.0.0-a.8</icy.elevation-map.version>
+        <fr.icy.extension.elevation-map.version>${icy.elevation-map.version}</fr.icy.extension.elevation-map.version>
+
         <icy.extension.emory-jtransforms.version>1.0.0-a.5</icy.extension.emory-jtransforms.version>
         <icy.extension.fill-holes-in-roi.version>2.0.0-a.5</icy.extension.fill-holes-in-roi.version>
         <icy.extension.filter-toolbox.version>5.0.0-a.5</icy.extension.filter-toolbox.version>
@@ -491,6 +495,11 @@
             </dependency>
 
             <!-- Icy extensions -->
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>elevation-map</artifactId>
+                <version>${fr.icy.extension.elevation-map.version}</version>
+            </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>rotation-3d</artifactId>
