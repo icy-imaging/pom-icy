@@ -219,7 +219,6 @@
 
         <!-- Icy extension versions -->
         <icy.extension.3d-mesh-roi.version>2.0.0-a.5</icy.extension.3d-mesh-roi.version>
-        <icy.extension.3d-rotation.version>2.0.0-a.5</icy.extension.3d-rotation.version>
         <icy.extension.3d-spheres-vtk.version>2.0.0-a.5</icy.extension.3d-spheres-vtk.version>
         <icy.extension.active-contours.version>5.0.0-a.5</icy.extension.active-contours.version>
         <icy.extension.angle-descriptor.version>2.0.0-a.5</icy.extension.angle-descriptor.version>
@@ -298,6 +297,10 @@
         <icy.extension.roi-to-detection.version>2.0.0-a.2</icy.extension.roi-to-detection.version>
         <icy.extension.roi-to-distance-map.version>4.0.0-a.1</icy.extension.roi-to-distance-map.version>
         <icy.extension.roi-tooltip.version>2.0.0-a.1</icy.extension.roi-tooltip.version>
+
+        <!-- # Rotation 3D -->
+        <icy.rotation-3d.version>2.0.0-a.8</icy.rotation-3d.version>
+        <fr.icy.extension.rotation-3d.version>${icy.rotation-3d.version}</fr.icy.extension.rotation-3d.version>
 
         <!-- # Ruler Helper -->
         <icy.ruler-helper.version>2.0.0-a.8</icy.ruler-helper.version>
@@ -488,6 +491,11 @@
             </dependency>
 
             <!-- Icy extensions -->
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>rotation-3d</artifactId>
+                <version>${fr.icy.extension.rotation-3d.version}</version>
+            </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>ruler-helper</artifactId>
