@@ -298,7 +298,10 @@
         <icy.extension.roi-to-detection.version>2.0.0-a.2</icy.extension.roi-to-detection.version>
         <icy.extension.roi-to-distance-map.version>4.0.0-a.1</icy.extension.roi-to-distance-map.version>
         <icy.extension.roi-tooltip.version>2.0.0-a.1</icy.extension.roi-tooltip.version>
-        <icy.extension.ruler-helper.version>2.0.0-a.5</icy.extension.ruler-helper.version>
+
+        <!-- # Ruler Helper -->
+        <icy.ruler-helper.version>2.0.0-a.8</icy.ruler-helper.version>
+        <fr.icy.extension.ruler-helper.version>${icy.ruler-helper.version}</fr.icy.extension.ruler-helper.version>
 
         <!-- # Scale Bar -->
         <icy.scale-bar.version>4.0.0-a.8-SNAPSHOT</icy.scale-bar.version>
@@ -485,6 +488,11 @@
             </dependency>
 
             <!-- Icy extensions -->
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>ruler-helper</artifactId>
+                <version>${fr.icy.extension.ruler-helper.version}</version>
+            </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>scale-bar</artifactId>
