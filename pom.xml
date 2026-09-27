@@ -203,19 +203,19 @@
         <!-- Icy core extension versions -->
         <!-- # Icy2API -->
         <icy.icy2api.version>1.0.0-a.8-SNAPSHOT</icy.icy2api.version>
-        <fr.icy.extensions.icy2-api.version>${icy.icy2api.version}</fr.icy.extensions.icy2-api.version>
+        <fr.icy.extension.icy2-api.version>${icy.icy2api.version}</fr.icy.extension.icy2-api.version>
 
         <!-- # Kernel extension -->
         <icy.kernel.version>1.0.0-a.8-SNAPSHOT</icy.kernel.version>
-        <fr.icy.extensions.kernel.version>${icy.kernel.version}</fr.icy.extensions.kernel.version>
+        <fr.icy.extension.kernel.version>${icy.kernel.version}</fr.icy.extension.kernel.version>
 
         <!-- # EzPlug -->
         <icy.ezplug.version>4.0.0-a.8-SNAPSHOT</icy.ezplug.version>
-        <fr.icy.extensions.ezplug.version>${icy.ezplug.version}</fr.icy.extensions.ezplug.version>
+        <fr.icy.extension.ezplug.version>${icy.ezplug.version}</fr.icy.extension.ezplug.version>
 
         <!-- # Protocols -->
         <icy.protocols.version>4.0.0-a.8-SNAPSHOT</icy.protocols.version>
-        <fr.icy.extensions.protocols.version>${icy.protocols.version}</fr.icy.extensions.protocols.version>
+        <fr.icy.extension.protocols.version>${icy.protocols.version}</fr.icy.extension.protocols.version>
 
         <!-- Icy extension versions -->
         <icy.extension.3d-mesh-roi.version>2.0.0-a.5</icy.extension.3d-mesh-roi.version>
@@ -460,24 +460,24 @@
 
             <!-- Icy core extensions -->
             <dependency>
-                <groupId>fr.icy.extensions</groupId>
+                <groupId>fr.icy.extension</groupId>
                 <artifactId>icy2-api</artifactId>
-                <version>${fr.icy.extensions.icy2-api.version}</version>
+                <version>${fr.icy.extension.icy2-api.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy.extensions</groupId>
+                <groupId>fr.icy.extension</groupId>
                 <artifactId>kernel</artifactId>
-                <version>${fr.icy.extensions.kernel.version}</version>
+                <version>${fr.icy.extension.kernel.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy.extensions</groupId>
+                <groupId>fr.icy.extension</groupId>
                 <artifactId>ezplug</artifactId>
-                <version>${fr.icy.extensions.ezplug.version}</version>
+                <version>${fr.icy.extension.ezplug.version}</version>
             </dependency>
             <dependency>
-                <groupId>fr.icy.extensions</groupId>
+                <groupId>fr.icy.extension</groupId>
                 <artifactId>protocols</artifactId>
-                <version>${fr.icy.extensions.protocols.version}</version>
+                <version>${fr.icy.extension.protocols.version}</version>
             </dependency>
 
             <!-- Icy extensions -->
