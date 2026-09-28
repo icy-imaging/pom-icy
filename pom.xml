@@ -224,7 +224,11 @@
         <icy.extension.angle-descriptor.version>2.0.0-a.5</icy.extension.angle-descriptor.version>
         <icy.extension.angle-helper.version>2.0.0-a.5</icy.extension.angle-helper.version>
         <icy.extension.best-threshold.version>2.0.0-a.5</icy.extension.best-threshold.version>
-        <icy.extension.blockvars.version>1.0.0-a.5</icy.extension.blockvars.version>
+
+        <!-- # BlockVars -->
+        <icy.blockvars.version>1.0.0-a.8</icy.blockvars.version>
+        <fr.icy.extension.blockvars.version>${icy.blockvars.version}</fr.icy.extension.blockvars.version>
+
         <icy.extension.channel-montage.version>3.0.0-a.5</icy.extension.channel-montage.version>
         <icy.extension.color-bar.version>2.0.0-a.5</icy.extension.color-bar.version>
         <icy.extension.color-picker-threshold.version>2.0.0-a.5</icy.extension.color-picker-threshold.version>
@@ -499,6 +503,11 @@
             </dependency>
 
             <!-- Icy extensions -->
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>blockvars</artifactId>
+                <version>${fr.icy.extension.blockvars.version}</version>
+            </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>elevation-map</artifactId>
