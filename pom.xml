@@ -336,7 +336,11 @@
         <icy.extension.sequence-blocks.version>3.0.0-a.5</icy.extension.sequence-blocks.version>
         <icy.extension.slic.version>2.0.0-a.1</icy.extension.slic.version>
         <icy.extension.soda-suite.version>2.0.0-a.1</icy.extension.soda-suite.version>
-        <icy.extension.spot-detection-utilities.version>2.0.0-a.5</icy.extension.spot-detection-utilities.version>
+
+        <!-- # Spot Detection Utilities -->
+        <icy.spot-detection-utilities.version>2.0.0-a.8-SNAPSHOT</icy.spot-detection-utilities.version>
+        <fr.icy.extension.spot-detection-utilities.version>${icy.spot-detection-utilities.version}</fr.icy.extension.spot-detection-utilities.version>
+
         <icy.extension.spot-detector.version>2.0.0-a.5</icy.extension.spot-detector.version>
         <icy.extension.spot-detector-block.version>2.0.0-a.1</icy.extension.spot-detector-block.version>
         <icy.extension.spot-tracking.version>4.0.0-a.5</icy.extension.spot-tracking.version>
@@ -551,6 +555,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>scale-bar</artifactId>
                 <version>${fr.icy.extension.scale-bar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>spot-detection-utilities</artifactId>
+                <version>${fr.icy.extension.spot-detection-utilities.version}</version>
             </dependency>
 
             <!-- Icy third parties -->
