@@ -281,7 +281,10 @@
         <icy.label-extractor.version>2.0.0-a.8-SNAPSHOT</icy.label-extractor.version>
         <fr.icy.extension.label-extractor.version>${icy.label-extractor.version}</fr.icy.extension.label-extractor.version>
 
-        <icy.extension.linear-programming.version>2.0.0-a.5</icy.extension.linear-programming.version>
+        <!-- # Linear Programming -->
+        <icy.linear-programming.version>2.0.0-a.8-SNAPSHOT</icy.linear-programming.version>
+        <fr.icy.extension.linear-programming.version>${icy.linear-programming.version}</fr.icy.extension.linear-programming.version>
+
         <icy.extension.magnifier.version>4.0.0-a.1</icy.extension.magnifier.version>
         <icy.extension.mask-editor.version>2.0.0-a.1</icy.extension.mask-editor.version>
         <icy.extension.mcib3d-core.version>4.0.0-a.2</icy.extension.mcib3d-core.version>
@@ -571,6 +574,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>label-extractor</artifactId>
                 <version>${fr.icy.extension.label-extractor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>linear-programming</artifactId>
+                <version>${fr.icy.extension.linear-programming.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
