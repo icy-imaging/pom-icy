@@ -70,7 +70,9 @@
             <name>Stéphane Dallongeville</name>
             <url>https://icy.bioimageanalysis.org/author/stef/</url>
             <timezone>Europe/Paris</timezone>
-            <roles><role>founder</role></roles>
+            <roles>
+                <role>founder</role>
+            </roles>
         </contributor>
         <contributor>
             <name>Amandine Tournay</name>
@@ -229,7 +231,10 @@
         <icy.blockvars.version>1.0.0-a.8-SNAPSHOT</icy.blockvars.version>
         <fr.icy.extension.blockvars.version>${icy.blockvars.version}</fr.icy.extension.blockvars.version>
 
-        <icy.extension.channel-montage.version>3.0.0-a.5</icy.extension.channel-montage.version>
+        <!-- # Channel Montage -->
+        <icy.channel-montage.version>3.0.0-a.8-SNAPSHOT</icy.channel-montage.version>
+        <fr.icy.extension.channel-montage.version>${icy.channel-montage.version}</fr.icy.extension.channel-montage.version>
+
         <icy.extension.color-bar.version>2.0.0-a.5</icy.extension.color-bar.version>
         <icy.extension.color-picker-threshold.version>2.0.0-a.5</icy.extension.color-picker-threshold.version>
         <icy.extension.color-track-processor.version>2.0.0-a.5</icy.extension.color-track-processor.version>
@@ -507,6 +512,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>blockvars</artifactId>
                 <version>${fr.icy.extension.blockvars.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>channel-montage</artifactId>
+                <version>${fr.icy.extension.channel-montage.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
