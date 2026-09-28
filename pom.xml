@@ -303,7 +303,11 @@
         <icy.extension.path-intensity-profiler.version>2.0.0-a.1</icy.extension.path-intensity-profiler.version>
         <icy.extension.projection.version>2.0.0-a.1</icy.extension.projection.version>
         <icy.extension.protractor.version>2.0.0-a.1</icy.extension.protractor.version>
-        <icy.extension.quickhull.version>2.0.0-a.5</icy.extension.quickhull.version>
+
+        <!-- # QuickHull -->
+        <icy.quickhull.version>2.0.0-a.8-SNAPSHOT</icy.quickhull.version>
+        <fr.icy.extension.quickhull.version>${icy.quickhull.version}</fr.icy.extension.quickhull.version>
+
         <icy.extension.random-roi-coloring.version>2.0.0-a.1</icy.extension.random-roi-coloring.version>
         <icy.extension.renjin.version>1.0.0-a.5</icy.extension.renjin.version>
         <icy.extension.rescale-roi.version>2.0.0-a.1</icy.extension.rescale-roi.version>
@@ -540,6 +544,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>orthoviewer</artifactId>
                 <version>${fr.icy.extension.orthoviewer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>quickhull</artifactId>
+                <version>${fr.icy.extension.quickhull.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
