@@ -371,7 +371,11 @@
         <icy.extension.stack-rotation.version>2.0.0-a.1</icy.extension.stack-rotation.version>
         <icy.extension.stereo-3d-vtk-canvas.version>2.0.0-a.1</icy.extension.stereo-3d-vtk-canvas.version>
         <icy.extension.texture-segmentation.version>2.0.0-a.1</icy.extension.texture-segmentation.version>
-        <icy.extension.thresholder.version>4.0.0-a.5</icy.extension.thresholder.version>
+
+        <!-- # Thresholder -->
+        <icy.thresholder.version>4.0.0-a.8-SNAPSHOT</icy.thresholder.version>
+        <fr.icy.extension.thresholder.version>${icy.thresholder.version}</fr.icy.extension.thresholder.version>
+
         <icy.extension.timestamp-overlay.version>2.0.0-a.1</icy.extension.timestamp-overlay.version>
         <icy.extension.track-manager.version>2.0.0-a.5</icy.extension.track-manager.version>
         <icy.extension.track-painter.version>3.0.0-a.1</icy.extension.track-painter.version>
@@ -613,6 +617,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>spot-detector</artifactId>
                 <version>${fr.icy.extension.spot-detector.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>thresholder</artifactId>
+                <version>${fr.icy.extension.thresholder.version}</version>
             </dependency>
 
             <!-- Icy third parties -->
