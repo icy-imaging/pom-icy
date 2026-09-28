@@ -226,7 +226,7 @@
         <icy.extension.best-threshold.version>2.0.0-a.5</icy.extension.best-threshold.version>
 
         <!-- # BlockVars -->
-        <icy.blockvars.version>1.0.0-a.8</icy.blockvars.version>
+        <icy.blockvars.version>1.0.0-a.8-SNAPSHOT</icy.blockvars.version>
         <fr.icy.extension.blockvars.version>${icy.blockvars.version}</fr.icy.extension.blockvars.version>
 
         <icy.extension.channel-montage.version>3.0.0-a.5</icy.extension.channel-montage.version>
@@ -240,7 +240,7 @@
         <icy.extension.edge-detection.version>1.0.0-a.5</icy.extension.edge-detection.version>
 
         <!-- # Elevation Map -->
-        <icy.elevation-map.version>3.0.0-a.8</icy.elevation-map.version>
+        <icy.elevation-map.version>3.0.0-a.8-SNAPSHOT</icy.elevation-map.version>
         <fr.icy.extension.elevation-map.version>${icy.elevation-map.version}</fr.icy.extension.elevation-map.version>
 
         <icy.extension.emory-jtransforms.version>1.0.0-a.5</icy.extension.emory-jtransforms.version>
@@ -287,7 +287,7 @@
         <icy.extension.opencv.version>5.0.0-a.1</icy.extension.opencv.version>
 
         <!-- # Orthoviewer -->
-        <icy.orthoviewer.version>3.0.0-a.8</icy.orthoviewer.version>
+        <icy.orthoviewer.version>3.0.0-a.8-SNAPSHOT</icy.orthoviewer.version>
         <fr.icy.extension.orthoviewer.version>${icy.orthoviewer.version}</fr.icy.extension.orthoviewer.version>
 
         <icy.extension.particle-animation.version>2.0.0-a.1</icy.extension.particle-animation.version>
@@ -311,11 +311,11 @@
         <icy.extension.roi-tooltip.version>2.0.0-a.1</icy.extension.roi-tooltip.version>
 
         <!-- # Rotation 3D -->
-        <icy.rotation-3d.version>2.0.0-a.8</icy.rotation-3d.version>
+        <icy.rotation-3d.version>2.0.0-a.8-SNAPSHOT</icy.rotation-3d.version>
         <fr.icy.extension.rotation-3d.version>${icy.rotation-3d.version}</fr.icy.extension.rotation-3d.version>
 
         <!-- # Ruler Helper -->
-        <icy.ruler-helper.version>2.0.0-a.8</icy.ruler-helper.version>
+        <icy.ruler-helper.version>2.0.0-a.8-SNAPSHOT</icy.ruler-helper.version>
         <fr.icy.extension.ruler-helper.version>${icy.ruler-helper.version}</fr.icy.extension.ruler-helper.version>
 
         <!-- # Scale Bar -->
