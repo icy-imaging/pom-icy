@@ -276,7 +276,11 @@
         <icy.extension.jruby.version>1.0.0-a.5</icy.extension.jruby.version>
         <icy.extension.kmeans-color-quantization.version>2.0.0-a.1</icy.extension.kmeans-color-quantization.version>
         <icy.extension.kymograph-tracker.version>2.0.0-a.1</icy.extension.kymograph-tracker.version>
-        <icy.extension.label-extractor.version>2.0.0-a.5</icy.extension.label-extractor.version>
+
+        <!-- # Label Extractor -->
+        <icy.label-extractor.version>2.0.0-a.8-SNAPSHOT</icy.label-extractor.version>
+        <fr.icy.extension.label-extractor.version>${icy.label-extractor.version}</fr.icy.extension.label-extractor.version>
+
         <icy.extension.linear-programming.version>2.0.0-a.5</icy.extension.linear-programming.version>
         <icy.extension.magnifier.version>4.0.0-a.1</icy.extension.magnifier.version>
         <icy.extension.mask-editor.version>2.0.0-a.1</icy.extension.mask-editor.version>
@@ -554,6 +558,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>elevation-map</artifactId>
                 <version>${fr.icy.extension.elevation-map.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>label-extractor</artifactId>
+                <version>${fr.icy.extension.label-extractor.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
