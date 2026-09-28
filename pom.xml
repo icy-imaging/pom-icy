@@ -281,7 +281,11 @@
         <icy.extension.micromanager.version>2.0.0-a.1</icy.extension.micromanager.version>
         <icy.extension.micromanager-block.version>2.0.0-a.1</icy.extension.micromanager-block.version>
         <icy.extension.microscope-remote.version>3.0.0-a.1</icy.extension.microscope-remote.version>
-        <icy.extension.montage-2d.version>1.0.0-a.2</icy.extension.montage-2d.version>
+
+        <!-- # Montage 2D -->
+        <icy.montage-2d.version>1.0.0-a.8-SNAPSHOT</icy.montage-2d.version>
+        <fr.icy.extension.montage-2d.version>${icy.montage-2d.version}</fr.icy.extension.montage-2d.version>
+
         <icy.extension.morphomaths.version>6.0.0-a.5</icy.extension.morphomaths.version>
         <icy.extension.motion-profiler.version>5.0.0-a.3</icy.extension.motion-profiler.version>
         <icy.extension.msd-track-processor.version>2.0.0-a.1</icy.extension.msd-track-processor.version>
@@ -522,6 +526,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>elevation-map</artifactId>
                 <version>${fr.icy.extension.elevation-map.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>montage-2d</artifactId>
+                <version>${fr.icy.extension.montage-2d.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
