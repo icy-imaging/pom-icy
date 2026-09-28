@@ -319,7 +319,11 @@
         <icy.extension.roi-blocks.version>2.0.0-a.5</icy.extension.roi-blocks.version>
         <icy.extension.roi-inclusion-analysis.version>2.0.0-a.1</icy.extension.roi-inclusion-analysis.version>
         <icy.extension.roi-intensity-evolution.version>3.0.0-a.1</icy.extension.roi-intensity-evolution.version>
-        <icy.extension.roi-pool.version>2.0.0-a.5</icy.extension.roi-pool.version>
+
+        <!-- # ROI Pool -->
+        <icy.roi-pool.version>2.0.0-a.8-SNAPSHOT</icy.roi-pool.version>
+        <fr.icy.extension.roi-pool.version>${icy.roi-pool.version}</fr.icy.extension.roi-pool.version>
+
         <icy.extension.roi-proximity-analysis.version>2.0.0-a.1</icy.extension.roi-proximity-analysis.version>
         <icy.extension.roi-statistics.version>6.0.0-a.3</icy.extension.roi-statistics.version>
         <icy.extension.roi-tagger.version>2.0.0-a.5</icy.extension.roi-tagger.version>
@@ -558,6 +562,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>quickhull</artifactId>
                 <version>${fr.icy.extension.quickhull.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>roi-pool</artifactId>
+                <version>${fr.icy.extension.roi-pool.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
