@@ -281,7 +281,11 @@
         <icy.extension.nherve-toolbox.version>2.0.0-a.5</icy.extension.nherve-toolbox.version>
         <icy.extension.ochafik.version>1.0.0-a.5</icy.extension.ochafik.version>
         <icy.extension.opencv.version>5.0.0-a.1</icy.extension.opencv.version>
-        <icy.extension.orthoviewer.version>3.0.0-a.2</icy.extension.orthoviewer.version>
+
+        <!-- # Orthoviewer -->
+        <icy.orthoviewer.version>3.0.0-a.8</icy.orthoviewer.version>
+        <fr.icy.extension.orthoviewer.version>${icy.orthoviewer.version}</fr.icy.extension.orthoviewer.version>
+
         <icy.extension.particle-animation.version>2.0.0-a.1</icy.extension.particle-animation.version>
         <icy.extension.path-intensity-profiler.version>2.0.0-a.1</icy.extension.path-intensity-profiler.version>
         <icy.extension.projection.version>2.0.0-a.1</icy.extension.projection.version>
@@ -499,6 +503,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>elevation-map</artifactId>
                 <version>${fr.icy.extension.elevation-map.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>orthoviewer</artifactId>
+                <version>${fr.icy.extension.orthoviewer.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
