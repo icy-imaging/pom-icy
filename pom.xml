@@ -377,7 +377,11 @@
         <fr.icy.extension.thresholder.version>${icy.thresholder.version}</fr.icy.extension.thresholder.version>
 
         <icy.extension.timestamp-overlay.version>2.0.0-a.1</icy.extension.timestamp-overlay.version>
-        <icy.extension.track-manager.version>2.0.0-a.5</icy.extension.track-manager.version>
+
+        <!-- # Track Manager -->
+        <icy.track-manager.version>2.0.0-a.8-SNAPSHOT</icy.track-manager.version>
+        <fr.icy.extension.track-manager.version>${icy.track-manager.version}</fr.icy.extension.track-manager.version>
+
         <icy.extension.track-painter.version>3.0.0-a.1</icy.extension.track-painter.version>
         <icy.extension.track-processor-excel-export.version>2.0.0-a.5</icy.extension.track-processor-excel-export.version>
         <icy.extension.track-processor-filtered-rois.version>2.0.0-a.1</icy.extension.track-processor-filtered-rois.version>
@@ -622,6 +626,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>thresholder</artifactId>
                 <version>${fr.icy.extension.thresholder.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>track-manager</artifactId>
+                <version>${fr.icy.extension.track-manager.version}</version>
             </dependency>
 
             <!-- Icy third parties -->
