@@ -400,7 +400,11 @@
 
         <icy.extension.track-processor-excel-export.version>2.0.0-a.5</icy.extension.track-processor-excel-export.version>
         <icy.extension.track-processor-filtered-rois.version>2.0.0-a.1</icy.extension.track-processor-filtered-rois.version>
-        <icy.extension.track-processor-flow.version>2.0.0-a.1</icy.extension.track-processor-flow.version>
+
+        <!-- # Track Processor - Flow -->
+        <icy.track-processor-flow.version>2.0.0-a.8-SNAPSHOT</icy.track-processor-flow.version>
+        <fr.icy.extension.track-processor-flow.version>${icy.track-processor-flow.version}</fr.icy.extension.track-processor-flow.version>
+
         <icy.extension.track-processor-instant-speed.version>2.0.0-a.1</icy.extension.track-processor-instant-speed.version>
         <icy.extension.track-processor-intensity-profile.version>2.0.0-a.2</icy.extension.track-processor-intensity-profile.version>
 
@@ -673,6 +677,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>track-processor-color</artifactId>
                 <version>${fr.icy.extension.track-processor-color.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>track-processor-flow</artifactId>
+                <version>${fr.icy.extension.track-processor-flow.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
