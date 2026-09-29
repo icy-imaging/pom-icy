@@ -252,7 +252,11 @@
         <fr.icy.extension.elevation-map.version>${icy.elevation-map.version}</fr.icy.extension.elevation-map.version>
 
         <icy.extension.emory-jtransforms.version>1.0.0-a.5</icy.extension.emory-jtransforms.version>
-        <icy.extension.fill-holes-in-roi.version>2.0.0-a.5</icy.extension.fill-holes-in-roi.version>
+
+        <!-- # Fill Holes in ROI -->
+        <icy.fill-holes-in-roi.version>2.0.0-a.8-SNAPSHOT</icy.fill-holes-in-roi.version>
+        <fr.icy.extension.fill-holes-in-roi.version>${icy.fill-holes-in-roi.version}</fr.icy.extension.fill-holes-in-roi.version>
+
         <icy.extension.filter-toolbox.version>5.0.0-a.5</icy.extension.filter-toolbox.version>
         <icy.extension.flanagan.version>2.0.0-a.5</icy.extension.flanagan.version>
         <icy.extension.flying-camera.version>2.0.0-a.5</icy.extension.flying-camera.version>
@@ -596,6 +600,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>elevation-map</artifactId>
                 <version>${fr.icy.extension.elevation-map.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>fill-holes-in-roi</artifactId>
+                <version>${fr.icy.extension.fill-holes-in-roi.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
