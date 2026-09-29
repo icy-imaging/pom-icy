@@ -398,7 +398,10 @@
         <icy.extension.track-processor-flow.version>2.0.0-a.1</icy.extension.track-processor-flow.version>
         <icy.extension.track-processor-instant-speed.version>2.0.0-a.1</icy.extension.track-processor-instant-speed.version>
         <icy.extension.track-processor-intensity-profile.version>2.0.0-a.2</icy.extension.track-processor-intensity-profile.version>
-        <icy.extension.track-processor-roi-gate.version>2.0.0-a.1</icy.extension.track-processor-roi-gate.version>
+
+        <!-- # Track Processor - ROI Gate -->
+        <icy.track-processor-roi-gate.version>2.0.0-a.8-SNAPSHOT</icy.track-processor-roi-gate.version>
+        <fr.icy.extension.track-processor-roi-gate.version>${icy.track-processor-roi-gate.version}</fr.icy.extension.track-processor-roi-gate.version>
 
         <!-- # Track Processor - Time Clip -->
         <icy.track-processor-time-clip.version>2.0.0-a.8-SNAPSHOT</icy.track-processor-time-clip.version>
@@ -660,6 +663,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>track-motion-profiler</artifactId>
                 <version>${fr.icy.extension.track-motion-profiler.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>track-processor-roi-gate</artifactId>
+                <version>${fr.icy.extension.track-processor-roi-gate.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
