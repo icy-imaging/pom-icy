@@ -369,7 +369,11 @@
         <fr.icy.extension.spot-detector.version>${icy.spot-detector.version}</fr.icy.extension.spot-detector.version>
 
         <icy.extension.spot-detector-block.version>2.0.0-a.1</icy.extension.spot-detector-block.version>
-        <icy.extension.spot-tracking.version>4.0.0-a.5</icy.extension.spot-tracking.version>
+
+        <!-- # Spot Tracking -->
+        <icy.spot-tracking.version>4.0.0-a.8-SNAPSHOT</icy.spot-tracking.version>
+        <fr.icy.extension.spot-tracking.version>${icy.spot-tracking.version}</fr.icy.extension.spot-tracking.version>
+
         <icy.extension.spot-tracking-blocks.version>2.0.0-a.1</icy.extension.spot-tracking-blocks.version>
         <icy.extension.stack-rotation.version>2.0.0-a.1</icy.extension.stack-rotation.version>
         <icy.extension.stereo-3d-vtk-canvas.version>2.0.0-a.1</icy.extension.stereo-3d-vtk-canvas.version>
@@ -629,6 +633,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>spot-detector</artifactId>
                 <version>${fr.icy.extension.spot-detector.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>spot-tracking</artifactId>
+                <version>${fr.icy.extension.spot-tracking.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
