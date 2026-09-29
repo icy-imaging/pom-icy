@@ -396,7 +396,11 @@
         <icy.extension.track-processor-instant-speed.version>2.0.0-a.1</icy.extension.track-processor-instant-speed.version>
         <icy.extension.track-processor-intensity-profile.version>2.0.0-a.2</icy.extension.track-processor-intensity-profile.version>
         <icy.extension.track-processor-roi-gate.version>2.0.0-a.1</icy.extension.track-processor-roi-gate.version>
-        <icy.extension.track-processor-time-clip.version>2.0.0-a.1</icy.extension.track-processor-time-clip.version>
+
+        <!-- # Track Processor - Time Clip -->
+        <icy.track-processor-time-clip.version>2.0.0-a.8-SNAPSHOT</icy.track-processor-time-clip.version>
+        <fr.icy.extension.track-processor-time-clip.version>${icy.track-processor-time-clip.version}</fr.icy.extension.track-processor-time-clip.version>
+
         <icy.extension.tracking-benchmark-generator.version>2.0.0-a.5</icy.extension.tracking-benchmark-generator.version>
         <icy.extension.vecmath.version>2.0.0-a.5</icy.extension.vecmath.version>
         <icy.extension.water-shed-3d.version>2.0.0-a.2</icy.extension.water-shed-3d.version>
@@ -648,6 +652,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>track-manager</artifactId>
                 <version>${fr.icy.extension.track-manager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>track-processor-time-clip</artifactId>
+                <version>${fr.icy.extension.track-processor-time-clip.version}</version>
             </dependency>
 
             <!-- Icy third parties -->
