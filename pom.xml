@@ -220,7 +220,6 @@
         <fr.icy.extension.protocols.version>${icy.protocols.version}</fr.icy.extension.protocols.version>
 
         <!-- Icy extension versions -->
-        <icy.extension.3d-mesh-roi.version>2.0.0-a.5</icy.extension.3d-mesh-roi.version>
         <icy.extension.3d-spheres-vtk.version>2.0.0-a.5</icy.extension.3d-spheres-vtk.version>
         <icy.extension.active-contours.version>5.0.0-a.5</icy.extension.active-contours.version>
         <icy.extension.angle-descriptor.version>2.0.0-a.5</icy.extension.angle-descriptor.version>
@@ -289,6 +288,11 @@
         <icy.extension.mask-editor.version>2.0.0-a.1</icy.extension.mask-editor.version>
         <icy.extension.mcib3d-core.version>4.0.0-a.2</icy.extension.mcib3d-core.version>
         <icy.extension.median-filter.version>3.0.0-a.1</icy.extension.median-filter.version>
+
+        <!-- # Mesh 3D ROI -->
+        <icy.mesh-3d-roi.version>2.0.0-a.8-SNAPSHOT</icy.mesh-3d-roi.version>
+        <fr.icy.extension.mesh-3d-roi.version>${icy.mesh-3d-roi.version}</fr.icy.extension.mesh-3d-roi.version>
+
         <icy.extension.micromanager.version>2.0.0-a.1</icy.extension.micromanager.version>
         <icy.extension.micromanager-block.version>2.0.0-a.1</icy.extension.micromanager-block.version>
         <icy.extension.microscope-remote.version>3.0.0-a.1</icy.extension.microscope-remote.version>
@@ -602,6 +606,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>linear-programming</artifactId>
                 <version>${fr.icy.extension.linear-programming.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>mesh-3d-roi</artifactId>
+                <version>${fr.icy.extension.mesh-3d-roi.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
