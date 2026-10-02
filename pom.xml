@@ -244,6 +244,11 @@
         <fr.icy.extension.connected-components.version>${icy.connected-components.version}</fr.icy.extension.connected-components.version>
 
         <icy.extension.convexify.version>3.0.0-a.5</icy.extension.convexify.version>
+
+        <!-- # Deep Icy -->
+        <icy.deep-icy.version>0.0.0-b.0-SNAPSHOT</icy.deep-icy.version>
+        <fr.icy.extension.deep-icy.version>${icy.deep-icy.version}</fr.icy.extension.deep-icy.version>
+
         <icy.extension.detection-to-roi.version>2.0.0-a.5</icy.extension.detection-to-roi.version>
         <icy.extension.distance-profiler.version>2.0.0-a.5</icy.extension.distance-profiler.version>
         <icy.extension.edge-detection.version>1.0.0-a.5</icy.extension.edge-detection.version>
@@ -600,6 +605,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>connected-components</artifactId>
                 <version>${fr.icy.extension.connected-components.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>deep-icy</artifactId>
+                <version>${fr.icy.extension.deep-icy.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
