@@ -124,8 +124,9 @@
 
         <icy.enforcer-maven-plugin.version>1.0.0-a.8-SNAPSHOT</icy.enforcer-maven-plugin.version>
         <fr.icy.maven.enforcer-maven-plugin.version>${icy.enforcer-maven-plugin.version}</fr.icy.maven.enforcer-maven-plugin.version>
-        <icy.mojo-maven-plugin.version>1.0.0-a.8</icy.mojo-maven-plugin.version>
+        <icy.mojo-maven-plugin.version>1.0.0-a.8-SNAPSHOT</icy.mojo-maven-plugin.version>
         <fr.icy.maven.mojo-maven-plugin.version>${icy.mojo-maven-plugin.version}</fr.icy.maven.mojo-maven-plugin.version>
+        <enforcer.skip>true</enforcer.skip> <!-- True only if mojo-maven-plugin is snapshot -->
 
         <!-- Maven plugin properties -->
         <maven-source-plugin.includePom>true</maven-source-plugin.includePom>
@@ -264,7 +265,11 @@
         <icy.extension.graaljs.version>1.0.0-a.5</icy.extension.graaljs.version>
         <icy.extension.hk-means.version>3.0.0-a.5</icy.extension.hk-means.version>
         <icy.extension.image-to-workbook.version>3.0.0-a.1</icy.extension.image-to-workbook.version>
-        <icy.extension.imglib2-icy.version>8.0.0-a.3</icy.extension.imglib2-icy.version>
+
+        <!-- # ImgLib2 -->
+        <icy.imglib2.version>8.0.0-a.8-SNAPSHOT</icy.imglib2.version>
+        <fr.icy.extension.imglib2.version>${icy.imglib2.version}</fr.icy.extension.imglib2.version>
+
         <icy.extension.intensity-profile.version>2.0.0-a.1</icy.extension.intensity-profile.version>
         <icy.extension.intensity-projection.version>2.0.0-a.2</icy.extension.intensity-projection.version>
         <icy.extension.invert.version>3.0.0-a.2</icy.extension.invert.version>
@@ -605,6 +610,11 @@
                 <groupId>fr.icy.extension</groupId>
                 <artifactId>fill-holes-in-roi</artifactId>
                 <version>${fr.icy.extension.fill-holes-in-roi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>fr.icy.extension</groupId>
+                <artifactId>imglib2</artifactId>
+                <version>${fr.icy.extension.imglib2.version}</version>
             </dependency>
             <dependency>
                 <groupId>fr.icy.extension</groupId>
