@@ -1200,6 +1200,17 @@
             <name>Maven Central</name>
             <url>https://repo.maven.apache.org/maven2/</url>
         </repository>
+        <repository>
+            <id>central.snapshots</id>
+            <name>Maven Central - Snapshots</name>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
 
         <!-- Every custom / self-hosted artifact repository required by Icy (must be called AFTER Central!) -->
         <repository>
